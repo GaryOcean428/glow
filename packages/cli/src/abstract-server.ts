@@ -138,7 +138,12 @@ export abstract class AbstractServer {
 			}
 		});
 
-		this.app.use((_req, res, next) => {
+		this.app.use((req, res, next) => {
+			// Skip database connectivity check for /healthz endpoint
+			if (req.path === '/healthz') {
+				return next();
+			}
+			
 			if (connectionState.connected) {
 				if (connectionState.migrated) next();
 				else res.send('n8n is starting up. Please wait');

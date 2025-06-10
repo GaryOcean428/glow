@@ -147,6 +147,11 @@ export const setupTestServer = ({
 		}
 
 		if (endpointGroups?.includes('health')) {
+			// Main health check should not care about DB connections
+			app.get('/healthz', (_req, res) => {
+				res.send({ status: 'ok' });
+			});
+			
 			app.get('/healthz/readiness', async (_req, res) => {
 				testDb.isReady()
 					? res.status(200).send({ status: 'ok' })
