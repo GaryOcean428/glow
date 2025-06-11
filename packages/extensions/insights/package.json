@@ -51,6 +51,7 @@
     "vite": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend",
+    "tsup": "catalog:",
     "vue-tsc": "catalog:frontend"
   }
 }
