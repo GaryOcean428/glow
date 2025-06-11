@@ -143,7 +143,7 @@ export abstract class AbstractServer {
 			if (req.path === '/healthz') {
 				return next();
 			}
-			
+
 			if (connectionState.connected) {
 				if (connectionState.migrated) next();
 				else res.send('n8n is starting up. Please wait');
@@ -170,6 +170,9 @@ export abstract class AbstractServer {
 		}
 
 		const { port, listen_address: address } = Container.get(GlobalConfig);
+
+		this.logger.info(`Starting n8n server on ${address}, port ${port}`);
+		this.logger.debug(`Node version: ${process.version}`);
 
 		this.server.on('error', (error: Error & { code: string }) => {
 			if (error.code === 'EADDRINUSE') {
