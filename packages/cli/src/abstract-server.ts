@@ -171,8 +171,7 @@ export abstract class AbstractServer {
 
 		const { port, listen_address: address } = Container.get(GlobalConfig);
 
-		this.logger.info(`Starting n8n server on ${address}, port ${port}`);
-		this.logger.debug(`Node version: ${process.version}`);
+  // Move these logs after server.listen() is called
 
 		this.server.on('error', (error: Error & { code: string }) => {
 			if (error.code === 'EADDRINUSE') {
