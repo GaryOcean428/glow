@@ -4,7 +4,7 @@
 			"name": "n8n",
 			"rootDirectory": ".",
 			"buildCommand": "pnpm build",
-			"startCommand": "pnpm start",
+			"startCommand": "./packages/cli/bin/n8n start",
 			"healthcheckPath": "/healthz"
 		}
 	]
