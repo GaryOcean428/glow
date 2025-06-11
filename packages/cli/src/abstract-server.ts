@@ -171,8 +171,10 @@ export abstract class AbstractServer {
 
 		const { port, listen_address: address } = Container.get(GlobalConfig);
 
-		this.logger.info(`Starting n8n server on ${address}, port ${port}`);
-		this.logger.debug(`Node version: ${process.version}`);
+  if (this.logger) {
+      this.logger.info(`Starting n8n server on ${address || 'localhost'}, port ${port || 'unknown'}`);
+      this.logger.debug(`Node version: ${process.version}`);
+  }
 
 		this.server.on('error', (error: Error & { code: string }) => {
 			if (error.code === 'EADDRINUSE') {
