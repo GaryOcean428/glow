@@ -1,0 +1,2 @@
+#!/bin/bash
+exec ./packages/cli/bin/n8n "$@"
