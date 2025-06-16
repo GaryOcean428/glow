@@ -45,6 +45,11 @@ if (process.env.E2E_TESTS !== 'true') {
 	require('dotenv').config();
 }
 
+// Allow the PLATFORM provided PORT env to define the n8n port
+if (!process.env.N8N_PORT && process.env.PORT) {
+	process.env.N8N_PORT = process.env.PORT;
+}
+
 // Load config early to ensure `N8N_CONFIG_FILES` values are populated into `GlobalConfig`
 // _before_ typeorm entities in `@n8n/db` are loaded, as typeorm entity decorators rely on
 // `GlobalConfig.database.type` to decide on column types and timestamp syntax.
