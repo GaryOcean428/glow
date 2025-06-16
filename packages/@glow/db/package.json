@@ -1,0 +1,45 @@
+{
+  "name": "@glow/db",
+  "version": "0.8.0",
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "dev": "pnpm watch",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "biome format --write .",
+    "format:check": "biome ci .",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
+    "watch": "tsc -p tsconfig.build.json --watch",
+    "test": "jest",
+    "test:dev": "jest --watch"
+  },
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "@glow/backend-common": "workspace:^",
+    "@glow/config": "workspace:^",
+    "@glow/constants": "workspace:^",
+    "@glow/di": "workspace:^",
+    "@glow/permissions": "workspace:^",
+    "@glow/typeorm": "catalog:",
+    "class-validator": "0.14.0",
+    "flatted": "catalog:",
+    "lodash": "catalog:",
+    "glow-core": "workspace:^",
+    "glow-workflow": "workspace:^",
+    "nanoid": "catalog:",
+    "p-lazy": "3.1.0",
+    "reflect-metadata": "catalog:",
+    "uuid": "catalog:",
+    "xss": "catalog:"
+  },
+  "devDependencies": {
+    "@glow/typescript-config": "workspace:*",
+    "@types/lodash": "catalog:"
+  }
+}

@@ -239,11 +239,11 @@ export class CommunityPackagesService {
 	}
 
 	async checkNpmPackageStatus(packageName: string) {
-		const N8N_BACKEND_SERVICE_URL = 'https://api.n8n.io/api/package';
+		const GLOW_BACKEND_SERVICE_URL = 'https://api.n8n.io/api/package';
 
 		try {
 			const response = await axios.post<CommunityPackages.PackageStatusCheck>(
-				N8N_BACKEND_SERVICE_URL,
+				GLOW_BACKEND_SERVICE_URL,
 				{ name: packageName },
 				{ method: 'POST' },
 			);

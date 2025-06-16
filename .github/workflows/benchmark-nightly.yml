@@ -23,8 +23,8 @@ env:
   ARM_CLIENT_ID: ${{ secrets.BENCHMARK_ARM_CLIENT_ID }}
   ARM_SUBSCRIPTION_ID: ${{ secrets.BENCHMARK_ARM_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.BENCHMARK_ARM_TENANT_ID }}
-  N8N_TAG: ${{ inputs.n8n_tag || 'nightly' }}
-  N8N_BENCHMARK_TAG: ${{ inputs.benchmark_tag || 'latest' }}
+  GLOW_TAG: ${{ inputs.n8n_tag || 'nightly' }}
+  GLOW_BENCHMARK_TAG: ${{ inputs.benchmark_tag || 'latest' }}
   DEBUG: ${{ inputs.debug == 'true' && '--debug' || '' }}
 
 permissions:
@@ -79,13 +79,13 @@ jobs:
         env:
           BENCHMARK_RESULT_WEBHOOK_URL: ${{ secrets.BENCHMARK_RESULT_WEBHOOK_URL }}
           BENCHMARK_RESULT_WEBHOOK_AUTH_HEADER: ${{ secrets.BENCHMARK_RESULT_WEBHOOK_AUTH_HEADER }}
-          N8N_LICENSE_CERT: ${{ secrets.N8N_BENCHMARK_LICENSE_CERT }}
+          GLOW_LICENSE_CERT: ${{ secrets.GLOW_BENCHMARK_LICENSE_CERT }}
         run: |
           pnpm benchmark-in-cloud \
             --vus 5 \
             --duration 1m \
-            --n8nTag ${{ env.N8N_TAG }} \
-            --benchmarkTag ${{ env.N8N_BENCHMARK_TAG }} \
+            --n8nTag ${{ env.GLOW_TAG }} \
+            --benchmarkTag ${{ env.GLOW_BENCHMARK_TAG }} \
             ${{ env.DEBUG }}
         working-directory: packages/@n8n/benchmark
 

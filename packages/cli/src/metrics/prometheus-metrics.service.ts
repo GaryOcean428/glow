@@ -10,7 +10,7 @@ import promClient, { type Counter, type Gauge } from 'prom-client';
 import semverParse from 'semver/functions/parse';
 
 import config from '@/config';
-import { N8N_VERSION, Time } from '@/constants';
+import { GLOW_VERSION, Time } from '@/constants';
 import type { EventMessageTypes } from '@/eventbus';
 import { MessageEventBus } from '@/eventbus/message-event-bus/message-event-bus';
 import { EventService } from '@/events/event.service';
@@ -95,7 +95,7 @@ export class PrometheusMetricsService {
 	 * Set up metric for n8n version: `n8n_version_info`
 	 */
 	private initN8nVersionMetric() {
-		const n8nVersion = semverParse(N8N_VERSION ?? '0.0.0');
+		const n8nVersion = semverParse(GLOW_VERSION ?? '0.0.0');
 
 		if (!n8nVersion) return;
 

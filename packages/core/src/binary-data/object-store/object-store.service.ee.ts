@@ -40,7 +40,7 @@ export class ObjectStoreService {
 		const { bucket } = s3Config;
 		if (bucket.name === '') {
 			throw new UnexpectedError(
-				'External storage bucket name not configured. Please set `N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME`.',
+				'External storage bucket name not configured. Please set `GLOW_EXTERNAL_STORAGE_S3_BUCKET_NAME`.',
 			);
 		}
 

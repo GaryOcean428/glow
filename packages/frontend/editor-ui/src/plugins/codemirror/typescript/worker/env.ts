@@ -45,7 +45,7 @@ export async function setupTypescriptEnv({ cache, code, mode }: EnvOptions) {
 
 	removeUnusedLibs(fsMap);
 
-	fsMap.set(TYPESCRIPT_FILES.N8N_TYPES, n8nTypes);
+	fsMap.set(TYPESCRIPT_FILES.GLOW_TYPES, n8nTypes);
 	fsMap.set(TYPESCRIPT_FILES.GLOBAL_TYPES, globalTypes);
 
 	fsMap.set(code.fileName, wrapInFunction(code.content, mode));

@@ -3,7 +3,7 @@ import { Container } from '@n8n/di';
 import { Flags, type Config } from '@oclif/core';
 
 import config from '@/config';
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 import { EventMessageGeneric } from '@/eventbus/event-message-classes/event-message-generic';
 import { MessageEventBus } from '@/eventbus/message-event-bus/message-event-bus';
 import { LogStreamingEventRelay } from '@/events/relays/log-streaming.event-relay';
@@ -31,7 +31,7 @@ export class Worker extends BaseCommand {
 	/**
 	 * How many jobs this worker may run concurrently.
 	 *
-	 * Taken from env var `N8N_CONCURRENCY_PRODUCTION_LIMIT` if set to a value
+	 * Taken from env var `GLOW_CONCURRENCY_PRODUCTION_LIMIT` if set to a value
 	 * other than -1, else taken from `--concurrency` flag.
 	 */
 	concurrency: number;
@@ -75,7 +75,7 @@ export class Worker extends BaseCommand {
 			this.gracefulShutdownTimeoutInS =
 				parseInt(QUEUE_WORKER_TIMEOUT, 10) || this.globalConfig.queue.bull.gracefulShutdownTimeout;
 			this.logger.warn(
-				'QUEUE_WORKER_TIMEOUT has been deprecated. Rename it to N8N_GRACEFUL_SHUTDOWN_TIMEOUT.',
+				'QUEUE_WORKER_TIMEOUT has been deprecated. Rename it to GLOW_GRACEFUL_SHUTDOWN_TIMEOUT.',
 			);
 		}
 		await this.initCrashJournal();
@@ -157,7 +157,7 @@ export class Worker extends BaseCommand {
 
 	async run() {
 		this.logger.info('\nn8n worker is now ready');
-		this.logger.info(` * Version: ${N8N_VERSION}`);
+		this.logger.info(` * Version: ${GLOW_VERSION}`);
 		this.logger.info(` * Concurrency: ${this.concurrency}`);
 		this.logger.info('');
 

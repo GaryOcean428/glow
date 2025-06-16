@@ -38,7 +38,7 @@ describe('SubworkflowPolicyChecker', () => {
 	});
 
 	describe('no caller policy', () => {
-		it('should fall back to `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION`', async () => {
+		it('should fall back to `GLOW_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION`', async () => {
 			globalConfig.workflows.callerPolicyDefaultOption = 'none';
 
 			const parentWorkflow = mock<WorkflowEntity>();

@@ -1,6 +1,6 @@
-# n8n AI Workflow Builder Guide
+# glow AI Workflow Builder Guide
 
-This guide provides examples and best practices for using n8n's AI workflow builder with LLM integration and enterprise features.
+This guide provides examples and best practices for using glow's AI workflow builder with LLM integration and enterprise features.
 
 ## Environment Configuration
 
@@ -8,7 +8,7 @@ This guide provides examples and best practices for using n8n's AI workflow buil
 Set the following environment variable to enable all enterprise features by default (useful for development/testing):
 
 ```bash
-N8N_FEATURE_FLAG_ALL=true
+GLOW_FEATURE_FLAG_ALL=true
 ```
 
 ### AI LLM Configuration
@@ -17,28 +17,28 @@ Configure AI integration with one or both of these options:
 #### Option 1: Direct API Keys
 ```bash
 # OpenAI API Key (for simple tasks and fallback)
-N8N_AI_OPENAI_API_KEY=sk-your-openai-api-key-here
+GLOW_AI_OPENAI_API_KEY=sk-your-openai-api-key-here
 
 # Anthropic API Key (for complex workflow generation)
-N8N_AI_ANTHROPIC_KEY=sk-ant-your-anthropic-api-key-here
+GLOW_AI_ANTHROPIC_KEY=sk-ant-your-anthropic-api-key-here
 ```
 
 #### Option 2: AI Assistant Proxy (Enterprise)
 ```bash
-# Use n8n's AI Assistant service
-N8N_AI_ASSISTANT_BASE_URL=https://your-ai-assistant-proxy.com
+# Use glow's AI Assistant service
+GLOW_AI_ASSISTANT_BASE_URL=https://your-ai-assistant-proxy.com
 ```
 
 ### License Configuration
 ```bash
 # License activation key
-N8N_LICENSE_ACTIVATION_KEY=your-activation-key
+GLOW_LICENSE_ACTIVATION_KEY=your-activation-key
 
 # Or use certificate directly
-N8N_LICENSE_CERT=your-license-certificate
+GLOW_LICENSE_CERT=your-license-certificate
 
-# License server (optional, defaults to n8n's server)
-N8N_LICENSE_SERVER_URL=https://license.n8n.io/v1
+# License server (optional, defaults to glow's server)
+GLOW_LICENSE_SERVER_URL=https://license.glow.io/v1
 ```
 
 ## Security Best Practices
@@ -89,7 +89,7 @@ const customWorkflowBuilder = {
   // AI will automatically:
   // 1. Validate the prompt for workflow intent
   // 2. Break down into logical steps
-  // 3. Select appropriate n8n nodes
+  // 3. Select appropriate glow nodes
   // 4. Generate node configurations
   // 5. Create connections between nodes
   // 6. Audit for security issues
@@ -98,7 +98,7 @@ const customWorkflowBuilder = {
 
 ### Enterprise Features Integration
 ```typescript
-// With N8N_FEATURE_FLAG_ALL=true, you get access to:
+// With GLOW_FEATURE_FLAG_ALL=true, you get access to:
 const enterpriseFeatures = [
   'Advanced permissions',
   'LDAP/SAML authentication', 
@@ -135,7 +135,7 @@ export class AiTransformNode implements INodeType {
     const instruction = this.getNodeParameter('instruction', 0) as string;
     const inputData = this.getInputData();
     
-    // Use n8n's AI workflow builder service for transformation
+    // Use glow's AI workflow builder service for transformation
     // (Security auditing is handled automatically)
     
     return [this.helpers.returnJsonArray(transformedData)];
@@ -208,15 +208,15 @@ export default {
 ### Common Issues
 
 1. **"No AI API keys configured"**
-   - Set `N8N_AI_OPENAI_API_KEY` or `N8N_AI_ANTHROPIC_KEY`
-   - Or configure `N8N_AI_ASSISTANT_BASE_URL` for proxy access
+   - Set `GLOW_AI_OPENAI_API_KEY` or `GLOW_AI_ANTHROPIC_KEY`
+   - Or configure `GLOW_AI_ASSISTANT_BASE_URL` for proxy access
 
 2. **"Invalid API key format"**
    - OpenAI keys should start with `sk-`
    - Anthropic keys should start with `sk-ant-`
 
 3. **License activation failures**
-   - Verify `N8N_LICENSE_ACTIVATION_KEY` is correct
+   - Verify `GLOW_LICENSE_ACTIVATION_KEY` is correct
    - Check network connectivity to license server
    - Ensure license hasn't expired or exceeded usage limits
 
@@ -244,6 +244,6 @@ export default {
 ## Support
 
 For additional help:
-- Review the [n8n AI Integrations documentation](https://docs.n8n.io/integrations/builtin/ai/)
-- Check the [Enterprise Setup guide](https://docs.n8n.io/enterprise/installation/)
-- Explore [Custom Node creation](https://docs.n8n.io/integrations/creating-nodes/)
+- Review the [glow AI Integrations documentation](https://docs.glow.io/integrations/builtin/ai/)
+- Check the [Enterprise Setup guide](https://docs.glow.io/enterprise/installation/)
+- Explore [Custom Node creation](https://docs.glow.io/integrations/creating-nodes/)

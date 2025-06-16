@@ -7,7 +7,7 @@ import { useStorage } from '@/composables/useStorage';
 import { useRootStore } from '@n8n/stores/useRootStore';
 import { getBecomeCreatorCta } from '@n8n/rest-api-client/api/ctas';
 
-const LOCAL_STORAGE_KEY = 'N8N_BECOME_TEMPLATE_CREATOR_CTA_DISMISSED_AT';
+const LOCAL_STORAGE_KEY = 'GLOW_BECOME_TEMPLATE_CREATOR_CTA_DISMISSED_AT';
 const RESHOW_DISMISSED_AFTER_DAYS = 30;
 const POLL_INTERVAL_IN_MS = 15 * 60 * 1000; // 15 minutes
 

@@ -5,8 +5,8 @@ import { join, resolve } from 'path';
 
 // Helper function to get n8n version that can be mocked in tests
 export const getN8NVersion = (): string => {
-	if (process.env.N8N_VERSION) {
-		return process.env.N8N_VERSION;
+	if (process.env.GLOW_VERSION) {
+		return process.env.GLOW_VERSION;
 	}
 
 	try {
@@ -20,7 +20,7 @@ export const getN8NVersion = (): string => {
 	}
 };
 
-export const N8N_VERSION = getN8NVersion();
+export const GLOW_VERSION = getN8NVersion();
 
 export const BASE_URL = process.env.AIRTOP_BASE_URL ?? 'https://api.airtop.ai/api/v1';
 export const INTEGRATION_URL =

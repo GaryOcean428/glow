@@ -31,7 +31,7 @@ export const binaryResponse = async (
 
 	return {
 		// If a binaryData has an id, the following field is set:
-		// N8N_DEFAULT_BINARY_DATA_MODE=filesystem
+		// GLOW_DEFAULT_BINARY_DATA_MODE=filesystem
 		data: binaryData.id
 			? await context.helpers.binaryToBuffer(await context.helpers.getBinaryStream(binaryData.id))
 			: atob(binaryData.data),

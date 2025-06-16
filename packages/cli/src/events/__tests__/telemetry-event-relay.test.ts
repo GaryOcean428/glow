@@ -11,7 +11,7 @@ import { type BinaryDataConfig, InstanceSettings } from 'n8n-core';
 import type { INode, INodesGraphResult } from 'n8n-workflow';
 import { NodeApiError, TelemetryHelpers, type IRun, type IWorkflowBase } from 'n8n-workflow';
 
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 import { EventService } from '@/events/event.service';
 import type { RelayEventMap } from '@/events/maps/relay.event-map';
 import { TelemetryEventRelay } from '@/events/relays/telemetry.event-relay';
@@ -785,7 +785,7 @@ describe('TelemetryEventRelay', () => {
 				is_manual: false,
 				success: false,
 				user_id: 'user123',
-				version_cli: N8N_VERSION,
+				version_cli: GLOW_VERSION,
 				workflow_id: 'workflow123',
 			});
 		});
@@ -1014,7 +1014,7 @@ describe('TelemetryEventRelay', () => {
 
 			expect(telemetry.identify).toHaveBeenCalledWith(
 				expect.objectContaining({
-					version_cli: N8N_VERSION,
+					version_cli: GLOW_VERSION,
 					metrics: {
 						metrics_category_cache: false,
 						metrics_category_default: true,
@@ -1338,7 +1338,7 @@ describe('TelemetryEventRelay', () => {
 					success: false,
 					is_manual: true,
 					execution_mode: 'manual',
-					version_cli: N8N_VERSION,
+					version_cli: GLOW_VERSION,
 					error_message: 'Error message',
 					error_node_type: 'n8n-nodes-base.jira',
 					node_graph_string: JSON.stringify(nodeGraph.nodeGraph),
@@ -1438,7 +1438,7 @@ describe('TelemetryEventRelay', () => {
 					success: false,
 					is_manual: true,
 					execution_mode: 'manual',
-					version_cli: N8N_VERSION,
+					version_cli: GLOW_VERSION,
 					error_message: 'Error message canceled',
 					error_node_type: 'n8n-nodes-base.jira',
 					node_graph_string: JSON.stringify(nodeGraph.nodeGraph),
@@ -1542,7 +1542,7 @@ describe('TelemetryEventRelay', () => {
 					success: false,
 					is_manual: true,
 					execution_mode: 'manual',
-					version_cli: N8N_VERSION,
+					version_cli: GLOW_VERSION,
 					error_message: 'Error message',
 					error_node_type: 'n8n-nodes-base.jira',
 					node_graph_string: JSON.stringify(nodeGraph.nodeGraph),
@@ -1655,7 +1655,7 @@ describe('TelemetryEventRelay', () => {
 					success: false,
 					is_manual: true,
 					execution_mode: 'manual',
-					version_cli: N8N_VERSION,
+					version_cli: GLOW_VERSION,
 					error_message: 'Error message',
 					error_node_type: 'n8n-nodes-base.jira',
 					node_graph_string: JSON.stringify(nodeGraph.nodeGraph),

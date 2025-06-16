@@ -57,7 +57,7 @@ export async function saveManualTriggerWorkflow() {
 	return await Container.get(WorkflowRepository).save(details);
 }
 
-export const MOCK_09990_N8N_VERSION = {
+export const MOCK_09990_GLOW_VERSION = {
 	name: '0.999.0',
 	nodes: [
 		{
@@ -79,7 +79,7 @@ export const MOCK_09990_N8N_VERSION = {
 	securityIssueFixVersion: null,
 };
 
-export const MOCK_01110_N8N_VERSION = {
+export const MOCK_01110_GLOW_VERSION = {
 	name: '0.111.0',
 	nodes: [],
 	createdAt: '2022-01-01T00:00:00.000Z',
@@ -111,20 +111,20 @@ export const MOCK_PACKAGE: InstalledPackages[] = [
 	},
 ];
 
-export function simulateOutdatedInstanceOnce(versionName = MOCK_01110_N8N_VERSION.name) {
+export function simulateOutdatedInstanceOnce(versionName = MOCK_01110_GLOW_VERSION.name) {
 	const baseUrl = Container.get(GlobalConfig).versionNotifications.endpoint + '/';
 
 	// @ts-expect-error readonly export
-	constants.N8N_VERSION = versionName;
+	constants.GLOW_VERSION = versionName;
 
-	nock(baseUrl).get(versionName).reply(200, [MOCK_01110_N8N_VERSION, MOCK_09990_N8N_VERSION]);
+	nock(baseUrl).get(versionName).reply(200, [MOCK_01110_GLOW_VERSION, MOCK_09990_GLOW_VERSION]);
 }
 
-export function simulateUpToDateInstance(versionName = MOCK_09990_N8N_VERSION.name) {
+export function simulateUpToDateInstance(versionName = MOCK_09990_GLOW_VERSION.name) {
 	const baseUrl = Container.get(GlobalConfig).versionNotifications.endpoint + '/';
 
 	// @ts-expect-error readonly export
-	constants.N8N_VERSION = versionName;
+	constants.GLOW_VERSION = versionName;
 
-	nock(baseUrl).persist().get(versionName).reply(200, [MOCK_09990_N8N_VERSION]);
+	nock(baseUrl).persist().get(versionName).reply(200, [MOCK_09990_GLOW_VERSION]);
 }

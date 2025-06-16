@@ -58,10 +58,10 @@ export class TaskRunnerProcess extends TypedEmitter<TaskRunnerProcessEventMap> {
 		'GENERIC_TIMEZONE',
 		'NODE_FUNCTION_ALLOW_BUILTIN',
 		'NODE_FUNCTION_ALLOW_EXTERNAL',
-		'N8N_SENTRY_DSN',
-		'N8N_RUNNERS_ALLOW_PROTOTYPE_MUTATION',
+		'GLOW_SENTRY_DSN',
+		'GLOW_RUNNERS_ALLOW_PROTOTYPE_MUTATION',
 		// Metadata about the environment
-		'N8N_VERSION',
+		'GLOW_VERSION',
 		'ENVIRONMENT',
 		'DEPLOYMENT_NAME',
 		'NODE_PATH',
@@ -168,12 +168,12 @@ export class TaskRunnerProcess extends TypedEmitter<TaskRunnerProcessEventMap> {
 
 	private getProcessEnvVars(grantToken: string, taskBrokerUri: string) {
 		const envVars: Record<string, string> = {
-			N8N_RUNNERS_GRANT_TOKEN: grantToken,
-			N8N_RUNNERS_TASK_BROKER_URI: taskBrokerUri,
-			N8N_RUNNERS_MAX_PAYLOAD: this.runnerConfig.maxPayload.toString(),
-			N8N_RUNNERS_MAX_CONCURRENCY: this.runnerConfig.maxConcurrency.toString(),
-			N8N_RUNNERS_TASK_TIMEOUT: this.runnerConfig.taskTimeout.toString(),
-			N8N_RUNNERS_HEARTBEAT_INTERVAL: this.runnerConfig.heartbeatInterval.toString(),
+			GLOW_RUNNERS_GRANT_TOKEN: grantToken,
+			GLOW_RUNNERS_TASK_BROKER_URI: taskBrokerUri,
+			GLOW_RUNNERS_MAX_PAYLOAD: this.runnerConfig.maxPayload.toString(),
+			GLOW_RUNNERS_MAX_CONCURRENCY: this.runnerConfig.maxConcurrency.toString(),
+			GLOW_RUNNERS_TASK_TIMEOUT: this.runnerConfig.taskTimeout.toString(),
+			GLOW_RUNNERS_HEARTBEAT_INTERVAL: this.runnerConfig.heartbeatInterval.toString(),
 			...this.getPassthroughEnvVars(),
 		};
 

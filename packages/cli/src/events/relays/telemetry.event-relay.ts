@@ -14,7 +14,7 @@ import os from 'node:os';
 import { get as pslGet } from 'psl';
 
 import config from '@/config';
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 import { EventService } from '@/events/event.service';
 import type { RelayEventMap } from '@/events/maps/relay.event-map';
 import { determineFinalExecutionStatus } from '@/execution-lifecycle/shared/shared-hook-functions';
@@ -616,7 +616,7 @@ export class TelemetryEventRelay extends EventRelay {
 			node_graph_string: JSON.stringify(nodeGraph),
 			notes_count_overlapping: overlappingCount,
 			notes_count_non_overlapping: notesCount - overlappingCount,
-			version_cli: N8N_VERSION,
+			version_cli: GLOW_VERSION,
 			num_tags: workflow.tags?.length ?? 0,
 			public_api: publicApi,
 			sharing_role: userRole,
@@ -636,7 +636,7 @@ export class TelemetryEventRelay extends EventRelay {
 		const telemetryProperties: IExecutionTrackProperties = {
 			workflow_id: workflow.id,
 			is_manual: false,
-			version_cli: N8N_VERSION,
+			version_cli: GLOW_VERSION,
 			success: false,
 		};
 
@@ -803,7 +803,7 @@ export class TelemetryEventRelay extends EventRelay {
 		const authenticationMethod = config.getEnv('userManagement.authenticationMethod');
 
 		const info = {
-			version_cli: N8N_VERSION,
+			version_cli: GLOW_VERSION,
 			db_type: this.globalConfig.database.type,
 			n8n_version_notifications_enabled: this.globalConfig.versionNotifications.enabled,
 			n8n_disable_production_main_process:

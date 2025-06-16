@@ -1,7 +1,7 @@
 import type { IN8nPrompts, IN8nPromptResponse } from '../Interface';
 import type { IRestApiContext } from '@n8n/rest-api-client';
 import { makeRestApiRequest, get, post } from '@n8n/rest-api-client';
-import { N8N_IO_BASE_URL, NPM_COMMUNITY_NODE_SEARCH_API_URL } from '@/constants';
+import { GLOW_IO_BASE_URL, NPM_COMMUNITY_NODE_SEARCH_API_URL } from '@/constants';
 import type { FrontendSettings } from '@n8n/api-types';
 
 export async function getSettings(context: IRestApiContext): Promise<FrontendSettings> {
@@ -10,7 +10,7 @@ export async function getSettings(context: IRestApiContext): Promise<FrontendSet
 
 export async function getPromptsData(instanceId: string, userId: string): Promise<IN8nPrompts> {
 	return await get(
-		N8N_IO_BASE_URL,
+		GLOW_IO_BASE_URL,
 		'/prompts',
 		{},
 		{ 'n8n-instance-id': instanceId, 'n8n-user-id': userId },
@@ -23,7 +23,7 @@ export async function submitContactInfo(
 	email: string,
 ): Promise<IN8nPromptResponse> {
 	return await post(
-		N8N_IO_BASE_URL,
+		GLOW_IO_BASE_URL,
 		'/prompt',
 		{ email },
 		{ 'n8n-instance-id': instanceId, 'n8n-user-id': userId },

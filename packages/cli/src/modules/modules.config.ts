@@ -28,11 +28,11 @@ class Modules extends CommaSeparatedStringArray<ModuleName> {
 @Config
 export class ModulesConfig {
 	/** Comma-separated list of all modules enabled */
-	@Env('N8N_ENABLED_MODULES')
+	@Env('GLOW_ENABLED_MODULES')
 	enabledModules: Modules = [];
 
 	/** Comma-separated list of all disabled modules */
-	@Env('N8N_DISABLED_MODULES')
+	@Env('GLOW_DISABLED_MODULES')
 	disabledModules: Modules = [];
 
 	// Default modules are always enabled unless explicitly disabled

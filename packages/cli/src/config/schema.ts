@@ -15,13 +15,13 @@ export const schema = {
 				doc: "Max production executions allowed to run concurrently, in main process for regular mode and in worker for queue mode. Default for main mode is `-1` (disabled). Default for queue mode is taken from the worker's `--concurrency` flag.",
 				format: Number,
 				default: -1,
-				env: 'N8N_CONCURRENCY_PRODUCTION_LIMIT',
+				env: 'GLOW_CONCURRENCY_PRODUCTION_LIMIT',
 			},
 			evaluationLimit: {
 				doc: 'Max evaluation executions allowed to run concurrently.',
 				format: Number,
 				default: -1,
-				env: 'N8N_CONCURRENCY_EVALUATION_LIMIT',
+				env: 'GLOW_CONCURRENCY_EVALUATION_LIMIT',
 			},
 		},
 
@@ -91,13 +91,13 @@ export const schema = {
 				doc: 'How often (minutes) to check for queue recovery',
 				format: Number,
 				default: 180,
-				env: 'N8N_EXECUTIONS_QUEUE_RECOVERY_INTERVAL',
+				env: 'GLOW_EXECUTIONS_QUEUE_RECOVERY_INTERVAL',
 			},
 			batchSize: {
 				doc: 'Size of batch of executions to check for queue recovery',
 				format: Number,
 				default: 100,
-				env: 'N8N_EXECUTIONS_QUEUE_RECOVERY_BATCH',
+				env: 'GLOW_EXECUTIONS_QUEUE_RECOVERY_BATCH',
 			},
 		},
 	},
@@ -105,19 +105,19 @@ export const schema = {
 	ssl_key: {
 		format: String,
 		default: '',
-		env: 'N8N_SSL_KEY',
+		env: 'GLOW_SSL_KEY',
 		doc: 'SSL Key for HTTPS Protocol',
 	},
 	ssl_cert: {
 		format: String,
 		default: '',
-		env: 'N8N_SSL_CERT',
+		env: 'GLOW_SSL_CERT',
 		doc: 'SSL Cert for HTTPS Protocol',
 	},
 	editorBaseUrl: {
 		format: String,
 		default: '',
-		env: 'N8N_EDITOR_BASE_URL',
+		env: 'GLOW_EDITOR_BASE_URL',
 		doc: 'Public URL where the editor is accessible. Also used for emails sent from n8n.',
 	},
 
@@ -126,19 +126,19 @@ export const schema = {
 			doc: 'Set a specific JWT secret (optional - n8n can generate one)', // Generated @ start.ts
 			format: String,
 			default: '',
-			env: 'N8N_USER_MANAGEMENT_JWT_SECRET',
+			env: 'GLOW_USER_MANAGEMENT_JWT_SECRET',
 		},
 		jwtSessionDurationHours: {
 			doc: 'Set a specific expiration date for the JWTs in hours.',
 			format: Number,
 			default: 168,
-			env: 'N8N_USER_MANAGEMENT_JWT_DURATION_HOURS',
+			env: 'GLOW_USER_MANAGEMENT_JWT_DURATION_HOURS',
 		},
 		jwtRefreshTimeoutHours: {
-			doc: 'How long before the JWT expires to automatically refresh it. 0 means 25% of N8N_USER_MANAGEMENT_JWT_DURATION_HOURS. -1 means it will never refresh, which forces users to login again after the defined period in N8N_USER_MANAGEMENT_JWT_DURATION_HOURS.',
+			doc: 'How long before the JWT expires to automatically refresh it. 0 means 25% of GLOW_USER_MANAGEMENT_JWT_DURATION_HOURS. -1 means it will never refresh, which forces users to login again after the defined period in GLOW_USER_MANAGEMENT_JWT_DURATION_HOURS.',
 			format: Number,
 			default: 0,
-			env: 'N8N_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS',
+			env: 'GLOW_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS',
 		},
 
 		/**
@@ -169,7 +169,7 @@ export const schema = {
 		type: {
 			format: String,
 			default: 'default',
-			env: 'N8N_DEPLOYMENT_TYPE',
+			env: 'GLOW_DEPLOYMENT_TYPE',
 		},
 	},
 
@@ -178,7 +178,7 @@ export const schema = {
 			format: Boolean,
 			default: true,
 			doc: 'Whether to enable MFA feature in instance.',
-			env: 'N8N_MFA_ENABLED',
+			env: 'GLOW_MFA_ENABLED',
 		},
 	},
 
@@ -221,7 +221,7 @@ export const schema = {
 			doc: 'Whether hiring banner in browser console is enabled.',
 			format: Boolean,
 			default: true,
-			env: 'N8N_HIRING_BANNER_ENABLED',
+			env: 'GLOW_HIRING_BANNER_ENABLED',
 		},
 	},
 
@@ -230,7 +230,7 @@ export const schema = {
 			doc: 'Whether personalization is enabled.',
 			format: Boolean,
 			default: true,
-			env: 'N8N_PERSONALIZATION_ENABLED',
+			env: 'GLOW_PERSONALIZATION_ENABLED',
 		},
 	},
 
@@ -238,13 +238,13 @@ export const schema = {
 		doc: 'Default locale for the UI',
 		format: String,
 		default: 'en',
-		env: 'N8N_DEFAULT_LOCALE',
+		env: 'GLOW_DEFAULT_LOCALE',
 	},
 
 	hideUsagePage: {
 		format: Boolean,
 		default: false,
-		env: 'N8N_HIDE_USAGE_PAGE',
+		env: 'GLOW_HIDE_USAGE_PAGE',
 		doc: 'Hide or show the usage page',
 	},
 
@@ -253,7 +253,7 @@ export const schema = {
 			doc: 'Prefix for all n8n related keys',
 			format: String,
 			default: 'n8n',
-			env: 'N8N_REDIS_KEY_PREFIX',
+			env: 'GLOW_REDIS_KEY_PREFIX',
 		},
 	},
 
@@ -275,14 +275,14 @@ export const schema = {
 			doc: 'Whether AI features are enabled',
 			format: Boolean,
 			default: false,
-			env: 'N8N_AI_ENABLED',
+			env: 'GLOW_AI_ENABLED',
 		},
 	},
 
 	proxy_hops: {
 		format: Number,
 		default: 0,
-		env: 'N8N_PROXY_HOPS',
+		env: 'GLOW_PROXY_HOPS',
 		doc: 'Number of reverse-proxies n8n is running behind',
 	},
 };

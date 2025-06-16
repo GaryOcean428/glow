@@ -28,7 +28,7 @@ describe('InstanceSettings', () => {
 		mockFs.statSync.mockReturnValue({ mode: 0o600 } as fs.Stats);
 
 		process.argv[2] = 'main';
-		process.env = { N8N_USER_FOLDER: userFolder };
+		process.env = { GLOW_USER_FOLDER: userFolder };
 	});
 
 	describe('If the settings file exists', () => {
@@ -52,12 +52,12 @@ describe('InstanceSettings', () => {
 
 		it('should throw if the env and file keys do not match', () => {
 			mockFs.readFileSync.mockReturnValue(JSON.stringify({ encryptionKey: 'key_1' }));
-			process.env.N8N_ENCRYPTION_KEY = 'key_2';
+			process.env.GLOW_ENCRYPTION_KEY = 'key_2';
 			expect(() => createInstanceSettings()).toThrowError();
 		});
 
 		it('should check if the settings file has the correct permissions', () => {
-			process.env.N8N_ENCRYPTION_KEY = 'test_key';
+			process.env.GLOW_ENCRYPTION_KEY = 'test_key';
 			mockFs.readFileSync.mockReturnValueOnce(JSON.stringify({ encryptionKey: 'test_key' }));
 			mockFs.statSync.mockReturnValueOnce({ mode: 0o600 } as fs.Stats);
 			const settings = createInstanceSettings();
@@ -76,16 +76,16 @@ describe('InstanceSettings', () => {
 			expect(mockFs.chmodSync).not.toHaveBeenCalled();
 		});
 
-		it("should not check the permissions if 'N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS' is false", () => {
-			process.env.N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS = 'false';
+		it("should not check the permissions if 'GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS' is false", () => {
+			process.env.GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS = 'false';
 			mockFs.readFileSync.mockReturnValueOnce(JSON.stringify({ encryptionKey: 'test_key' }));
 			createInstanceSettings();
 			expect(mockFs.statSync).not.toHaveBeenCalled();
 			expect(mockFs.chmodSync).not.toHaveBeenCalled();
 		});
 
-		it("should fix the permissions of the settings file if 'N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS' is true", () => {
-			process.env.N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS = 'true';
+		it("should fix the permissions of the settings file if 'GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS' is true", () => {
+			process.env.GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS = 'true';
 			mockFs.readFileSync.mockReturnValueOnce(JSON.stringify({ encryptionKey: 'test_key' }));
 			mockFs.statSync.mockReturnValueOnce({ mode: 0o644 } as fs.Stats);
 			createInstanceSettings({
@@ -103,8 +103,8 @@ describe('InstanceSettings', () => {
 			mockFs.writeFileSync.mockReturnValue();
 		});
 
-		it('should create a new settings file without explicit permissions if N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS is not set', () => {
-			process.env.N8N_ENCRYPTION_KEY = 'key_2';
+		it('should create a new settings file without explicit permissions if GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS is not set', () => {
+			process.env.GLOW_ENCRYPTION_KEY = 'key_2';
 			const settings = createInstanceSettings();
 			expect(settings.encryptionKey).not.toEqual('test_key');
 			expect(mockFs.mkdirSync).toHaveBeenCalledWith('/test/.n8n', { recursive: true });
@@ -118,9 +118,9 @@ describe('InstanceSettings', () => {
 			);
 		});
 
-		it('should create a new settings file without explicit permissions if N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false', () => {
-			process.env.N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS = 'false';
-			process.env.N8N_ENCRYPTION_KEY = 'key_2';
+		it('should create a new settings file without explicit permissions if GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS=false', () => {
+			process.env.GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS = 'false';
+			process.env.GLOW_ENCRYPTION_KEY = 'key_2';
 			const settings = createInstanceSettings();
 			expect(settings.encryptionKey).not.toEqual('test_key');
 			expect(mockFs.mkdirSync).toHaveBeenCalledWith('/test/.n8n', { recursive: true });
@@ -134,9 +134,9 @@ describe('InstanceSettings', () => {
 			);
 		});
 
-		it('should create a new settings file with explicit permissions if N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true', () => {
-			process.env.N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS = 'true';
-			process.env.N8N_ENCRYPTION_KEY = 'key_2';
+		it('should create a new settings file with explicit permissions if GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS=true', () => {
+			process.env.GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS = 'true';
+			process.env.GLOW_ENCRYPTION_KEY = 'key_2';
 			const settings = createInstanceSettings({
 				enforceSettingsFilePermissions: true,
 			});
@@ -152,8 +152,8 @@ describe('InstanceSettings', () => {
 			);
 		});
 
-		it('should pick up the encryption key from env var N8N_ENCRYPTION_KEY', () => {
-			process.env.N8N_ENCRYPTION_KEY = 'env_key';
+		it('should pick up the encryption key from env var GLOW_ENCRYPTION_KEY', () => {
+			process.env.GLOW_ENCRYPTION_KEY = 'env_key';
 			const settings = createInstanceSettings();
 			expect(settings.encryptionKey).toEqual('env_key');
 			expect(settings.instanceId).toEqual(
@@ -171,9 +171,9 @@ describe('InstanceSettings', () => {
 			);
 		});
 
-		it("should not set the permissions of the settings file if 'N8N_IGNORE_SETTINGS_FILE_PERMISSIONS' is true", () => {
-			process.env.N8N_ENCRYPTION_KEY = 'key_2';
-			process.env.N8N_IGNORE_SETTINGS_FILE_PERMISSIONS = 'true';
+		it("should not set the permissions of the settings file if 'GLOW_IGNORE_SETTINGS_FILE_PERMISSIONS' is true", () => {
+			process.env.GLOW_ENCRYPTION_KEY = 'key_2';
+			process.env.GLOW_IGNORE_SETTINGS_FILE_PERMISSIONS = 'true';
 			const settings = createInstanceSettings();
 			expect(settings.encryptionKey).not.toEqual('test_key');
 			expect(mockFs.mkdirSync).toHaveBeenCalledWith('/test/.n8n', { recursive: true });
@@ -196,7 +196,7 @@ describe('InstanceSettings', () => {
 	describe('constructor', () => {
 		it('should generate a `hostId`', () => {
 			const encryptionKey = 'test_key';
-			process.env.N8N_ENCRYPTION_KEY = encryptionKey;
+			process.env.GLOW_ENCRYPTION_KEY = encryptionKey;
 			mockFs.existsSync.mockReturnValueOnce(true);
 			mockFs.readFileSync.mockReturnValueOnce(JSON.stringify({ encryptionKey }));
 

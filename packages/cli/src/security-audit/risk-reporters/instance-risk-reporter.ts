@@ -7,7 +7,7 @@ import { InstanceSettings } from 'n8n-core';
 import type { IWorkflowBase } from 'n8n-workflow';
 
 import config from '@/config';
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 import { isApiEnabled } from '@/public-api';
 import {
 	ENV_VARS_DOCS_URL,
@@ -176,7 +176,7 @@ export class InstanceRiskReporter implements RiskReporter {
 	private async getOutdatedState() {
 		let versions = [];
 
-		const localVersion = N8N_VERSION;
+		const localVersion = GLOW_VERSION;
 
 		try {
 			versions = await this.getNextVersions(localVersion).then((v) => this.removeIconData(v));

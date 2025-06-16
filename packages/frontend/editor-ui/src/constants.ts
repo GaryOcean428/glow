@@ -96,7 +96,7 @@ export const BREAKPOINT_MD = 992;
 export const BREAKPOINT_LG = 1200;
 export const BREAKPOINT_XL = 1920;
 
-export const N8N_IO_BASE_URL = 'https://api.n8n.io/api/';
+export const GLOW_IO_BASE_URL = 'https://api.n8n.io/api/';
 export const DOCS_DOMAIN = 'docs.n8n.io';
 export const BUILTIN_NODES_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/builtin/`;
 export const BUILTIN_CREDENTIALS_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/builtin/credentials/`;
@@ -108,14 +108,14 @@ export const NPM_COMMUNITY_NODE_SEARCH_API_URL = 'https://api.npms.io/v2/';
 export const NPM_PACKAGE_DOCS_BASE_URL = 'https://www.npmjs.com/package/';
 export const NPM_KEYWORD_SEARCH_URL =
 	'https://www.npmjs.com/search?q=keywords%3An8n-community-node-package';
-export const N8N_QUEUE_MODE_DOCS_URL = `https://${DOCS_DOMAIN}/hosting/scaling/queue-mode/`;
+export const GLOW_QUEUE_MODE_DOCS_URL = `https://${DOCS_DOMAIN}/hosting/scaling/queue-mode/`;
 export const COMMUNITY_NODES_INSTALLATION_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/community-nodes/installation/gui-install/`;
 export const COMMUNITY_NODES_RISKS_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/community-nodes/risks/`;
 export const COMMUNITY_NODES_BLOCKLIST_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/community-nodes/blocklist/`;
 export const CUSTOM_NODES_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/creating-nodes/code/create-n8n-nodes-module/`;
 export const EXPRESSIONS_DOCS_URL = `https://${DOCS_DOMAIN}/code-examples/expressions/`;
-export const N8N_PRICING_PAGE_URL = 'https://n8n.io/pricing';
-export const N8N_MAIN_GITHUB_REPO_URL = 'https://github.com/n8n-io/n8n';
+export const GLOW_PRICING_PAGE_URL = 'https://n8n.io/pricing';
+export const GLOW_MAIN_GITHUB_REPO_URL = 'https://github.com/n8n-io/n8n';
 
 export const NODE_INSERT_SPACER_BETWEEN_INPUT_GROUPS = false;
 export const NODE_MIN_INPUT_ITEMS_COUNT = 4;
@@ -163,7 +163,7 @@ export const OPEN_AI_ASSISTANT_NODE_TYPE = '@n8n/n8n-nodes-langchain.openAiAssis
 export const BASIC_CHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.chainLlm';
 export const QA_CHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.chainRetrievalQa';
 export const MICROSOFT_TEAMS_NODE_TYPE = 'n8n-nodes-base.microsoftTeams';
-export const N8N_NODE_TYPE = 'n8n-nodes-base.n8n';
+export const GLOW_NODE_TYPE = 'n8n-nodes-base.n8n';
 export const NO_OP_NODE_TYPE = 'n8n-nodes-base.noOp';
 export const STICKY_NODE_TYPE = 'n8n-nodes-base.stickyNote';
 export const NOTION_TRIGGER_NODE_TYPE = 'n8n-nodes-base.notionTrigger';
@@ -470,25 +470,25 @@ export const FOLDER_NAME_MAX_LENGTH = 100;
 export const VALID_EMAIL_REGEX =
 	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 export const VALID_WORKFLOW_IMPORT_URL_REGEX = /^http[s]?:\/\/.*\.json$/i;
-export const LOCAL_STORAGE_ACTIVATION_FLAG = 'N8N_HIDE_ACTIVATION_ALERT';
-export const LOCAL_STORAGE_PIN_DATA_DISCOVERY_NDV_FLAG = 'N8N_PIN_DATA_DISCOVERY_NDV';
-export const LOCAL_STORAGE_PIN_DATA_DISCOVERY_CANVAS_FLAG = 'N8N_PIN_DATA_DISCOVERY_CANVAS';
-export const LOCAL_STORAGE_MAPPING_IS_ONBOARDED = 'N8N_MAPPING_ONBOARDED';
-export const LOCAL_STORAGE_AUTOCOMPLETE_IS_ONBOARDED = 'N8N_AUTOCOMPLETE_ONBOARDED';
-export const LOCAL_STORAGE_TABLE_HOVER_IS_ONBOARDED = 'N8N_TABLE_HOVER_ONBOARDED';
-export const LOCAL_STORAGE_MAIN_PANEL_RELATIVE_WIDTH = 'N8N_MAIN_PANEL_RELATIVE_WIDTH';
-export const LOCAL_STORAGE_ACTIVE_MODAL = 'N8N_ACTIVE_MODAL';
-export const LOCAL_STORAGE_THEME = 'N8N_THEME';
-export const LOCAL_STORAGE_EXPERIMENT_OVERRIDES = 'N8N_EXPERIMENT_OVERRIDES';
-export const LOCAL_STORAGE_HIDE_GITHUB_STAR_BUTTON = 'N8N_HIDE_HIDE_GITHUB_STAR_BUTTON';
-export const LOCAL_STORAGE_NDV_INPUT_PANEL_DISPLAY_MODE = 'N8N_NDV_INPUT_PANEL_DISPLAY_MODE';
-export const LOCAL_STORAGE_NDV_OUTPUT_PANEL_DISPLAY_MODE = 'N8N_NDV_OUTPUT_PANEL_DISPLAY_MODE';
-export const LOCAL_STORAGE_LOGS_PANEL_OPEN = 'N8N_LOGS_PANEL_OPEN';
-export const LOCAL_STORAGE_LOGS_SYNC_SELECTION = 'N8N_LOGS_SYNC_SELECTION';
-export const LOCAL_STORAGE_LOGS_PANEL_DETAILS_PANEL = 'N8N_LOGS_DETAILS_PANEL';
-export const LOCAL_STORAGE_WORKFLOW_LIST_PREFERENCES_KEY = 'N8N_WORKFLOWS_LIST_PREFERENCES';
+export const LOCAL_STORAGE_ACTIVATION_FLAG = 'GLOW_HIDE_ACTIVATION_ALERT';
+export const LOCAL_STORAGE_PIN_DATA_DISCOVERY_NDV_FLAG = 'GLOW_PIN_DATA_DISCOVERY_NDV';
+export const LOCAL_STORAGE_PIN_DATA_DISCOVERY_CANVAS_FLAG = 'GLOW_PIN_DATA_DISCOVERY_CANVAS';
+export const LOCAL_STORAGE_MAPPING_IS_ONBOARDED = 'GLOW_MAPPING_ONBOARDED';
+export const LOCAL_STORAGE_AUTOCOMPLETE_IS_ONBOARDED = 'GLOW_AUTOCOMPLETE_ONBOARDED';
+export const LOCAL_STORAGE_TABLE_HOVER_IS_ONBOARDED = 'GLOW_TABLE_HOVER_ONBOARDED';
+export const LOCAL_STORAGE_MAIN_PANEL_RELATIVE_WIDTH = 'GLOW_MAIN_PANEL_RELATIVE_WIDTH';
+export const LOCAL_STORAGE_ACTIVE_MODAL = 'GLOW_ACTIVE_MODAL';
+export const LOCAL_STORAGE_THEME = 'GLOW_THEME';
+export const LOCAL_STORAGE_EXPERIMENT_OVERRIDES = 'GLOW_EXPERIMENT_OVERRIDES';
+export const LOCAL_STORAGE_HIDE_GITHUB_STAR_BUTTON = 'GLOW_HIDE_HIDE_GITHUB_STAR_BUTTON';
+export const LOCAL_STORAGE_NDV_INPUT_PANEL_DISPLAY_MODE = 'GLOW_NDV_INPUT_PANEL_DISPLAY_MODE';
+export const LOCAL_STORAGE_NDV_OUTPUT_PANEL_DISPLAY_MODE = 'GLOW_NDV_OUTPUT_PANEL_DISPLAY_MODE';
+export const LOCAL_STORAGE_LOGS_PANEL_OPEN = 'GLOW_LOGS_PANEL_OPEN';
+export const LOCAL_STORAGE_LOGS_SYNC_SELECTION = 'GLOW_LOGS_SYNC_SELECTION';
+export const LOCAL_STORAGE_LOGS_PANEL_DETAILS_PANEL = 'GLOW_LOGS_DETAILS_PANEL';
+export const LOCAL_STORAGE_WORKFLOW_LIST_PREFERENCES_KEY = 'GLOW_WORKFLOWS_LIST_PREFERENCES';
 export const LOCAL_STORAGE_EXPERIMENTAL_MIN_ZOOM_NODE_SETTINGS_IN_CANVAS =
-	'N8N_EXPERIMENTAL_MIN_ZOOM_NODE_SETTINGS_IN_CANVAS';
+	'GLOW_EXPERIMENTAL_MIN_ZOOM_NODE_SETTINGS_IN_CANVAS';
 export const BASE_NODE_SURVEY_URL = 'https://n8n-community.typeform.com/to/BvmzxqYv#nodename=';
 export const COMMUNITY_PLUS_DOCS_URL =
 	'https://docs.n8n.io/hosting/community-edition-features/#registered-community-edition';
@@ -699,9 +699,9 @@ export const enum SignInType {
 	EMAIL = 'email',
 }
 
-export const N8N_SALES_EMAIL = 'sales@n8n.io';
+export const GLOW_SALES_EMAIL = 'sales@n8n.io';
 
-export const N8N_CONTACT_EMAIL = 'contact@n8n.io';
+export const GLOW_CONTACT_EMAIL = 'contact@n8n.io';
 
 export const EXPRESSION_EDITOR_PARSER_TIMEOUT = 15_000; // ms
 
@@ -898,7 +898,7 @@ export const INSECURE_CONNECTION_WARNING = `
 	<ul>
 		<li>Setup TLS/HTTPS (<strong>recommended</strong>), or</li>
 		<li>If you are running this locally, and not using Safari, try using <a href="http://localhost:5678">localhost</a> instead</li>
-		<li>If you prefer to disable this security feature (<strong>not recommended</strong>), set the environment variable <code>N8N_SECURE_COOKIE</code> to <code>false</code></li>
+		<li>If you prefer to disable this security feature (<strong>not recommended</strong>), set the environment variable <code>GLOW_SECURE_COOKIE</code> to <code>false</code></li>
 	</ul>
 </div>
 </body>`;

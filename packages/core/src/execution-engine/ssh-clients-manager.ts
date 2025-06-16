@@ -7,7 +7,7 @@ import { Client, type ConnectConfig } from 'ssh2';
 @Config
 class SSHClientsConfig {
 	/** How many seconds before an idle SSH tunnel is closed */
-	@Env('N8N_SSH_TUNNEL_IDLE_TIMEOUT')
+	@Env('GLOW_SSH_TUNNEL_IDLE_TIMEOUT')
 	idleTimeout: number = 5 * 60;
 }
 

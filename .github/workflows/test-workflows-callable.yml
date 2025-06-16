@@ -34,7 +34,7 @@ jobs:
     runs-on: blacksmith-2vcpu-ubuntu-2204
     timeout-minutes: 10
     env:
-      N8N_ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
+      GLOW_ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
 
     steps:
       - name: Checkout repository
@@ -78,7 +78,7 @@ jobs:
         env:
           SKIP_STATISTICS_EVENTS: "true"
           DB_SQLITE_POOL_SIZE: "4"
-          N8N_SENTRY_DSN: ${{ secrets.CI_SENTRY_DSN }}
+          GLOW_SENTRY_DSN: ${{ secrets.CI_SENTRY_DSN }}
 
       - name: Report test outcome
         if: always()

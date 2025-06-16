@@ -31,7 +31,7 @@
 			"skipFiles": ["<node_internals>/**"],
 			"type": "node",
 			"env": {
-				// "N8N_PORT": "5679",
+				// "GLOW_PORT": "5679",
 			},
 			"outputCapture": "std",
 			"killBehavior": "polite"

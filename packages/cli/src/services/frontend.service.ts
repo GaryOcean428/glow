@@ -11,7 +11,7 @@ import type { ICredentialType, INodeTypeBaseDescription } from 'n8n-workflow';
 import path from 'path';
 
 import config from '@/config';
-import { inE2ETests, N8N_VERSION } from '@/constants';
+import { inE2ETests, GLOW_VERSION } from '@/constants';
 import { CredentialTypes } from '@/credential-types';
 import { CredentialsOverwrites } from '@/credentials-overwrites';
 import { getLdapLoginLabel } from '@/ldap.ee/helpers.ee';
@@ -91,7 +91,7 @@ export class FrontendService {
 			inE2ETests,
 			isDocker: this.instanceSettings.isDocker,
 			databaseType: this.globalConfig.database.type,
-			previewMode: process.env.N8N_PREVIEW_MODE === 'true',
+			previewMode: process.env.GLOW_PREVIEW_MODE === 'true',
 			endpointForm: this.globalConfig.endpoints.form,
 			endpointFormTest: this.globalConfig.endpoints.formTest,
 			endpointFormWaiting: this.globalConfig.endpoints.formWaiting,
@@ -112,7 +112,7 @@ export class FrontendService {
 			urlBaseEditor: instanceBaseUrl,
 			binaryDataMode: this.binaryDataConfig.mode,
 			nodeJsVersion: process.version.replace(/^v/, ''),
-			versionCli: N8N_VERSION,
+			versionCli: GLOW_VERSION,
 			concurrency: config.getEnv('executions.concurrency.productionLimit'),
 			authCookie: {
 				secure: this.globalConfig.auth.cookie.secure,

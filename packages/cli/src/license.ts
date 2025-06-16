@@ -18,7 +18,7 @@ import { InstanceSettings } from 'n8n-core';
 import config from '@/config';
 import { LicenseMetricsService } from '@/metrics/license-metrics.service';
 
-import { N8N_VERSION, SETTINGS_LICENSE_CERT_KEY, Time } from './constants';
+import { GLOW_VERSION, SETTINGS_LICENSE_CERT_KEY, Time } from './constants';
 
 const LICENSE_RENEWAL_DISABLED_WARNING =
 	'Automatic license renewal is disabled. The license will not renew automatically, and access to licensed features may be lost!';
@@ -93,7 +93,7 @@ export class License implements LicenseProvider {
 			this.manager = new LicenseManager({
 				server,
 				tenantId: this.globalConfig.license.tenantId,
-				productIdentifier: `n8n-${N8N_VERSION}`,
+				productIdentifier: `n8n-${GLOW_VERSION}`,
 				autoRenewEnabled: shouldRenew,
 				renewOnInit: shouldRenew,
 				autoRenewOffset,

@@ -23,10 +23,10 @@ describe('DeprecationService', () => {
 		jest.resetAllMocks();
 	});
 
-	describe('N8N_PARTIAL_EXECUTION_VERSION_DEFAULT', () => {
+	describe('GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT', () => {
 		test('supports multiple warnings for the same environment variable', () => {
 			// ARRANGE
-			process.env.N8N_PARTIAL_EXECUTION_VERSION_DEFAULT = '1';
+			process.env.GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT = '1';
 			const dataCaptor = captor();
 
 			// ACT
@@ -37,8 +37,8 @@ describe('DeprecationService', () => {
 			expect(logger.warn).toHaveBeenCalledWith(dataCaptor);
 			expect(dataCaptor.value.split('\n')).toEqual(
 				expect.arrayContaining([
-					' - N8N_PARTIAL_EXECUTION_VERSION_DEFAULT -> Version 1 of partial executions is deprecated and will be removed as early as v1.85.0',
-					' - N8N_PARTIAL_EXECUTION_VERSION_DEFAULT -> This environment variable is internal and should not be set.',
+					' - GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT -> Version 1 of partial executions is deprecated and will be removed as early as v1.85.0',
+					' - GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT -> This environment variable is internal and should not be set.',
 				]),
 			);
 		});
@@ -75,14 +75,14 @@ describe('DeprecationService', () => {
 	};
 
 	test.each([
-		['N8N_BINARY_DATA_TTL', '1', true],
-		['N8N_PERSISTED_BINARY_DATA_TTL', '1', true],
+		['GLOW_BINARY_DATA_TTL', '1', true],
+		['GLOW_PERSISTED_BINARY_DATA_TTL', '1', true],
 		['EXECUTIONS_DATA_PRUNE_TIMEOUT', '1', true],
-		['N8N_CONFIG_FILES', '1', true],
-		['N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN', '1', true],
-		['N8N_PARTIAL_EXECUTION_VERSION_DEFAULT', '1', true],
-		['N8N_PARTIAL_EXECUTION_VERSION_DEFAULT', '2', true],
-		['N8N_PARTIAL_EXECUTION_VERSION_DEFAULT', undefined, false],
+		['GLOW_CONFIG_FILES', '1', true],
+		['GLOW_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN', '1', true],
+		['GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT', '1', true],
+		['GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT', '2', true],
+		['GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT', undefined, false],
 	])('should detect when %s is `%s`', (envVar, value, mustWarn) => {
 		toTest(envVar, value, mustWarn);
 	});
@@ -91,8 +91,8 @@ describe('DeprecationService', () => {
 		['default', true],
 		['filesystem', false],
 		['s3', false],
-	])('should handle N8N_BINARY_DATA_MODE as %s', (mode, mustWarn) => {
-		toTest('N8N_BINARY_DATA_MODE', mode, mustWarn);
+	])('should handle GLOW_BINARY_DATA_MODE as %s', (mode, mustWarn) => {
+		toTest('GLOW_BINARY_DATA_MODE', mode, mustWarn);
 	});
 
 	test.each([
@@ -104,8 +104,8 @@ describe('DeprecationService', () => {
 		toTest('DB_TYPE', dbType, mustWarn);
 	});
 
-	describe('N8N_RUNNERS_ENABLED', () => {
-		const envVar = 'N8N_RUNNERS_ENABLED';
+	describe('GLOW_RUNNERS_ENABLED', () => {
+		const envVar = 'GLOW_RUNNERS_ENABLED';
 
 		test.each([
 			['false', true],
@@ -135,7 +135,7 @@ describe('DeprecationService', () => {
 		const envVar = 'OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS';
 
 		beforeEach(() => {
-			process.env = { N8N_RUNNERS_ENABLED: 'true' };
+			process.env = { GLOW_RUNNERS_ENABLED: 'true' };
 
 			jest.spyOn(config, 'getEnv').mockImplementation((key) => {
 				if (key === 'executions.mode') return 'queue';

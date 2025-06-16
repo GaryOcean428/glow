@@ -72,13 +72,13 @@ describe('TaskRunnerProcess', () => {
 			'PATH',
 			'NODE_FUNCTION_ALLOW_BUILTIN',
 			'NODE_FUNCTION_ALLOW_EXTERNAL',
-			'N8N_SENTRY_DSN',
-			'N8N_VERSION',
+			'GLOW_SENTRY_DSN',
+			'GLOW_VERSION',
 			'ENVIRONMENT',
 			'DEPLOYMENT_NAME',
 			'NODE_PATH',
 			'GENERIC_TIMEZONE',
-			'N8N_RUNNERS_ALLOW_PROTOTYPE_MUTATION',
+			'GLOW_RUNNERS_ALLOW_PROTOTYPE_MUTATION',
 		])('should propagate %s from env as is', async (envVar) => {
 			jest.spyOn(authService, 'createGrantToken').mockResolvedValue('grantToken');
 			process.env[envVar] = 'custom value';
@@ -120,7 +120,7 @@ describe('TaskRunnerProcess', () => {
 			expect(options.env).not.toHaveProperty('NODE_OPTIONS');
 		});
 
-		it('should pass N8N_RUNNERS_TASK_TIMEOUT if set', async () => {
+		it('should pass GLOW_RUNNERS_TASK_TIMEOUT if set', async () => {
 			jest.spyOn(authService, 'createGrantToken').mockResolvedValue('grantToken');
 			runnerConfig.taskTimeout = 123;
 
@@ -130,12 +130,12 @@ describe('TaskRunnerProcess', () => {
 			const options = spawnMock.mock.calls[0][2] as SpawnOptions;
 			expect(options.env).toEqual(
 				expect.objectContaining({
-					N8N_RUNNERS_TASK_TIMEOUT: '123',
+					GLOW_RUNNERS_TASK_TIMEOUT: '123',
 				}),
 			);
 		});
 
-		it('should pass N8N_RUNNERS_HEARTBEAT_INTERVAL if set', async () => {
+		it('should pass GLOW_RUNNERS_HEARTBEAT_INTERVAL if set', async () => {
 			jest.spyOn(authService, 'createGrantToken').mockResolvedValue('grantToken');
 			runnerConfig.heartbeatInterval = 456;
 
@@ -145,7 +145,7 @@ describe('TaskRunnerProcess', () => {
 			const options = spawnMock.mock.calls[0][2] as SpawnOptions;
 			expect(options.env).toEqual(
 				expect.objectContaining({
-					N8N_RUNNERS_HEARTBEAT_INTERVAL: '456',
+					GLOW_RUNNERS_HEARTBEAT_INTERVAL: '456',
 				}),
 			);
 		});

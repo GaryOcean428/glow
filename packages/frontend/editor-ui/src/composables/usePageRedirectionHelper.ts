@@ -4,7 +4,7 @@ import { useVersionsStore } from '@/stores/versions.store';
 import { useTelemetry } from './useTelemetry';
 import { useSettingsStore } from '@/stores/settings.store';
 import type { CloudUpdateLinkSourceType, UTMCampaign } from '@/Interface';
-import { N8N_PRICING_PAGE_URL } from '@/constants';
+import { GLOW_PRICING_PAGE_URL } from '@/constants';
 
 export function usePageRedirectionHelper() {
 	const usersStore = useUsersStore();
@@ -76,7 +76,7 @@ export function usePageRedirectionHelper() {
 	};
 
 	const generateUpgradeLink = async (source: string, utm_campaign: string) => {
-		let upgradeLink = N8N_PRICING_PAGE_URL;
+		let upgradeLink = GLOW_PRICING_PAGE_URL;
 
 		if (usersStore.isInstanceOwner && settingsStore.isCloudDeployment) {
 			upgradeLink = await cloudPlanStore.generateCloudDashboardAutoLoginLink({

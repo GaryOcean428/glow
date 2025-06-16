@@ -8,7 +8,7 @@ import { Service } from '@n8n/di';
 import { AiAssistantClient } from '@n8n_io/ai-assistant-sdk';
 import { assert, type IUser } from 'n8n-workflow';
 
-import { N8N_VERSION } from '../constants';
+import { GLOW_VERSION } from '../constants';
 import { License } from '../license';
 
 @Service()
@@ -35,7 +35,7 @@ export class AiService {
 		this.client = new AiAssistantClient({
 			licenseCert,
 			consumerId,
-			n8nVersion: N8N_VERSION,
+			n8nVersion: GLOW_VERSION,
 			baseUrl,
 			logLevel,
 		});
