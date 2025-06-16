@@ -171,7 +171,8 @@ export abstract class AbstractServer {
 
 		const { port, listen_address: address } = Container.get(GlobalConfig);
 
-  // Move these logs after server.listen() is called
+		// Setup health check routes before server starts listening
+		await this.setupHealthCheck();
 
 		this.server.on('error', (error: Error & { code: string }) => {
 			if (error.code === 'EADDRINUSE') {
@@ -185,8 +186,6 @@ export abstract class AbstractServer {
 		await new Promise<void>((resolve) => this.server.listen(port, address, () => resolve()));
 
 		this.externalHooks = Container.get(ExternalHooks);
-
-		await this.setupHealthCheck();
 
 		this.logger.info(`n8n ready on ${address}, port ${port}`);
 	}
