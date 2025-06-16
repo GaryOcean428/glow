@@ -15,7 +15,6 @@ import { plannerChain } from './chains/planner';
 import { validatorChain } from './chains/validator';
 import { ILicenseService } from './interfaces';
 import { anthropicClaude37Sonnet, gpt41mini } from './llm-config';
-import { PromptAuditor } from './security/prompt-auditor';
 import type { MessageResponse } from './types';
 import { WorkflowState } from './workflow-state';
 
@@ -29,8 +28,6 @@ export class AiWorkflowBuilderService {
 
 	private client: AiAssistantClient | undefined;
 
-	private promptAuditor: PromptAuditor;
-
 	constructor(
 		private readonly licenseService: ILicenseService,
 		private readonly nodeTypes: INodeTypes,
@@ -38,7 +35,6 @@ export class AiWorkflowBuilderService {
 		private readonly n8nVersion: string,
 	) {
 		this.parsedNodeTypes = this.getNodeTypes();
-		this.promptAuditor = new PromptAuditor();
 	}
 
 	private async setupModels(user: IUser) {
@@ -49,86 +45,45 @@ export class AiWorkflowBuilderService {
 		const baseUrl = this.globalConfig.aiAssistant.baseUrl;
 		// If base URL is set, use api-proxy to access LLMs
 		if (baseUrl) {
-			try {
-				if (!this.client) {
-					const licenseCert = await this.licenseService.loadCertStr();
-					const consumerId = this.licenseService.getConsumerId();
+			if (!this.client) {
+				const licenseCert = await this.licenseService.loadCertStr();
+				const consumerId = this.licenseService.getConsumerId();
 
-					this.client = new AiAssistantClient({
-						licenseCert,
-						consumerId,
-						baseUrl,
-						n8nVersion: this.n8nVersion,
-					});
-				}
-
-				assert(this.client, 'Client not setup');
-
-				const authHeaders = await this.client.generateApiProxyCredentials(user);
-				this.llmSimpleTask = gpt41mini({
-					baseUrl: baseUrl + '/v1/api-proxy/openai',
-					// When using api-proxy the key will be populated automatically, we just need to pass a placeholder
-					apiKey: '-',
-					headers: {
-						Authorization: authHeaders.apiKey,
-					},
+				this.client = new AiAssistantClient({
+					licenseCert,
+					consumerId,
+					baseUrl,
+					n8nVersion: this.n8nVersion,
 				});
-				this.llmComplexTask = anthropicClaude37Sonnet({
-					baseUrl: baseUrl + '/v1/api-proxy/anthropic',
-					apiKey: '-',
-					headers: {
-						Authorization: authHeaders.apiKey,
-					},
-				});
-				return;
-			} catch (error) {
-				throw new OperationalError(
-					`Failed to setup AI assistant client: ${error instanceof Error ? error.message : 'Unknown error'}`
-				);
 			}
-		}
 
+			assert(this.client, 'Client not setup');
+
+			const authHeaders = await this.client.generateApiProxyCredentials(user);
+			this.llmSimpleTask = await gpt41mini({
+				baseUrl: baseUrl + '/v1/api-proxy/openai',
+				// When using api-proxy the key will be populated automatically, we just need to pass a placeholder
+				apiKey: '-',
+				headers: {
+					Authorization: authHeaders.apiKey,
+				},
+			});
+			this.llmComplexTask = await anthropicClaude37Sonnet({
+				baseUrl: baseUrl + '/v1/api-proxy/anthropic',
+				apiKey: '-',
+				headers: {
+					Authorization: authHeaders.apiKey,
+				},
+			});
+			return;
+		}
 		// If base URL is not set, use environment variables
-		const openaiApiKey = process.env.N8N_AI_OPENAI_API_KEY;
-		const anthropicApiKey = process.env.N8N_AI_ANTHROPIC_KEY;
-
-		// Validate that at least one API key is provided
-		if (!openaiApiKey && !anthropicApiKey) {
-			throw new OperationalError(
-				'No AI API keys configured. Please set N8N_AI_OPENAI_API_KEY or N8N_AI_ANTHROPIC_KEY environment variables, or configure aiAssistant.baseUrl for proxy access.'
-			);
-		}
-
-		// Validate API key format (basic validation)
-		if (openaiApiKey && !openaiApiKey.startsWith('sk-')) {
-			throw new OperationalError('Invalid OpenAI API key format. Key should start with "sk-"');
-		}
-
-		if (anthropicApiKey && !anthropicApiKey.startsWith('sk-ant-')) {
-			throw new OperationalError('Invalid Anthropic API key format. Key should start with "sk-ant-"');
-		}
-
-		// Setup models with available keys, fallback to the same model if only one key is available
-		if (openaiApiKey) {
-			this.llmSimpleTask = gpt41mini({
-				apiKey: openaiApiKey,
-			});
-			// Use OpenAI for complex tasks if Anthropic key is not available
-			this.llmComplexTask = anthropicApiKey ? anthropicClaude37Sonnet({
-				apiKey: anthropicApiKey,
-			}) : gpt41mini({
-				apiKey: openaiApiKey,
-			});
-		} else if (anthropicApiKey) {
-			// Use Anthropic for both if only Anthropic key is available
-			this.llmSimpleTask = anthropicClaude37Sonnet({
-				apiKey: anthropicApiKey,
-			});
-			this.llmComplexTask = anthropicClaude37Sonnet({
-				apiKey: anthropicApiKey,
-			});
-		}
-	}
+		this.llmSimpleTask = await gpt41mini({
+			apiKey: process.env.N8N_AI_OPENAI_API_KEY ?? '',
+		});
+		this.llmComplexTask = await anthropicClaude37Sonnet({
+			apiKey: process.env.N8N_AI_ANTHROPIC_KEY ?? '',
+		});
 	}
 
 	private getNodeTypes(): INodeTypeDescription[] {
@@ -399,26 +354,11 @@ export class AiWorkflowBuilderService {
 			await this.setupModels(user);
 		}
 
-		// Audit and sanitize the user's question for security
-		const auditResult = this.promptAuditor.auditAndSanitizePrompt(payload.question);
-		
-		if (auditResult.warnings.length > 0) {
-			// Yield security warning message
-			yield {
-				messages: [{
-					role: 'assistant',
-					type: 'security-warning',
-					text: 'Some potentially unsafe content was detected and sanitized in your prompt.',
-					warnings: auditResult.warnings,
-				}],
-			};
-		}
-
 		const agent = this.getAgent().compile();
 
 		const initialState: typeof WorkflowState.State = {
 			messages: [],
-			prompt: auditResult.sanitized, // Use sanitized prompt
+			prompt: payload.question,
 			steps: [],
 			nodes: [],
 			workflowJSON: { nodes: [], connections: {} },
@@ -437,29 +377,6 @@ export class AiWorkflowBuilderService {
 			if (chunk.event === 'on_custom_event') {
 				if (this.isWorkflowEvent(chunk.name)) {
 					messageChunk = chunk.data as MessageResponse;
-					
-					// Audit generated workflow JSON for security if it's the final result
-					if (chunk.name === 'generated_workflow_json' && messageChunk.type === 'workflow-generated') {
-						try {
-							const workflowJson = JSON.parse(messageChunk.codeSnippet || '{}');
-							const securityAudit = this.promptAuditor.auditWorkflowJson(workflowJson);
-							
-							if (!securityAudit.isSecure) {
-								// Yield security warning for workflow
-								yield {
-									messages: [{
-										role: 'assistant',
-										type: 'security-warning',
-										text: 'Security issues detected in generated workflow. Please review before use.',
-										warnings: securityAudit.warnings,
-									}],
-								};
-							}
-						} catch (error) {
-							// If JSON parsing fails, log but don't block
-							console.warn('Failed to parse workflow JSON for security audit:', error);
-						}
-					}
 				} else {
 					messageChunk = {
 						role: 'assistant',
