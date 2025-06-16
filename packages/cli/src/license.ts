@@ -213,6 +213,10 @@ export class License implements LicenseProvider {
 	}
 
 	isLicensed(feature: BooleanLicenseFeature) {
+		// Check if all features are enabled via environment variable
+		if (this.globalConfig.license.enableAllFeatures) {
+			return true;
+		}
 		return this.manager?.hasFeatureEnabled(feature) ?? false;
 	}
 

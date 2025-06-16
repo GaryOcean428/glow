@@ -95,6 +95,13 @@ export interface PromptValidationMessage {
 	id: string;
 }
 
+export interface SecurityWarningMessage {
+	role: 'assistant';
+	type: 'security-warning';
+	text: string;
+	warnings: string[];
+}
+
 export type MessageResponse =
 	| ((
 			| AssistantChatMessage
@@ -107,6 +114,7 @@ export type MessageResponse =
 			| WorkflowComposedMessage
 			| WorkflowConnectionsMessage
 			| PromptValidationMessage
+			| SecurityWarningMessage
 	  ) & {
 			quickReplies?: QuickReplyOption[];
 	  })
