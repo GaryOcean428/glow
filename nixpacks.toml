@@ -1,2 +1,2 @@
 [start]
-cmd = "PATH=$PATH:./packages/cli/bin n8n start"
+cmd = "n8n start"
