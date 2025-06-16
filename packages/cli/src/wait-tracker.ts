@@ -1,9 +1,9 @@
-import { Logger } from '@n8n/backend-common';
-import { ExecutionRepository } from '@n8n/db';
-import { OnLeaderStepdown, OnLeaderTakeover } from '@n8n/decorators';
-import { Service } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
-import { UnexpectedError, type IWorkflowExecutionDataProcess } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { ExecutionRepository } from '@glow/db';
+import { OnLeaderStepdown, OnLeaderTakeover } from '@glow/decorators';
+import { Service } from '@glow/di';
+import { InstanceSettings } from 'glow-core';
+import { UnexpectedError, type IWorkflowExecutionDataProcess } from 'glow-workflow';
 
 import { ActiveExecutions } from '@/active-executions';
 import { OwnershipService } from '@/services/ownership.service';

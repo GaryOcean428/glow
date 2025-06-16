@@ -1,5 +1,5 @@
-import { Logger } from '@n8n/backend-common';
-import { TaskRunnersConfig } from '@n8n/config';
+import { Logger } from '@glow/backend-common';
+import { TaskRunnersConfig } from '@glow/config';
 import { mock } from 'jest-mock-extended';
 import type { ChildProcess, SpawnOptions } from 'node:child_process';
 
@@ -158,7 +158,7 @@ describe('TaskRunnerProcess', () => {
 			expect(spawnMock.mock.calls[0].at(1)).toEqual([
 				'--disallow-code-generation-from-strings',
 				'--disable-proto=delete',
-				expect.stringContaining('/packages/@n8n/task-runner/dist/start.js'),
+				expect.stringContaining('/packages/@glow/task-runner/dist/start.js'),
 			]);
 		});
 	});

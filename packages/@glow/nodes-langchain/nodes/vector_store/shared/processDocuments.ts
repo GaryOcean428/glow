@@ -1,5 +1,5 @@
 import type { Document } from '@langchain/core/documents';
-import type { INodeExecutionData } from 'n8n-workflow';
+import type { INodeExecutionData } from 'glow-workflow';
 
 import { N8nBinaryLoader } from '@utils/N8nBinaryLoader';
 import { N8nJsonLoader } from '@utils/N8nJsonLoader';

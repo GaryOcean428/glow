@@ -1,5 +1,5 @@
-import type { ApiKeyScope } from '@n8n/permissions';
-import { Column, Entity, Index, ManyToOne, Unique } from '@n8n/typeorm';
+import type { ApiKeyScope } from '@glow/permissions';
+import { Column, Entity, Index, ManyToOne, Unique } from '@glow/typeorm';
 
 import { JsonColumn, WithTimestampsAndStringId } from './abstract-entity';
 import { User } from './user';

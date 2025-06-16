@@ -3,7 +3,7 @@
 import type { VNode, ComponentPublicInstance } from 'vue';
 import type { PartialDeep } from 'type-fest';
 import type { ExternalHooks } from '@/types/externalHooks';
-import type { FrontendSettings } from '@n8n/api-types';
+import type { FrontendSettings } from '@glow/api-types';
 
 export {};
 

@@ -1,4 +1,4 @@
-import type { AllRolesMap } from '@n8n/permissions';
+import type { AllRolesMap } from '@glow/permissions';
 
 import type { IRestApiContext } from '../types';
 import { makeRestApiRequest } from '../utils';

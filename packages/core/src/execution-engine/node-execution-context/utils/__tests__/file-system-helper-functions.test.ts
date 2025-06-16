@@ -1,5 +1,5 @@
-import { Container } from '@n8n/di';
-import type { INode } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import type { INode } from 'glow-workflow';
 import { createReadStream } from 'node:fs';
 import { access as fsAccess } from 'node:fs/promises';
 import { join } from 'node:path';

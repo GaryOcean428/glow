@@ -1,15 +1,15 @@
-import type { CreateCredentialDto } from '@n8n/api-types';
+import type { CreateCredentialDto } from '@glow/api-types';
 import {
 	AiChatRequestDto,
 	AiApplySuggestionRequestDto,
 	AiAskRequestDto,
 	AiFreeCreditsRequestDto,
 	AiBuilderChatRequestDto,
-} from '@n8n/api-types';
-import { Body, Post, RestController } from '@n8n/decorators';
+} from '@glow/api-types';
+import { Body, Post, RestController } from '@glow/decorators';
 import type { AiAssistantSDK } from '@n8n_io/ai-assistant-sdk';
 import { Response } from 'express';
-import { OPEN_AI_API_CREDENTIAL_TYPE } from 'n8n-workflow';
+import { OPEN_AI_API_CREDENTIAL_TYPE } from 'glow-workflow';
 import { strict as assert } from 'node:assert';
 import { WritableStream } from 'node:stream/web';
 

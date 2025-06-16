@@ -1,6 +1,6 @@
 import { DynamicStructuredTool, DynamicTool } from '@langchain/core/tools';
-import { createMockExecuteFunction } from 'n8n-nodes-base/test/nodes/Helpers';
-import type { INode, ISupplyDataFunctions } from 'n8n-workflow';
+import { createMockExecuteFunction } from 'glow-nodes-base/test/nodes/Helpers';
+import type { INode, ISupplyDataFunctions } from 'glow-workflow';
 import { z } from 'zod';
 
 import { N8nTool } from './N8nTool';

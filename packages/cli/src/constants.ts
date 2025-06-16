@@ -1,7 +1,7 @@
 import { readFileSync, statSync } from 'fs';
-import type { n8n } from 'n8n-core';
-import type { ITaskDataConnections } from 'n8n-workflow';
-import { jsonParse, TRIMMED_TASK_DATA_CONNECTIONS_KEY } from 'n8n-workflow';
+import type { n8n } from 'glow-core';
+import type { ITaskDataConnections } from 'glow-workflow';
+import { jsonParse, TRIMMED_TASK_DATA_CONNECTIONS_KEY } from 'glow-workflow';
 import { resolve, join, dirname } from 'path';
 
 const { E2E_TESTS } = process.env;
@@ -21,12 +21,12 @@ export const GLOW_VERSION = n8nPackageJson.version;
 export const GLOW_RELEASE_DATE = statSync(packageJsonPath).mtime;
 
 export const STARTING_NODES = [
-	'@n8n/n8n-nodes-langchain.manualChatTrigger',
+	'@glow/n8n-nodes-langchain.manualChatTrigger',
 	'n8n-nodes-base.start',
 	'n8n-nodes-base.manualTrigger',
 ];
 
-export const MCP_TRIGGER_NODE_TYPE = '@n8n/n8n-nodes-langchain.mcpTrigger';
+export const MCP_TRIGGER_NODE_TYPE = '@glow/n8n-nodes-langchain.mcpTrigger';
 
 export const NODE_PACKAGE_PREFIX = 'n8n-nodes-';
 

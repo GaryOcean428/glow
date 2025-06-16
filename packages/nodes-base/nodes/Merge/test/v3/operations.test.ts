@@ -1,4 +1,4 @@
-import type { IDataObject, INode } from 'n8n-workflow';
+import type { IDataObject, INode } from 'glow-workflow';
 
 import { createMockExecuteFunction } from '@test/nodes/Helpers';
 

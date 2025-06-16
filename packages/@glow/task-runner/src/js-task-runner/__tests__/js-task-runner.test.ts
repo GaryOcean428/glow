@@ -1,6 +1,6 @@
 import { DateTime, Duration, Interval } from 'luxon';
-import type { IBinaryData } from 'n8n-workflow';
-import { setGlobalState, type CodeExecutionMode, type IDataObject } from 'n8n-workflow';
+import type { IBinaryData } from 'glow-workflow';
+import { setGlobalState, type CodeExecutionMode, type IDataObject } from 'glow-workflow';
 import fs from 'node:fs';
 import { builtinModules } from 'node:module';
 

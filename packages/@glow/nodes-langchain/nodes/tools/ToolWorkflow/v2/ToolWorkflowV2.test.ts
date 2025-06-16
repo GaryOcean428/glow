@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/dot-notation */ // Disabled to allow access to private methods
 import { DynamicTool } from '@langchain/core/tools';
-import { NodeOperationError } from 'n8n-workflow';
+import { NodeOperationError } from 'glow-workflow';
 import type {
 	ISupplyDataFunctions,
 	INodeExecutionData,
 	IWorkflowDataProxyData,
 	ExecuteWorkflowData,
 	INode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { WorkflowToolService } from './utils/WorkflowToolService';
 

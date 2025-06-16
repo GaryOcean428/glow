@@ -1,8 +1,8 @@
-import { SharedCredentials } from '@n8n/db';
-import type { CredentialsEntity } from '@n8n/db';
-import type { User } from '@n8n/db';
-import { Container } from '@n8n/di';
-import { In } from '@n8n/typeorm';
+import { SharedCredentials } from '@glow/db';
+import type { CredentialsEntity } from '@glow/db';
+import type { User } from '@glow/db';
+import { Container } from '@glow/di';
+import { In } from '@glow/typeorm';
 import { mock } from 'jest-mock-extended';
 
 import { CredentialsFinderService } from '@/credentials/credentials-finder.service';

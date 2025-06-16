@@ -1,11 +1,11 @@
-import type { ClientOAuth2Options, OAuth2CredentialData } from '@n8n/client-oauth2';
-import { ClientOAuth2 } from '@n8n/client-oauth2';
-import { Get, RestController } from '@n8n/decorators';
+import type { ClientOAuth2Options, OAuth2CredentialData } from '@glow/client-oauth2';
+import { ClientOAuth2 } from '@glow/client-oauth2';
+import { Get, RestController } from '@glow/decorators';
 import { Response } from 'express';
 import omit from 'lodash/omit';
 import set from 'lodash/set';
 import split from 'lodash/split';
-import { type ICredentialDataDecryptedObject, jsonParse, jsonStringify } from 'n8n-workflow';
+import { type ICredentialDataDecryptedObject, jsonParse, jsonStringify } from 'glow-workflow';
 import pkceChallenge from 'pkce-challenge';
 import * as qs from 'querystring';
 

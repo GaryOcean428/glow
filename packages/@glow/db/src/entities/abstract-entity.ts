@@ -1,6 +1,6 @@
-import { GlobalConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
-import type { ColumnOptions } from '@n8n/typeorm';
+import { GlobalConfig } from '@glow/config';
+import { Container } from '@glow/di';
+import type { ColumnOptions } from '@glow/typeorm';
 import {
 	BeforeInsert,
 	BeforeUpdate,
@@ -8,8 +8,8 @@ import {
 	CreateDateColumn,
 	PrimaryColumn,
 	UpdateDateColumn,
-} from '@n8n/typeorm';
-import type { Class } from 'n8n-core';
+} from '@glow/typeorm';
+import type { Class } from 'glow-core';
 
 import { generateNanoId } from '../utils/generators';
 

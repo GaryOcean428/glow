@@ -4,7 +4,7 @@ import {
 	type AssignmentCollectionValue,
 	type IExecuteFunctions,
 	type INodeTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { GoogleSheet } from '../../Google/Sheet/v2/helpers/GoogleSheet';
 import { Evaluation } from '../Evaluation/Evaluation.node.ee';

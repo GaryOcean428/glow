@@ -1,4 +1,4 @@
-import { randomInt, randomString, UPPERCASE_LETTERS } from 'n8n-workflow';
+import { randomInt, randomString, UPPERCASE_LETTERS } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { MIN_PASSWORD_CHAR_LENGTH, MAX_PASSWORD_CHAR_LENGTH } from '@/constants';

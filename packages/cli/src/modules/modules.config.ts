@@ -1,6 +1,6 @@
-import { CommaSeparatedStringArray, Config, Env } from '@n8n/config';
-import type { InstanceSettings } from 'n8n-core';
-import { UnexpectedError } from 'n8n-workflow';
+import { CommaSeparatedStringArray, Config, Env } from '@glow/config';
+import type { InstanceSettings } from 'glow-core';
+import { UnexpectedError } from 'glow-workflow';
 
 export type ModulePreInitContext = {
 	instance: InstanceSettings;

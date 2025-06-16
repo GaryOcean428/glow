@@ -6,8 +6,8 @@ import type {
 	ITriggerResponse,
 	IDeferredPromise,
 	IRun,
-} from 'n8n-workflow';
-import { deepCopy, jsonParse, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { deepCopy, jsonParse, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 import type { ContainerOptions, EventContext, Message, ReceiverOptions } from 'rhea';
 import { create_container } from 'rhea';
 

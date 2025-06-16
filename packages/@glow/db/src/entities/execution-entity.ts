@@ -9,9 +9,9 @@ import {
 	PrimaryColumn,
 	Relation,
 	DeleteDateColumn,
-} from '@n8n/typeorm';
-import type { SimpleColumnType } from '@n8n/typeorm/driver/types/ColumnTypes';
-import { ExecutionStatus, WorkflowExecuteMode } from 'n8n-workflow';
+} from '@glow/typeorm';
+import type { SimpleColumnType } from '@glow/typeorm/driver/types/ColumnTypes';
+import { ExecutionStatus, WorkflowExecuteMode } from 'glow-workflow';
 
 import { DateTimeColumn, datetimeColumnType } from './abstract-entity';
 import type { ExecutionAnnotation } from './execution-annotation.ee';

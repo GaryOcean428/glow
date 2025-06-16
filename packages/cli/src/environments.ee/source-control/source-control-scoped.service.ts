@@ -6,11 +6,11 @@ import {
 	type WorkflowEntity,
 	WorkflowRepository,
 	type WorkflowTagMapping,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
-import { hasGlobalScope } from '@n8n/permissions';
+} from '@glow/db';
+import { Service } from '@glow/di';
+import { hasGlobalScope } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { FindOptionsWhere } from '@n8n/typeorm';
+import type { FindOptionsWhere } from '@glow/typeorm';
 
 import { ForbiddenError } from '@/errors/response-errors/forbidden.error';
 import type { AuthenticatedRequest } from '@/requests';

@@ -1,8 +1,8 @@
-import { Service } from '@n8n/di';
-import type { TaskResultData, RequesterMessage, BrokerMessage, TaskData } from '@n8n/task-runner';
-import { AVAILABLE_RPC_METHODS } from '@n8n/task-runner';
-import { isSerializedBuffer, toBuffer } from 'n8n-core';
-import { createResultOk, createResultError } from 'n8n-workflow';
+import { Service } from '@glow/di';
+import type { TaskResultData, RequesterMessage, BrokerMessage, TaskData } from '@glow/task-runner';
+import { AVAILABLE_RPC_METHODS } from '@glow/task-runner';
+import { isSerializedBuffer, toBuffer } from 'glow-core';
+import { createResultOk, createResultError } from 'glow-workflow';
 import type {
 	EnvProviderState,
 	IExecuteFunctions,
@@ -17,7 +17,7 @@ import type {
 	IDataObject,
 	IWorkflowExecuteAdditionalData,
 	Result,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { nanoid } from 'nanoid';
 
 import { NodeTypes } from '@/node-types';

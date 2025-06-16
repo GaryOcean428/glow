@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { ICredentialType, INodeProperties } from 'glow-workflow';
 
 export class S3 implements ICredentialType {
 	name = 's3';

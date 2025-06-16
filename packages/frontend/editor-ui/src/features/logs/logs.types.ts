@@ -1,6 +1,6 @@
 import type { LOG_DETAILS_PANEL_STATE, LOGS_PANEL_STATE } from '@/features/logs/logs.constants';
 import type { INodeUi, LlmTokenUsageData } from '@/Interface';
-import type { IRunExecutionData, ITaskData, Workflow } from 'n8n-workflow';
+import type { IRunExecutionData, ITaskData, Workflow } from 'glow-workflow';
 
 export interface LogEntry {
 	parent?: LogEntry;

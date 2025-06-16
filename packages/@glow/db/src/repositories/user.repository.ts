@@ -1,7 +1,7 @@
-import { Service } from '@n8n/di';
-import type { GlobalRole } from '@n8n/permissions';
-import type { DeepPartial, EntityManager, FindManyOptions } from '@n8n/typeorm';
-import { DataSource, In, IsNull, Not, Repository } from '@n8n/typeorm';
+import { Service } from '@glow/di';
+import type { GlobalRole } from '@glow/permissions';
+import type { DeepPartial, EntityManager, FindManyOptions } from '@glow/typeorm';
+import { DataSource, In, IsNull, Not, Repository } from '@glow/typeorm';
 
 import { Project, ProjectRelation, User } from '../entities';
 import type { ListQuery } from '../entities/types-db';
@@ -22,7 +22,7 @@ export class UserRepository extends Repository<User> {
 	 * @deprecated Use `UserRepository.save` instead if you can.
 	 *
 	 * We need to use `save` so that that the subscriber in
-	 * packages/@n8n/db/src/entities/Project.ts receives the full user.
+	 * packages/@glow/db/src/entities/Project.ts receives the full user.
 	 * With `update` it would only receive the updated fields, e.g. the `id`
 	 * would be missing. test('does not use `Repository.update`, but
 	 * `Repository.save` instead'.

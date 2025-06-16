@@ -33,14 +33,14 @@ import type {
 	WorkflowTestData,
 	RelatedExecution,
 	IExecuteFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	ApplicationError,
 	createDeferredPromise,
 	NodeConnectionTypes,
 	NodeHelpers,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import * as Helpers from '@test/helpers';
 import { legacyWorkflowExecuteTests, v1WorkflowExecuteTests } from '@test/helpers/constants';
@@ -823,7 +823,7 @@ describe('WorkflowExecute', () => {
 			const expectedToolExecutor: INode = {
 				name: 'PartialExecutionToolExecutor',
 				disabled: false,
-				type: '@n8n/n8n-nodes-langchain.toolExecutor',
+				type: '@glow/n8n-nodes-langchain.toolExecutor',
 				parameters: {
 					query: {},
 					toolName: '',

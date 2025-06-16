@@ -6,7 +6,7 @@ import {
 	type ITriggerFunctions,
 	type ITriggerResponse,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import {
 	pgTriggerFunction,

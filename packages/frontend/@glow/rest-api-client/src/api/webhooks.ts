@@ -1,4 +1,4 @@
-import type { IHttpRequestMethods } from 'n8n-workflow';
+import type { IHttpRequestMethods } from 'glow-workflow';
 
 import type { IRestApiContext } from '../types';
 import { makeRestApiRequest } from '../utils';

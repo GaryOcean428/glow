@@ -1,5 +1,5 @@
-import type { InstalledPackages } from '@n8n/db';
-import { Delete, Get, Patch, Post, RestController, GlobalScope } from '@n8n/decorators';
+import type { InstalledPackages } from '@glow/db';
+import { Delete, Get, Patch, Post, RestController, GlobalScope } from '@glow/decorators';
 
 import {
 	RESPONSE_ERROR_MESSAGES,

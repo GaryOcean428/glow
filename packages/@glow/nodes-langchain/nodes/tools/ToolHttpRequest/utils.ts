@@ -5,7 +5,7 @@ import { JSDOM } from 'jsdom';
 import get from 'lodash/get';
 import set from 'lodash/set';
 import unset from 'lodash/unset';
-import { getOAuth2AdditionalParameters } from 'n8n-nodes-base/dist/nodes/HttpRequest/GenericFunctions';
+import { getOAuth2AdditionalParameters } from 'glow-nodes-base/dist/nodes/HttpRequest/GenericFunctions';
 import type {
 	IDataObject,
 	IHttpRequestOptions,
@@ -13,8 +13,8 @@ import type {
 	ExecutionError,
 	NodeApiError,
 	ISupplyDataFunctions,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeOperationError, jsonParse } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeOperationError, jsonParse } from 'glow-workflow';
 import { z } from 'zod';
 
 import type {

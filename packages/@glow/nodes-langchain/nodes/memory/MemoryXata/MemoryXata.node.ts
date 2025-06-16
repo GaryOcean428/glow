@@ -2,13 +2,13 @@
 import { XataChatMessageHistory } from '@langchain/community/stores/message/xata';
 import { BaseClient } from '@xata.io/client';
 import { BufferMemory, BufferWindowMemory } from 'langchain/memory';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 import type {
 	ISupplyDataFunctions,
 	INodeType,
 	INodeTypeDescription,
 	SupplyData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getSessionId } from '@utils/helpers';
 import { logWrapper } from '@utils/logWrapper';

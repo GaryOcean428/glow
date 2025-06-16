@@ -1,4 +1,4 @@
-import type { NodeParameterValueType, INodeParameterResourceLocator } from 'n8n-workflow';
+import type { NodeParameterValueType, INodeParameterResourceLocator } from 'glow-workflow';
 
 function isRlcValue(value: NodeParameterValueType): value is INodeParameterResourceLocator {
 	return Boolean(

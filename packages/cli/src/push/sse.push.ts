@@ -1,5 +1,5 @@
-import type { User } from '@n8n/db';
-import { Service } from '@n8n/di';
+import type { User } from '@glow/db';
+import { Service } from '@glow/di';
 
 import { AbstractPush } from './abstract.push';
 import type { PushRequest, PushResponse } from './types';

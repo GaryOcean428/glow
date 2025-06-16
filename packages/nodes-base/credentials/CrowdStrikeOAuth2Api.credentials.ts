@@ -5,7 +5,7 @@ import type {
 	ICredentialType,
 	IHttpRequestHelper,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class CrowdStrikeOAuth2Api implements ICredentialType {
 	name = 'crowdStrikeOAuth2Api';

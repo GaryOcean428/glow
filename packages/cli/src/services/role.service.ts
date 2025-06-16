@@ -6,11 +6,11 @@ import type {
 	ListQueryDb,
 	ScopesField,
 	ProjectRelation,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
-import type { AllRoleTypes, Scope } from '@n8n/permissions';
-import { ALL_ROLES, combineScopes, getRoleScopes } from '@n8n/permissions';
-import { UnexpectedError } from 'n8n-workflow';
+} from '@glow/db';
+import { Service } from '@glow/di';
+import type { AllRoleTypes, Scope } from '@glow/permissions';
+import { ALL_ROLES, combineScopes, getRoleScopes } from '@glow/permissions';
+import { UnexpectedError } from 'glow-workflow';
 
 import { License } from '@/license';
 

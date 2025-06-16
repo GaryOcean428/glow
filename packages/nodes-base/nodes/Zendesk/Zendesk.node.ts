@@ -7,8 +7,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeApiError, NodeOperationError, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeOperationError, NodeConnectionTypes } from 'glow-workflow';
 
 import { validateJSON, zendeskApiRequest, zendeskApiRequestAllItems } from './GenericFunctions';
 import { organizationFields, organizationOperations } from './OrganizationDescription';

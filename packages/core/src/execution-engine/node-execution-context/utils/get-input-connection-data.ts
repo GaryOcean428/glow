@@ -15,13 +15,13 @@ import type {
 	ISupplyDataFunctions,
 	INodeType,
 	INode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	NodeConnectionTypes,
 	NodeOperationError,
 	ExecutionBaseError,
 	ApplicationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { createNodeAsTool } from './create-node-as-tool';
 import type { ExecuteContext, WebhookContext } from '../../node-execution-context';

@@ -1,5 +1,5 @@
 import get from 'lodash/get';
-import type { IDataObject, IExecuteFunctions } from 'n8n-workflow';
+import type { IDataObject, IExecuteFunctions } from 'glow-workflow';
 
 import * as assistant from '../actions/assistant';
 import * as audio from '../actions/audio';

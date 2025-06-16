@@ -1,8 +1,8 @@
-import { WorkflowRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { WorkflowRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
-import type { IWorkflowBase, IWorkflowExecutionDataProcess } from 'n8n-workflow';
-import { ExecutionBaseError, UnexpectedError, UserError } from 'n8n-workflow';
+import type { IWorkflowBase, IWorkflowExecutionDataProcess } from 'glow-workflow';
+import { ExecutionBaseError, UnexpectedError, UserError } from 'glow-workflow';
 
 import { ActiveExecutions } from '@/active-executions';
 import { OwnershipService } from '@/services/ownership.service';

@@ -1,5 +1,5 @@
-import { Container } from '@n8n/di';
-import { UnexpectedError } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import { UnexpectedError } from 'glow-workflow';
 
 import { ModulesConfig } from '../modules.config';
 

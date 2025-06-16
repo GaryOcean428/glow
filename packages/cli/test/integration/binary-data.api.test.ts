@@ -1,4 +1,4 @@
-import { BinaryDataService, FileNotFoundError } from 'n8n-core';
+import { BinaryDataService, FileNotFoundError } from 'glow-core';
 import fsp from 'node:fs/promises';
 import { Readable } from 'node:stream';
 

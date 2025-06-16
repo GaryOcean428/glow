@@ -1,5 +1,5 @@
-import type { BooleanLicenseFeature } from '@n8n/constants';
-import { Container } from '@n8n/di';
+import type { BooleanLicenseFeature } from '@glow/constants';
+import { Container } from '@glow/di';
 
 import { ControllerRegistryMetadata } from '../controller-registry-metadata';
 import { Licensed } from '../licensed';

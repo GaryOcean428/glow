@@ -1,9 +1,9 @@
 import { waitFor } from '@testing-library/vue';
 import { createPinia, setActivePinia } from 'pinia';
 import WorkflowCanvas from '@/components/canvas/WorkflowCanvas.vue';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import { createCanvasNodeElement, createCanvasConnection } from '@/__tests__/data';
-import type { Workflow } from 'n8n-workflow';
+import type { Workflow } from 'glow-workflow';
 import { createComponentRenderer } from '@/__tests__/render';
 import { STICKY_NODE_TYPE } from '@/constants';
 import { CanvasNodeRenderType } from '@/types';

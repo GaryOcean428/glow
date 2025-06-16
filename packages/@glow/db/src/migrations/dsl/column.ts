@@ -1,4 +1,4 @@
-import type { Driver, TableColumnOptions } from '@n8n/typeorm';
+import type { Driver, TableColumnOptions } from '@glow/typeorm';
 
 export class Column {
 	private type:

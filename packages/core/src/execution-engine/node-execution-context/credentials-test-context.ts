@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import { Memoized } from '@n8n/decorators';
-import { Container } from '@n8n/di';
-import type { ICredentialTestFunctions } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { Memoized } from '@glow/decorators';
+import { Container } from '@glow/di';
+import type { ICredentialTestFunctions } from 'glow-workflow';
 
 import { proxyRequestToAxios } from './utils/request-helper-functions';
 import { getSSHTunnelFunctions } from './utils/ssh-tunnel-helper-functions';

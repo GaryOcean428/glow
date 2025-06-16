@@ -2,8 +2,8 @@ import type { User } from '@n8n/db';
 import { ProjectRepository } from '@n8n/db';
 import { TestRunRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import { mockInstance } from 'n8n-core/test/utils';
-import type { IWorkflowBase } from 'n8n-workflow';
+import { mockInstance } from 'glow-core/test/utils';
+import type { IWorkflowBase } from 'glow-workflow';
 
 import { TestRunnerService } from '@/evaluation.ee/test-runner/test-runner.service.ee';
 import { createTestRun, createTestCaseExecution } from '@test-integration/db/evaluation';

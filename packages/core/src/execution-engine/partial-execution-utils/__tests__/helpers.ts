@@ -1,4 +1,4 @@
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type {
 	INodeParameters,
 	INode,
@@ -6,7 +6,7 @@ import type {
 	IDataObject,
 	IConnections,
 	NodeConnectionType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 interface StubNode {
 	name: string;

@@ -4,12 +4,12 @@ import type {
 	OptionsRequestDto,
 	ResourceLocatorRequestDto,
 	ResourceMapperFieldsRequestDto,
-} from '@n8n/api-types';
-import * as nodeTypesApi from '@n8n/rest-api-client/api/nodeTypes';
+} from '@glow/api-types';
+import * as nodeTypesApi from '@glow/rest-api-client/api/nodeTypes';
 import { HTTP_REQUEST_NODE_TYPE, CREDENTIAL_ONLY_HTTP_NODE_VERSION } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type { NodeTypesByTypeNameAndVersion } from '@/Interface';
-import { addHeaders, addNodeTranslation } from '@n8n/i18n';
+import { addHeaders, addNodeTranslation } from '@glow/i18n';
 import { omit } from '@/utils/typesUtils';
 import type {
 	INode,
@@ -19,11 +19,11 @@ import type {
 	INodeTypeNameVersion,
 	Workflow,
 	NodeConnectionType,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeHelpers } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeHelpers } from 'glow-workflow';
 import { defineStore } from 'pinia';
 import { useCredentialsStore } from './credentials.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import * as utils from '@/utils/credentialOnlyNodes';
 import { groupNodeTypesByNameAndType } from '@/utils/nodeTypes/nodeTypeTransforms';
 import { computed, ref } from 'vue';

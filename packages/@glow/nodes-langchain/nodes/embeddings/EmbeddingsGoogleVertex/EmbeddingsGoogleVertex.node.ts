@@ -1,15 +1,15 @@
 /* eslint-disable n8n-nodes-base/node-dirname-against-convention */
 import { ProjectsClient } from '@google-cloud/resource-manager';
 import { VertexAIEmbeddings } from '@langchain/google-vertexai';
-import { formatPrivateKey } from 'n8n-nodes-base/dist/utils/utilities';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { formatPrivateKey } from 'glow-nodes-base/dist/utils/utilities';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type {
 	ILoadOptionsFunctions,
 	INodeType,
 	INodeTypeDescription,
 	ISupplyDataFunctions,
 	SupplyData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { logWrapper } from '@utils/logWrapper';
 import { getConnectionHintNoticeField } from '@utils/sharedFields';

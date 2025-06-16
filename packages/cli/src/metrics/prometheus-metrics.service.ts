@@ -1,11 +1,11 @@
-import { GlobalConfig } from '@n8n/config';
-import { WorkflowRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { WorkflowRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import type express from 'express';
 import promBundle from 'express-prom-bundle';
 import { DateTime } from 'luxon';
-import { InstanceSettings } from 'n8n-core';
-import { EventMessageTypeNames } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { EventMessageTypeNames } from 'glow-workflow';
 import promClient, { type Counter, type Gauge } from 'prom-client';
 import semverParse from 'semver/functions/parse';
 

@@ -2,12 +2,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import type { CredentialsEntity, ICredentialsDb } from '@n8n/db';
-import { CredentialsRepository, SharedCredentialsRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import type { CredentialsEntity, ICredentialsDb } from '@glow/db';
+import { CredentialsRepository, SharedCredentialsRepository } from '@glow/db';
+import { Service } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In } from '@n8n/typeorm';
-import { Credentials, getAdditionalKeys } from 'n8n-core';
+import { In } from '@glow/typeorm';
+import { Credentials, getAdditionalKeys } from 'glow-core';
 import type {
 	ICredentialDataDecryptedObject,
 	ICredentialsExpressionResolveValues,
@@ -27,8 +27,8 @@ import type {
 	IWorkflowExecuteAdditionalData,
 	IExecuteData,
 	IDataObject,
-} from 'n8n-workflow';
-import { ICredentialsHelper, NodeHelpers, Workflow, UnexpectedError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ICredentialsHelper, NodeHelpers, Workflow, UnexpectedError } from 'glow-workflow';
 
 import { CredentialTypes } from '@/credential-types';
 import { CredentialsOverwrites } from '@/credentials-overwrites';

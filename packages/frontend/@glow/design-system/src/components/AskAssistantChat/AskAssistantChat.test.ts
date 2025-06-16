@@ -1,6 +1,6 @@
 import { render } from '@testing-library/vue';
 
-import { n8nHtml } from '@n8n/design-system/directives';
+import { n8nHtml } from '@glow/design-system/directives';
 
 import AskAssistantChat from './AskAssistantChat.vue';
 

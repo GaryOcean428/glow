@@ -1,5 +1,5 @@
-import type { IExecuteSingleFunctions, IHttpRequestOptions, INodeProperties } from 'n8n-workflow';
-import { NodeApiError, updateDisplayOptions } from 'n8n-workflow';
+import type { IExecuteSingleFunctions, IHttpRequestOptions, INodeProperties } from 'glow-workflow';
+import { NodeApiError, updateDisplayOptions } from 'glow-workflow';
 
 import { validateArn } from '../../helpers/utils';
 import { userPoolResourceLocator } from '../common.description';

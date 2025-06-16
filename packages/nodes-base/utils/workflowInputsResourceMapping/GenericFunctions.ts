@@ -12,8 +12,8 @@ import type {
 	WorkflowInputsData,
 	IExecuteFunctions,
 	ISupplyDataFunctions,
-} from 'n8n-workflow';
-import { jsonParse, NodeOperationError, EXECUTE_WORKFLOW_TRIGGER_NODE_TYPE } from 'n8n-workflow';
+} from 'glow-workflow';
+import { jsonParse, NodeOperationError, EXECUTE_WORKFLOW_TRIGGER_NODE_TYPE } from 'glow-workflow';
 
 import {
 	JSON_EXAMPLE,

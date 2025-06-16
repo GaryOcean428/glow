@@ -19,7 +19,7 @@ vi.mock('@/push-connection/useEventSourceClient', () => ({
 	}),
 }));
 
-vi.mock('@n8n/stores/useRootStore', () => ({
+vi.mock('@glow/stores/useRootStore', () => ({
 	useRootStore: vi.fn().mockReturnValue({
 		restUrl: 'http://localhost:5678/api/v1',
 		pushRef: 'test-push-ref',

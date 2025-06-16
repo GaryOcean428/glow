@@ -1,5 +1,5 @@
-import type { INodeProperties } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { INodeProperties } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { getConnectionHintNoticeField } from '@utils/sharedFields';
 

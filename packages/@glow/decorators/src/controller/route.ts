@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 import type { RequestHandler } from 'express';
 
 import { ControllerRegistryMetadata } from './controller-registry-metadata';

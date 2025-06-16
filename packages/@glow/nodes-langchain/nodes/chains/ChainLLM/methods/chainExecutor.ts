@@ -2,7 +2,7 @@ import type { BaseLanguageModel } from '@langchain/core/language_models/base';
 import type { BaseLLMOutputParser } from '@langchain/core/output_parsers';
 import { JsonOutputParser, StringOutputParser } from '@langchain/core/output_parsers';
 import type { ChatPromptTemplate, PromptTemplate } from '@langchain/core/prompts';
-import type { IExecuteFunctions } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
 
 import { getTracingConfig } from '@utils/tracing';
 

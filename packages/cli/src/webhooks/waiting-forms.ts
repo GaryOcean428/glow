@@ -1,13 +1,13 @@
-import type { IExecutionResponse } from '@n8n/db';
-import { Service } from '@n8n/di';
+import type { IExecutionResponse } from '@glow/db';
+import { Service } from '@glow/di';
 import type express from 'express';
-import type { IRunData } from 'n8n-workflow';
+import type { IRunData } from 'glow-workflow';
 import {
 	FORM_NODE_TYPE,
 	WAIT_NODE_TYPE,
 	WAITING_FORMS_EXECUTION_STATUS,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { ConflictError } from '@/errors/response-errors/conflict.error';
 import { NotFoundError } from '@/errors/response-errors/not-found.error';

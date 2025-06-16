@@ -3,7 +3,7 @@ import { JsonOutputParser, StringOutputParser } from '@langchain/core/output_par
 import { ChatPromptTemplate, PromptTemplate } from '@langchain/core/prompts';
 import { FakeLLM, FakeChatModel } from '@langchain/core/utils/testing';
 import { mock } from 'jest-mock-extended';
-import type { IExecuteFunctions } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
 
 import type { N8nOutputParser } from '@utils/output_parsers/N8nOutputParser';
 import * as tracing from '@utils/tracing';

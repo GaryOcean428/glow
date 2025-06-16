@@ -2,7 +2,7 @@ import { createComponentRenderer } from '@/__tests__/render';
 import { type TestingPinia, createTestingPinia } from '@pinia/testing';
 import { setActivePinia } from 'pinia';
 import CommunityNodeInfo from './CommunityNodeInfo.vue';
-import type { PublicInstalledPackage } from 'n8n-workflow';
+import type { PublicInstalledPackage } from 'glow-workflow';
 import { waitFor } from '@testing-library/vue';
 
 const getCommunityNodeAttributes = vi.fn();

@@ -1,9 +1,9 @@
-import { ExecutionRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { ExecutionRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { stringify } from 'flatted';
 import { mock } from 'jest-mock-extended';
-import { InstanceSettings } from 'n8n-core';
-import { randomInt } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { randomInt } from 'glow-workflow';
 import assert from 'node:assert';
 
 import { ARTIFICIAL_TASK_DATA } from '@/constants';

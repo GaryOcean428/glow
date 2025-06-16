@@ -1,5 +1,5 @@
-import type { GlobalRole } from '@n8n/permissions';
-import { getApiKeyScopesForRole } from '@n8n/permissions';
+import type { GlobalRole } from '@glow/permissions';
+import { getApiKeyScopesForRole } from '@glow/permissions';
 
 import { ApiKey } from '../../entities';
 import type { MigrationContext, ReversibleMigration } from '../migration-types';

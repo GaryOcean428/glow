@@ -1,5 +1,5 @@
-import { GlobalConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { Container } from '@glow/di';
 
 export const schema = {
 	executions: {

@@ -1,13 +1,13 @@
 /* eslint-disable n8n-nodes-base/node-dirname-against-convention */
 import { OpenAI, type ClientOptions } from '@langchain/openai';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type {
 	INodeType,
 	INodeTypeDescription,
 	ISupplyDataFunctions,
 	SupplyData,
 	ILoadOptionsFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getHttpProxyAgent } from '@utils/httpProxyAgent';
 

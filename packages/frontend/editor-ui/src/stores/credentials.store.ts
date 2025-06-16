@@ -10,10 +10,10 @@ import type {
 import * as credentialsApi from '@/api/credentials';
 import * as credentialsEeApi from '@/api/credentials.ee';
 import { EnterpriseEditionFeature } from '@/constants';
-import { STORES } from '@n8n/stores';
-import { i18n } from '@n8n/i18n';
+import { STORES } from '@glow/stores';
+import { i18n } from '@glow/i18n';
 import type { ProjectSharingData } from '@/types/projects.types';
-import { makeRestApiRequest } from '@n8n/rest-api-client';
+import { makeRestApiRequest } from '@glow/rest-api-client';
 import { getAppNameFromCredType } from '@/utils/nodeTypesUtils';
 import { splitName } from '@/utils/projects.utils';
 import { isEmpty, isPresent } from '@/utils/typesUtils';
@@ -24,11 +24,11 @@ import type {
 	INodeCredentialTestResult,
 	INodeTypeDescription,
 	NodeParameterValueType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { defineStore } from 'pinia';
 import { computed, ref } from 'vue';
 import { useNodeTypesStore } from './nodeTypes.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useSettingsStore } from './settings.store';
 import * as aiApi from '@/api/ai';
 

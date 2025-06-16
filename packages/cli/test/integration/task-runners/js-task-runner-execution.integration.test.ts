@@ -11,8 +11,8 @@ import type {
 	ITaskDataConnections,
 	IWorkflowExecuteAdditionalData,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
-import { createEnvProviderState, NodeConnectionTypes, Workflow } from 'n8n-workflow';
+} from 'glow-workflow';
+import { createEnvProviderState, NodeConnectionTypes, Workflow } from 'glow-workflow';
 
 import { LocalTaskRequester } from '@/task-runners/task-managers/local-task-requester';
 import { TaskRunnerModule } from '@/task-runners/task-runner-module';

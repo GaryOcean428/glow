@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from '@n8n/typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from '@glow/typeorm';
 
 import { DateTimeColumn } from './abstract-entity';
 import { AuthProviderType, RunningMode, SyncStatus } from './types-db';

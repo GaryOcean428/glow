@@ -1,5 +1,5 @@
 {
-	"extends": "@n8n/typescript-config/tsconfig.frontend.json",
+	"extends": "@glow/typescript-config/tsconfig.frontend.json",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"rootDirs": [".", "../composables/src"],
@@ -12,9 +12,9 @@
 			"../../../../node_modules/@types"
 		],
 		"paths": {
-			"@n8n/design-system*": ["./src*"],
-			"@n8n/composables*": ["../composables/src*"],
-			"@n8n/utils*": ["../../../@n8n/utils/src*"]
+			"@glow/design-system*": ["./src*"],
+			"@glow/composables*": ["../composables/src*"],
+			"@glow/utils*": ["../../../@glow/utils/src*"]
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.vue"]

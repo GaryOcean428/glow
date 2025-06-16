@@ -1,9 +1,9 @@
 import { computed } from 'vue';
 import { defineStore } from 'pinia';
 import { useAsyncState } from '@vueuse/core';
-import type { ListInsightsWorkflowQueryDto, InsightsDateRange } from '@n8n/api-types';
+import type { ListInsightsWorkflowQueryDto, InsightsDateRange } from '@glow/api-types';
 import * as insightsApi from '@/features/insights/insights.api';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useUsersStore } from '@/stores/users.store';
 import { useSettingsStore } from '@/stores/settings.store';
 import { transformInsightsSummary } from '@/features/insights/insights.utils';

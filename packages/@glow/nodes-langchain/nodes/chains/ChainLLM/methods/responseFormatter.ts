@@ -1,4 +1,4 @@
-import type { IDataObject } from 'n8n-workflow';
+import type { IDataObject } from 'glow-workflow';
 
 /**
  * Formats the response from the LLM chain into a consistent structure

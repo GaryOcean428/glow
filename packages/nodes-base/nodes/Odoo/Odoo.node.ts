@@ -11,8 +11,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, deepCopy, randomInt } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, deepCopy, randomInt } from 'glow-workflow';
 
 import {
 	contactDescription,

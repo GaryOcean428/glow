@@ -1,15 +1,15 @@
-import { GlobalConfig } from '@n8n/config';
+import { GlobalConfig } from '@glow/config';
 import {
 	CredentialsRepository,
 	ProjectRelationRepository,
 	SharedWorkflowRepository,
 	WorkflowRepository,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
+} from '@glow/db';
+import { Service } from '@glow/di';
 import { snakeCase } from 'change-case';
-import { BinaryDataConfig, InstanceSettings } from 'n8n-core';
-import type { ExecutionStatus, INodesGraphResult, ITelemetryTrackProperties } from 'n8n-workflow';
-import { TelemetryHelpers } from 'n8n-workflow';
+import { BinaryDataConfig, InstanceSettings } from 'glow-core';
+import type { ExecutionStatus, INodesGraphResult, ITelemetryTrackProperties } from 'glow-workflow';
+import { TelemetryHelpers } from 'glow-workflow';
 import os from 'node:os';
 import { get as pslGet } from 'psl';
 

@@ -5,7 +5,7 @@ import type {
 	IExecuteSingleFunctions,
 	IDataObject,
 	IHttpRequestMethods,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { AwsCredentialsType } from '../../../../credentials/Aws.credentials';
 

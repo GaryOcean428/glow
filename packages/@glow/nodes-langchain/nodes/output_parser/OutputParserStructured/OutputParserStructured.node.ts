@@ -9,7 +9,7 @@ import {
 	type SupplyData,
 	NodeOperationError,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { z } from 'zod';
 
 import {

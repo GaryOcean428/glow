@@ -3,7 +3,7 @@ import type { entities } from '@n8n/db';
 import { Container } from '@n8n/di';
 import type { DataSourceOptions } from '@n8n/typeorm';
 import { DataSource as Connection } from '@n8n/typeorm';
-import { randomString } from 'n8n-workflow';
+import { randomString } from 'glow-workflow';
 
 import { DbConnection } from '@/databases/db-connection';
 import { DbConnectionOptions } from '@/databases/db-connection-options';

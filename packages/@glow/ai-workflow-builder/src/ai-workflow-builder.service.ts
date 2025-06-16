@@ -2,11 +2,11 @@ import { dispatchCustomEvent } from '@langchain/core/callbacks/dispatch';
 import type { BaseChatModel } from '@langchain/core/language_models/chat_models';
 import type { RunnableConfig } from '@langchain/core/runnables';
 import { StateGraph, END, START } from '@langchain/langgraph';
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
 import { AiAssistantClient } from '@n8n_io/ai-assistant-sdk';
-import { OperationalError, assert, INodeTypes } from 'n8n-workflow';
-import type { IUser, INodeTypeDescription, INode } from 'n8n-workflow';
+import { OperationalError, assert, INodeTypes } from 'glow-workflow';
+import type { IUser, INodeTypeDescription, INode } from 'glow-workflow';
 
 import { connectionComposerChain } from './chains/connection-composer';
 import { nodesSelectionChain } from './chains/node-selector';

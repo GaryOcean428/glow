@@ -3,7 +3,7 @@ import type { AIMessageChunk } from '@langchain/core/messages';
 import { SystemMessage } from '@langchain/core/messages';
 import { ChatPromptTemplate, HumanMessagePromptTemplate } from '@langchain/core/prompts';
 import { DynamicStructuredTool } from '@langchain/core/tools';
-import { OperationalError } from 'n8n-workflow';
+import { OperationalError } from 'glow-workflow';
 import { z } from 'zod';
 
 export const nodeSelectorPrompt = new SystemMessage(

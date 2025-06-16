@@ -8,7 +8,7 @@ import {
 import type { BaseRetriever } from '@langchain/core/retrievers';
 import { createStuffDocumentsChain } from 'langchain/chains/combine_documents';
 import { createRetrievalChain } from 'langchain/chains/retrieval';
-import { type IExecuteFunctions, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+import { type IExecuteFunctions, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { getPromptInputByType, isChatInstance } from '@utils/helpers';
 import { getTracingConfig } from '@utils/tracing';

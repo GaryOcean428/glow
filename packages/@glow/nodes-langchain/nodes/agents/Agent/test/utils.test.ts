@@ -1,7 +1,7 @@
 import type { Tool } from 'langchain/tools';
 import { DynamicStructuredTool } from 'langchain/tools';
-import { NodeOperationError } from 'n8n-workflow';
-import type { INode } from 'n8n-workflow';
+import { NodeOperationError } from 'glow-workflow';
+import type { INode } from 'glow-workflow';
 import { z } from 'zod';
 
 import { checkForStructuredTools } from '../agents/utils';

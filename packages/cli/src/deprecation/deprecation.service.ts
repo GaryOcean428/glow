@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
+import { InstanceSettings } from 'glow-core';
 
 import config from '@/config';
 

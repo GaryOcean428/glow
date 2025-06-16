@@ -1,7 +1,7 @@
-import { OnPubSubEvent, PubSubMetadata } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
+import { OnPubSubEvent, PubSubMetadata } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
+import type { InstanceSettings } from 'glow-core';
 
 import { mockLogger } from '@test/mocking';
 

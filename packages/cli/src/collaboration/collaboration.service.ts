@@ -1,10 +1,10 @@
-import type { PushPayload } from '@n8n/api-types';
-import type { User } from '@n8n/db';
-import { UserRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { ErrorReporter } from 'n8n-core';
-import type { Workflow } from 'n8n-workflow';
-import { UnexpectedError } from 'n8n-workflow';
+import type { PushPayload } from '@glow/api-types';
+import type { User } from '@glow/db';
+import { UserRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { ErrorReporter } from 'glow-core';
+import type { Workflow } from 'glow-workflow';
+import { UnexpectedError } from 'glow-workflow';
 
 import { CollaborationState } from '@/collaboration/collaboration.state';
 import { Push } from '@/push';

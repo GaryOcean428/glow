@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { ICredentialType, INodeProperties } from 'glow-workflow';
 
 export class MicrosoftExcelOAuth2Api implements ICredentialType {
 	name = 'microsoftExcelOAuth2Api';

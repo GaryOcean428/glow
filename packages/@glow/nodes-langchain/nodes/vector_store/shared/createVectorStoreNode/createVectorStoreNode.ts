@@ -2,7 +2,7 @@
 /* eslint-disable n8n-nodes-base/node-dirname-against-convention */
 import type { Embeddings } from '@langchain/core/embeddings';
 import type { VectorStore } from '@langchain/core/vectorstores';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 import type {
 	IExecuteFunctions,
 	INodeExecutionData,
@@ -10,7 +10,7 @@ import type {
 	SupplyData,
 	ISupplyDataFunctions,
 	INodeType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getConnectionHintNoticeField } from '@utils/sharedFields';
 

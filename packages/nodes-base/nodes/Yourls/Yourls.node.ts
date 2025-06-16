@@ -5,7 +5,7 @@ import {
 	type INodeType,
 	type INodeTypeDescription,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { yourlsApiRequest } from './GenericFunctions';
 import { urlFields, urlOperations } from './UrlDescription';

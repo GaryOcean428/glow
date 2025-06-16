@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
 
 import { ActiveExecutions } from '@/active-executions';

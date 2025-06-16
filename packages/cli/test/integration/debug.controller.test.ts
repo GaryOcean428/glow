@@ -2,7 +2,7 @@ import type { WorkflowEntity } from '@n8n/db';
 import { generateNanoId } from '@n8n/db';
 import { WorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
+import { InstanceSettings } from 'glow-core';
 
 import { ActiveWorkflowManager } from '@/active-workflow-manager';
 import { MultiMainSetup } from '@/scaling/multi-main-setup.ee';

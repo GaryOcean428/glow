@@ -1,4 +1,4 @@
-import { Config, Nested } from '@n8n/config';
+import { Config, Nested } from '@glow/config';
 
 import { BaseRunnerConfig } from './base-runner-config';
 import { JsRunnerConfig } from './js-runner-config';

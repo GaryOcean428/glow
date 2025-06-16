@@ -4,7 +4,7 @@ import {
 	ListFolderQueryDto,
 	TransferFolderBodyDto,
 	UpdateFolderDto,
-} from '@n8n/api-types';
+} from '@glow/api-types';
 import {
 	Post,
 	RestController,
@@ -16,9 +16,9 @@ import {
 	Query,
 	Put,
 	Param,
-} from '@n8n/decorators';
+} from '@glow/decorators';
 import { Response } from 'express';
-import { UserError } from 'n8n-workflow';
+import { UserError } from 'glow-workflow';
 
 import { FolderNotFoundError } from '@/errors/folder-not-found.error';
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';

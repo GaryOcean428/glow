@@ -1,5 +1,5 @@
-import { INSTANCE_ID_HEADER } from '@n8n/constants';
-import type { INodeParameters } from 'n8n-workflow';
+import { INSTANCE_ID_HEADER } from '@glow/constants';
+import type { INodeParameters } from 'glow-workflow';
 
 import { get } from '../utils';
 

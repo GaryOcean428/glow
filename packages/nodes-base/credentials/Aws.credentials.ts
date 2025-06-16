@@ -8,8 +8,8 @@ import type {
 	IHttpRequestOptions,
 	INodeProperties,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { isObjectEmpty } from 'n8n-workflow';
+} from 'glow-workflow';
+import { isObjectEmpty } from 'glow-workflow';
 
 export const regions = [
 	{

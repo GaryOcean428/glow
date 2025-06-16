@@ -1,11 +1,11 @@
-import type { SharedWorkflow, User } from '@n8n/db';
-import { SharedWorkflowRepository, FolderRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { hasGlobalScope, rolesWithScope, type Scope } from '@n8n/permissions';
+import type { SharedWorkflow, User } from '@glow/db';
+import { SharedWorkflowRepository, FolderRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { hasGlobalScope, rolesWithScope, type Scope } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { EntityManager, FindOptionsWhere } from '@n8n/typeorm';
+import type { EntityManager, FindOptionsWhere } from '@glow/typeorm';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In } from '@n8n/typeorm';
+import { In } from '@glow/typeorm';
 
 @Service()
 export class WorkflowFinderService {

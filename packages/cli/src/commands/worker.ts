@@ -1,5 +1,5 @@
-import { inTest } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
+import { inTest } from '@glow/backend-common';
+import { Container } from '@glow/di';
 import { Flags, type Config } from '@oclif/core';
 
 import config from '@/config';

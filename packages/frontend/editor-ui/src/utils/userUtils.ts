@@ -69,7 +69,7 @@ import type {
 	IUser,
 	ILogInStatus,
 } from '@/Interface';
-import type { IPersonalizationSurveyAnswersV4 } from 'n8n-workflow';
+import type { IPersonalizationSurveyAnswersV4 } from 'glow-workflow';
 
 /*
 	Utility functions used to handle users in n8n

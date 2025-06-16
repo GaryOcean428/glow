@@ -1,5 +1,5 @@
-import type { INodeProperties, IExecuteFunctions, INodeExecutionData } from 'n8n-workflow';
-import { updateDisplayOptions } from 'n8n-workflow';
+import type { INodeProperties, IExecuteFunctions, INodeExecutionData } from 'glow-workflow';
+import { updateDisplayOptions } from 'glow-workflow';
 
 import { apiRequest } from '../../transport';
 

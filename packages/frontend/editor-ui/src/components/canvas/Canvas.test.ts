@@ -5,8 +5,8 @@ import Canvas from '@/components/canvas/Canvas.vue';
 import { createPinia, setActivePinia } from 'pinia';
 import type { CanvasConnection, CanvasNode } from '@/types';
 import { createCanvasConnection, createCanvasNodeElement } from '@/__tests__/data';
-import { NodeConnectionTypes } from 'n8n-workflow';
-import type { useDeviceSupport } from '@n8n/composables/useDeviceSupport';
+import { NodeConnectionTypes } from 'glow-workflow';
+import type { useDeviceSupport } from '@glow/composables/useDeviceSupport';
 import { useVueFlow } from '@vue-flow/core';
 import { SIMULATE_NODE_TYPE } from '@/constants';
 import { canvasEventBus } from '@/event-bus/canvas';
@@ -16,7 +16,7 @@ const matchMedia = global.window.matchMedia;
 global.window = jsdom.window as unknown as Window & typeof globalThis;
 global.window.matchMedia = matchMedia;
 
-vi.mock('@n8n/design-system', async (importOriginal) => {
+vi.mock('@glow/design-system', async (importOriginal) => {
 	const actual = await importOriginal<typeof useDeviceSupport>();
 	return { ...actual, useDeviceSupport: vi.fn(() => ({ isCtrlKeyPressed: vi.fn() })) };
 });

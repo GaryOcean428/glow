@@ -1,4 +1,4 @@
-import type { SamlPreferences } from '@n8n/api-types';
+import type { SamlPreferences } from '@glow/api-types';
 import { createTestingPinia } from '@pinia/testing';
 import { within, waitFor } from '@testing-library/vue';
 import { mockedStore, retry } from '@/__tests__/utils';
@@ -12,7 +12,7 @@ import { createComponentRenderer } from '@/__tests__/render';
 import { EnterpriseEditionFeature } from '@/constants';
 import { nextTick } from 'vue';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
-import type { SamlPreferencesExtractedData } from '@n8n/rest-api-client/api/sso';
+import type { SamlPreferencesExtractedData } from '@glow/rest-api-client/api/sso';
 
 const renderView = createComponentRenderer(SettingsSso);
 

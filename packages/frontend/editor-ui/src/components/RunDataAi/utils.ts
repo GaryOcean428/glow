@@ -6,7 +6,7 @@ import {
 	type ITaskDataConnections,
 	type NodeConnectionType,
 	type Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export interface AIResult {
 	node: string;

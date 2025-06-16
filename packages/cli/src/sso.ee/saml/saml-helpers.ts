@@ -1,8 +1,8 @@
-import type { SamlAcsDto, SamlPreferences } from '@n8n/api-types';
-import type { User } from '@n8n/db';
-import { AuthIdentity, AuthIdentityRepository, UserRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
-import { randomString } from 'n8n-workflow';
+import type { SamlAcsDto, SamlPreferences } from '@glow/api-types';
+import type { User } from '@glow/db';
+import { AuthIdentity, AuthIdentityRepository, UserRepository } from '@glow/db';
+import { Container } from '@glow/di';
+import { randomString } from 'glow-workflow';
 import type { FlowResult } from 'samlify/types/src/flow';
 
 import config from '@/config';

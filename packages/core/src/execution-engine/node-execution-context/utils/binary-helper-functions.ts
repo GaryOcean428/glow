@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 import chardet from 'chardet';
 import FileType from 'file-type';
 import { IncomingMessage } from 'http';
@@ -11,8 +11,8 @@ import type {
 	INode,
 	ITaskDataConnections,
 	IWorkflowExecuteAdditionalData,
-} from 'n8n-workflow';
-import { NodeOperationError, fileTypeFromMimeType, ApplicationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeOperationError, fileTypeFromMimeType, ApplicationError } from 'glow-workflow';
 import path from 'path';
 import type { Readable } from 'stream';
 import { URL } from 'url';

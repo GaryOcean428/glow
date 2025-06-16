@@ -1,10 +1,10 @@
-import type { SourceControlledFile } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import type { TagEntity, WorkflowTagMapping } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { SourceControlledFile } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import type { TagEntity, WorkflowTagMapping } from '@glow/db';
+import { Container } from '@glow/di';
 import { generateKeyPairSync } from 'crypto';
 import { constants as fsConstants, mkdirSync, accessSync } from 'fs';
-import { jsonParse, UserError } from 'n8n-workflow';
+import { jsonParse, UserError } from 'glow-workflow';
 import { ok } from 'node:assert/strict';
 import { readFile as fsReadFile } from 'node:fs/promises';
 import path from 'path';

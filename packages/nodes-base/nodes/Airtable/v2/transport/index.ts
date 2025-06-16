@@ -8,8 +8,8 @@ import type {
 	IPairedItemData,
 	IHttpRequestMethods,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { ApplicationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError } from 'glow-workflow';
 
 import type { IAttachment, IRecord } from '../helpers/interfaces';
 import { flattenOutput } from '../helpers/utils';

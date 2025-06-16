@@ -5,7 +5,7 @@ import type {
 	IHttpRequestHelper,
 	IHttpRequestOptions,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class VenafiTlsProtectDatacenterApi implements ICredentialType {
 	name = 'venafiTlsProtectDatacenterApi';

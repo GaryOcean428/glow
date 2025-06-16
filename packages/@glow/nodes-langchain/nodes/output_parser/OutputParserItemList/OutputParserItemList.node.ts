@@ -5,7 +5,7 @@ import {
 	type INodeTypeDescription,
 	type ISupplyDataFunctions,
 	type SupplyData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { N8nItemListOutputParser } from '@utils/output_parsers/N8nItemListOutputParser';
 import { getConnectionHintNoticeField } from '@utils/sharedFields';

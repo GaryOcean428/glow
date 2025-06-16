@@ -1,4 +1,4 @@
-import type { LoadPreviousSessionResponse, SendMessageResponse } from '@n8n/chat/types';
+import type { LoadPreviousSessionResponse, SendMessageResponse } from '@glow/chat/types';
 
 export function createFetchResponse<T>(data: T) {
 	return async () =>

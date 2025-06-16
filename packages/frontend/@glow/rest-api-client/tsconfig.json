@@ -1,5 +1,5 @@
 {
-	"extends": "@n8n/typescript-config/tsconfig.frontend.json",
+	"extends": "@glow/typescript-config/tsconfig.frontend.json",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"outDir": "dist",
@@ -7,7 +7,7 @@
 		"types": ["vite/client", "vitest/globals"],
 		"isolatedModules": true,
 		"paths": {
-			"@n8n/utils/*": ["../../../@n8n/utils/src/*"]
+			"@glow/utils/*": ["../../../@glow/utils/src/*"]
 		}
 	},
 	"include": ["src/**/*.ts", "vite.config.ts", "tsup.config.ts"]

@@ -1,6 +1,6 @@
-import { Logger } from '@n8n/backend-common';
-import type { Project } from '@n8n/db';
-import { ExecutionRepository } from '@n8n/db';
+import { Logger } from '@glow/backend-common';
+import type { Project } from '@glow/db';
+import { ExecutionRepository } from '@glow/db';
 import { stringify } from 'flatted';
 import { mock } from 'jest-mock-extended';
 import {
@@ -9,8 +9,8 @@ import {
 	InstanceSettings,
 	ExecutionLifecycleHooks,
 	BinaryDataConfig,
-} from 'n8n-core';
-import { ExpressionError } from 'n8n-workflow';
+} from 'glow-core';
+import { ExpressionError } from 'glow-workflow';
 import type {
 	IRunExecutionData,
 	ITaskData,
@@ -21,7 +21,7 @@ import type {
 	IWorkflowBase,
 	WorkflowExecuteMode,
 	ITaskStartedData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { EventService } from '@/events/event.service';
 import { ExternalHooks } from '@/external-hooks';

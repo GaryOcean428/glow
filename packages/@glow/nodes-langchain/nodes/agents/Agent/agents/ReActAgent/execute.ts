@@ -7,7 +7,7 @@ import {
 	type INodeExecutionData,
 	NodeConnectionTypes,
 	NodeOperationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getConnectedTools, getPromptInputByType, isChatInstance } from '@utils/helpers';
 import { getOptionalOutputParser } from '@utils/output_parsers/N8nOutputParser';

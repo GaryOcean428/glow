@@ -1,4 +1,4 @@
-import type { Scope, ProjectRole } from '@n8n/permissions';
+import type { Scope, ProjectRole } from '@glow/permissions';
 import type { IUserResponse } from '@/Interface';
 
 export const ProjectTypes = {

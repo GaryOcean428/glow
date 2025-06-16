@@ -9,7 +9,7 @@ import {
 	type IExecuteFunctions,
 	type ISupplyDataFunctions,
 	ApplicationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { createVectorStoreNode } from '../shared/createVectorStoreNode/createVectorStoreNode';
 import { MemoryVectorStoreManager } from '../shared/MemoryManager/MemoryVectorStoreManager';

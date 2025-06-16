@@ -1,11 +1,11 @@
 import { DynamicStructuredTool } from '@langchain/core/tools';
-import type { IDataObject, INode, INodeType, FromAIArgument } from 'n8n-workflow';
+import type { IDataObject, INode, INodeType, FromAIArgument } from 'glow-workflow';
 import {
 	generateZodSchema,
 	NodeOperationError,
 	traverseNodeParameters,
 	NodeHelpers,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { z } from 'zod';
 
 export type CreateNodeAsToolOptions = {
@@ -91,7 +91,7 @@ function getSchema(node: INode) {
 /**
  * Converts a node name to a valid tool name by replacing special characters with underscores
  * and collapsing consecutive underscores into a single one.
- * This method is copied from `packages/@n8n/nodes-langchain/utils/helpers.ts`.
+ * This method is copied from `packages/@glow/nodes-langchain/utils/helpers.ts`.
  */
 export function nodeNameToToolName(node: INode): string {
 	return node.name.replace(/[\s.?!=+#@&*()[\]{}:;,<>\/\\'"^%$]/g, '_').replace(/_+/g, '_');

@@ -1,10 +1,10 @@
-import type { Project } from '@n8n/db';
-import type { WorkflowEntity } from '@n8n/db';
-import type { IWorkflowDb } from '@n8n/db';
-import type { SharedWorkflowRepository } from '@n8n/db';
-import type { WorkflowExecuteAfterContext } from '@n8n/decorators';
-import { Container } from '@n8n/di';
-import { In } from '@n8n/typeorm';
+import type { Project } from '@glow/db';
+import type { WorkflowEntity } from '@glow/db';
+import type { IWorkflowDb } from '@glow/db';
+import type { SharedWorkflowRepository } from '@glow/db';
+import type { WorkflowExecuteAfterContext } from '@glow/decorators';
+import { Container } from '@glow/di';
+import { In } from '@glow/typeorm';
 import { mock } from 'jest-mock-extended';
 import { DateTime } from 'luxon';
 import {
@@ -12,7 +12,7 @@ import {
 	type ExecutionStatus,
 	type IRun,
 	type WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { TypeUnit } from '@/modules/insights/database/entities/insights-shared';
 import { InsightsMetadataRepository } from '@/modules/insights/database/repositories/insights-metadata.repository';

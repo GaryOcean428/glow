@@ -1,6 +1,6 @@
-import type { User } from '@n8n/db';
-import { WorkflowStatisticsRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import type { User } from '@glow/db';
+import { WorkflowStatisticsRepository } from '@glow/db';
+import { Service } from '@glow/di';
 
 @Service()
 export class CtaService {

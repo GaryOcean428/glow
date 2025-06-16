@@ -3,8 +3,8 @@ import type {
 	IExecuteFunctions,
 	IDataObject,
 	INodeExecutionData,
-} from 'n8n-workflow';
-import { updateDisplayOptions } from 'n8n-workflow';
+} from 'glow-workflow';
+import { updateDisplayOptions } from 'glow-workflow';
 
 import { apiRequest } from '../../transport';
 

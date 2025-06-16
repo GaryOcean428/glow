@@ -1,4 +1,4 @@
-import type { PublicInstalledPackage } from 'n8n-workflow';
+import type { PublicInstalledPackage } from 'glow-workflow';
 
 import type { IRestApiContext } from '../types';
 import { get, post, makeRestApiRequest } from '../utils';

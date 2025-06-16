@@ -1,4 +1,4 @@
-import { Column, Entity, ManyToOne, PrimaryColumn } from '@n8n/typeorm';
+import { Column, Entity, ManyToOne, PrimaryColumn } from '@glow/typeorm';
 
 import { DateTimeColumn } from './abstract-entity';
 import { StatisticsNames } from './types-db';

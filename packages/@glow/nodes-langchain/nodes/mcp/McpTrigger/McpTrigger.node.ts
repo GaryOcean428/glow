@@ -1,7 +1,7 @@
-import { WebhookAuthorizationError } from 'n8n-nodes-base/dist/nodes/Webhook/error';
-import { validateWebhookAuthentication } from 'n8n-nodes-base/dist/nodes/Webhook/utils';
-import type { INodeTypeDescription, IWebhookFunctions, IWebhookResponseData } from 'n8n-workflow';
-import { NodeConnectionTypes, Node } from 'n8n-workflow';
+import { WebhookAuthorizationError } from 'glow-nodes-base/dist/nodes/Webhook/error';
+import { validateWebhookAuthentication } from 'glow-nodes-base/dist/nodes/Webhook/utils';
+import type { INodeTypeDescription, IWebhookFunctions, IWebhookResponseData } from 'glow-workflow';
+import { NodeConnectionTypes, Node } from 'glow-workflow';
 
 import { getConnectedTools, nodeNameToToolName } from '@utils/helpers';
 

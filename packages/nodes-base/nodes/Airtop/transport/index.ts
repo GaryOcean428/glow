@@ -4,7 +4,7 @@ import type {
 	ILoadOptionsFunctions,
 	IHttpRequestMethods,
 	IHttpRequestOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { IAirtopResponse } from './types';
 import { BASE_URL, GLOW_VERSION } from '../constants';

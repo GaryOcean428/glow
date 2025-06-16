@@ -19,14 +19,14 @@ import {
 } from '@/constants';
 import { v4 as uuidv4 } from 'uuid';
 
-import { sublimeSearch } from '@n8n/utils/search/sublimeSearch';
+import { sublimeSearch } from '@glow/utils/search/sublimeSearch';
 import type { NodeViewItemSection } from './viewsData';
-import { i18n } from '@n8n/i18n';
+import { i18n } from '@glow/i18n';
 import sortBy from 'lodash/sortBy';
 import * as changeCase from 'change-case';
 
 import { useSettingsStore } from '@/stores/settings.store';
-import { SEND_AND_WAIT_OPERATION } from 'n8n-workflow';
+import { SEND_AND_WAIT_OPERATION } from 'glow-workflow';
 import type { NodeIconSource } from '../../../utils/nodeIcon';
 import type { CommunityNodeDetails, ViewStack } from './composables/useViewStacks';
 import { useNodeTypesStore } from '../../../stores/nodeTypes.store';

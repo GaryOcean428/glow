@@ -1,5 +1,5 @@
-import { PullWorkFolderRequestDto } from '@n8n/api-types';
-import { Container } from '@n8n/di';
+import { PullWorkFolderRequestDto } from '@glow/api-types';
+import { Container } from '@glow/di';
 import type express from 'express';
 import type { StatusResult } from 'simple-git';
 

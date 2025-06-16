@@ -2,7 +2,7 @@ import type { BaseChatModel } from '@langchain/core/language_models/chat_models'
 import { mock } from 'jest-mock-extended';
 import { AgentExecutor } from 'langchain/agents';
 import type { Tool } from 'langchain/tools';
-import type { IExecuteFunctions, INode } from 'n8n-workflow';
+import type { IExecuteFunctions, INode } from 'glow-workflow';
 
 import * as helpers from '../../../../../utils/helpers';
 import { toolsAgentExecute } from '../../agents/ToolsAgent/V1/execute';

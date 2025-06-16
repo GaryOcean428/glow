@@ -1,5 +1,5 @@
 import { useLocalStorage } from '@vueuse/core';
-import type { INodeParameters, NodeParameterValueType } from 'n8n-workflow';
+import type { INodeParameters, NodeParameterValueType } from 'glow-workflow';
 import { defineStore } from 'pinia';
 
 const LOCAL_STORAGE_AGENT_REQUESTS = 'GLOW_AGENT_REQUESTS';

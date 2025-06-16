@@ -1,9 +1,9 @@
-import type { User } from '@n8n/db';
-import type { ExecutionEntity } from '@n8n/db';
-import { Container, Service } from '@n8n/di';
+import type { User } from '@glow/db';
+import type { ExecutionEntity } from '@glow/db';
+import { Container, Service } from '@glow/di';
 import { mock } from 'jest-mock-extended';
-import { DirectedGraph, WorkflowExecute } from 'n8n-core';
-import * as core from 'n8n-core';
+import { DirectedGraph, WorkflowExecute } from 'glow-core';
+import * as core from 'glow-core';
 import type {
 	IExecuteData,
 	INode,
@@ -15,8 +15,8 @@ import type {
 	IWorkflowExecutionDataProcess,
 	StartNodeData,
 	IWorkflowExecuteAdditionalData,
-} from 'n8n-workflow';
-import { Workflow, type ExecutionError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { Workflow, type ExecutionError } from 'glow-workflow';
 import PCancelable from 'p-cancelable';
 
 import { ActiveExecutions } from '@/active-executions';

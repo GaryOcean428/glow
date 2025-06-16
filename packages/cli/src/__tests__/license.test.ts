@@ -1,7 +1,7 @@
-import type { GlobalConfig } from '@n8n/config';
+import type { GlobalConfig } from '@glow/config';
 import { LicenseManager } from '@n8n_io/license-sdk';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
+import type { InstanceSettings } from 'glow-core';
 
 import { GLOW_VERSION } from '@/constants';
 import { License } from '@/license';

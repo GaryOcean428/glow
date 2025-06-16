@@ -12,7 +12,7 @@ import {
 import { Container } from '@n8n/di';
 import * as fastGlob from 'fast-glob';
 import { mock } from 'jest-mock-extended';
-import { Cipher } from 'n8n-core';
+import { Cipher } from 'glow-core';
 import fsp from 'node:fs/promises';
 import { basename, isAbsolute } from 'node:path';
 

@@ -1,6 +1,6 @@
-import type { InstanceType } from '@n8n/constants';
+import type { InstanceType } from '@glow/constants';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
+import type { InstanceSettings } from 'glow-core';
 
 import type { ModulePreInitContext } from '@/modules/modules.config';
 

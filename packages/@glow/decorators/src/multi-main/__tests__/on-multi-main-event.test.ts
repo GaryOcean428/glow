@@ -1,5 +1,5 @@
-import { Container } from '@n8n/di';
-import { Service } from '@n8n/di';
+import { Container } from '@glow/di';
+import { Service } from '@glow/di';
 import { EventEmitter } from 'node:events';
 
 import { NonMethodError } from '../../errors';

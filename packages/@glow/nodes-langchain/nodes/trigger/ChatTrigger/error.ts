@@ -1,4 +1,4 @@
-import { ApplicationError } from 'n8n-workflow';
+import { ApplicationError } from 'glow-workflow';
 
 export class ChatTriggerAuthorizationError extends ApplicationError {
 	constructor(

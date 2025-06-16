@@ -9,7 +9,7 @@ import type {
 	IWorkflowExecuteAdditionalData,
 	PaginationOptions,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import nock from 'nock';
 import type { SecureContextOptions } from 'tls';
 

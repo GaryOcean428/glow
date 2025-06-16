@@ -8,14 +8,14 @@ import type {
 	IWebhookFunctions,
 	FormFieldsParameter,
 	NodeTypeAndVersion,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	FORM_NODE_TYPE,
 	FORM_TRIGGER_NODE_TYPE,
 	NodeOperationError,
 	WAIT_NODE_TYPE,
 	jsonParse,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import sanitize from 'sanitize-html';
 
 import type { FormTriggerData, FormTriggerInput } from './interfaces';

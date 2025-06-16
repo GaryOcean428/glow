@@ -1,6 +1,6 @@
-import type { BooleanLicenseFeature } from '@n8n/constants';
-import type { Constructable } from '@n8n/di';
-import type { Scope } from '@n8n/permissions';
+import type { BooleanLicenseFeature } from '@glow/constants';
+import type { Constructable } from '@glow/di';
+import type { Scope } from '@glow/permissions';
 import type { RequestHandler } from 'express';
 
 export type Method = 'get' | 'post' | 'put' | 'patch' | 'delete';

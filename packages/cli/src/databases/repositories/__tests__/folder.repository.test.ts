@@ -1,8 +1,8 @@
-import type { Project } from '@n8n/db';
-import type { User } from '@n8n/db';
-import type { Folder } from '@n8n/db';
-import { FolderRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { Project } from '@glow/db';
+import type { User } from '@glow/db';
+import type { Folder } from '@glow/db';
+import { FolderRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { DateTime } from 'luxon';
 
 import { createFolder } from '@test-integration/db/folders';

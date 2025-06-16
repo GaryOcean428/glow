@@ -1,5 +1,5 @@
-import type { IDataObject, INode, INodeExecutionData, ITaskData } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { IDataObject, INode, INodeExecutionData, ITaskData } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { nanoid } from 'nanoid';
 
 import type { JSExecSettings } from '@/js-task-runner/js-task-runner';

@@ -1,4 +1,4 @@
-import { projectRoleSchema } from '@n8n/permissions';
+import { projectRoleSchema } from '@glow/permissions';
 import { z } from 'zod';
 
 export const projectNameSchema = z.string().min(1).max(255);

@@ -1,10 +1,10 @@
-import type { IVersionNotificationSettings } from '@n8n/api-types';
-import * as versionsApi from '@n8n/rest-api-client/api/versions';
+import type { IVersionNotificationSettings } from '@glow/api-types';
+import * as versionsApi from '@glow/rest-api-client/api/versions';
 import { VERSIONS_MODAL_KEY } from '@/constants';
-import { STORES } from '@n8n/stores';
-import type { Version } from '@n8n/rest-api-client/api/versions';
+import { STORES } from '@glow/stores';
+import type { Version } from '@glow/rest-api-client/api/versions';
 import { defineStore } from 'pinia';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useToast } from '@/composables/useToast';
 import { useUIStore } from '@/stores/ui.store';
 import { computed, ref } from 'vue';

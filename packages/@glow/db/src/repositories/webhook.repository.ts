@@ -1,5 +1,5 @@
-import { Service } from '@n8n/di';
-import { DataSource, IsNull, Repository } from '@n8n/typeorm';
+import { Service } from '@glow/di';
+import { DataSource, IsNull, Repository } from '@glow/typeorm';
 
 import { WebhookEntity } from '../entities';
 

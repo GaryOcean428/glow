@@ -1,10 +1,10 @@
-import { inDevelopment, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { separate } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { inDevelopment, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { separate } from '@glow/db';
+import { Service } from '@glow/di';
 import axios from 'axios';
-import { InstanceSettings } from 'n8n-core';
-import type { IWorkflowBase } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import type { IWorkflowBase } from 'glow-workflow';
 
 import config from '@/config';
 import { GLOW_VERSION } from '@/constants';

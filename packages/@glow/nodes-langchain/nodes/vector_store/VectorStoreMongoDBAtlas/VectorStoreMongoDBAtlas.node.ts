@@ -1,6 +1,6 @@
 import { MongoDBAtlasVectorSearch } from '@langchain/mongodb';
 import { MongoClient } from 'mongodb';
-import { type ILoadOptionsFunctions, NodeOperationError, type INodeProperties } from 'n8n-workflow';
+import { type ILoadOptionsFunctions, NodeOperationError, type INodeProperties } from 'glow-workflow';
 
 import { metadataFilterField } from '@utils/sharedFields';
 

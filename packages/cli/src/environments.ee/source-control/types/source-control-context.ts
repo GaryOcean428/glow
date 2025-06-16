@@ -1,5 +1,5 @@
-import type { User } from '@n8n/db';
-import { hasGlobalScope } from '@n8n/permissions';
+import type { User } from '@glow/db';
+import { hasGlobalScope } from '@glow/permissions';
 
 export class SourceControlContext {
 	constructor(private readonly userInternal: User) {}

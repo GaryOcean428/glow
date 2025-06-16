@@ -8,8 +8,8 @@ import type {
 	WorkflowExecuteMode,
 	IWebhookData,
 	WebhookType,
-} from 'n8n-workflow';
-import { ApplicationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError } from 'glow-workflow';
 
 import { NodeExecutionContext } from './node-execution-context';
 import { getRequestHelperFunctions } from './utils/request-helper-functions';

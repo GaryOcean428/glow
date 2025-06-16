@@ -1,6 +1,6 @@
 import { describe, it, expect, afterAll } from 'vitest';
 import { mock } from 'vitest-mock-extended';
-import type { IConnections, NodeParameterValueType, IDataObject } from 'n8n-workflow';
+import type { IConnections, NodeParameterValueType, IDataObject } from 'glow-workflow';
 import { updateDynamicConnections } from './nodeSettingsUtils';
 import { SWITCH_NODE_TYPE } from '@/constants';
 import type { INodeUi, IUpdateInformation } from '@/Interface';

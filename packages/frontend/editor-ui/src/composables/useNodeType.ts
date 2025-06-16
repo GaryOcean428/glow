@@ -1,9 +1,9 @@
 import type { MaybeRef } from 'vue';
 import { computed, unref } from 'vue';
-import type { INodeTypeDescription } from 'n8n-workflow';
+import type { INodeTypeDescription } from 'glow-workflow';
 import type { INodeUi, SimplifiedNodeType } from '@/Interface';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
-import { NodeHelpers } from 'n8n-workflow';
+import { NodeHelpers } from 'glow-workflow';
 
 export function useNodeType(
 	options: {

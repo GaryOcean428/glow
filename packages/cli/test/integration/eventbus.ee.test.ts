@@ -5,12 +5,12 @@ import type {
 	MessageEventBusDestinationSentryOptions,
 	MessageEventBusDestinationSyslogOptions,
 	MessageEventBusDestinationWebhookOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	defaultMessageEventBusDestinationSentryOptions,
 	defaultMessageEventBusDestinationSyslogOptions,
 	defaultMessageEventBusDestinationWebhookOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import syslog from 'syslog-client';
 import { v4 as uuid } from 'uuid';
 

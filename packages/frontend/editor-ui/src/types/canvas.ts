@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-redundant-type-constituents */
-import type { ExecutionStatus, INodeConnections, NodeConnectionType } from 'n8n-workflow';
+import type { ExecutionStatus, INodeConnections, NodeConnectionType } from 'glow-workflow';
 import type {
 	DefaultEdge,
 	Node,
@@ -10,7 +10,7 @@ import type {
 } from '@vue-flow/core';
 import type { IExecutionResponse, INodeUi } from '@/Interface';
 import type { ComputedRef, Ref } from 'vue';
-import type { EventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
 import type { CanvasLayoutSource } from '@/composables/useCanvasLayout';
 import type { NodeIconSource } from '../utils/nodeIcon';
 

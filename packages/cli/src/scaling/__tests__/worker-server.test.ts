@@ -1,7 +1,7 @@
-import type { GlobalConfig } from '@n8n/config';
+import type { GlobalConfig } from '@glow/config';
 import type express from 'express';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
+import type { InstanceSettings } from 'glow-core';
 import { AssertionError } from 'node:assert';
 import * as http from 'node:http';
 

@@ -3,7 +3,7 @@ import { mockedStore } from '@/__tests__/utils';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useExecutionDebugging } from './useExecutionDebugging';
 import type { INodeUi, IExecutionResponse } from '@/Interface';
-import type { Workflow } from 'n8n-workflow';
+import type { Workflow } from 'glow-workflow';
 import { useToast } from '@/composables/useToast';
 
 vi.mock('@/composables/useToast', () => {

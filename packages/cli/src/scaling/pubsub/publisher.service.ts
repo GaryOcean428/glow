@@ -1,8 +1,8 @@
-import { Logger } from '@n8n/backend-common';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { Service } from '@glow/di';
 import type { Redis as SingleNodeClient, Cluster as MultiNodeClient } from 'ioredis';
-import { InstanceSettings } from 'n8n-core';
-import type { LogMetadata } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import type { LogMetadata } from 'glow-workflow';
 
 import config from '@/config';
 import { RedisClientService } from '@/services/redis-client.service';

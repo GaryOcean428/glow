@@ -10,8 +10,8 @@ import type {
 	INodeExecutionData,
 	INodeProperties,
 	IPairedItemData,
-} from 'n8n-workflow';
-import { ApplicationError, jsonParse, randomInt } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, jsonParse, randomInt } from 'glow-workflow';
 
 /**
  * Creates an array of elements split into groups the length of `size`.

@@ -1,5 +1,5 @@
 import { setActivePinia } from 'pinia';
-import type { INode, INodeTypeDescription, Workflow } from 'n8n-workflow';
+import type { INode, INodeTypeDescription, Workflow } from 'glow-workflow';
 import { createTestingPinia } from '@pinia/testing';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { createTestNode } from '@/__tests__/mocks';
@@ -7,7 +7,7 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { CUSTOM_API_CALL_KEY } from '@/constants';
 import { mockedStore } from '@/__tests__/utils';
 import { mock } from 'vitest-mock-extended';
-import type { ExecutionStatus, IRunData } from 'n8n-workflow';
+import type { ExecutionStatus, IRunData } from 'glow-workflow';
 
 describe('useNodeHelpers()', () => {
 	beforeAll(() => {

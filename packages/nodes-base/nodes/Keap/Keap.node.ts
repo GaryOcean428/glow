@@ -1,6 +1,6 @@
 import { capitalCase, pascalCase } from 'change-case';
 import moment from 'moment-timezone';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IDataObject,
 	IExecuteFunctions,
@@ -9,7 +9,7 @@ import type {
 	INodePropertyOptions,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { companyFields, companyOperations } from './CompanyDescription';
 import type { ICompany } from './CompanyInterface';

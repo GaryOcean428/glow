@@ -4,8 +4,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	JsonObject,
-} from 'n8n-workflow';
-import { jsonParse, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { jsonParse, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 const errorObjectPlaceholder = `{
 	"code": "404",

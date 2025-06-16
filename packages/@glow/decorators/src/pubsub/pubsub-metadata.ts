@@ -1,5 +1,5 @@
-import type { InstanceRole, InstanceType } from '@n8n/constants';
-import { Service } from '@n8n/di';
+import type { InstanceRole, InstanceType } from '@glow/constants';
+import { Service } from '@glow/di';
 
 import type { EventHandler } from '../types';
 

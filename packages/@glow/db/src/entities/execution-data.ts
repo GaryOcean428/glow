@@ -1,5 +1,5 @@
-import { Column, Entity, ManyToOne, PrimaryColumn } from '@n8n/typeorm';
-import { IWorkflowBase } from 'n8n-workflow';
+import { Column, Entity, ManyToOne, PrimaryColumn } from '@glow/typeorm';
+import { IWorkflowBase } from 'glow-workflow';
 
 import { JsonColumn } from './abstract-entity';
 import { ExecutionEntity } from './execution-entity';

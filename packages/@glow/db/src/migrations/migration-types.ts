@@ -1,5 +1,5 @@
-import type { Logger } from '@n8n/backend-common';
-import type { QueryRunner, ObjectLiteral } from '@n8n/typeorm';
+import type { Logger } from '@glow/backend-common';
+import type { QueryRunner, ObjectLiteral } from '@glow/typeorm';
 
 import type { createSchemaBuilder } from './dsl';
 
@@ -63,4 +63,4 @@ export interface Migration extends Function {
 
 export type InsertResult = Array<{ insertId: number }>;
 
-export { QueryFailedError } from '@n8n/typeorm/error/QueryFailedError';
+export { QueryFailedError } from '@glow/typeorm/error/QueryFailedError';

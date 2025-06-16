@@ -1,15 +1,15 @@
-import type { InsightsDateRange } from '@n8n/api-types';
-import type { LicenseState } from '@n8n/backend-common';
-import type { Project } from '@n8n/db';
-import type { WorkflowEntity } from '@n8n/db';
-import type { IWorkflowDb } from '@n8n/db';
-import type { WorkflowExecuteAfterContext } from '@n8n/decorators';
-import { Container } from '@n8n/di';
+import type { InsightsDateRange } from '@glow/api-types';
+import type { LicenseState } from '@glow/backend-common';
+import type { Project } from '@glow/db';
+import type { WorkflowEntity } from '@glow/db';
+import type { IWorkflowDb } from '@glow/db';
+import type { WorkflowExecuteAfterContext } from '@glow/decorators';
+import { Container } from '@glow/di';
 import type { MockProxy } from 'jest-mock-extended';
 import { mock } from 'jest-mock-extended';
 import { DateTime } from 'luxon';
-import type { InstanceSettings } from 'n8n-core';
-import type { IRun } from 'n8n-workflow';
+import type { InstanceSettings } from 'glow-core';
+import type { IRun } from 'glow-workflow';
 
 import { mockLogger } from '@test/mocking';
 import { createTeamProject } from '@test-integration/db/projects';

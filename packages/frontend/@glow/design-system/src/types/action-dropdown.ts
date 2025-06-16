@@ -1,4 +1,4 @@
-import type { KeyboardShortcut } from '@n8n/design-system/types/keyboardshortcut';
+import type { KeyboardShortcut } from '@glow/design-system/types/keyboardshortcut';
 
 export interface ActionDropdownItem {
 	id: string;

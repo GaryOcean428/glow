@@ -1,5 +1,5 @@
-import { VariablesRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { VariablesRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import type { Response } from 'express';
 
 import { VariablesController } from '@/environments.ee/variables/variables.controller.ee';

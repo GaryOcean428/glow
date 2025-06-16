@@ -1,6 +1,6 @@
-import type { Variables } from '@n8n/db';
-import { generateNanoId, VariablesRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import type { Variables } from '@glow/db';
+import { generateNanoId, VariablesRepository } from '@glow/db';
+import { Service } from '@glow/di';
 
 import { VariableCountLimitReachedError } from '@/errors/variable-count-limit-reached.error';
 import { VariableValidationError } from '@/errors/variable-validation.error';

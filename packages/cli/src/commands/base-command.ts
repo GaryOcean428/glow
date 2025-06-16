@@ -1,8 +1,8 @@
 import 'reflect-metadata';
-import { inDevelopment, inTest, LicenseState, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { LICENSE_FEATURES } from '@n8n/constants';
-import { Container } from '@n8n/di';
+import { inDevelopment, inTest, LicenseState, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { LICENSE_FEATURES } from '@glow/constants';
+import { Container } from '@glow/di';
 import { Command, Errors } from '@oclif/core';
 import {
 	BinaryDataConfig,
@@ -11,8 +11,8 @@ import {
 	ObjectStoreService,
 	DataDeduplicationService,
 	ErrorReporter,
-} from 'n8n-core';
-import { ensureError, sleep, UserError } from 'n8n-workflow';
+} from 'glow-core';
+import { ensureError, sleep, UserError } from 'glow-workflow';
 
 import type { AbstractServer } from '@/abstract-server';
 import config from '@/config';

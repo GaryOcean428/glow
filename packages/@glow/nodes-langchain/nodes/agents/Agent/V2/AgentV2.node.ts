@@ -1,4 +1,4 @@
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type {
 	INodeInputConfiguration,
 	INodeInputFilter,
@@ -8,7 +8,7 @@ import type {
 	INodeTypeDescription,
 	NodeConnectionType,
 	INodeTypeBaseDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { promptTypeOptions, textFromPreviousNode, textInput } from '@utils/descriptions';
 

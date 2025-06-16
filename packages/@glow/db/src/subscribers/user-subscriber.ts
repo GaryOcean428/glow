@@ -1,9 +1,9 @@
-import { Logger } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
-import type { EntitySubscriberInterface, UpdateEvent } from '@n8n/typeorm';
-import { EventSubscriber } from '@n8n/typeorm';
-import { ErrorReporter } from 'n8n-core';
-import { UnexpectedError } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { Container } from '@glow/di';
+import type { EntitySubscriberInterface, UpdateEvent } from '@glow/typeorm';
+import { EventSubscriber } from '@glow/typeorm';
+import { ErrorReporter } from 'glow-core';
+import { UnexpectedError } from 'glow-workflow';
 
 import { Project, User } from '../entities';
 import { UserRepository } from '../repositories/user.repository';

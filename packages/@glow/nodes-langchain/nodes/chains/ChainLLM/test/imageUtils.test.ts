@@ -3,8 +3,8 @@ import { HumanMessage } from '@langchain/core/messages';
 import { ChatGoogleGenerativeAI } from '@langchain/google-genai';
 import { ChatOllama } from '@langchain/ollama';
 import { mock } from 'jest-mock-extended';
-import type { IExecuteFunctions, IBinaryData, INode } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IExecuteFunctions, IBinaryData, INode } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import {
 	createImageMessage,

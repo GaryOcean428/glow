@@ -1,11 +1,11 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
-import type { ObjectLiteral } from '@n8n/typeorm';
-import type { QueryRunner } from '@n8n/typeorm/query-runner/QueryRunner';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Container } from '@glow/di';
+import type { ObjectLiteral } from '@glow/typeorm';
+import type { QueryRunner } from '@glow/typeorm/query-runner/QueryRunner';
 import { readFileSync, rmSync } from 'fs';
-import { InstanceSettings } from 'n8n-core';
-import { jsonParse, UnexpectedError } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { jsonParse, UnexpectedError } from 'glow-workflow';
 
 import { createSchemaBuilder } from './dsl';
 import type { BaseMigration, Migration, MigrationContext, MigrationFn } from './migration-types';

@@ -3,8 +3,8 @@ import type {
 	IExecuteSingleFunctions,
 	IHttpRequestOptions,
 	INodeProperties,
-} from 'n8n-workflow';
-import { OperationalError, updateDisplayOptions } from 'n8n-workflow';
+} from 'glow-workflow';
+import { OperationalError, updateDisplayOptions } from 'glow-workflow';
 
 import { HeaderConstants } from '../../helpers/constants';
 import { processJsonInput } from '../../helpers/utils';

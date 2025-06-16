@@ -1,31 +1,31 @@
 {
-	"extends": "@n8n/typescript-config/tsconfig.frontend.json",
+	"extends": "@glow/typescript-config/tsconfig.frontend.json",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"rootDirs": [
 			".",
-			"../@n8n/rest-api-client/src",
-			"../@n8n/composables/src",
-			"../@n8n/chat/src",
-			"../@n8n/design-system/src"
+			"../@glow/rest-api-client/src",
+			"../@glow/composables/src",
+			"../@glow/chat/src",
+			"../@glow/design-system/src"
 		],
 		"outDir": "dist",
 		"types": [
 			"vitest/globals",
 			"unplugin-icons/types/vue",
-			"../@n8n/design-system/src/shims-modules.d.ts"
+			"../@glow/design-system/src/shims-modules.d.ts"
 		],
 		"paths": {
 			"@/*": ["./src/*"],
-			"@n8n/rest-api-client*": ["../@n8n/rest-api-client/src*"],
-			"@n8n/composables*": ["../@n8n/composables/src*"],
-			"@n8n/constants*": ["../../@n8n/constants/src*"],
-			"@n8n/chat*": ["../@n8n/chat/src*"],
-			"@n8n/design-system*": ["../@n8n/design-system/src*"],
-			"@n8n/i18n*": ["../@n8n/i18n/src*"],
-			"@n8n/stores*": ["../@n8n/stores/src*"],
-			"@n8n/api-types*": ["../../@n8n/api-types/src*"],
-			"@n8n/utils*": ["../../@n8n/utils/src*"]
+			"@glow/rest-api-client*": ["../@glow/rest-api-client/src*"],
+			"@glow/composables*": ["../@glow/composables/src*"],
+			"@glow/constants*": ["../../@glow/constants/src*"],
+			"@glow/chat*": ["../@glow/chat/src*"],
+			"@glow/design-system*": ["../@glow/design-system/src*"],
+			"@glow/i18n*": ["../@glow/i18n/src*"],
+			"@glow/stores*": ["../@glow/stores/src*"],
+			"@glow/api-types*": ["../../@glow/api-types/src*"],
+			"@glow/utils*": ["../../@glow/utils/src*"]
 		},
 		// TODO: remove all options below this line
 		"useUnknownInCatchVariables": false

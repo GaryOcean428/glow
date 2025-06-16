@@ -1,5 +1,5 @@
-import type { IExecuteFunctions } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { N8nItemListOutputParser } from './N8nItemListOutputParser';
 import { N8nOutputFixingParser } from './N8nOutputFixingParser';

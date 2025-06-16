@@ -1,4 +1,4 @@
-import { ApplicationError } from 'n8n-workflow';
+import { ApplicationError } from 'glow-workflow';
 
 import { ExecutionError } from '@/js-task-runner/errors/execution-error';
 

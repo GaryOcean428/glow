@@ -4,7 +4,7 @@ import type {
 	INodeExecutionData,
 	ISupplyDataFunctions,
 	IWorkflowDataProxyData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { isObject } from './utils';
 import { ValidationError } from './ValidationError';

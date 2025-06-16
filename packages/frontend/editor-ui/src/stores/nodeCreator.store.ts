@@ -8,7 +8,7 @@ import {
 	REGULAR_NODE_CREATOR_VIEW,
 	TRIGGER_NODE_CREATOR_VIEW,
 } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type {
 	NodeFilterType,
 	NodeCreatorOpenSource,
@@ -25,8 +25,8 @@ import type {
 	INodeInputConfiguration,
 	NodeParameterValueType,
 	NodeConnectionType,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeHelpers } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeHelpers } from 'glow-workflow';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useNDVStore } from '@/stores/ndv.store';

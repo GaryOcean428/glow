@@ -1,11 +1,11 @@
 import { DateTime } from 'luxon';
 import { defineStore } from 'pinia';
 import { computed, ref } from 'vue';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { useCloudPlanStore } from '@/stores/cloudPlan.store';
 import { useStorage } from '@/composables/useStorage';
-import { useRootStore } from '@n8n/stores/useRootStore';
-import { getBecomeCreatorCta } from '@n8n/rest-api-client/api/ctas';
+import { useRootStore } from '@glow/stores/useRootStore';
+import { getBecomeCreatorCta } from '@glow/rest-api-client/api/ctas';
 
 const LOCAL_STORAGE_KEY = 'GLOW_BECOME_TEMPLATE_CREATOR_CTA_DISMISSED_AT';
 const RESHOW_DISMISSED_AFTER_DAYS = 30;

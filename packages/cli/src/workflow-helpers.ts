@@ -1,12 +1,12 @@
-import { CredentialsRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { CredentialsRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import type {
 	IDataObject,
 	INodeCredentialsDetails,
 	IRun,
 	ITaskData,
 	IWorkflowBase,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { VariablesService } from '@/environments.ee/variables/variables.service.ee';

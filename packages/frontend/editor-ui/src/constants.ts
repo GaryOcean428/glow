@@ -3,8 +3,8 @@ import type {
 	EnterpriseEditionFeatureValue,
 	NodeCreatorOpenSource,
 } from './Interface';
-import type { NodeConnectionType } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { NodeConnectionType } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type {
 	CanvasInjectionData,
 	CanvasNodeHandleInjectionData,
@@ -124,9 +124,9 @@ export const NODE_MIN_INPUT_ITEMS_COUNT = 4;
 export const BAMBOO_HR_NODE_TYPE = 'n8n-nodes-base.bambooHr';
 export const CALENDLY_TRIGGER_NODE_TYPE = 'n8n-nodes-base.calendlyTrigger';
 export const CODE_NODE_TYPE = 'n8n-nodes-base.code';
-export const AI_CODE_NODE_TYPE = '@n8n/n8n-nodes-langchain.code';
-export const AI_MCP_TOOL_NODE_TYPE = '@n8n/n8n-nodes-langchain.mcpClientTool';
-export const WIKIPEDIA_TOOL_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolWikipedia';
+export const AI_CODE_NODE_TYPE = '@glow/n8n-nodes-langchain.code';
+export const AI_MCP_TOOL_NODE_TYPE = '@glow/n8n-nodes-langchain.mcpClientTool';
+export const WIKIPEDIA_TOOL_NODE_TYPE = '@glow/n8n-nodes-langchain.toolWikipedia';
 export const CRON_NODE_TYPE = 'n8n-nodes-base.cron';
 export const CLEARBIT_NODE_TYPE = 'n8n-nodes-base.clearbit';
 export const FILTER_NODE_TYPE = 'n8n-nodes-base.filter';
@@ -152,16 +152,16 @@ export const JIRA_NODE_TYPE = 'n8n-nodes-base.jira';
 export const JIRA_TRIGGER_NODE_TYPE = 'n8n-nodes-base.jiraTrigger';
 export const MICROSOFT_EXCEL_NODE_TYPE = 'n8n-nodes-base.microsoftExcel';
 export const MANUAL_TRIGGER_NODE_TYPE = 'n8n-nodes-base.manualTrigger';
-export const MANUAL_CHAT_TRIGGER_NODE_TYPE = '@n8n/n8n-nodes-langchain.manualChatTrigger';
-export const MCP_TRIGGER_NODE_TYPE = '@n8n/n8n-nodes-langchain.mcpTrigger';
-export const CHAT_TRIGGER_NODE_TYPE = '@n8n/n8n-nodes-langchain.chatTrigger';
-export const AGENT_NODE_TYPE = '@n8n/n8n-nodes-langchain.agent';
-export const OPEN_AI_NODE_TYPE = '@n8n/n8n-nodes-langchain.openAi';
+export const MANUAL_CHAT_TRIGGER_NODE_TYPE = '@glow/n8n-nodes-langchain.manualChatTrigger';
+export const MCP_TRIGGER_NODE_TYPE = '@glow/n8n-nodes-langchain.mcpTrigger';
+export const CHAT_TRIGGER_NODE_TYPE = '@glow/n8n-nodes-langchain.chatTrigger';
+export const AGENT_NODE_TYPE = '@glow/n8n-nodes-langchain.agent';
+export const OPEN_AI_NODE_TYPE = '@glow/n8n-nodes-langchain.openAi';
 export const OPEN_AI_NODE_MESSAGE_ASSISTANT_TYPE =
-	'@n8n/n8n-nodes-langchain.openAi.assistant.message';
-export const OPEN_AI_ASSISTANT_NODE_TYPE = '@n8n/n8n-nodes-langchain.openAiAssistant';
-export const BASIC_CHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.chainLlm';
-export const QA_CHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.chainRetrievalQa';
+	'@glow/n8n-nodes-langchain.openAi.assistant.message';
+export const OPEN_AI_ASSISTANT_NODE_TYPE = '@glow/n8n-nodes-langchain.openAiAssistant';
+export const BASIC_CHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.chainLlm';
+export const QA_CHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.chainRetrievalQa';
 export const MICROSOFT_TEAMS_NODE_TYPE = 'n8n-nodes-base.microsoftTeams';
 export const GLOW_NODE_TYPE = 'n8n-nodes-base.n8n';
 export const NO_OP_NODE_TYPE = 'n8n-nodes-base.noOp';
@@ -208,7 +208,7 @@ export const RSS_READ_NODE_TYPE = 'n8n-nodes-base.rssFeedRead';
 export const COMPRESSION_NODE_TYPE = 'n8n-nodes-base.compression';
 export const EDIT_IMAGE_NODE_TYPE = 'n8n-nodes-base.editImage';
 export const CHAIN_SUMMARIZATION_LANGCHAIN_NODE_TYPE =
-	'@n8n/n8n-nodes-langchain.chainSummarization';
+	'@glow/n8n-nodes-langchain.chainSummarization';
 export const SIMULATE_NODE_TYPE = 'n8n-nodes-base.simulate';
 export const SIMULATE_TRIGGER_NODE_TYPE = 'n8n-nodes-base.simulateTrigger';
 export const AI_TRANSFORM_NODE_TYPE = 'n8n-nodes-base.aiTransform';
@@ -314,8 +314,8 @@ export const AI_CATEGORY_ROOT_NODES = 'Root Nodes';
 export const AI_CATEGORY_MCP_NODES = 'Model Context Protocol';
 export const AI_EVALUATION = 'Evaluation';
 export const AI_UNCATEGORIZED_CATEGORY = 'Miscellaneous';
-export const AI_CODE_TOOL_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolCode';
-export const AI_WORKFLOW_TOOL_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolWorkflow';
+export const AI_CODE_TOOL_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.toolCode';
+export const AI_WORKFLOW_TOOL_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.toolWorkflow';
 export const REQUEST_NODE_FORM_URL = 'https://n8n-community.typeform.com/to/K1fBVTZ3';
 
 // Node Connection Types
@@ -918,6 +918,6 @@ export const IsInPiPWindowSymbol = 'IsInPipWindow' as unknown as InjectionKey<
 /** Auth */
 export const APP_MODALS_ELEMENT_ID = 'app-modals';
 
-export const AI_NODES_PACKAGE_NAME = '@n8n/n8n-nodes-langchain';
+export const AI_NODES_PACKAGE_NAME = '@glow/n8n-nodes-langchain';
 
 export const AI_ASSISTANT_MAX_CONTENT_LENGTH = 100; // in kilobytes

@@ -18,13 +18,13 @@ import type {
 	ISupplyDataFunctions,
 	ITaskMetadata,
 	NodeConnectionType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	NodeOperationError,
 	NodeConnectionTypes,
 	parseErrorMetadata,
 	deepCopy,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { logAiEvent, isToolsInstance, isBaseChatMemory, isBaseChatMessageHistory } from './helpers';
 import { N8nBinaryLoader } from './N8nBinaryLoader';

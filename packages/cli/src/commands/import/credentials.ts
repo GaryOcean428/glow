@@ -1,13 +1,13 @@
-import { CredentialsEntity, Project, User, SharedCredentials, ProjectRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { CredentialsEntity, Project, User, SharedCredentials, ProjectRepository } from '@glow/db';
+import { Container } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { EntityManager } from '@n8n/typeorm';
+import type { EntityManager } from '@glow/typeorm';
 import { Flags } from '@oclif/core';
 import glob from 'fast-glob';
 import fs from 'fs';
-import { Cipher } from 'n8n-core';
-import type { ICredentialsEncrypted } from 'n8n-workflow';
-import { jsonParse, UserError } from 'n8n-workflow';
+import { Cipher } from 'glow-core';
+import type { ICredentialsEncrypted } from 'glow-workflow';
+import { jsonParse, UserError } from 'glow-workflow';
 
 import { UM_FIX_INSTRUCTION } from '@/constants';
 

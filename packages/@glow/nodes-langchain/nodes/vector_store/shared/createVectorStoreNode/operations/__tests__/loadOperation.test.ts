@@ -6,8 +6,8 @@ import type { BaseDocumentCompressor } from '@langchain/core/retrievers/document
 import type { VectorStore } from '@langchain/core/vectorstores';
 import type { MockProxy } from 'jest-mock-extended';
 import { mock } from 'jest-mock-extended';
-import type { IDataObject, IExecuteFunctions } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { IDataObject, IExecuteFunctions } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { logAiEvent } from '@utils/helpers';
 

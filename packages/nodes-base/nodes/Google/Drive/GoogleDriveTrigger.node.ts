@@ -7,8 +7,8 @@ import type {
 	INodePropertyOptions,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeApiError } from 'glow-workflow';
 
 import { extractId, googleApiRequest, googleApiRequestAllItems } from './v1/GenericFunctions';
 import { fileSearch, folderSearch } from './v2/methods/listSearch';

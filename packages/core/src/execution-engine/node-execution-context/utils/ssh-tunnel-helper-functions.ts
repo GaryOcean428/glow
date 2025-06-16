@@ -1,5 +1,5 @@
-import { Container } from '@n8n/di';
-import type { SSHTunnelFunctions } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import type { SSHTunnelFunctions } from 'glow-workflow';
 
 import { SSHClientsManager } from '../../ssh-clients-manager';
 

@@ -1,14 +1,14 @@
-import type { PushMessage } from '@n8n/api-types';
-import { inProduction, Logger } from '@n8n/backend-common';
-import type { User } from '@n8n/db';
-import { OnPubSubEvent, OnShutdown } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
+import type { PushMessage } from '@glow/api-types';
+import { inProduction, Logger } from '@glow/backend-common';
+import type { User } from '@glow/db';
+import { OnPubSubEvent, OnShutdown } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
 import type { Application } from 'express';
 import { ServerResponse } from 'http';
 import type { Server } from 'http';
 import pick from 'lodash/pick';
-import { InstanceSettings } from 'n8n-core';
-import { deepCopy } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { deepCopy } from 'glow-workflow';
 import { parse as parseUrl } from 'url';
 import { Server as WSServer } from 'ws';
 

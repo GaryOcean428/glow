@@ -1,13 +1,13 @@
-import { inDevelopment, inProduction, LicenseState } from '@n8n/backend-common';
-import { SecurityConfig } from '@n8n/config';
-import { Container, Service } from '@n8n/di';
+import { inDevelopment, inProduction, LicenseState } from '@glow/backend-common';
+import { SecurityConfig } from '@glow/config';
+import { Container, Service } from '@glow/di';
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import { access as fsAccess } from 'fs/promises';
 import helmet from 'helmet';
 import isEmpty from 'lodash/isEmpty';
-import { InstanceSettings } from 'n8n-core';
-import { jsonParse } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { jsonParse } from 'glow-workflow';
 import { resolve } from 'path';
 
 import { AbstractServer } from '@/abstract-server';

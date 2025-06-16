@@ -1,5 +1,5 @@
-import type { GlobalRole, Scope } from '@n8n/permissions';
-import type { FindOperator } from '@n8n/typeorm';
+import type { GlobalRole, Scope } from '@glow/permissions';
+import type { FindOperator } from '@glow/typeorm';
 import type {
 	ICredentialsEncrypted,
 	IRunExecutionData,
@@ -11,7 +11,7 @@ import type {
 	AnnotationVote,
 	ExecutionSummary,
 	IUser,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { CredentialsEntity } from './credentials-entity';
 import type { Folder } from './folder';

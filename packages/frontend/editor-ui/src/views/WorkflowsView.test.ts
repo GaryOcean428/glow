@@ -6,7 +6,7 @@ import { createComponentRenderer } from '@/__tests__/render';
 import { useProjectsStore } from '@/stores/projects.store';
 import { createTestingPinia } from '@pinia/testing';
 import { VIEWS } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { mockedStore, waitAllPromises } from '@/__tests__/utils';
 import type { IUser, WorkflowListResource } from '@/Interface';
 import { useSourceControlStore } from '@/stores/sourceControl.store';

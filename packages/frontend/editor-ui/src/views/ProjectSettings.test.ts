@@ -10,7 +10,7 @@ import { VIEWS } from '@/constants';
 import { useUsersStore } from '@/stores/users.store';
 import { createProjectListItem } from '@/__tests__/data/projects';
 import { useSettingsStore } from '@/stores/settings.store';
-import type { FrontendSettings } from '@n8n/api-types';
+import type { FrontendSettings } from '@glow/api-types';
 import { ProjectTypes } from '@/types/projects.types';
 
 vi.mock('vue-router', () => {

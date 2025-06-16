@@ -12,7 +12,7 @@ import {
 	CallToolRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 import type * as express from 'express';
-import { OperationalError, type Logger } from 'n8n-workflow';
+import { OperationalError, type Logger } from 'glow-workflow';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 
 import { FlushingSSEServerTransport } from './FlushingSSEServerTransport';

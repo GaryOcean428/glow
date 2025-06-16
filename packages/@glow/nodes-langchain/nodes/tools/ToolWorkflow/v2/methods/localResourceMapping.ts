@@ -1,5 +1,5 @@
-import { loadWorkflowInputMappings } from 'n8n-nodes-base/dist/utils/workflowInputsResourceMapping/GenericFunctions';
-import type { ILocalLoadOptionsFunctions, ResourceMapperFields } from 'n8n-workflow';
+import { loadWorkflowInputMappings } from 'glow-nodes-base/dist/utils/workflowInputsResourceMapping/GenericFunctions';
+import type { ILocalLoadOptionsFunctions, ResourceMapperFields } from 'glow-workflow';
 
 export async function loadSubWorkflowInputs(
 	this: ILocalLoadOptionsFunctions,

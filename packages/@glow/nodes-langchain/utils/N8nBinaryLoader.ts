@@ -12,8 +12,8 @@ import type {
 	IExecuteFunctions,
 	INodeExecutionData,
 	ISupplyDataFunctions,
-} from 'n8n-workflow';
-import { NodeOperationError, BINARY_ENCODING } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeOperationError, BINARY_ENCODING } from 'glow-workflow';
 import { pipeline } from 'stream/promises';
 import { file as tmpFile, type DirectoryResult } from 'tmp-promise';
 

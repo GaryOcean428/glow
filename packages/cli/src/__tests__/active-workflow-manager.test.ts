@@ -1,15 +1,15 @@
-import type { WorkflowEntity } from '@n8n/db';
-import type { WorkflowRepository } from '@n8n/db';
+import type { WorkflowEntity } from '@glow/db';
+import type { WorkflowRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
+import type { InstanceSettings } from 'glow-core';
 import type {
 	WorkflowParameters,
 	INode,
 	INodeType,
 	INodeTypeDescription,
 	WorkflowActivateMode,
-} from 'n8n-workflow';
-import { Workflow } from 'n8n-workflow';
+} from 'glow-workflow';
+import { Workflow } from 'glow-workflow';
 
 import { ActiveWorkflowManager } from '@/active-workflow-manager';
 import type { NodeTypes } from '@/node-types';

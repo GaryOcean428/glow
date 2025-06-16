@@ -9,7 +9,7 @@ import type {
 	IWorkflowBase,
 	Workflow,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export type ExecutionLifecycleHookHandlers = {
 	nodeExecuteBefore: Array<

@@ -1,5 +1,5 @@
-import { UserRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { UserRepository } from '@glow/db';
+import { Container } from '@glow/di';
 
 import config from '@/config';
 

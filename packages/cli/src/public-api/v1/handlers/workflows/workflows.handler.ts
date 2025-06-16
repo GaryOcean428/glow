@@ -1,10 +1,10 @@
-import { GlobalConfig } from '@n8n/config';
-import { WorkflowEntity, ProjectRepository, TagRepository, WorkflowRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { WorkflowEntity, ProjectRepository, TagRepository, WorkflowRepository } from '@glow/db';
+import { Container } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In, Like, QueryFailedError } from '@n8n/typeorm';
+import { In, Like, QueryFailedError } from '@glow/typeorm';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { FindOptionsWhere } from '@n8n/typeorm';
+import type { FindOptionsWhere } from '@glow/typeorm';
 import type express from 'express';
 import { v4 as uuid } from 'uuid';
 import { z } from 'zod';

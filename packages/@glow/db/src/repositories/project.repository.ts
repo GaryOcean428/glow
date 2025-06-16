@@ -1,6 +1,6 @@
-import { Service } from '@n8n/di';
-import type { EntityManager } from '@n8n/typeorm';
-import { DataSource, Repository } from '@n8n/typeorm';
+import { Service } from '@glow/di';
+import type { EntityManager } from '@glow/typeorm';
+import { DataSource, Repository } from '@glow/typeorm';
 
 import { Project } from '../entities';
 

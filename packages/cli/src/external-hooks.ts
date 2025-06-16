@@ -1,18 +1,18 @@
-import type { FrontendSettings, UserUpdateRequestDto } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import type { ClientOAuth2Options } from '@n8n/client-oauth2';
-import { GlobalConfig } from '@n8n/config';
-import type { TagEntity, User, ICredentialsDb, PublicUser } from '@n8n/db';
+import type { FrontendSettings, UserUpdateRequestDto } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import type { ClientOAuth2Options } from '@glow/client-oauth2';
+import { GlobalConfig } from '@glow/config';
+import type { TagEntity, User, ICredentialsDb, PublicUser } from '@glow/db';
 import {
 	CredentialsRepository,
 	WorkflowRepository,
 	SettingsRepository,
 	UserRepository,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
-import { ErrorReporter } from 'n8n-core';
-import type { IRun, IWorkflowBase, Workflow, WorkflowExecuteMode } from 'n8n-workflow';
-import { UnexpectedError } from 'n8n-workflow';
+} from '@glow/db';
+import { Service } from '@glow/di';
+import { ErrorReporter } from 'glow-core';
+import type { IRun, IWorkflowBase, Workflow, WorkflowExecuteMode } from 'glow-workflow';
+import { UnexpectedError } from 'glow-workflow';
 import type clientOAuth1 from 'oauth-1.0a';
 
 import type { AbstractServer } from '@/abstract-server';

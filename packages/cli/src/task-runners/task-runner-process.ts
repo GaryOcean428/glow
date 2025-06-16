@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import { TaskRunnersConfig } from '@n8n/config';
-import { OnShutdown } from '@n8n/decorators';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { TaskRunnersConfig } from '@glow/config';
+import { OnShutdown } from '@glow/decorators';
+import { Service } from '@glow/di';
 import * as a from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import * as process from 'node:process';
@@ -107,7 +107,7 @@ export class TaskRunnerProcess extends TypedEmitter<TaskRunnerProcessEventMap> {
 	}
 
 	startNode(grantToken: string, taskBrokerUri: string) {
-		const startScript = require.resolve('@n8n/task-runner/start');
+		const startScript = require.resolve('@glow/task-runner/start');
 
 		return spawn(
 			'node',

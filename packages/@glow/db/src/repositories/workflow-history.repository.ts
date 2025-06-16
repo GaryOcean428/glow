@@ -1,5 +1,5 @@
-import { Service } from '@n8n/di';
-import { DataSource, LessThan, Repository } from '@n8n/typeorm';
+import { Service } from '@glow/di';
+import { DataSource, LessThan, Repository } from '@glow/typeorm';
 
 import { WorkflowHistory } from '../entities';
 

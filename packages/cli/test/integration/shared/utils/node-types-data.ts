@@ -1,4 +1,4 @@
-import type { INodeTypeData } from 'n8n-workflow';
+import type { INodeTypeData } from 'glow-workflow';
 
 export function mockNodeTypesData(
 	nodeNames: string[],

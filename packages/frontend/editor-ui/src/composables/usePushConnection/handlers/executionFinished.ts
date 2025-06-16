@@ -1,4 +1,4 @@
-import type { ExecutionFinished } from '@n8n/api-types/push/execution';
+import type { ExecutionFinished } from '@glow/api-types/push/execution';
 import { useUIStore } from '@/stores/ui.store';
 import type { IExecutionResponse } from '@/Interface';
 import { WORKFLOW_SETTINGS_MODAL_KEY } from '@/constants';
@@ -17,9 +17,9 @@ import { useTelemetry } from '@/composables/useTelemetry';
 import { parse } from 'flatted';
 import { useToast } from '@/composables/useToast';
 import type { useRouter } from 'vue-router';
-import { useI18n } from '@n8n/i18n';
-import { TelemetryHelpers, EVALUATION_TRIGGER_NODE_TYPE } from 'n8n-workflow';
-import type { IWorkflowBase, ExpressionError, IDataObject, IRunExecutionData } from 'n8n-workflow';
+import { useI18n } from '@glow/i18n';
+import { TelemetryHelpers, EVALUATION_TRIGGER_NODE_TYPE } from 'glow-workflow';
+import type { IWorkflowBase, ExpressionError, IDataObject, IRunExecutionData } from 'glow-workflow';
 import { codeNodeEditorEventBus, globalLinkActionsEventBus } from '@/event-bus';
 import { getTriggerNodeServiceName } from '@/utils/nodeTypesUtils';
 import { useExternalHooks } from '@/composables/useExternalHooks';

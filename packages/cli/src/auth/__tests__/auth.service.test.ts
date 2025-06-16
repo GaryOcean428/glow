@@ -1,7 +1,7 @@
-import type { GlobalConfig } from '@n8n/config';
-import type { User } from '@n8n/db';
-import type { InvalidAuthTokenRepository } from '@n8n/db';
-import type { UserRepository } from '@n8n/db';
+import type { GlobalConfig } from '@glow/config';
+import type { User } from '@glow/db';
+import type { InvalidAuthTokenRepository } from '@glow/db';
+import type { UserRepository } from '@glow/db';
 import type { NextFunction, Response } from 'express';
 import { mock } from 'jest-mock-extended';
 import jwt from 'jsonwebtoken';

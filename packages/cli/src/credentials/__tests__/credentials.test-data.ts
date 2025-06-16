@@ -1,7 +1,7 @@
-import type { CreateCredentialDto } from '@n8n/api-types';
-import type { Scope } from '@n8n/permissions';
+import type { CreateCredentialDto } from '@glow/api-types';
+import type { Scope } from '@glow/permissions';
 import { nanoId, date } from 'minifaker';
-import { randomString } from 'n8n-workflow';
+import { randomString } from 'glow-workflow';
 
 type NewCredentialWithSCopes = {
 	scopes: Scope[];

@@ -6,7 +6,7 @@ import { useHistoryStore } from '@/stores/history.store';
 import { useUIStore } from '@/stores/ui.store';
 
 import { onMounted, onUnmounted, nextTick } from 'vue';
-import { useDeviceSupport } from '@n8n/composables/useDeviceSupport';
+import { useDeviceSupport } from '@glow/composables/useDeviceSupport';
 import { getNodeViewTab } from '@/utils/nodeViewUtils';
 import type { RouteLocationNormalizedLoaded } from 'vue-router';
 import { useTelemetry } from './useTelemetry';

@@ -9,8 +9,8 @@ import type {
 	IRequestOptionsSimplified,
 	IRequestOptions,
 	IHttpRequestMethods,
-} from 'n8n-workflow';
-import { NodeApiError, NodeConnectionTypes, NodeOperationError, jsonParse } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeConnectionTypes, NodeOperationError, jsonParse } from 'glow-workflow';
 
 export class GraphQL implements INodeType {
 	description: INodeTypeDescription = {

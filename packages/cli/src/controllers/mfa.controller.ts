@@ -1,5 +1,5 @@
-import { UserRepository } from '@n8n/db';
-import { Get, Post, RestController } from '@n8n/decorators';
+import { UserRepository } from '@glow/db';
+import { Get, Post, RestController } from '@glow/decorators';
 import { Response } from 'express';
 
 import { AuthService } from '@/auth/auth.service';

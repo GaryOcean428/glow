@@ -3,8 +3,8 @@ import type { BaseLanguageModel } from '@langchain/core/language_models/base';
 import type { AIMessage } from '@langchain/core/messages';
 import { BaseOutputParser, OutputParserException } from '@langchain/core/output_parsers';
 import type { PromptTemplate } from '@langchain/core/prompts';
-import type { ISupplyDataFunctions } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { ISupplyDataFunctions } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import type { N8nStructuredOutputParser } from './N8nStructuredOutputParser';
 import { logAiEvent } from '../helpers';

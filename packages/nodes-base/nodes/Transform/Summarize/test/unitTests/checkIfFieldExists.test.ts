@@ -1,4 +1,4 @@
-import { NodeOperationError, type IExecuteFunctions, type IDataObject } from 'n8n-workflow';
+import { NodeOperationError, type IExecuteFunctions, type IDataObject } from 'glow-workflow';
 
 import { checkIfFieldExists, type Aggregations } from '../../utils';
 

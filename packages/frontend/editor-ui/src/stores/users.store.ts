@@ -3,12 +3,12 @@ import type {
 	PasswordUpdateRequestDto,
 	SettingsUpdateRequestDto,
 	UserUpdateRequestDto,
-} from '@n8n/api-types';
+} from '@glow/api-types';
 import type { UpdateGlobalRolePayload } from '@/api/users';
 import * as usersApi from '@/api/users';
-import { BROWSER_ID_STORAGE_KEY } from '@n8n/constants';
+import { BROWSER_ID_STORAGE_KEY } from '@glow/constants';
 import { PERSONALIZATION_MODAL_KEY, ROLE } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type {
 	Cloud,
 	IPersonalizationLatestVersion,
@@ -19,14 +19,14 @@ import type {
 } from '@/Interface';
 import { getPersonalizedNodeTypes } from '@/utils/userUtils';
 import { defineStore } from 'pinia';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { usePostHog } from './posthog.store';
 import { useUIStore } from './ui.store';
 import { useCloudPlanStore } from './cloudPlan.store';
-import * as mfaApi from '@n8n/rest-api-client/api/mfa';
+import * as mfaApi from '@glow/rest-api-client/api/mfa';
 import * as cloudApi from '@/api/cloudPlans';
 import { useRBACStore } from '@/stores/rbac.store';
-import type { Scope } from '@n8n/permissions';
+import type { Scope } from '@glow/permissions';
 import * as invitationsApi from '@/api/invitation';
 import { useNpsSurveyStore } from './npsSurvey.store';
 import { computed, ref } from 'vue';

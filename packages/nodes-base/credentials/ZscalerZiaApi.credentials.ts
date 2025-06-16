@@ -1,4 +1,4 @@
-import { ApplicationError } from 'n8n-workflow';
+import { ApplicationError } from 'glow-workflow';
 import type {
 	IAuthenticateGeneric,
 	ICredentialDataDecryptedObject,
@@ -7,7 +7,7 @@ import type {
 	IHttpRequestHelper,
 	INodeProperties,
 	Icon,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class ZscalerZiaApi implements ICredentialType {
 	name = 'zscalerZiaApi';

@@ -1,7 +1,7 @@
-import { ExecutionRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { ExecutionRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import type express from 'express';
-import { replaceCircularReferences } from 'n8n-workflow';
+import { replaceCircularReferences } from 'glow-workflow';
 
 import { ActiveExecutions } from '@/active-executions';
 import { ConcurrencyControlService } from '@/concurrency/concurrency-control.service';

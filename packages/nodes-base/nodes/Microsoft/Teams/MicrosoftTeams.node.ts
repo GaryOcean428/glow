@@ -1,5 +1,5 @@
-import type { INodeTypeBaseDescription, IVersionedNodeType } from 'n8n-workflow';
-import { VersionedNodeType } from 'n8n-workflow';
+import type { INodeTypeBaseDescription, IVersionedNodeType } from 'glow-workflow';
+import { VersionedNodeType } from 'glow-workflow';
 
 import { MicrosoftTeamsV1 } from './v1/MicrosoftTeamsV1.node';
 import { MicrosoftTeamsV2 } from './v2/MicrosoftTeamsV2.node';

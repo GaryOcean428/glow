@@ -7,8 +7,8 @@ import type {
 	INode,
 	INodeProperties,
 	INodeTypes,
-} from 'n8n-workflow';
-import { deepCopy, Workflow } from 'n8n-workflow';
+} from 'glow-workflow';
+import { deepCopy, Workflow } from 'glow-workflow';
 
 import { CredentialTypes } from '@/credential-types';
 import { CredentialsHelper } from '@/credentials-helper';

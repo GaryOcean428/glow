@@ -1,7 +1,7 @@
-import { inTest, inDevelopment, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { OnShutdown } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
+import { inTest, inDevelopment, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { OnShutdown } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
 import compression from 'compression';
 import express from 'express';
 import { engine as expressHandlebars } from 'express-handlebars';

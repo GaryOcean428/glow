@@ -8,7 +8,7 @@ import {
 	type ITriggerFunctions,
 	NodeOperationError,
 	type IBinaryKeyData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 async function parseRawEmail(
 	this: ITriggerFunctions,

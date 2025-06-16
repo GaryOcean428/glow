@@ -1,6 +1,6 @@
-import { WorkflowRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { UnexpectedError, type IWorkflowBase, type IWorkflowLoader } from 'n8n-workflow';
+import { WorkflowRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { UnexpectedError, type IWorkflowBase, type IWorkflowLoader } from 'glow-workflow';
 
 @Service()
 export class WorkflowLoaderService implements IWorkflowLoader {

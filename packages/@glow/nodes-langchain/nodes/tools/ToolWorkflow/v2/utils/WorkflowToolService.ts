@@ -2,9 +2,9 @@ import type { CallbackManagerForToolRun } from '@langchain/core/callbacks/manage
 import { DynamicStructuredTool, DynamicTool } from '@langchain/core/tools';
 import isArray from 'lodash/isArray';
 import isObject from 'lodash/isObject';
-import type { SetField, SetNodeOptions } from 'n8n-nodes-base/dist/nodes/Set/v2/helpers/interfaces';
-import * as manual from 'n8n-nodes-base/dist/nodes/Set/v2/manual.mode';
-import { getCurrentWorkflowInputData } from 'n8n-nodes-base/dist/utils/workflowInputsResourceMapping/GenericFunctions';
+import type { SetField, SetNodeOptions } from 'glow-nodes-base/dist/nodes/Set/v2/helpers/interfaces';
+import * as manual from 'glow-nodes-base/dist/nodes/Set/v2/manual.mode';
+import { getCurrentWorkflowInputData } from 'glow-nodes-base/dist/utils/workflowInputsResourceMapping/GenericFunctions';
 import type {
 	ExecuteWorkflowData,
 	ExecutionError,
@@ -18,7 +18,7 @@ import type {
 	IWorkflowBase,
 	IWorkflowDataProxyData,
 	ResourceMapperValue,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	generateZodSchema,
 	jsonParse,
@@ -26,7 +26,7 @@ import {
 	NodeOperationError,
 	parseErrorMetadata,
 	traverseNodeParameters,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { z } from 'zod';
 
 function isNodeExecutionData(data: unknown): data is INodeExecutionData[] {

@@ -2,9 +2,9 @@
 import type { CallbackManagerForRetrieverRun } from '@langchain/core/callbacks/manager';
 import { Document } from '@langchain/core/documents';
 import { BaseRetriever, type BaseRetrieverInput } from '@langchain/core/retrievers';
-import type { SetField, SetNodeOptions } from 'n8n-nodes-base/dist/nodes/Set/v2/helpers/interfaces';
-import * as manual from 'n8n-nodes-base/dist/nodes/Set/v2/manual.mode';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+import type { SetField, SetNodeOptions } from 'glow-nodes-base/dist/nodes/Set/v2/helpers/interfaces';
+import * as manual from 'glow-nodes-base/dist/nodes/Set/v2/manual.mode';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 import type {
 	IDataObject,
 	IExecuteWorkflowInfo,
@@ -16,7 +16,7 @@ import type {
 	SupplyData,
 	INodeParameterResourceLocator,
 	ExecuteWorkflowData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { logWrapper } from '@utils/logWrapper';
 

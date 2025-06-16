@@ -1,5 +1,5 @@
-import type { IExecuteFunctions, INodeExecutionData, INodeProperties } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IExecuteFunctions, INodeExecutionData, INodeProperties } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { pushFileToSession, triggerFileInput } from './helpers';
 import { sessionIdField, windowIdField, elementDescriptionField } from '../common/fields';

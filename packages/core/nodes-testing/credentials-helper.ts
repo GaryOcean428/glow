@@ -1,5 +1,5 @@
 import { Service } from '@n8n/di';
-import { ICredentialsHelper } from 'n8n-workflow';
+import { ICredentialsHelper } from 'glow-workflow';
 import type {
 	ICredentialDataDecryptedObject,
 	IHttpRequestHelper,
@@ -7,7 +7,7 @@ import type {
 	INode,
 	INodeCredentialsDetails,
 	IWorkflowExecuteAdditionalData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { Credentials } from '../dist/credentials';
 import { CredentialTypes } from './credential-types';

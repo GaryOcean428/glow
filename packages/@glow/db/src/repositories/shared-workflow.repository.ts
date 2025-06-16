@@ -1,7 +1,7 @@
-import { Service } from '@n8n/di';
-import type { WorkflowSharingRole } from '@n8n/permissions';
-import { DataSource, Repository, In, Not } from '@n8n/typeorm';
-import type { EntityManager, FindManyOptions, FindOptionsWhere } from '@n8n/typeorm';
+import { Service } from '@glow/di';
+import type { WorkflowSharingRole } from '@glow/permissions';
+import { DataSource, Repository, In, Not } from '@glow/typeorm';
+import type { EntityManager, FindManyOptions, FindOptionsWhere } from '@glow/typeorm';
 
 import type { Project } from '../entities';
 import { SharedWorkflow } from '../entities';

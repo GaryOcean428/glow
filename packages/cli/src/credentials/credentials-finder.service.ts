@@ -1,12 +1,12 @@
-import type { CredentialsEntity, SharedCredentials, User } from '@n8n/db';
-import { CredentialsRepository, SharedCredentialsRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { hasGlobalScope, rolesWithScope } from '@n8n/permissions';
-import type { CredentialSharingRole, ProjectRole, Scope } from '@n8n/permissions';
+import type { CredentialsEntity, SharedCredentials, User } from '@glow/db';
+import { CredentialsRepository, SharedCredentialsRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { hasGlobalScope, rolesWithScope } from '@glow/permissions';
+import type { CredentialSharingRole, ProjectRole, Scope } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { EntityManager, FindOptionsWhere } from '@n8n/typeorm';
+import type { EntityManager, FindOptionsWhere } from '@glow/typeorm';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In } from '@n8n/typeorm';
+import { In } from '@glow/typeorm';
 
 @Service()
 export class CredentialsFinderService {

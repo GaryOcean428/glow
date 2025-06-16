@@ -1,4 +1,4 @@
-import type { ILoadOptionsFunctions, INodeListSearchResult } from 'n8n-workflow';
+import type { ILoadOptionsFunctions, INodeListSearchResult } from 'glow-workflow';
 import OpenAI from 'openai';
 
 import { getHttpProxyAgent } from '@utils/httpProxyAgent';

@@ -8,8 +8,8 @@ import type {
 	IDataObject,
 	ILoadOptionsFunctions,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeApiError, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeConnectionTypes } from 'glow-workflow';
 
 import type { WebhookNotification, SubscriptionResponse } from './v2/helpers/types';
 import { createSubscription, getResourcePath } from './v2/helpers/utils-trigger';

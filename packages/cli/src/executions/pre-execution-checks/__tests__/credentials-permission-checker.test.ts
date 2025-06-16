@@ -1,8 +1,8 @@
-import type { Project } from '@n8n/db';
-import type { User } from '@n8n/db';
-import type { SharedCredentialsRepository } from '@n8n/db';
+import type { Project } from '@glow/db';
+import type { User } from '@glow/db';
+import type { SharedCredentialsRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import type { INode } from 'n8n-workflow';
+import type { INode } from 'glow-workflow';
 
 import type { OwnershipService } from '@/services/ownership.service';
 import type { ProjectService } from '@/services/project.service.ee';

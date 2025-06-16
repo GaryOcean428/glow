@@ -2,7 +2,7 @@
 import type { SafetySetting } from '@google/generative-ai';
 import { ProjectsClient } from '@google-cloud/resource-manager';
 import { ChatVertexAI } from '@langchain/google-vertexai';
-import { formatPrivateKey } from 'n8n-nodes-base/dist/utils/utilities';
+import { formatPrivateKey } from 'glow-nodes-base/dist/utils/utilities';
 import {
 	NodeConnectionTypes,
 	type INodeType,
@@ -12,7 +12,7 @@ import {
 	type ILoadOptionsFunctions,
 	type JsonObject,
 	NodeOperationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getConnectionHintNoticeField } from '@utils/sharedFields';
 

@@ -1,15 +1,15 @@
-import { Logger } from '@n8n/backend-common';
-import type { CreateExecutionPayload, IExecutionDb } from '@n8n/db';
-import { ExecutionRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import type { CreateExecutionPayload, IExecutionDb } from '@glow/db';
+import { ExecutionRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import type {
 	IDeferredPromise,
 	IExecuteResponsePromiseData,
 	IRun,
 	ExecutionStatus,
 	IWorkflowExecutionDataProcess,
-} from 'n8n-workflow';
-import { createDeferredPromise, ExecutionCancelledError, sleep } from 'n8n-workflow';
+} from 'glow-workflow';
+import { createDeferredPromise, ExecutionCancelledError, sleep } from 'glow-workflow';
 import { strict as assert } from 'node:assert';
 import type PCancelable from 'p-cancelable';
 

@@ -1,5 +1,5 @@
 import type { Tool } from '@langchain/core/tools';
-import { type IDataObject, type INodeExecutionData } from 'n8n-workflow';
+import { type IDataObject, type INodeExecutionData } from 'glow-workflow';
 
 import { convertObjectBySchema } from './convertToSchema';
 

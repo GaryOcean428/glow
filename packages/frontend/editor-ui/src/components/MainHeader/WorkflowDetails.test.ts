@@ -9,7 +9,7 @@ import {
 	PROJECT_MOVE_RESOURCE_MODAL,
 } from '@/constants';
 import type { IWorkflowDb } from '@/Interface';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { createTestingPinia } from '@pinia/testing';
 import userEvent from '@testing-library/user-event';
 import { useUIStore } from '@/stores/ui.store';

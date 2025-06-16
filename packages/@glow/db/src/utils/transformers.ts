@@ -1,7 +1,7 @@
-import { GlobalConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
-import type { ValueTransformer, FindOperator } from '@n8n/typeorm';
-import { jsonParse } from 'n8n-workflow';
+import { GlobalConfig } from '@glow/config';
+import { Container } from '@glow/di';
+import type { ValueTransformer, FindOperator } from '@glow/typeorm';
+import { jsonParse } from 'glow-workflow';
 
 export const idStringifier = {
 	from: (value?: number): string | undefined => value?.toString(),

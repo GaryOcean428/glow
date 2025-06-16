@@ -1,6 +1,6 @@
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
-import { DataSource, Repository, In, Like } from '@n8n/typeorm';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
+import { DataSource, Repository, In, Like } from '@glow/typeorm';
 import type {
 	SelectQueryBuilder,
 	UpdateResult,
@@ -9,8 +9,8 @@ import type {
 	FindManyOptions,
 	FindOptionsRelations,
 	EntityManager,
-} from '@n8n/typeorm';
-import { PROJECT_ROOT } from 'n8n-workflow';
+} from '@glow/typeorm';
+import { PROJECT_ROOT } from 'glow-workflow';
 
 import { FolderRepository } from './folder.repository';
 import { WebhookEntity, TagEntity, WorkflowEntity, WorkflowTagMapping } from '../entities';

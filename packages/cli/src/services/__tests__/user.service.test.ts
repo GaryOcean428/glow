@@ -1,6 +1,6 @@
-import { GlobalConfig } from '@n8n/config';
-import { User } from '@n8n/db';
-import { UserRepository } from '@n8n/db';
+import { GlobalConfig } from '@glow/config';
+import { User } from '@glow/db';
+import { UserRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
 import { v4 as uuid } from 'uuid';
 
@@ -80,7 +80,7 @@ describe('UserService', () => {
 
 	describe('update', () => {
 		// We need to use `save` so that that the subscriber in
-		// packages/@n8n/db/src/entities/Project.ts receives the full user.
+		// packages/@glow/db/src/entities/Project.ts receives the full user.
 		// With `update` it would only receive the updated fields, e.g. the `id`
 		// would be missing.
 		it('should use `save` instead of `update`', async () => {

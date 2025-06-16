@@ -1,6 +1,6 @@
 import type { BaseLanguageModel } from '@langchain/core/language_models/base';
 import { OutputFixingParser, StructuredOutputParser } from 'langchain/output_parsers';
-import { NodeOperationError, NodeConnectionTypes, sleep } from 'n8n-workflow';
+import { NodeOperationError, NodeConnectionTypes, sleep } from 'glow-workflow';
 import type {
 	IDataObject,
 	IExecuteFunctions,
@@ -8,7 +8,7 @@ import type {
 	INodeParameters,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { z } from 'zod';
 
 import { getBatchingOptionFields } from '@utils/sharedFields';

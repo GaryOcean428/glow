@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties, Icon } from 'n8n-workflow';
+import type { ICredentialType, INodeProperties, Icon } from 'glow-workflow';
 
 export class HttpDigestAuth implements ICredentialType {
 	name = 'httpDigestAuth';

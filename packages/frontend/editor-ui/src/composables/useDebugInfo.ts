@@ -1,7 +1,7 @@
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useSettingsStore } from '@/stores/settings.store';
-import { useDeviceSupport } from '@n8n/composables/useDeviceSupport';
-import type { WorkflowSettings } from 'n8n-workflow';
+import { useDeviceSupport } from '@glow/composables/useDeviceSupport';
+import type { WorkflowSettings } from 'glow-workflow';
 
 type DebugInfo = {
 	core: {

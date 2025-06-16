@@ -1,4 +1,4 @@
-import type { INode, IConnections, IWorkflowSettings } from 'n8n-workflow';
+import type { INode, IConnections, IWorkflowSettings } from 'glow-workflow';
 
 import type { ResourceOwner } from './resource-owner';
 

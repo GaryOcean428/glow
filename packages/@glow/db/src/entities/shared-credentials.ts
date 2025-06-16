@@ -1,5 +1,5 @@
-import { CredentialSharingRole } from '@n8n/permissions';
-import { Column, Entity, ManyToOne, PrimaryColumn } from '@n8n/typeorm';
+import { CredentialSharingRole } from '@glow/permissions';
+import { Column, Entity, ManyToOne, PrimaryColumn } from '@glow/typeorm';
 
 import { WithTimestamps } from './abstract-entity';
 import { CredentialsEntity } from './credentials-entity';

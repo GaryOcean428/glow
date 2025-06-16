@@ -12,9 +12,9 @@ import type {
 	INodeTypes,
 	IExecuteFunctions,
 	IRunData,
-} from 'n8n-workflow';
-import type { ITaskData } from 'n8n-workflow';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import type { ITaskData } from 'glow-workflow';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { ExecuteContext } from '../../execute-context';
 import { makeHandleToolInvocation } from '../get-input-connection-data';

@@ -1,4 +1,4 @@
-import { Container, Service } from '@n8n/di';
+import { Container, Service } from '@glow/di';
 
 import { ControllerRegistryMetadata } from './controller-registry-metadata';
 import type { Controller } from './types';

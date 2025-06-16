@@ -6,11 +6,11 @@ import type { INodeUi } from '@/Interface';
 import { HTTP_REQUEST_NODE_TYPE, IF_NODE_TYPE, MAX_PINNED_DATA_SIZE } from '@/constants';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useTelemetry } from '@/composables/useTelemetry';
-import { NodeConnectionTypes, STICKY_NODE_TYPE } from 'n8n-workflow';
-import type { NodeConnectionType, INodeTypeDescription } from 'n8n-workflow';
+import { NodeConnectionTypes, STICKY_NODE_TYPE } from 'glow-workflow';
+import type { NodeConnectionType, INodeTypeDescription } from 'glow-workflow';
 
 vi.mock('@/composables/useToast', () => ({ useToast: vi.fn(() => ({ showError: vi.fn() })) }));
-vi.mock('@n8n/i18n', () => ({
+vi.mock('@glow/i18n', () => ({
 	useI18n: vi.fn(() => ({ baseText: vi.fn((key) => key) })),
 }));
 vi.mock('@/composables/useExternalHooks', () => ({

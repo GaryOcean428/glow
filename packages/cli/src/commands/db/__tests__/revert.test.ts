@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import type { IrreversibleMigration, ReversibleMigration } from '@n8n/db';
-import type { Migration, MigrationExecutor } from '@n8n/typeorm';
-import { type DataSource } from '@n8n/typeorm';
+import { Logger } from '@glow/backend-common';
+import type { IrreversibleMigration, ReversibleMigration } from '@glow/db';
+import type { Migration, MigrationExecutor } from '@glow/typeorm';
+import { type DataSource } from '@glow/typeorm';
 import { mock } from 'jest-mock-extended';
 
 import { main } from '@/commands/db/revert';

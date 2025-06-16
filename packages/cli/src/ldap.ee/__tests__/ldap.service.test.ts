@@ -1,11 +1,11 @@
-import { LDAP_FEATURE_NAME, type LdapConfig } from '@n8n/constants';
-import type { Settings } from '@n8n/db';
-import { AuthIdentityRepository, SettingsRepository } from '@n8n/db';
-import { QueryFailedError } from '@n8n/typeorm';
+import { LDAP_FEATURE_NAME, type LdapConfig } from '@glow/constants';
+import type { Settings } from '@glow/db';
+import { AuthIdentityRepository, SettingsRepository } from '@glow/db';
+import { QueryFailedError } from '@glow/typeorm';
 import { mock } from 'jest-mock-extended';
 import { Client } from 'ldapts';
-import type { Cipher } from 'n8n-core';
-import { randomString } from 'n8n-workflow';
+import type { Cipher } from 'glow-core';
+import { randomString } from 'glow-workflow';
 
 import config from '@/config';
 import type { EventService } from '@/events/event.service';

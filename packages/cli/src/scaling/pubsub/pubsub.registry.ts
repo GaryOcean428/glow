@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import { PubSubMetadata } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
+import { Logger } from '@glow/backend-common';
+import { PubSubMetadata } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
+import { InstanceSettings } from 'glow-core';
 
 import { PubSubEventBus } from './pubsub.eventbus';
 

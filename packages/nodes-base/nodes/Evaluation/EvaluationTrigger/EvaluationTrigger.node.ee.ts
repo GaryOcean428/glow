@@ -4,8 +4,8 @@ import type {
 	INodeTypeDescription,
 	IExecuteFunctions,
 	INodeExecutionData,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { document, sheet } from '../../Google/Sheet/GoogleSheetsTrigger.node';
 import { readFilter } from '../../Google/Sheet/v2/actions/sheet/read.operation';

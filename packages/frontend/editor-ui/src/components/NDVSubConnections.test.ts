@@ -3,12 +3,12 @@ import NDVSubConnections from '@/components/NDVSubConnections.vue';
 import { setActivePinia } from 'pinia';
 import { createTestingPinia } from '@pinia/testing';
 import type { INodeUi } from '@/Interface';
-import type { INodeTypeDescription, WorkflowParameters } from 'n8n-workflow';
-import { NodeConnectionTypes, Workflow } from 'n8n-workflow';
+import type { INodeTypeDescription, WorkflowParameters } from 'glow-workflow';
+import { NodeConnectionTypes, Workflow } from 'glow-workflow';
 
 const nodeType: INodeTypeDescription = {
 	displayName: 'OpenAI',
-	name: '@n8n/n8n-nodes-langchain.openAi',
+	name: '@glow/n8n-nodes-langchain.openAi',
 	version: [1],
 	inputs: [
 		{ type: NodeConnectionTypes.Main },
@@ -39,7 +39,7 @@ const node: INodeUi = {
 	},
 	id: 'f30c2cbc-c1b1-4014-87f7-22e6ae7afcc8',
 	name: 'OpenAI',
-	type: '@n8n/n8n-nodes-langchain.openAi',
+	type: '@glow/n8n-nodes-langchain.openAi',
 	typeVersion: 1.6,
 	position: [1300, 540],
 };

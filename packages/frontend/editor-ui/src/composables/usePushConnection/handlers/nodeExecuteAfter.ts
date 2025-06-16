@@ -1,4 +1,4 @@
-import type { NodeExecuteAfter } from '@n8n/api-types/push/execution';
+import type { NodeExecuteAfter } from '@glow/api-types/push/execution';
 import { useSchemaPreviewStore } from '@/stores/schemaPreview.store';
 import { useAssistantStore } from '@/stores/assistant.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';

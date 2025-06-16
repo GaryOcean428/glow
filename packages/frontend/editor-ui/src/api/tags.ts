@@ -1,7 +1,7 @@
 import type { ITag } from '@/Interface';
-import type { IRestApiContext } from '@n8n/rest-api-client';
-import { makeRestApiRequest } from '@n8n/rest-api-client';
-import type { CreateOrUpdateTagRequestDto, RetrieveTagQueryDto } from '@n8n/api-types';
+import type { IRestApiContext } from '@glow/rest-api-client';
+import { makeRestApiRequest } from '@glow/rest-api-client';
+import type { CreateOrUpdateTagRequestDto, RetrieveTagQueryDto } from '@glow/api-types';
 
 type TagsApiEndpoint = '/tags' | '/annotation-tags';
 

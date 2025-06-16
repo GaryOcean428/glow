@@ -4,7 +4,7 @@ import ParameterOverrideSelectableList from './ParameterOverrideSelectableList.v
 import { createTestingPinia } from '@pinia/testing';
 import { ref } from 'vue';
 import { createAppModals } from '@/__tests__/utils';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 
 vi.mock('vue-router', () => {
 	return {

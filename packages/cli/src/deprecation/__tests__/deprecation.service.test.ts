@@ -1,8 +1,8 @@
-import type { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import type { InstanceType } from '@n8n/constants';
+import type { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import type { InstanceType } from '@glow/constants';
 import { captor, mock } from 'jest-mock-extended';
-import { InstanceSettings } from 'n8n-core';
+import { InstanceSettings } from 'glow-core';
 
 import config from '@/config';
 import { mockInstance } from '@test/mocking';

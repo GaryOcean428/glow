@@ -1,4 +1,4 @@
-import { Container, Service, type Constructable } from '@n8n/di';
+import { Container, Service, type Constructable } from '@glow/di';
 
 import { ModuleMetadata } from './module-metadata';
 

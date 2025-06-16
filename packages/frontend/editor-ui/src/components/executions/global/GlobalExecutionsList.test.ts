@@ -3,10 +3,10 @@ import merge from 'lodash/merge';
 import { createTestingPinia } from '@pinia/testing';
 import userEvent from '@testing-library/user-event';
 import { faker } from '@faker-js/faker';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { VIEWS } from '@/constants';
 import ExecutionsList from '@/components/executions/global/GlobalExecutionsList.vue';
-import { randomInt, type ExecutionSummary } from 'n8n-workflow';
+import { randomInt, type ExecutionSummary } from 'glow-workflow';
 import type { MockedStore } from '@/__tests__/utils';
 import {
 	mockedStore,

@@ -3,9 +3,9 @@ import {
 	ResourceLocatorRequestDto,
 	ResourceMapperFieldsRequestDto,
 	ActionResultRequestDto,
-} from '@n8n/api-types';
-import { Post, RestController, Body } from '@n8n/decorators';
-import type { INodePropertyOptions, NodeParameterValueType } from 'n8n-workflow';
+} from '@glow/api-types';
+import { Post, RestController, Body } from '@glow/decorators';
+import type { INodePropertyOptions, NodeParameterValueType } from 'glow-workflow';
 
 import { AuthenticatedRequest } from '@/requests';
 import { DynamicNodeParametersService } from '@/services/dynamic-node-parameters.service';

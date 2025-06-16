@@ -1,5 +1,5 @@
-import type { PushMessage, WorkerStatus } from '@n8n/api-types';
-import type { IWorkflowBase } from 'n8n-workflow';
+import type { PushMessage, WorkerStatus } from '@glow/api-types';
+import type { IWorkflowBase } from 'glow-workflow';
 
 export type PubSubCommandMap = {
 	// #region Lifecycle

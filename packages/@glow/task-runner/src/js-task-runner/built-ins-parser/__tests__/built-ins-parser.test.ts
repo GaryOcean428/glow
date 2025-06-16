@@ -1,11 +1,11 @@
-import { getAdditionalKeys } from 'n8n-core';
+import { getAdditionalKeys } from 'glow-core';
 import type {
 	IDataObject,
 	IExecuteData,
 	INodeType,
 	IWorkflowExecuteAdditionalData,
-} from 'n8n-workflow';
-import { Workflow, WorkflowDataProxy } from 'n8n-workflow';
+} from 'glow-workflow';
+import { Workflow, WorkflowDataProxy } from 'glow-workflow';
 
 import { newDataRequestResponse } from '../../__tests__/test-data';
 import { BuiltInsParser } from '../built-ins-parser';

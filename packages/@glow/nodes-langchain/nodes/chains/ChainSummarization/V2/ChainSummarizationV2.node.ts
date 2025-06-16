@@ -6,8 +6,8 @@ import type {
 	INodeTypeDescription,
 	IDataObject,
 	INodeInputConfiguration,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, sleep } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, sleep } from 'glow-workflow';
 
 import { getBatchingOptionFields, getTemplateNoticeField } from '@utils/sharedFields';
 

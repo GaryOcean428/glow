@@ -6,7 +6,7 @@ import {
 	type INodeTypeDescription,
 	type ISupplyDataFunctions,
 	type SupplyData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { logWrapper } from '@utils/logWrapper';
 import { N8nBinaryLoader } from '@utils/N8nBinaryLoader';

@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
 import type {
 	Expression,
@@ -9,8 +9,8 @@ import type {
 	IWorkflowExecuteAdditionalData,
 	Workflow,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { InstanceSettings } from '@/instance-settings';
 

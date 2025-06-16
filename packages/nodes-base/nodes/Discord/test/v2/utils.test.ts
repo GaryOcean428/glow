@@ -1,4 +1,4 @@
-import type { IExecuteFunctions, INode } from 'n8n-workflow';
+import type { IExecuteFunctions, INode } from 'glow-workflow';
 
 import * as transport from '../../v2//transport/discord.api';
 import {

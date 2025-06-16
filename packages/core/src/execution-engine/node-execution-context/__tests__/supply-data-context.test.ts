@@ -14,9 +14,9 @@ import type {
 	INodeTypes,
 	ICredentialDataDecryptedObject,
 	NodeConnectionType,
-} from 'n8n-workflow';
-import type { IRunData } from 'n8n-workflow';
-import { ApplicationError, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import type { IRunData } from 'glow-workflow';
+import { ApplicationError, NodeConnectionTypes } from 'glow-workflow';
 
 import { describeCommonTests } from './shared-tests';
 import { SupplyDataContext } from '../supply-data-context';

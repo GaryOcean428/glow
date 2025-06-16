@@ -6,13 +6,13 @@
 /* eslint-disable prefer-spread */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import type { Project } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import type { Project } from '@glow/db';
+import { Container } from '@glow/di';
 import type express from 'express';
 import get from 'lodash/get';
-import { BinaryDataService, ErrorReporter } from 'n8n-core';
+import { BinaryDataService, ErrorReporter } from 'glow-core';
 import type {
 	IBinaryData,
 	IBinaryKeyData,
@@ -33,7 +33,7 @@ import type {
 	IWorkflowExecutionDataProcess,
 	IWorkflowBase,
 	WebhookResponseData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	BINARY_ENCODING,
 	createDeferredPromise,
@@ -44,7 +44,7 @@ import {
 	OperationalError,
 	UnexpectedError,
 	WAIT_NODE_TYPE,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { finished } from 'stream/promises';
 
 import { ActiveExecutions } from '@/active-executions';

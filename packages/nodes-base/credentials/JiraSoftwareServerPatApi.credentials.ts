@@ -3,7 +3,7 @@ import type {
 	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class JiraSoftwareServerPatApi implements ICredentialType {
 	name = 'jiraSoftwareServerPatApi';

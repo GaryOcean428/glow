@@ -1,6 +1,6 @@
-import { CreateProjectDto, DeleteProjectDto, UpdateProjectDto } from '@n8n/api-types';
-import type { Project } from '@n8n/db';
-import { ProjectRepository } from '@n8n/db';
+import { CreateProjectDto, DeleteProjectDto, UpdateProjectDto } from '@glow/api-types';
+import type { Project } from '@glow/db';
+import { ProjectRepository } from '@glow/db';
 import {
 	Get,
 	Post,
@@ -13,11 +13,11 @@ import {
 	Body,
 	Param,
 	Query,
-} from '@n8n/decorators';
-import { combineScopes, getRoleScopes, hasGlobalScope } from '@n8n/permissions';
-import type { Scope } from '@n8n/permissions';
+} from '@glow/decorators';
+import { combineScopes, getRoleScopes, hasGlobalScope } from '@glow/permissions';
+import type { Scope } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In, Not } from '@n8n/typeorm';
+import { In, Not } from '@glow/typeorm';
 import { Response } from 'express';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';

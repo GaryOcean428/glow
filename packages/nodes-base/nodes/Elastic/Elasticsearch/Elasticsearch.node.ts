@@ -6,8 +6,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, jsonParse, NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, jsonParse, NodeApiError } from 'glow-workflow';
 
 import { documentFields, documentOperations, indexFields, indexOperations } from './descriptions';
 import {

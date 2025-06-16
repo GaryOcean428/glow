@@ -3,8 +3,8 @@ import type {
 	IExecuteFunctions,
 	INodeExecutionData,
 	IDataObject,
-} from 'n8n-workflow';
-import { ApplicationError, NodeOperationError, updateDisplayOptions } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, NodeOperationError, updateDisplayOptions } from 'glow-workflow';
 
 import { apiRequest } from '../../transport';
 import { assistantRLC, modelRLC } from '../descriptions';

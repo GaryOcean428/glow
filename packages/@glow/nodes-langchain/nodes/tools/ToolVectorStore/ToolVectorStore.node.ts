@@ -7,8 +7,8 @@ import type {
 	INodeTypeDescription,
 	ISupplyDataFunctions,
 	SupplyData,
-} from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { nodeNameToToolName } from '@utils/helpers';
 import { logWrapper } from '@utils/logWrapper';

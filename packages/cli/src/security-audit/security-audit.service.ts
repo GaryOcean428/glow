@@ -1,6 +1,6 @@
-import { SecurityConfig } from '@n8n/config';
-import { WorkflowRepository } from '@n8n/db';
-import { Container, Service } from '@n8n/di';
+import { SecurityConfig } from '@glow/config';
+import { WorkflowRepository } from '@glow/db';
+import { Container, Service } from '@glow/di';
 
 import config from '@/config';
 import { RISK_CATEGORIES } from '@/security-audit/constants';

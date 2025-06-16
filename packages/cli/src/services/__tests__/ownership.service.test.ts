@@ -1,8 +1,8 @@
-import type { SharedCredentials } from '@n8n/db';
-import { Project, SharedWorkflow, User, WorkflowEntity, ProjectRelation } from '@n8n/db';
-import { ProjectRelationRepository } from '@n8n/db';
-import { SharedWorkflowRepository } from '@n8n/db';
-import { UserRepository } from '@n8n/db';
+import type { SharedCredentials } from '@glow/db';
+import { Project, SharedWorkflow, User, WorkflowEntity, ProjectRelation } from '@glow/db';
+import { ProjectRelationRepository } from '@glow/db';
+import { SharedWorkflowRepository } from '@glow/db';
+import { UserRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
 import { v4 as uuid } from 'uuid';
 

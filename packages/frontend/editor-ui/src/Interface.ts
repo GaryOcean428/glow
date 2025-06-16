@@ -6,9 +6,9 @@ import type {
 	Iso8601DateTimeString,
 	IUserManagementSettings,
 	IVersionNotificationSettings,
-} from '@n8n/api-types';
-import type { Scope } from '@n8n/permissions';
-import type { NodeCreatorTag } from '@n8n/design-system';
+} from '@glow/api-types';
+import type { Scope } from '@glow/permissions';
+import type { NodeCreatorTag } from '@glow/design-system';
 import type {
 	GenericValue,
 	IConnections,
@@ -44,8 +44,8 @@ import type {
 	AnnotationVote,
 	ITaskData,
 	ISourceData,
-} from 'n8n-workflow';
-import type { Version, VersionNode } from '@n8n/rest-api-client/api/versions';
+} from 'glow-workflow';
+import type { Version, VersionNode } from '@glow/rest-api-client/api/versions';
 
 import type {
 	AI_NODE_CREATOR_VIEW,
@@ -61,9 +61,9 @@ import type {
 import type { BulkCommand, Undoable } from '@/models/history';
 
 import type { ProjectSharingData } from '@/types/projects.types';
-import type { PathItem } from '@n8n/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
+import type { PathItem } from '@glow/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
 
-export * from '@n8n/design-system/types';
+export * from '@glow/design-system/types';
 
 declare global {
 	interface Window {

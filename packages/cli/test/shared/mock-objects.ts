@@ -1,7 +1,7 @@
 import { CredentialsEntity } from '@n8n/db';
 import { Project } from '@n8n/db';
 import { User } from '@n8n/db';
-import { randomInt } from 'n8n-workflow';
+import { randomInt } from 'glow-workflow';
 
 import {
 	randomCredentialPayload,

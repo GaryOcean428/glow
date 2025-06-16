@@ -9,8 +9,8 @@ import type {
 	JsonObject,
 	IHttpRequestMethods,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { ApplicationError, NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, NodeApiError } from 'glow-workflow';
 
 import type { Filter, Address, Search, FilterGroup, ProductAttribute } from './types';
 

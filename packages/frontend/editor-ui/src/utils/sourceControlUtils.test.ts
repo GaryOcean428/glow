@@ -7,7 +7,7 @@ import {
 } from './sourceControlUtils';
 import type { useToast } from '@/composables/useToast';
 
-import { SOURCE_CONTROL_FILE_STATUS } from '@n8n/api-types';
+import { SOURCE_CONTROL_FILE_STATUS } from '@glow/api-types';
 
 describe('source control utils', () => {
 	describe('getStatusText()', () => {

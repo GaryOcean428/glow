@@ -1,6 +1,6 @@
 import { NodeTestHarness } from '@nodes-testing/node-test-harness';
 import pick from 'lodash/pick';
-import type { WorkflowTestData } from 'n8n-workflow';
+import type { WorkflowTestData } from 'glow-workflow';
 import path from 'node:path';
 
 describe('OpenAI Workflow', () => {

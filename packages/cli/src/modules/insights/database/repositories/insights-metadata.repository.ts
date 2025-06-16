@@ -1,5 +1,5 @@
-import { Service } from '@n8n/di';
-import { DataSource, Repository } from '@n8n/typeorm';
+import { Service } from '@glow/di';
+import { DataSource, Repository } from '@glow/typeorm';
 
 import { InsightsMetadata } from '../entities/insights-metadata';
 

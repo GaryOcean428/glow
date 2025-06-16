@@ -1,5 +1,5 @@
-import type { TaskRunnerMode } from '@n8n/config/src/configs/runners.config';
-import { OperationalError } from 'n8n-workflow';
+import type { TaskRunnerMode } from '@glow/config/src/configs/runners.config';
+import { OperationalError } from 'glow-workflow';
 
 export class TaskRunnerExecutionTimeoutError extends OperationalError {
 	description: string;

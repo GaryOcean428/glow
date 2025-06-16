@@ -1,14 +1,14 @@
 /* eslint-disable n8n-nodes-base/node-dirname-against-convention */
 import type { BaseChatMemory } from '@langchain/community/memory/chat_memory';
 import { AIMessage, SystemMessage, HumanMessage, type BaseMessage } from '@langchain/core/messages';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IDataObject,
 	IExecuteFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 type MessageRole = 'ai' | 'system' | 'user';
 interface MessageRecord {

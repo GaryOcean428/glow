@@ -1,6 +1,6 @@
-import { Container } from '@n8n/di';
-import { Cipher, InstanceSettings } from 'n8n-core';
-import { jsonParse } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import { Cipher, InstanceSettings } from 'glow-core';
+import { jsonParse } from 'glow-workflow';
 import { readFile, writeFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 

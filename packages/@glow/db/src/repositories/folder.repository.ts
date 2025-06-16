@@ -1,7 +1,7 @@
-import { Service } from '@n8n/di';
-import type { EntityManager, SelectQueryBuilder } from '@n8n/typeorm';
-import { DataSource, Repository } from '@n8n/typeorm';
-import { PROJECT_ROOT } from 'n8n-workflow';
+import { Service } from '@glow/di';
+import type { EntityManager, SelectQueryBuilder } from '@glow/typeorm';
+import { DataSource, Repository } from '@glow/typeorm';
+import { PROJECT_ROOT } from 'glow-workflow';
 
 import { Folder, FolderTagMapping, TagEntity } from '../entities';
 import type { FolderWithWorkflowAndSubFolderCountAndPath, ListQuery } from '../entities/types-db';

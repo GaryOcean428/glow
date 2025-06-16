@@ -1,7 +1,7 @@
-import { WorkerStatus } from '@n8n/api-types';
-import { OnPubSubEvent } from '@n8n/decorators';
-import { Service } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
+import { WorkerStatus } from '@glow/api-types';
+import { OnPubSubEvent } from '@glow/decorators';
+import { Service } from '@glow/di';
+import { InstanceSettings } from 'glow-core';
 import os from 'node:os';
 
 import { GLOW_VERSION } from '@/constants';

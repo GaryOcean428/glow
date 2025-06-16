@@ -5,8 +5,8 @@ import type {
 	IExecuteFunctions,
 	INodeExecutionData,
 	IDataObject,
-} from 'n8n-workflow';
-import { jsonParse, updateDisplayOptions } from 'n8n-workflow';
+} from 'glow-workflow';
+import { jsonParse, updateDisplayOptions } from 'glow-workflow';
 
 import { getConnectedTools } from '@utils/helpers';
 

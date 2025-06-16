@@ -3,7 +3,7 @@ import type {
 	ITaskData,
 	ITaskStartedData,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export type ExecutionStarted = {
 	type: 'executionStarted';

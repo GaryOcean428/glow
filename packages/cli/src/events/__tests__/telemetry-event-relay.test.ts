@@ -1,15 +1,15 @@
-import type { GlobalConfig } from '@n8n/config';
-import type { CredentialsEntity } from '@n8n/db';
-import type { WorkflowEntity } from '@n8n/db';
-import type { IWorkflowDb } from '@n8n/db';
-import type { CredentialsRepository } from '@n8n/db';
-import type { ProjectRelationRepository } from '@n8n/db';
-import type { SharedWorkflowRepository } from '@n8n/db';
-import type { WorkflowRepository } from '@n8n/db';
+import type { GlobalConfig } from '@glow/config';
+import type { CredentialsEntity } from '@glow/db';
+import type { WorkflowEntity } from '@glow/db';
+import type { IWorkflowDb } from '@glow/db';
+import type { CredentialsRepository } from '@glow/db';
+import type { ProjectRelationRepository } from '@glow/db';
+import type { SharedWorkflowRepository } from '@glow/db';
+import type { WorkflowRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import { type BinaryDataConfig, InstanceSettings } from 'n8n-core';
-import type { INode, INodesGraphResult } from 'n8n-workflow';
-import { NodeApiError, TelemetryHelpers, type IRun, type IWorkflowBase } from 'n8n-workflow';
+import { type BinaryDataConfig, InstanceSettings } from 'glow-core';
+import type { INode, INodesGraphResult } from 'glow-workflow';
+import { NodeApiError, TelemetryHelpers, type IRun, type IWorkflowBase } from 'glow-workflow';
 
 import { GLOW_VERSION } from '@/constants';
 import { EventService } from '@/events/event.service';

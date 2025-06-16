@@ -1,5 +1,5 @@
-import type { AuthPrincipal } from '@n8n/permissions';
-import { GlobalRole } from '@n8n/permissions';
+import type { AuthPrincipal } from '@glow/permissions';
+import { GlobalRole } from '@glow/permissions';
 import {
 	AfterLoad,
 	AfterUpdate,
@@ -10,9 +10,9 @@ import {
 	OneToMany,
 	PrimaryGeneratedColumn,
 	BeforeInsert,
-} from '@n8n/typeorm';
+} from '@glow/typeorm';
 import { IsEmail, IsString, Length } from 'class-validator';
-import type { IUser, IUserSettings } from 'n8n-workflow';
+import type { IUser, IUserSettings } from 'glow-workflow';
 
 import { JsonColumn, WithTimestamps } from './abstract-entity';
 import type { ApiKey } from './api-key';

@@ -1,8 +1,8 @@
 import { DynamicTool, type Tool } from '@langchain/core/tools';
 import { Toolkit } from 'langchain/agents';
-import { createMockExecuteFunction } from 'n8n-nodes-base/test/nodes/Helpers';
-import { NodeOperationError } from 'n8n-workflow';
-import type { ISupplyDataFunctions, IExecuteFunctions, INode } from 'n8n-workflow';
+import { createMockExecuteFunction } from 'glow-nodes-base/test/nodes/Helpers';
+import { NodeOperationError } from 'glow-workflow';
+import type { ISupplyDataFunctions, IExecuteFunctions, INode } from 'glow-workflow';
 import { z } from 'zod';
 
 import {

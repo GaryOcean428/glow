@@ -1,10 +1,10 @@
-import { NodeConnectionTypes, parseErrorMetadata, sleep } from 'n8n-workflow';
+import { NodeConnectionTypes, parseErrorMetadata, sleep } from 'glow-workflow';
 import {
 	type IExecuteFunctions,
 	type INodeExecutionData,
 	type INodeType,
 	type INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { promptTypeOptions, textFromPreviousNode } from '@utils/descriptions';
 import { getBatchingOptionFields, getTemplateNoticeField } from '@utils/sharedFields';

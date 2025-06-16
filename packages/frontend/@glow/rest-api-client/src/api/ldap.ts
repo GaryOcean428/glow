@@ -1,6 +1,6 @@
 import type { IRestApiContext } from '../types';
 import { makeRestApiRequest } from '../utils';
-import type { IDataObject } from 'n8n-workflow';
+import type { IDataObject } from 'glow-workflow';
 
 export interface LdapSyncData {
 	id: number;

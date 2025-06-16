@@ -1,8 +1,8 @@
 import type { CallExpression, Identifier, Node, Program } from 'acorn';
 import { parse } from 'acorn';
 import { ancestor } from 'acorn-walk';
-import type { Result } from 'n8n-workflow';
-import { toResult } from 'n8n-workflow';
+import type { Result } from 'glow-workflow';
+import { toResult } from 'glow-workflow';
 
 import {
 	isAssignmentExpression,

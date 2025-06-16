@@ -3,7 +3,7 @@ import { createTestingPinia } from '@pinia/testing';
 import userEvent from '@testing-library/user-event';
 import Assignment from './Assignment.vue';
 import { defaultSettings } from '@/__tests__/defaults';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import merge from 'lodash/merge';
 import { cleanupAppModals, createAppModals } from '@/__tests__/utils';
 

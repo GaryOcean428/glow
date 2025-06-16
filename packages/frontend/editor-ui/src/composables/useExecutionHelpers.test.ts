@@ -1,6 +1,6 @@
 import { useExecutionHelpers } from '@/composables/useExecutionHelpers';
-import type { ExecutionSummary } from 'n8n-workflow';
-import { i18n } from '@n8n/i18n';
+import type { ExecutionSummary } from 'glow-workflow';
+import { i18n } from '@glow/i18n';
 import { convertToDisplayDate } from '@/utils/formatters/dateFormatter';
 import { mock } from 'vitest-mock-extended';
 

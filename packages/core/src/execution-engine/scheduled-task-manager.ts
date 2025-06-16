@@ -1,6 +1,6 @@
-import { Service } from '@n8n/di';
+import { Service } from '@glow/di';
 import { CronJob } from 'cron';
-import type { CronExpression, Workflow } from 'n8n-workflow';
+import type { CronExpression, Workflow } from 'glow-workflow';
 
 import { InstanceSettings } from '@/instance-settings';
 

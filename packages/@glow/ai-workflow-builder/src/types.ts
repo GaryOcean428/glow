@@ -1,4 +1,4 @@
-import type { IWorkflowBase } from 'n8n-workflow';
+import type { IWorkflowBase } from 'glow-workflow';
 
 export type SimpleWorkflow = Pick<IWorkflowBase, 'nodes' | 'connections'>;
 export interface CodeDiffMessage {

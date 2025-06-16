@@ -7,12 +7,12 @@ import type {
 	SupplyData,
 	IHttpRequestMethods,
 	IHttpRequestOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	NodeConnectionTypes,
 	NodeOperationError,
 	tryToParseAlphanumericString,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { N8nTool } from '@utils/N8nTool';
 import { getConnectionHintNoticeField } from '@utils/sharedFields';

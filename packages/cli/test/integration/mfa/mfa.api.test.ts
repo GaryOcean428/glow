@@ -1,6 +1,6 @@
 import { UserRepository, type User } from '@n8n/db';
 import { Container } from '@n8n/di';
-import { randomString } from 'n8n-workflow';
+import { randomString } from 'glow-workflow';
 
 import { AuthService } from '@/auth/auth.service';
 import config from '@/config';

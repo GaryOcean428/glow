@@ -1,8 +1,8 @@
-import { Logger } from '@n8n/backend-common';
-import { TaskRunnersConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
-import type { BrokerMessage, RunnerMessage } from '@n8n/task-runner';
-import { jsonStringify, UserError } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { TaskRunnersConfig } from '@glow/config';
+import { Service } from '@glow/di';
+import type { BrokerMessage, RunnerMessage } from '@glow/task-runner';
+import { jsonStringify, UserError } from 'glow-workflow';
 import type WebSocket from 'ws';
 
 import { Time, WsStatusCodes } from '@/constants';

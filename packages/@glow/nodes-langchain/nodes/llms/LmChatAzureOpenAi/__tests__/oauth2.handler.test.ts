@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import { createMockExecuteFunction } from 'n8n-nodes-base/test/nodes/Helpers';
-import type { INode, ISupplyDataFunctions } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import { createMockExecuteFunction } from 'glow-nodes-base/test/nodes/Helpers';
+import type { INode, ISupplyDataFunctions } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { setupOAuth2Authentication } from '../credentials/oauth2';
 import type { AzureEntraCognitiveServicesOAuth2ApiCredential } from '../types';

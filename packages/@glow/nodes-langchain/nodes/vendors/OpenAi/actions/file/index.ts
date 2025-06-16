@@ -1,4 +1,4 @@
-import type { INodeProperties } from 'n8n-workflow';
+import type { INodeProperties } from 'glow-workflow';
 
 import * as deleteFile from './deleteFile.operation';
 import * as list from './list.operation';

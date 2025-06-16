@@ -1,4 +1,4 @@
-import type { INodeCredentials, INodeParameters, INodeTypeNameVersion } from 'n8n-workflow';
+import type { INodeCredentials, INodeParameters, INodeTypeNameVersion } from 'glow-workflow';
 import { z } from 'zod';
 import { Z } from 'zod-class';
 

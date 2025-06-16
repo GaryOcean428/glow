@@ -1,6 +1,6 @@
-import { RoleChangeRequestDto, SettingsUpdateRequestDto } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import type { PublicUser } from '@n8n/db';
+import { RoleChangeRequestDto, SettingsUpdateRequestDto } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import type { PublicUser } from '@glow/db';
 import {
 	Project,
 	User,
@@ -9,7 +9,7 @@ import {
 	SharedCredentialsRepository,
 	SharedWorkflowRepository,
 	UserRepository,
-} from '@n8n/db';
+} from '@glow/db';
 import {
 	GlobalScope,
 	Delete,
@@ -19,7 +19,7 @@ import {
 	Licensed,
 	Body,
 	Param,
-} from '@n8n/decorators';
+} from '@glow/decorators';
 import { Response } from 'express';
 
 import { AuthService } from '@/auth/auth.service';

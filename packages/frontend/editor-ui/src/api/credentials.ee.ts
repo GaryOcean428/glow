@@ -1,7 +1,7 @@
 import type { ICredentialsResponse, IShareCredentialsPayload } from '@/Interface';
-import type { IRestApiContext } from '@n8n/rest-api-client';
-import { makeRestApiRequest } from '@n8n/rest-api-client';
-import type { IDataObject } from 'n8n-workflow';
+import type { IRestApiContext } from '@glow/rest-api-client';
+import { makeRestApiRequest } from '@glow/rest-api-client';
+import type { IDataObject } from 'glow-workflow';
 
 export async function setCredentialSharedWith(
 	context: IRestApiContext,

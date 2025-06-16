@@ -1,15 +1,15 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { EventDestinationsRepository, ExecutionRepository, WorkflowRepository } from '@n8n/db';
-import { OnPubSubEvent } from '@n8n/decorators';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { EventDestinationsRepository, ExecutionRepository, WorkflowRepository } from '@glow/db';
+import { OnPubSubEvent } from '@glow/decorators';
+import { Service } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { DeleteResult } from '@n8n/typeorm';
+import type { DeleteResult } from '@glow/typeorm';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In } from '@n8n/typeorm';
+import { In } from '@glow/typeorm';
 import EventEmitter from 'events';
 import uniqby from 'lodash/uniqBy';
-import type { MessageEventBusDestinationOptions } from 'n8n-workflow';
+import type { MessageEventBusDestinationOptions } from 'glow-workflow';
 
 import config from '@/config';
 import { License } from '@/license';

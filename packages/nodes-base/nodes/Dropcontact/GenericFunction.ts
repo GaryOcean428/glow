@@ -6,7 +6,7 @@ import type {
 	IPairedItemData,
 	IHttpRequestMethods,
 	IRequestOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 /**
  * Make an authenticated API request to Bubble.

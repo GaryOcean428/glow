@@ -1,9 +1,9 @@
-import { Logger } from '@n8n/backend-common';
-import { SettingsRepository } from '@n8n/db';
-import { OnPubSubEvent, OnShutdown } from '@n8n/decorators';
-import { Service } from '@n8n/di';
-import { Cipher, type IExternalSecretsManager } from 'n8n-core';
-import { jsonParse, type IDataObject, ensureError, UnexpectedError } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { SettingsRepository } from '@glow/db';
+import { OnPubSubEvent, OnShutdown } from '@glow/decorators';
+import { Service } from '@glow/di';
+import { Cipher, type IExternalSecretsManager } from 'glow-core';
+import { jsonParse, type IDataObject, ensureError, UnexpectedError } from 'glow-workflow';
 
 import { EventService } from '@/events/event.service';
 import { License } from '@/license';

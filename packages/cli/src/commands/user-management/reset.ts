@@ -1,4 +1,4 @@
-import type { CredentialsEntity } from '@n8n/db';
+import type { CredentialsEntity } from '@glow/db';
 import {
 	User,
 	CredentialsRepository,
@@ -7,8 +7,8 @@ import {
 	SharedCredentialsRepository,
 	SharedWorkflowRepository,
 	UserRepository,
-} from '@n8n/db';
-import { Container } from '@n8n/di';
+} from '@glow/db';
+import { Container } from '@glow/di';
 
 import { BaseCommand } from '../base-command';
 

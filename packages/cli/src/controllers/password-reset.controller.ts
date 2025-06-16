@@ -2,11 +2,11 @@ import {
 	ChangePasswordRequestDto,
 	ForgotPasswordRequestDto,
 	ResolvePasswordTokenQueryDto,
-} from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import { UserRepository } from '@n8n/db';
-import { Body, Get, Post, Query, RestController } from '@n8n/decorators';
-import { hasGlobalScope } from '@n8n/permissions';
+} from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import { UserRepository } from '@glow/db';
+import { Body, Get, Post, Query, RestController } from '@glow/decorators';
+import { hasGlobalScope } from '@glow/permissions';
 import { Response } from 'express';
 
 import { AuthService } from '@/auth/auth.service';

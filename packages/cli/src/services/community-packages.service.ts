@@ -1,16 +1,16 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { LICENSE_FEATURES } from '@n8n/constants';
-import type { InstalledPackages } from '@n8n/db';
-import { InstalledPackagesRepository } from '@n8n/db';
-import { OnPubSubEvent } from '@n8n/decorators';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { LICENSE_FEATURES } from '@glow/constants';
+import type { InstalledPackages } from '@glow/db';
+import { InstalledPackagesRepository } from '@glow/db';
+import { OnPubSubEvent } from '@glow/decorators';
+import { Service } from '@glow/di';
 import axios from 'axios';
 import { exec } from 'child_process';
 import { access, constants, mkdir, readFile, rm, writeFile } from 'fs/promises';
-import type { PackageDirectoryLoader } from 'n8n-core';
-import { InstanceSettings } from 'n8n-core';
-import { jsonParse, UnexpectedError, UserError, type PublicInstalledPackage } from 'n8n-workflow';
+import type { PackageDirectoryLoader } from 'glow-core';
+import { InstanceSettings } from 'glow-core';
+import { jsonParse, UnexpectedError, UserError, type PublicInstalledPackage } from 'glow-workflow';
 import { join } from 'path';
 import { promisify } from 'util';
 

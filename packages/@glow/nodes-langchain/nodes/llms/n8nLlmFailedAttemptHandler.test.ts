@@ -1,6 +1,6 @@
 import { mock } from 'jest-mock-extended';
-import type { ISupplyDataFunctions } from 'n8n-workflow';
-import { ApplicationError, NodeApiError } from 'n8n-workflow';
+import type { ISupplyDataFunctions } from 'glow-workflow';
+import { ApplicationError, NodeApiError } from 'glow-workflow';
 
 import { makeN8nLlmFailedAttemptHandler } from './n8nLlmFailedAttemptHandler';
 

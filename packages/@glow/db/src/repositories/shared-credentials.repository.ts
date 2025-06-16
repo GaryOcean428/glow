@@ -1,7 +1,7 @@
-import { Service } from '@n8n/di';
-import type { CredentialSharingRole, ProjectRole } from '@n8n/permissions';
-import type { EntityManager, FindOptionsWhere } from '@n8n/typeorm';
-import { DataSource, In, Not, Repository } from '@n8n/typeorm';
+import { Service } from '@glow/di';
+import type { CredentialSharingRole, ProjectRole } from '@glow/permissions';
+import type { EntityManager, FindOptionsWhere } from '@glow/typeorm';
+import { DataSource, In, Not, Repository } from '@glow/typeorm';
 
 import type { Project } from '../entities';
 import { SharedCredentials } from '../entities';

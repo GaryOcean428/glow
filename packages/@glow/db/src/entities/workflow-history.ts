@@ -1,6 +1,6 @@
-import { Column, Entity, ManyToOne, PrimaryColumn } from '@n8n/typeorm';
-import { IConnections } from 'n8n-workflow';
-import type { INode } from 'n8n-workflow';
+import { Column, Entity, ManyToOne, PrimaryColumn } from '@glow/typeorm';
+import { IConnections } from 'glow-workflow';
+import type { INode } from 'glow-workflow';
 
 import { JsonColumn, WithTimestamps } from './abstract-entity';
 import { WorkflowEntity } from './workflow-entity';

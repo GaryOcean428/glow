@@ -1,5 +1,5 @@
 import { sign, type Request } from 'aws4';
-import type { IHttpRequestOptions } from 'n8n-workflow';
+import type { IHttpRequestOptions } from 'glow-workflow';
 
 import { Aws, type AwsCredentialsType } from '../Aws.credentials';
 

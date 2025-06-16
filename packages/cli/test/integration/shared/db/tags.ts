@@ -4,7 +4,7 @@ import { generateNanoId } from '@n8n/db';
 import { TagRepository } from '@n8n/db';
 import { WorkflowTagMappingRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import type { IWorkflowBase } from 'n8n-workflow';
+import type { IWorkflowBase } from 'glow-workflow';
 
 import { randomName } from '../random';
 

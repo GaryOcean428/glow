@@ -1,7 +1,7 @@
 {
 	"extends": [
-		"@n8n/typescript-config/tsconfig.common.json",
-		"@n8n/typescript-config/tsconfig.backend.json"
+		"@glow/typescript-config/tsconfig.common.json",
+		"@glow/typescript-config/tsconfig.backend.json"
 	],
 	"compilerOptions": {
 		"paths": {
@@ -26,7 +26,7 @@
 		"utils/**/*.ts"
 	],
 	"references": [
-		{ "path": "../@n8n/imap/tsconfig.build.json" },
+		{ "path": "../@glow/imap/tsconfig.build.json" },
 		{ "path": "../workflow/tsconfig.build.json" },
 		{ "path": "../core/tsconfig.build.json" }
 	]

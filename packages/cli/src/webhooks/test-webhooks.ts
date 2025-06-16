@@ -1,15 +1,15 @@
-import { OnPubSubEvent } from '@n8n/decorators';
-import { Service } from '@n8n/di';
+import { OnPubSubEvent } from '@glow/decorators';
+import { Service } from '@glow/di';
 import type express from 'express';
-import { InstanceSettings } from 'n8n-core';
-import { WebhookPathTakenError, Workflow } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { WebhookPathTakenError, Workflow } from 'glow-workflow';
 import type {
 	IWebhookData,
 	IWorkflowExecuteAdditionalData,
 	IHttpRequestMethods,
 	IRunData,
 	IWorkflowBase,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { TEST_WEBHOOK_TIMEOUT } from '@/constants';
 import { NotFoundError } from '@/errors/response-errors/not-found.error';

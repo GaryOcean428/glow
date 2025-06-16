@@ -1,4 +1,4 @@
-import { NodeConnectionTypes, type INodeProperties, type INodeTypeDescription } from 'n8n-workflow';
+import { NodeConnectionTypes, type INodeProperties, type INodeTypeDescription } from 'glow-workflow';
 import { useActionsGenerator } from './composables/useActionsGeneration';
 import { usePostHog } from '@/stores/posthog.store';
 import { createTestingPinia } from '@pinia/testing';

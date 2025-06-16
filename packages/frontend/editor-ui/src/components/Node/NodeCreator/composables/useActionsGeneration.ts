@@ -14,9 +14,9 @@ import type {
 	INodePropertyCollection,
 	INodePropertyOptions,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
-import { i18n } from '@n8n/i18n';
+import { i18n } from '@glow/i18n';
 
 import { getCredentialOnlyNodeType } from '@/utils/credentialOnlyNodes';
 import { formatTriggerActionName } from '../utils';

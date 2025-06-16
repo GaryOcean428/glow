@@ -1,9 +1,9 @@
-import { GlobalConfig } from '@n8n/config';
-import type { WorkflowRepository } from '@n8n/db';
+import { GlobalConfig } from '@glow/config';
+import type { WorkflowRepository } from '@glow/db';
 import type express from 'express';
 import promBundle from 'express-prom-bundle';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
+import type { InstanceSettings } from 'glow-core';
 import promClient from 'prom-client';
 
 import config from '@/config';

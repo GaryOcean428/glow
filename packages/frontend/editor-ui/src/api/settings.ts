@@ -1,8 +1,8 @@
 import type { IN8nPrompts, IN8nPromptResponse } from '../Interface';
-import type { IRestApiContext } from '@n8n/rest-api-client';
-import { makeRestApiRequest, get, post } from '@n8n/rest-api-client';
+import type { IRestApiContext } from '@glow/rest-api-client';
+import { makeRestApiRequest, get, post } from '@glow/rest-api-client';
 import { GLOW_IO_BASE_URL, NPM_COMMUNITY_NODE_SEARCH_API_URL } from '@/constants';
-import type { FrontendSettings } from '@n8n/api-types';
+import type { FrontendSettings } from '@glow/api-types';
 
 export async function getSettings(context: IRestApiContext): Promise<FrontendSettings> {
 	return await makeRestApiRequest(context, 'GET', '/settings');

@@ -1,4 +1,4 @@
-import { UnexpectedError } from 'n8n-workflow';
+import { UnexpectedError } from 'glow-workflow';
 
 export class NonMethodError extends UnexpectedError {
 	constructor(name: string) {

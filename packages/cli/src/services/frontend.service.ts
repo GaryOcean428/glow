@@ -1,13 +1,13 @@
-import type { FrontendSettings, ITelemetrySettings } from '@n8n/api-types';
-import { LicenseState, Logger } from '@n8n/backend-common';
-import { GlobalConfig, SecurityConfig } from '@n8n/config';
-import { LICENSE_FEATURES } from '@n8n/constants';
-import { Container, Service } from '@n8n/di';
+import type { FrontendSettings, ITelemetrySettings } from '@glow/api-types';
+import { LicenseState, Logger } from '@glow/backend-common';
+import { GlobalConfig, SecurityConfig } from '@glow/config';
+import { LICENSE_FEATURES } from '@glow/constants';
+import { Container, Service } from '@glow/di';
 import { createWriteStream } from 'fs';
 import { mkdir } from 'fs/promises';
 import uniq from 'lodash/uniq';
-import { BinaryDataConfig, InstanceSettings } from 'n8n-core';
-import type { ICredentialType, INodeTypeBaseDescription } from 'n8n-workflow';
+import { BinaryDataConfig, InstanceSettings } from 'glow-core';
+import type { ICredentialType, INodeTypeBaseDescription } from 'glow-workflow';
 import path from 'path';
 
 import config from '@/config';

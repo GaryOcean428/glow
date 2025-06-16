@@ -1,6 +1,6 @@
 import { mock } from 'jest-mock-extended';
 import { DateTime } from 'luxon';
-import type { IExecuteFunctions, INode } from 'n8n-workflow';
+import type { IExecuteFunctions, INode } from 'glow-workflow';
 
 import { parseRawEmail, prepareTimestamp } from '../../GenericFunctions';
 

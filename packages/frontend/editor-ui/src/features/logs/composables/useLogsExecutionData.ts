@@ -1,6 +1,6 @@
 import { watch, computed, ref } from 'vue';
 import { type IExecutionResponse } from '@/Interface';
-import { Workflow, type IRunExecutionData } from 'n8n-workflow';
+import { Workflow, type IRunExecutionData } from 'glow-workflow';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useThrottleFn } from '@vueuse/core';

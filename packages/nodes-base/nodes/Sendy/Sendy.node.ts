@@ -5,8 +5,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { campaignFields, campaignOperations } from './CampaignDescription';
 import { sendyApiRequest } from './GenericFunctions';

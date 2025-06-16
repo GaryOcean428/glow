@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { computed, ref } from 'vue';
-import type { IDataObject, ExecutionSummary, AnnotationVote, ExecutionStatus } from 'n8n-workflow';
+import type { IDataObject, ExecutionSummary, AnnotationVote, ExecutionStatus } from 'glow-workflow';
 import type {
 	ExecutionFilterType,
 	ExecutionsQueryFilter,
@@ -11,8 +11,8 @@ import type {
 	IExecutionsListResponse,
 	IExecutionsStopData,
 } from '@/Interface';
-import { useRootStore } from '@n8n/stores/useRootStore';
-import { makeRestApiRequest } from '@n8n/rest-api-client';
+import { useRootStore } from '@glow/stores/useRootStore';
+import { makeRestApiRequest } from '@glow/rest-api-client';
 import { unflattenExecutionData } from '@/utils/executionUtils';
 import { executionFilterToQueryFilter, getDefaultExecutionFilters } from '@/utils/executionUtils';
 import { useProjectsStore } from '@/stores/projects.store';

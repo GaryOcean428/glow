@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
 import { DateTime } from 'luxon';
 

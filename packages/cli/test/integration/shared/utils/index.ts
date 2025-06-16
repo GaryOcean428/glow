@@ -7,15 +7,15 @@ import {
 	InstanceSettings,
 	UnrecognizedNodeTypeError,
 	type DirectoryLoader,
-} from 'n8n-core';
-import { Ftp } from 'n8n-nodes-base/credentials/Ftp.credentials';
-import { GithubApi } from 'n8n-nodes-base/credentials/GithubApi.credentials';
-import { Cron } from 'n8n-nodes-base/nodes/Cron/Cron.node';
-import { FormTrigger } from 'n8n-nodes-base/nodes/Form/FormTrigger.node';
-import { ScheduleTrigger } from 'n8n-nodes-base/nodes/Schedule/ScheduleTrigger.node';
-import { Set } from 'n8n-nodes-base/nodes/Set/Set.node';
-import { Start } from 'n8n-nodes-base/nodes/Start/Start.node';
-import type { INodeTypeData, INode } from 'n8n-workflow';
+} from 'glow-core';
+import { Ftp } from 'glow-nodes-base/credentials/Ftp.credentials';
+import { GithubApi } from 'glow-nodes-base/credentials/GithubApi.credentials';
+import { Cron } from 'glow-nodes-base/nodes/Cron/Cron.node';
+import { FormTrigger } from 'glow-nodes-base/nodes/Form/FormTrigger.node';
+import { ScheduleTrigger } from 'glow-nodes-base/nodes/Schedule/ScheduleTrigger.node';
+import { Set } from 'glow-nodes-base/nodes/Set/Set.node';
+import { Start } from 'glow-nodes-base/nodes/Start/Start.node';
+import type { INodeTypeData, INode } from 'glow-workflow';
 import type request from 'supertest';
 import { v4 as uuid } from 'uuid';
 

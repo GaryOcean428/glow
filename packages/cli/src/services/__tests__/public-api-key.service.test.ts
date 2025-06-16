@@ -1,12 +1,12 @@
-import { ApiKeyRepository } from '@n8n/db';
-import { UserRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
-import { getOwnerOnlyApiKeyScopes, type ApiKeyScope } from '@n8n/permissions';
+import { ApiKeyRepository } from '@glow/db';
+import { UserRepository } from '@glow/db';
+import { Container } from '@glow/di';
+import { getOwnerOnlyApiKeyScopes, type ApiKeyScope } from '@glow/permissions';
 import type { Response, NextFunction } from 'express';
 import { mock, mockDeep } from 'jest-mock-extended';
 import { DateTime } from 'luxon';
-import type { InstanceSettings } from 'n8n-core';
-import { randomString } from 'n8n-workflow';
+import type { InstanceSettings } from 'glow-core';
+import { randomString } from 'glow-workflow';
 import type { OpenAPIV3 } from 'openapi-types';
 
 import type { EventService } from '@/events/event.service';

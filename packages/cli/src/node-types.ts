@@ -1,11 +1,11 @@
-import { Service } from '@n8n/di';
-import type { NeededNodeType } from '@n8n/task-runner';
+import { Service } from '@glow/di';
+import type { NeededNodeType } from '@glow/task-runner';
 import type { Dirent } from 'fs';
 import { readdir } from 'fs/promises';
-import { RoutingNode } from 'n8n-core';
-import type { ExecuteContext } from 'n8n-core';
-import type { INodeType, INodeTypeDescription, INodeTypes, IVersionedNodeType } from 'n8n-workflow';
-import { NodeHelpers, UnexpectedError, UserError } from 'n8n-workflow';
+import { RoutingNode } from 'glow-core';
+import type { ExecuteContext } from 'glow-core';
+import type { INodeType, INodeTypeDescription, INodeTypes, IVersionedNodeType } from 'glow-workflow';
+import { NodeHelpers, UnexpectedError, UserError } from 'glow-workflow';
 import { join, dirname } from 'path';
 
 import { LoadNodesAndCredentials } from './load-nodes-and-credentials';

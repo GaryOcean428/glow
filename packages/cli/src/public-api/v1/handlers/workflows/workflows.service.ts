@@ -1,5 +1,5 @@
-import { GlobalConfig } from '@n8n/config';
-import type { Project, User } from '@n8n/db';
+import { GlobalConfig } from '@glow/config';
+import type { Project, User } from '@glow/db';
 import {
 	WorkflowEntity,
 	WorkflowTagMapping,
@@ -7,10 +7,10 @@ import {
 	TagRepository,
 	SharedWorkflowRepository,
 	WorkflowRepository,
-} from '@n8n/db';
-import { Container } from '@n8n/di';
-import type { Scope, WorkflowSharingRole } from '@n8n/permissions';
-import type { WorkflowId } from 'n8n-workflow';
+} from '@glow/db';
+import { Container } from '@glow/di';
+import type { Scope, WorkflowSharingRole } from '@glow/permissions';
+import type { WorkflowId } from 'glow-workflow';
 
 import { License } from '@/license';
 import { WorkflowSharingService } from '@/workflows/workflow-sharing.service';

@@ -1,11 +1,11 @@
-import { Logger } from '@n8n/backend-common';
-import type { Migration } from '@n8n/db';
-import { wrapMigration } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import type { Migration } from '@glow/db';
+import { wrapMigration } from '@glow/db';
+import { Container } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { DataSourceOptions as ConnectionOptions } from '@n8n/typeorm';
+import type { DataSourceOptions as ConnectionOptions } from '@glow/typeorm';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { MigrationExecutor, DataSource as Connection } from '@n8n/typeorm';
+import { MigrationExecutor, DataSource as Connection } from '@glow/typeorm';
 import { Command, Flags } from '@oclif/core';
 
 import { DbConnectionOptions } from '@/databases/db-connection-options';

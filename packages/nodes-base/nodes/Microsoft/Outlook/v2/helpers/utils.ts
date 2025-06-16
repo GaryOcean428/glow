@@ -5,8 +5,8 @@ import type {
 	ILoadOptionsFunctions,
 	IPollFunctions,
 	JsonObject,
-} from 'n8n-workflow';
-import { ApplicationError, jsonParse, NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, jsonParse, NodeApiError } from 'glow-workflow';
 
 export const messageFields = [
 	'bccRecipients',

@@ -1,8 +1,8 @@
 import { SettingsRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { mock } from 'jest-mock-extended';
-import { Cipher } from 'n8n-core';
-import type { IDataObject } from 'n8n-workflow';
+import { Cipher } from 'glow-core';
+import type { IDataObject } from 'glow-workflow';
 
 import config from '@/config';
 import { CREDENTIAL_BLANKING_VALUE } from '@/constants';

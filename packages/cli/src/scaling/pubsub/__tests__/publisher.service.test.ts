@@ -1,6 +1,6 @@
 import type { Redis as SingleNodeClient } from 'ioredis';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
+import type { InstanceSettings } from 'glow-core';
 
 import config from '@/config';
 import type { RedisClientService } from '@/services/redis-client.service';

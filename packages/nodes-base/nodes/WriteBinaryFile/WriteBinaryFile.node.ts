@@ -1,10 +1,10 @@
-import { BINARY_ENCODING, NodeConnectionTypes } from 'n8n-workflow';
+import { BINARY_ENCODING, NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IExecuteFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { Readable } from 'stream';
 
 export class WriteBinaryFile implements INodeType {

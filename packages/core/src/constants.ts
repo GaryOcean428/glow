@@ -3,7 +3,7 @@ export const PLACEHOLDER_EMPTY_EXECUTION_ID = '__UNKNOWN__';
 export const PLACEHOLDER_EMPTY_WORKFLOW_ID = '__EMPTY__';
 export const HTTP_REQUEST_NODE_TYPE = 'n8n-nodes-base.httpRequest';
 export const HTTP_REQUEST_AS_TOOL_NODE_TYPE = 'n8n-nodes-base.httpRequestTool';
-export const HTTP_REQUEST_TOOL_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolHttpRequest';
+export const HTTP_REQUEST_TOOL_NODE_TYPE = '@glow/n8n-nodes-langchain.toolHttpRequest';
 
 export const RESTRICT_FILE_ACCESS_TO = 'GLOW_RESTRICT_FILE_ACCESS_TO';
 export const BLOCK_FILE_ACCESS_TO_GLOW_FILES = 'GLOW_BLOCK_FILE_ACCESS_TO_GLOW_FILES';

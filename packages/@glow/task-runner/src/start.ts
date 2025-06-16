@@ -1,5 +1,5 @@
-import { Container } from '@n8n/di';
-import { ensureError, setGlobalState } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import { ensureError, setGlobalState } from 'glow-workflow';
 
 import { MainConfig } from './config/main-config';
 import type { HealthCheckServer } from './health-check-server';

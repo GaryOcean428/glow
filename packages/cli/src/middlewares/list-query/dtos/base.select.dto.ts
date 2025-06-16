@@ -1,5 +1,5 @@
-import { isStringArray } from '@n8n/db';
-import { jsonParse, UnexpectedError } from 'n8n-workflow';
+import { isStringArray } from '@glow/db';
+import { jsonParse, UnexpectedError } from 'glow-workflow';
 
 export class BaseSelect {
 	static selectableFields: Set<string>;

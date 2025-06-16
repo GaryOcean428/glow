@@ -5,7 +5,7 @@ import type {
 	Sort,
 } from 'mongodb';
 import { ObjectId } from 'mongodb';
-import { ApplicationError, NodeConnectionTypes } from 'n8n-workflow';
+import { ApplicationError, NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IExecuteFunctions,
 	ICredentialsDecrypted,
@@ -16,7 +16,7 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	JsonObject,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import {
 	buildParameterizedConnString,

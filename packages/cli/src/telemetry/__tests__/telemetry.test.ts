@@ -1,7 +1,7 @@
-import type { GlobalConfig } from '@n8n/config';
+import type { GlobalConfig } from '@glow/config';
 import type RudderStack from '@rudderstack/rudder-sdk-node';
 import { mock } from 'jest-mock-extended';
-import { InstanceSettings } from 'n8n-core';
+import { InstanceSettings } from 'glow-core';
 
 import config from '@/config';
 import { PostHogClient } from '@/posthog';

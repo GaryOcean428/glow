@@ -1,5 +1,5 @@
 import { mock } from 'jest-mock-extended';
-import { type INodeTypeBaseDescription, type ITriggerFunctions } from 'n8n-workflow';
+import { type INodeTypeBaseDescription, type ITriggerFunctions } from 'glow-workflow';
 
 import { type ICredentialsDataImap } from '@credentials/Imap.credentials';
 

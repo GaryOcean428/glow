@@ -1,7 +1,7 @@
-import { Service } from '@n8n/di';
-import { DataSource, In, Repository } from '@n8n/typeorm';
-import type { EntityManager } from '@n8n/typeorm';
-import type { QueryDeepPartialEntity } from '@n8n/typeorm/query-builder/QueryPartialEntity';
+import { Service } from '@glow/di';
+import { DataSource, In, Repository } from '@glow/typeorm';
+import type { EntityManager } from '@glow/typeorm';
+import type { QueryDeepPartialEntity } from '@glow/typeorm/query-builder/QueryPartialEntity';
 
 import { ExecutionData } from '../entities';
 

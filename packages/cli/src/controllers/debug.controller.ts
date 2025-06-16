@@ -1,6 +1,6 @@
-import { WorkflowRepository } from '@n8n/db';
-import { Get, RestController } from '@n8n/decorators';
-import { InstanceSettings } from 'n8n-core';
+import { WorkflowRepository } from '@glow/db';
+import { Get, RestController } from '@glow/decorators';
+import { InstanceSettings } from 'glow-core';
 
 import { ActiveWorkflowManager } from '@/active-workflow-manager';
 import { MultiMainSetup } from '@/scaling/multi-main-setup.ee';

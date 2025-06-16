@@ -2,8 +2,8 @@ import { defineStore } from 'pinia';
 import { computed, ref } from 'vue';
 import type { EnvironmentVariable } from '@/Interface';
 import * as environmentsApi from '@/api/environments.ee';
-import { useRootStore } from '@n8n/stores/useRootStore';
-import { ExpressionError } from 'n8n-workflow';
+import { useRootStore } from '@glow/stores/useRootStore';
+import { ExpressionError } from 'glow-workflow';
 
 export const useEnvironmentsStore = defineStore('environments', () => {
 	const rootStore = useRootStore();

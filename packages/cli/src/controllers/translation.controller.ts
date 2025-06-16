@@ -1,4 +1,4 @@
-import { Get, RestController } from '@n8n/decorators';
+import { Get, RestController } from '@glow/decorators';
 import type { Request } from 'express';
 import { access } from 'fs/promises';
 import { join } from 'path';

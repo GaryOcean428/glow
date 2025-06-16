@@ -4,7 +4,7 @@ import type {
 	SupplyData,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { nodeNameToToolName } from '@utils/helpers';
 

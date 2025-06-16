@@ -1,5 +1,5 @@
-import type { INodeProperties } from 'n8n-workflow';
-import { updateDisplayOptions } from 'n8n-workflow';
+import type { INodeProperties } from 'glow-workflow';
+import { updateDisplayOptions } from 'glow-workflow';
 
 import { paginationParameters } from '../common';
 

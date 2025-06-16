@@ -1,6 +1,6 @@
 import type { BaseOutputParser } from '@langchain/core/output_parsers';
 import type { DynamicStructuredTool, Tool } from 'langchain/tools';
-import { NodeOperationError, type IExecuteFunctions, type INode } from 'n8n-workflow';
+import { NodeOperationError, type IExecuteFunctions, type INode } from 'glow-workflow';
 import type { z } from 'zod';
 
 type ZodObjectAny = z.ZodObject<any, any, any, any>;

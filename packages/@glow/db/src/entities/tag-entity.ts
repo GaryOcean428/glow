@@ -1,4 +1,4 @@
-import { Column, Entity, Index, ManyToMany, OneToMany } from '@n8n/typeorm';
+import { Column, Entity, Index, ManyToMany, OneToMany } from '@glow/typeorm';
 import { IsString, Length } from 'class-validator';
 
 import { WithTimestampsAndStringId } from './abstract-entity';

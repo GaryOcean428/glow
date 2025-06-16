@@ -3,9 +3,9 @@ jest.mock('n8n-workflow', () => ({
 	LoggerProxy: { init: jest.fn() },
 }));
 
-import type { GlobalConfig, InstanceSettingsConfig } from '@n8n/config';
+import type { GlobalConfig, InstanceSettingsConfig } from '@glow/config';
 import { mock, captor } from 'jest-mock-extended';
-import { LoggerProxy } from 'n8n-workflow';
+import { LoggerProxy } from 'glow-workflow';
 import winston from 'winston';
 
 import { Logger } from '../logger';

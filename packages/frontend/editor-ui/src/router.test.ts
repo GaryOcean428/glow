@@ -5,7 +5,7 @@ import { VIEWS } from '@/constants';
 import { setupServer } from '@/__tests__/server';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useRBACStore } from '@/stores/rbac.store';
-import type { Scope } from '@n8n/permissions';
+import type { Scope } from '@glow/permissions';
 import type { RouteRecordName } from 'vue-router';
 import * as init from '@/init';
 

@@ -1,5 +1,5 @@
-import { SamlAcsDto, SamlPreferences, SamlToggleDto } from '@n8n/api-types';
-import { Get, Post, RestController, GlobalScope, Body } from '@n8n/decorators';
+import { SamlAcsDto, SamlPreferences, SamlToggleDto } from '@glow/api-types';
+import { Get, Post, RestController, GlobalScope, Body } from '@glow/decorators';
 import { Response } from 'express';
 import querystring from 'querystring';
 import type { PostBindingContext } from 'samlify/types/src/entity';

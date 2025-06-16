@@ -1,6 +1,6 @@
-import { Config, Env } from '@n8n/config';
-import { Service } from '@n8n/di';
-import type { SSHCredentials } from 'n8n-workflow';
+import { Config, Env } from '@glow/config';
+import { Service } from '@glow/di';
+import type { SSHCredentials } from 'glow-workflow';
 import { createHash } from 'node:crypto';
 import { Client, type ConnectConfig } from 'ssh2';
 

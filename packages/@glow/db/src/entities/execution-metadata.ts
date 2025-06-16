@@ -1,4 +1,4 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from '@n8n/typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from '@glow/typeorm';
 
 import { ExecutionEntity } from './execution-entity';
 

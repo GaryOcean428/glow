@@ -9,7 +9,7 @@ import {
 	type IDataObject,
 	type IExecuteFunctions,
 	type Result,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { z } from 'zod';
 
 import { convertJsonSchemaToZod } from '@utils/schemaParsing';

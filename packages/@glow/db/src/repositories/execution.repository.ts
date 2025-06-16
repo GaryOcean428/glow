@@ -1,13 +1,13 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
 import type {
 	FindManyOptions,
 	FindOneOptions,
 	FindOperator,
 	FindOptionsWhere,
 	SelectQueryBuilder,
-} from '@n8n/typeorm';
+} from '@glow/typeorm';
 import {
 	Brackets,
 	DataSource,
@@ -19,18 +19,18 @@ import {
 	Not,
 	Raw,
 	Repository,
-} from '@n8n/typeorm';
-import { DateUtils } from '@n8n/typeorm/util/DateUtils';
+} from '@glow/typeorm';
+import { DateUtils } from '@glow/typeorm/util/DateUtils';
 import { parse, stringify } from 'flatted';
 import pick from 'lodash/pick';
-import { BinaryDataService, ErrorReporter } from 'n8n-core';
-import { ExecutionCancelledError, UnexpectedError } from 'n8n-workflow';
+import { BinaryDataService, ErrorReporter } from 'glow-core';
+import { ExecutionCancelledError, UnexpectedError } from 'glow-workflow';
 import type {
 	AnnotationVote,
 	ExecutionStatus,
 	ExecutionSummary,
 	IRunExecutionData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { ExecutionDataRepository } from './execution-data.repository';
 import {

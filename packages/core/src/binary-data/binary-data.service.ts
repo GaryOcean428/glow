@@ -1,8 +1,8 @@
-import { Container, Service } from '@n8n/di';
+import { Container, Service } from '@glow/di';
 import jwt from 'jsonwebtoken';
 import type { StringValue as TimeUnitValue } from 'ms';
-import { BINARY_ENCODING, UnexpectedError } from 'n8n-workflow';
-import type { INodeExecutionData, IBinaryData } from 'n8n-workflow';
+import { BINARY_ENCODING, UnexpectedError } from 'glow-workflow';
+import type { INodeExecutionData, IBinaryData } from 'glow-workflow';
 import { readFile, stat } from 'node:fs/promises';
 import prettyBytes from 'pretty-bytes';
 import type { Readable } from 'stream';

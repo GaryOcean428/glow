@@ -3,7 +3,7 @@
  * @TODO Remove this notice when Canvas V2 is the only one in use
  */
 
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import type { Ref } from 'vue';
@@ -37,13 +37,13 @@ import type {
 	INodeTypeDescription,
 	ITaskData,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	NodeConnectionTypes,
 	NodeHelpers,
 	SEND_AND_WAIT_OPERATION,
 	WAIT_INDEFINITELY,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { INodeUi } from '@/Interface';
 import {
 	CUSTOM_API_CALL_KEY,

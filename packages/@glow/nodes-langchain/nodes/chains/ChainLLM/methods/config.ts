@@ -3,8 +3,8 @@ import {
 	HumanMessagePromptTemplate,
 	SystemMessagePromptTemplate,
 } from '@langchain/core/prompts';
-import type { IDataObject, INodeInputConfiguration, INodeProperties } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { IDataObject, INodeInputConfiguration, INodeProperties } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { promptTypeOptions, textFromPreviousNode } from '@utils/descriptions';
 import { getBatchingOptionFields, getTemplateNoticeField } from '@utils/sharedFields';

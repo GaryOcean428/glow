@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/vue3';
 
-import type { UserAction } from '@n8n/design-system/types';
+import type { UserAction } from '@glow/design-system/types';
 
 import AsyncLoadingCacheDemo from './AsyncLoadingCacheDemo.vue';
 import Breadcrumbs from './Breadcrumbs.vue';

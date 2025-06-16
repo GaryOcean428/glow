@@ -5,7 +5,7 @@ import { UserRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { Not } from '@n8n/typeorm';
 import type { Entry as LdapUser } from 'ldapts';
-import { Cipher } from 'n8n-core';
+import { Cipher } from 'glow-core';
 
 import config from '@/config';
 import { saveLdapSynchronization } from '@/ldap.ee/helpers.ee';

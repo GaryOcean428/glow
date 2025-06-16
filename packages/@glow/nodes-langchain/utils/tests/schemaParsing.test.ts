@@ -1,7 +1,7 @@
 import type { JSONSchema7 } from 'json-schema';
-import { createMockExecuteFunction } from 'n8n-nodes-base/test/nodes/Helpers';
-import { NodeOperationError } from 'n8n-workflow';
-import type { INode, IExecuteFunctions } from 'n8n-workflow';
+import { createMockExecuteFunction } from 'glow-nodes-base/test/nodes/Helpers';
+import { NodeOperationError } from 'glow-workflow';
+import type { INode, IExecuteFunctions } from 'glow-workflow';
 
 import {
 	generateSchemaFromExample,

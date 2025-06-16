@@ -1,7 +1,7 @@
 import type { SecretManagerServiceClient as GcpClient } from '@google-cloud/secret-manager';
-import { Logger } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
-import { ensureError, jsonParse, type INodeProperties } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { Container } from '@glow/di';
+import { ensureError, jsonParse, type INodeProperties } from 'glow-workflow';
 
 import type {
 	GcpSecretsManagerContext,

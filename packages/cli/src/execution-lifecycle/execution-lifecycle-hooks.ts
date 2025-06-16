@@ -1,13 +1,13 @@
-import { Logger } from '@n8n/backend-common';
-import { ExecutionRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { ExecutionRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { stringify } from 'flatted';
-import { ErrorReporter, InstanceSettings, ExecutionLifecycleHooks } from 'n8n-core';
+import { ErrorReporter, InstanceSettings, ExecutionLifecycleHooks } from 'glow-core';
 import type {
 	IWorkflowBase,
 	WorkflowExecuteMode,
 	IWorkflowExecutionDataProcess,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { EventService } from '@/events/event.service';
 import { ExternalHooks } from '@/external-hooks';

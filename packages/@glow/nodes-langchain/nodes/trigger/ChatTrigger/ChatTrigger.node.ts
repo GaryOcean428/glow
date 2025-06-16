@@ -1,6 +1,6 @@
 import type { BaseChatMemory } from '@langchain/community/memory/chat_memory';
 import pick from 'lodash/pick';
-import { Node, NodeConnectionTypes } from 'n8n-workflow';
+import { Node, NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IDataObject,
 	IWebhookFunctions,
@@ -10,7 +10,7 @@ import type {
 	INodeExecutionData,
 	IBinaryData,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { cssVariables } from './constants';
 import { validateAuth } from './GenericFunctions';

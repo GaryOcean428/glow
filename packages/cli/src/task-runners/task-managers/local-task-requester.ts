@@ -1,5 +1,5 @@
-import { Container, Service } from '@n8n/di';
-import type { RequesterMessage } from '@n8n/task-runner';
+import { Container, Service } from '@glow/di';
+import type { RequesterMessage } from '@glow/task-runner';
 
 import { NodeTypes } from '@/node-types';
 import type { RequesterMessageCallback } from '@/task-runners/task-broker/task-broker.service';

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-invalid-void-type */
-import type { BooleanLicenseFeature } from '@n8n/constants';
-import { Container } from '@n8n/di';
-import type { ApiKeyScope, Scope } from '@n8n/permissions';
+import type { BooleanLicenseFeature } from '@glow/constants';
+import { Container } from '@glow/di';
+import type { ApiKeyScope, Scope } from '@glow/permissions';
 import type express from 'express';
 import type { NextFunction } from 'express';
 

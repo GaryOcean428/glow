@@ -7,8 +7,8 @@ import {
 	HumanMessagePromptTemplate,
 	ChatPromptTemplate,
 } from '@langchain/core/prompts';
-import type { IExecuteFunctions } from 'n8n-workflow';
-import { OperationalError } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
+import { OperationalError } from 'glow-workflow';
 
 import { isChatInstance } from '@utils/helpers';
 

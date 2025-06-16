@@ -1,14 +1,14 @@
-import { GlobalConfig } from '@n8n/config';
-import type { IWorkflowDb, Project, WorkflowEntity } from '@n8n/db';
-import type { User } from '@n8n/db';
-import { WorkflowStatisticsRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import type { IWorkflowDb, Project, WorkflowEntity } from '@glow/db';
+import type { User } from '@glow/db';
+import { WorkflowStatisticsRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import {
 	QueryFailedError,
 	type DataSource,
 	type EntityManager,
 	type EntityMetadata,
-} from '@n8n/typeorm';
+} from '@glow/typeorm';
 import { mocked } from 'jest-mock';
 import { mock } from 'jest-mock-extended';
 import {
@@ -16,7 +16,7 @@ import {
 	type INode,
 	type IRun,
 	type WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import config from '@/config';
 import { EventService } from '@/events/event.service';

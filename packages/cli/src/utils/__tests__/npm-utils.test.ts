@@ -1,4 +1,4 @@
-import { UnexpectedError } from 'n8n-workflow';
+import { UnexpectedError } from 'glow-workflow';
 import nock from 'nock';
 
 import { verifyIntegrity } from '../npm-utils';

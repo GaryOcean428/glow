@@ -1,5 +1,5 @@
-import type { LdapConfig } from '@n8n/constants';
-import type { RunningMode } from '@n8n/db';
+import type { LdapConfig } from '@glow/constants';
+import type { RunningMode } from '@glow/db';
 
 import type { AuthenticatedRequest } from '@/requests';
 

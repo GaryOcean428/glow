@@ -1,7 +1,7 @@
-import { StatisticsNames, WorkflowStatistics } from '@n8n/db';
-import { WorkflowStatisticsRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
-import { type InsertResult, QueryFailedError } from '@n8n/typeorm';
+import { StatisticsNames, WorkflowStatistics } from '@glow/db';
+import { WorkflowStatisticsRepository } from '@glow/db';
+import { Container } from '@glow/di';
+import { type InsertResult, QueryFailedError } from '@glow/typeorm';
 import { mock, mockClear } from 'jest-mock-extended';
 
 import { mockEntityManager } from '@test/mocking';

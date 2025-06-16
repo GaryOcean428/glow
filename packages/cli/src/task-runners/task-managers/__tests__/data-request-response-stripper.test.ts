@@ -1,7 +1,7 @@
-import type { DataRequestResponse, TaskDataRequestParams } from '@n8n/task-runner';
+import type { DataRequestResponse, TaskDataRequestParams } from '@glow/task-runner';
 import { mock } from 'jest-mock-extended';
-import type { IWorkflowExecuteAdditionalData } from 'n8n-workflow';
-import { type INode, type INodeExecutionData } from 'n8n-workflow';
+import type { IWorkflowExecuteAdditionalData } from 'glow-workflow';
+import { type INode, type INodeExecutionData } from 'glow-workflow';
 
 import { DataRequestResponseStripper } from '../data-request-response-stripper';
 

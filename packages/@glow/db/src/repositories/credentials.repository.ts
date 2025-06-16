@@ -1,6 +1,6 @@
-import { Service } from '@n8n/di';
-import { DataSource, In, Repository, Like } from '@n8n/typeorm';
-import type { FindManyOptions } from '@n8n/typeorm';
+import { Service } from '@glow/di';
+import { DataSource, In, Repository, Like } from '@glow/typeorm';
+import type { FindManyOptions } from '@glow/typeorm';
 
 import { CredentialsEntity } from '../entities';
 import type { User } from '../entities';

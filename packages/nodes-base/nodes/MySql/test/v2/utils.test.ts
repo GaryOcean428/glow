@@ -1,4 +1,4 @@
-import type { INode } from 'n8n-workflow';
+import type { INode } from 'glow-workflow';
 
 import type { SortRule, WhereClause } from '../../v2/helpers/interfaces';
 import {

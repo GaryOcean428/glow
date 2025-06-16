@@ -8,7 +8,7 @@ import {
 	getExecutionErrorToastConfiguration,
 	findTriggerNodeToAutoSelect,
 } from './executionUtils';
-import type { INode, IRunData, IPinData, ExecutionError, INodeTypeDescription } from 'n8n-workflow';
+import type { INode, IRunData, IPinData, ExecutionError, INodeTypeDescription } from 'glow-workflow';
 import { type INodeUi } from '../Interface';
 import {
 	CHAT_TRIGGER_NODE_TYPE,
@@ -25,7 +25,7 @@ const WAIT_NODE_TYPE = 'waitNode';
 
 const windowOpenSpy = vi.spyOn(window, 'open');
 
-vi.mock('@n8n/stores/useRootStore', () => ({
+vi.mock('@glow/stores/useRootStore', () => ({
 	useRootStore: () => ({
 		formWaitingUrl: 'http://localhost:5678/form-waiting',
 		webhookWaitingUrl: 'http://localhost:5678/webhook-waiting',
@@ -38,7 +38,7 @@ vi.mock('@/stores/workflows.store', () => ({
 	}),
 }));
 
-vi.mock('@n8n/i18n', () => ({
+vi.mock('@glow/i18n', () => ({
 	i18n: {
 		baseText: (key: string, options?: { interpolate?: { error?: string; details?: string } }) => {
 			const texts: { [key: string]: string } = {

@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 
 import { DatabaseConfig } from '../database.config';
 

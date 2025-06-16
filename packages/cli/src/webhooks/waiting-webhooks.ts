@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import type { IExecutionResponse } from '@n8n/db';
-import { ExecutionRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import type { IExecutionResponse } from '@glow/db';
+import { ExecutionRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import type express from 'express';
 import {
 	FORM_NODE_TYPE,
@@ -10,7 +10,7 @@ import {
 	SEND_AND_WAIT_OPERATION,
 	WAIT_NODE_TYPE,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { ConflictError } from '@/errors/response-errors/conflict.error';
 import { NotFoundError } from '@/errors/response-errors/not-found.error';

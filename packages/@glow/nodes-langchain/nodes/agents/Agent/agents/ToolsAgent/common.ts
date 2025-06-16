@@ -6,8 +6,8 @@ import type { AgentAction, AgentFinish } from 'langchain/agents';
 import type { ToolsAgentAction } from 'langchain/dist/agents/tool_calling/output_parser';
 import type { BaseChatMemory } from 'langchain/memory';
 import { DynamicStructuredTool, type Tool } from 'langchain/tools';
-import { BINARY_ENCODING, jsonParse, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
-import type { IExecuteFunctions } from 'n8n-workflow';
+import { BINARY_ENCODING, jsonParse, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
 import type { ZodObject } from 'zod';
 import { z } from 'zod';
 

@@ -1,6 +1,6 @@
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
-import { DataSource, MoreThanOrEqual, QueryFailedError, Repository } from '@n8n/typeorm';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
+import { DataSource, MoreThanOrEqual, QueryFailedError, Repository } from '@glow/typeorm';
 
 import { WorkflowStatistics } from '../entities';
 import type { User } from '../entities';

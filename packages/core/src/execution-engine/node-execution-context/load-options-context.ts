@@ -7,7 +7,7 @@ import type {
 	IWorkflowExecuteAdditionalData,
 	NodeParameterValueType,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { NodeExecutionContext } from './node-execution-context';
 import { extractValue } from './utils/extract-value';

@@ -1,5 +1,5 @@
-import type { LicenseMetricsRepository } from '@n8n/db';
-import type { WorkflowRepository } from '@n8n/db';
+import type { LicenseMetricsRepository } from '@glow/db';
+import type { WorkflowRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
 
 import { LicenseMetricsService } from '@/metrics/license-metrics.service';

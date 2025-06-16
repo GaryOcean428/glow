@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties, INodePropertyOptions, Icon } from 'n8n-workflow';
+import type { ICredentialType, INodeProperties, INodePropertyOptions, Icon } from 'glow-workflow';
 
 const algorithms: INodePropertyOptions[] = [
 	{

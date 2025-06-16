@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { LICENSE_FEATURES } from '@n8n/constants';
-import { ExecutionRepository, SettingsRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { LICENSE_FEATURES } from '@glow/constants';
+import { ExecutionRepository, SettingsRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
 import glob from 'fast-glob';
 import { createReadStream, createWriteStream, existsSync } from 'fs';
 import { mkdir } from 'fs/promises';
-import { jsonParse, randomString, type IWorkflowExecutionDataProcess } from 'n8n-workflow';
+import { jsonParse, randomString, type IWorkflowExecutionDataProcess } from 'glow-workflow';
 import path from 'path';
 import replaceStream from 'replacestream';
 import { pipeline } from 'stream/promises';
@@ -299,7 +299,7 @@ export class Start extends BaseCommand {
 				this.instanceSettings.update({ tunnelSubdomain });
 			}
 
-			const { default: localtunnel } = await import('@n8n/localtunnel');
+			const { default: localtunnel } = await import('@glow/localtunnel');
 			const { port } = this.globalConfig;
 
 			const webhookTunnel = await localtunnel(port, {

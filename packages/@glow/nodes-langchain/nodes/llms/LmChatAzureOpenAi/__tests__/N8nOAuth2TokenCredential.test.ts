@@ -1,6 +1,6 @@
 import { ClientOAuth2 } from '@n8n/client-oauth2';
-import type { INode } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { INode } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { N8nOAuth2TokenCredential } from '../credentials/N8nOAuth2TokenCredential';
 import type { AzureEntraCognitiveServicesOAuth2ApiCredential } from '../types';

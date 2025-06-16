@@ -1,6 +1,6 @@
-import { type INodeTypeDescription } from 'n8n-workflow';
-import type { VersionNode } from '@n8n/rest-api-client/api/versions';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { type INodeTypeDescription } from 'glow-workflow';
+import type { VersionNode } from '@glow/rest-api-client/api/versions';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useUIStore } from '../stores/ui.store';
 import { getThemedValue } from './nodeTypesUtils';
 import { isNodePreviewKey } from '../components/Node/NodeCreator/utils';

@@ -8,7 +8,7 @@ import {
 	makeOverrideValue,
 	parseOverrides,
 } from './fromAIOverrideUtils';
-import type { INodeTypeDescription, NodePropertyTypes } from 'n8n-workflow';
+import type { INodeTypeDescription, NodePropertyTypes } from 'glow-workflow';
 
 const getNodeType = vi.fn();
 

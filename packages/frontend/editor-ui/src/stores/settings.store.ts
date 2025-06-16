@@ -1,27 +1,27 @@
 import { computed, ref } from 'vue';
 import Bowser from 'bowser';
-import type { IUserManagementSettings, FrontendSettings } from '@n8n/api-types';
+import type { IUserManagementSettings, FrontendSettings } from '@glow/api-types';
 
-import * as eventsApi from '@n8n/rest-api-client/api/events';
-import * as ldapApi from '@n8n/rest-api-client/api/ldap';
+import * as eventsApi from '@glow/rest-api-client/api/events';
+import * as ldapApi from '@glow/rest-api-client/api/ldap';
 import * as settingsApi from '@/api/settings';
 import { testHealthEndpoint } from '@/api/templates';
-import type { LdapConfig } from '@n8n/rest-api-client/api/ldap';
+import type { LdapConfig } from '@glow/rest-api-client/api/ldap';
 import {
 	INSECURE_CONNECTION_WARNING,
 	LOCAL_STORAGE_EXPERIMENTAL_MIN_ZOOM_NODE_SETTINGS_IN_CANVAS,
 } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { UserManagementAuthenticationMethod } from '@/Interface';
-import type { IDataObject, WorkflowSettings } from 'n8n-workflow';
+import type { IDataObject, WorkflowSettings } from 'glow-workflow';
 import { defineStore } from 'pinia';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useUIStore } from './ui.store';
 import { useUsersStore } from './users.store';
 import { useVersionsStore } from './versions.store';
-import { makeRestApiRequest } from '@n8n/rest-api-client';
+import { makeRestApiRequest } from '@glow/rest-api-client';
 import { useToast } from '@/composables/useToast';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useLocalStorage } from '@vueuse/core';
 
 export const useSettingsStore = defineStore(STORES.SETTINGS, () => {

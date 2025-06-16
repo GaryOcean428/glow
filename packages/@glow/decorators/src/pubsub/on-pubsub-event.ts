@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 
 import { PubSubMetadata } from './pubsub-metadata';
 import type { PubSubEventName, PubSubEventFilter } from './pubsub-metadata';

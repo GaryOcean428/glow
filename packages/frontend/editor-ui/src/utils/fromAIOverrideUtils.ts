@@ -3,8 +3,8 @@ import {
 	FROM_AI_AUTO_GENERATED_MARKER,
 	type NodeParameterValueType,
 	type NodePropertyTypes,
-} from 'n8n-workflow';
-import { i18n } from '@n8n/i18n';
+} from 'glow-workflow';
+import { i18n } from '@glow/i18n';
 import type { INodeUi } from '@/Interface';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 
@@ -47,10 +47,10 @@ function sanitizeFromAiParameterName(s: string) {
 
 // nodeName | [nodeName, highestUnsupportedVersion]
 const NODE_DENYLIST = [
-	'@n8n/n8n-nodes-langchain.toolCode',
-	'@n8n/n8n-nodes-langchain.toolHttpRequest',
-	'@n8n/n8n-nodes-langchain.mcpClientTool',
-	['@n8n/n8n-nodes-langchain.toolWorkflow', 1.2],
+	'@glow/n8n-nodes-langchain.toolCode',
+	'@glow/n8n-nodes-langchain.toolHttpRequest',
+	'@glow/n8n-nodes-langchain.mcpClientTool',
+	['@glow/n8n-nodes-langchain.toolWorkflow', 1.2],
 ] as const;
 
 const PATH_DENYLIST = [

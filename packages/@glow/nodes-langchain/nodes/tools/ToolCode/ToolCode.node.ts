@@ -1,10 +1,10 @@
 /* eslint-disable n8n-nodes-base/node-dirname-against-convention */
 import { DynamicStructuredTool, DynamicTool } from '@langchain/core/tools';
 import type { JSONSchema7 } from 'json-schema';
-import { JavaScriptSandbox } from 'n8n-nodes-base/dist/nodes/Code/JavaScriptSandbox';
-import { PythonSandbox } from 'n8n-nodes-base/dist/nodes/Code/PythonSandbox';
-import type { Sandbox } from 'n8n-nodes-base/dist/nodes/Code/Sandbox';
-import { getSandboxContext } from 'n8n-nodes-base/dist/nodes/Code/Sandbox';
+import { JavaScriptSandbox } from 'glow-nodes-base/dist/nodes/Code/JavaScriptSandbox';
+import { PythonSandbox } from 'glow-nodes-base/dist/nodes/Code/PythonSandbox';
+import type { Sandbox } from 'glow-nodes-base/dist/nodes/Code/Sandbox';
+import { getSandboxContext } from 'glow-nodes-base/dist/nodes/Code/Sandbox';
 import type {
 	INodeType,
 	INodeTypeDescription,
@@ -12,8 +12,8 @@ import type {
 	SupplyData,
 	ExecutionError,
 	IDataObject,
-} from 'n8n-workflow';
-import { jsonParse, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { jsonParse, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import {
 	buildInputSchemaField,

@@ -1,4 +1,4 @@
-import type { TestWebhookReceived } from '@n8n/api-types/push/webhook';
+import type { TestWebhookReceived } from '@glow/api-types/push/webhook';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 
 /**

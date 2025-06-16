@@ -7,7 +7,7 @@ import {
 	type IconNodeType,
 } from './nodeIcon';
 
-vi.mock('@n8n/stores/useRootStore', () => ({
+vi.mock('@glow/stores/useRootStore', () => ({
 	useRootStore: vi.fn(() => ({
 		baseUrl: 'https://example.com/',
 	})),

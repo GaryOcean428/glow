@@ -1,4 +1,4 @@
-import { GlobalConfig } from '@n8n/config';
+import { GlobalConfig } from '@glow/config';
 import type { NextFunction, Response } from 'express';
 import { mock } from 'jest-mock-extended';
 

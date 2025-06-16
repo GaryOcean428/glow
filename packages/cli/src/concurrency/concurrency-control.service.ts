@@ -1,8 +1,8 @@
-import { Logger } from '@n8n/backend-common';
-import { ExecutionRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { ExecutionRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import capitalize from 'lodash/capitalize';
-import type { WorkflowExecuteMode as ExecutionMode } from 'n8n-workflow';
+import type { WorkflowExecuteMode as ExecutionMode } from 'glow-workflow';
 
 import config from '@/config';
 import { InvalidConcurrencyLimitError } from '@/errors/invalid-concurrency-limit.error';

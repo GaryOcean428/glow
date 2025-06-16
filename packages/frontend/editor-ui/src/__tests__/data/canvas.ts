@@ -11,11 +11,11 @@ import type {
 	ExecutionOutputMapData,
 } from '@/types';
 import { CanvasConnectionMode, CanvasNodeRenderType } from '@/types';
-import type { NodeConnectionType } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { NodeConnectionType } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type { GraphEdge, GraphNode, ViewportTransform } from '@vue-flow/core';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { createEventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 
 export function createCanvasNodeData({
 	id = 'node',

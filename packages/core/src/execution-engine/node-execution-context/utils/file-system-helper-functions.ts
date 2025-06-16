@@ -1,6 +1,6 @@
-import { Container } from '@n8n/di';
-import type { FileSystemHelperFunctions, INode } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import type { FileSystemHelperFunctions, INode } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 import { createReadStream } from 'node:fs';
 import { access as fsAccess, writeFile as fsWriteFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';

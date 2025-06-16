@@ -1,6 +1,6 @@
 import { createTestNode, createTestTaskData, createTestWorkflowObject } from '@/__tests__/mocks';
 import { createAiData, getTreeNodeData } from '@/components/RunDataAi/utils';
-import { type ITaskData, NodeConnectionTypes } from 'n8n-workflow';
+import { type ITaskData, NodeConnectionTypes } from 'glow-workflow';
 
 describe(getTreeNodeData, () => {
 	it('should generate one node per execution', () => {

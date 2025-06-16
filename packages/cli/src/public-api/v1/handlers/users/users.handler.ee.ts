@@ -1,6 +1,6 @@
-import { InviteUsersRequestDto, RoleChangeRequestDto } from '@n8n/api-types';
-import { ProjectRelationRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { InviteUsersRequestDto, RoleChangeRequestDto } from '@glow/api-types';
+import { ProjectRelationRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import type express from 'express';
 import type { Response } from 'express';
 

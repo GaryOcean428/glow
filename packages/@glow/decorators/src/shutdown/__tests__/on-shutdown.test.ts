@@ -1,4 +1,4 @@
-import { Container, Service } from '@n8n/di';
+import { Container, Service } from '@glow/di';
 
 import { OnShutdown } from '../on-shutdown';
 import { ShutdownRegistryMetadata } from '../shutdown-registry-metadata';

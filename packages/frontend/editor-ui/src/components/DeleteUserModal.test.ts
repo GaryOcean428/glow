@@ -6,7 +6,7 @@ import { createProjectListItem } from '@/__tests__/data/projects';
 import { createUser } from '@/__tests__/data/users';
 
 import { DELETE_USER_MODAL_KEY } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { ProjectTypes } from '@/types/projects.types';
 import userEvent from '@testing-library/user-event';
 import { useUsersStore } from '@/stores/users.store';

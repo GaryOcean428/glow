@@ -1,4 +1,4 @@
-import { getValueByPath } from '@n8n/design-system/utils';
+import { getValueByPath } from '@glow/design-system/utils';
 
 describe('getValueByPath()', () => {
 	const object = {

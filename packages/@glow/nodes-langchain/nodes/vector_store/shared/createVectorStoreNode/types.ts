@@ -12,7 +12,7 @@ import type {
 	ThemeIconColor,
 	IDataObject,
 	NodeParameterValueType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export type NodeOperationMode = 'insert' | 'load' | 'retrieve' | 'update' | 'retrieve-as-tool';
 

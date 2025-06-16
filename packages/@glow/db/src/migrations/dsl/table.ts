@@ -1,6 +1,6 @@
-import type { TableForeignKeyOptions, TableIndexOptions, QueryRunner } from '@n8n/typeorm';
-import { Table, TableColumn, TableForeignKey } from '@n8n/typeorm';
-import { UnexpectedError } from 'n8n-workflow';
+import type { TableForeignKeyOptions, TableIndexOptions, QueryRunner } from '@glow/typeorm';
+import { Table, TableColumn, TableForeignKey } from '@glow/typeorm';
+import { UnexpectedError } from 'glow-workflow';
 import LazyPromise from 'p-lazy';
 
 import { Column } from './column';

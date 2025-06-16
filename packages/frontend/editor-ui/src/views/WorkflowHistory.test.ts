@@ -11,7 +11,7 @@ import { SETTINGS_STORE_DEFAULT_STATE } from '@/__tests__/utils';
 import WorkflowHistoryPage from '@/views/WorkflowHistory.vue';
 import { useWorkflowHistoryStore } from '@/stores/workflowHistory.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { VIEWS } from '@/constants';
 import {
 	workflowHistoryDataFactory,

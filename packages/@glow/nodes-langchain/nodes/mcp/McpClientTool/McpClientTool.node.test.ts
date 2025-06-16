@@ -6,7 +6,7 @@ import {
 	type ILoadOptionsFunctions,
 	type INode,
 	type ISupplyDataFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getTools } from './loadOptions';
 import { McpClientTool } from './McpClientTool.node';

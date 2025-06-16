@@ -1,4 +1,4 @@
-import type { IExecuteData, INodeExecutionData, ITaskDataConnections } from 'n8n-workflow';
+import type { IExecuteData, INodeExecutionData, ITaskDataConnections } from 'glow-workflow';
 
 import type { DataRequestResponse, InputDataChunkDefinition } from '@/runner-types';
 

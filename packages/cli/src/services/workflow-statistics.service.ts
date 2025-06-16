@@ -1,13 +1,13 @@
-import { Logger } from '@n8n/backend-common';
-import { StatisticsNames, WorkflowStatisticsRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { StatisticsNames, WorkflowStatisticsRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import type {
 	ExecutionStatus,
 	INode,
 	IRun,
 	IWorkflowBase,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { EventService } from '@/events/event.service';
 import { UserService } from '@/services/user.service';

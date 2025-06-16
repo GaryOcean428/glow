@@ -11,7 +11,7 @@ import {
 	type IWebhookResponseData,
 	type IBinaryKeyData,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { downloadFile, getChannelInfo, getUserInfo } from './SlackTriggerHelpers';
 import { slackApiRequestAllItems } from './V2/GenericFunctions';

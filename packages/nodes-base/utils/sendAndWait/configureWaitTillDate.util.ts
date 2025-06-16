@@ -1,5 +1,5 @@
-import { ApplicationError, NodeOperationError, WAIT_INDEFINITELY } from 'n8n-workflow';
-import type { IExecuteFunctions, IDataObject } from 'n8n-workflow';
+import { ApplicationError, NodeOperationError, WAIT_INDEFINITELY } from 'glow-workflow';
+import type { IExecuteFunctions, IDataObject } from 'glow-workflow';
 
 export function configureWaitTillDate(
 	context: IExecuteFunctions,

@@ -1,7 +1,7 @@
 import type { Ref } from 'vue';
 import { ref } from 'vue';
-import { NodeConnectionTypes } from 'n8n-workflow';
-import type { Workflow, INode, NodeApiError } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
+import type { Workflow, INode, NodeApiError } from 'glow-workflow';
 import { setActivePinia } from 'pinia';
 
 import { useCanvasMapping } from '@/composables/useCanvasMapping';
@@ -13,7 +13,7 @@ import {
 	mockNodes,
 	mockNodeTypeDescription,
 } from '@/__tests__/mocks';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { MANUAL_TRIGGER_NODE_TYPE, SET_NODE_TYPE, STICKY_NODE_TYPE } from '@/constants';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { createCanvasConnectionHandleString, createCanvasConnectionId } from '@/utils/canvasUtils';
@@ -22,7 +22,7 @@ import { MarkerType } from '@vue-flow/core';
 import { createTestingPinia } from '@pinia/testing';
 import { mockedStore } from '@/__tests__/utils';
 import { mock } from 'vitest-mock-extended';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 
 beforeEach(() => {
 	const pinia = createTestingPinia({

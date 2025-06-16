@@ -1,10 +1,10 @@
-import { Logger } from '@n8n/backend-common';
-import { ExecutionsConfig } from '@n8n/config';
-import { ExecutionRepository } from '@n8n/db';
-import { OnLeaderStepdown, OnLeaderTakeover, OnShutdown } from '@n8n/decorators';
-import { Service } from '@n8n/di';
-import { BinaryDataService, InstanceSettings } from 'n8n-core';
-import { ensureError } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { ExecutionsConfig } from '@glow/config';
+import { ExecutionRepository } from '@glow/db';
+import { OnLeaderStepdown, OnLeaderTakeover, OnShutdown } from '@glow/decorators';
+import { Service } from '@glow/di';
+import { BinaryDataService, InstanceSettings } from 'glow-core';
+import { ensureError } from 'glow-workflow';
 import { strict } from 'node:assert';
 
 import { Time } from '@/constants';

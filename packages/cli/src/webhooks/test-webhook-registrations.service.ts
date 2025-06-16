@@ -1,6 +1,6 @@
-import { Service } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
-import type { IWebhookData, IWorkflowBase } from 'n8n-workflow';
+import { Service } from '@glow/di';
+import { InstanceSettings } from 'glow-core';
+import type { IWebhookData, IWorkflowBase } from 'glow-workflow';
 
 import { TEST_WEBHOOK_TIMEOUT, TEST_WEBHOOK_TIMEOUT_BUFFER } from '@/constants';
 import { CacheService } from '@/services/cache/cache.service';

@@ -1,9 +1,9 @@
-import { UserUpdateRequestDto } from '@n8n/api-types';
-import type { User } from '@n8n/db';
-import type { PublicUser } from '@n8n/db';
-import { InvalidAuthTokenRepository } from '@n8n/db';
-import { UserRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { UserUpdateRequestDto } from '@glow/api-types';
+import type { User } from '@glow/db';
+import type { PublicUser } from '@glow/db';
+import { InvalidAuthTokenRepository } from '@glow/db';
+import { UserRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import type { Response } from 'express';
 import { mock, anyObject } from 'jest-mock-extended';
 import jwt from 'jsonwebtoken';

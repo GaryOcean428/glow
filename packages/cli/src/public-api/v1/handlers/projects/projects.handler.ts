@@ -4,9 +4,9 @@ import {
 	CreateProjectDto,
 	DeleteProjectDto,
 	UpdateProjectDto,
-} from '@n8n/api-types';
-import { ProjectRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+} from '@glow/api-types';
+import { ProjectRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import type { Response } from 'express';
 
 import { ProjectController } from '@/controllers/project.controller';

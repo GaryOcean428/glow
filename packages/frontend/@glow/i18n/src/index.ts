@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
-import type { INodeProperties, INodePropertyCollection, INodePropertyOptions } from 'n8n-workflow';
+import type { INodeProperties, INodePropertyCollection, INodePropertyOptions } from 'glow-workflow';
 import { createI18n } from 'vue-i18n';
 
 import englishBaseText from './locales/en.json';
@@ -383,7 +383,7 @@ export async function loadLanguage(language: string) {
 		return await setLanguage(language);
 	}
 
-	const { numberFormats, ...rest } = (await import(`@n8n/i18n/locales/${language}.json`)).default;
+	const { numberFormats, ...rest } = (await import(`@glow/i18n/locales/${language}.json`)).default;
 
 	i18nInstance.global.setLocaleMessage(language, rest);
 

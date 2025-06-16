@@ -6,8 +6,8 @@ import { Buffer } from 'buffer';
 import { mock } from 'jest-mock-extended';
 import type { ToolsAgentAction } from 'langchain/dist/agents/tool_calling/output_parser';
 import type { Tool } from 'langchain/tools';
-import type { IExecuteFunctions, INode } from 'n8n-workflow';
-import { NodeOperationError, BINARY_ENCODING, NodeConnectionTypes } from 'n8n-workflow';
+import type { IExecuteFunctions, INode } from 'glow-workflow';
+import { NodeOperationError, BINARY_ENCODING, NodeConnectionTypes } from 'glow-workflow';
 import type { ZodType } from 'zod';
 import { z } from 'zod';
 

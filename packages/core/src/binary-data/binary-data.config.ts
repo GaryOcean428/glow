@@ -1,4 +1,4 @@
-import { Config, Env } from '@n8n/config';
+import { Config, Env } from '@glow/config';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { z } from 'zod';

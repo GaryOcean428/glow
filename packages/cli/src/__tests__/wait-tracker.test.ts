@@ -1,10 +1,10 @@
-import type { Project } from '@n8n/db';
-import type { IExecutionResponse } from '@n8n/db';
-import type { ExecutionRepository } from '@n8n/db';
+import type { Project } from '@glow/db';
+import type { IExecutionResponse } from '@glow/db';
+import type { ExecutionRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
-import type { IRun, IWorkflowBase } from 'n8n-workflow';
-import { createDeferredPromise } from 'n8n-workflow';
+import type { InstanceSettings } from 'glow-core';
+import type { IRun, IWorkflowBase } from 'glow-workflow';
+import { createDeferredPromise } from 'glow-workflow';
 
 import type { ActiveExecutions } from '@/active-executions';
 import type { MultiMainSetup } from '@/scaling/multi-main-setup.ee';

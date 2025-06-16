@@ -4,13 +4,13 @@ import type { BaseLanguageModel } from '@langchain/core/language_models/base';
 import { OutputParserException } from '@langchain/core/output_parsers';
 import type { MockProxy } from 'jest-mock-extended';
 import { mock } from 'jest-mock-extended';
-import { normalizeItems } from 'n8n-core';
+import { normalizeItems } from 'glow-core';
 import type {
 	ISupplyDataFunctions,
 	IWorkflowDataProxyData,
 	NodeConnectionType,
-} from 'n8n-workflow';
-import { ApplicationError, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import type {
 	N8nOutputFixingParser,

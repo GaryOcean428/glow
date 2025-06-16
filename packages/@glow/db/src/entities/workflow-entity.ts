@@ -7,10 +7,10 @@ import {
 	ManyToMany,
 	ManyToOne,
 	OneToMany,
-} from '@n8n/typeorm';
+} from '@glow/typeorm';
 import { Length } from 'class-validator';
-import { IConnections, IDataObject, IWorkflowSettings, WorkflowFEMeta } from 'n8n-workflow';
-import type { IBinaryKeyData, INode, IPairedItemData } from 'n8n-workflow';
+import { IConnections, IDataObject, IWorkflowSettings, WorkflowFEMeta } from 'glow-workflow';
+import type { IBinaryKeyData, INode, IPairedItemData } from 'glow-workflow';
 
 import { JsonColumn, WithTimestampsAndStringId, dbType } from './abstract-entity';
 import { type Folder } from './folder';

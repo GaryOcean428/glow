@@ -6,8 +6,8 @@ import type { VectorStore } from '@langchain/core/vectorstores';
 import type { MockProxy } from 'jest-mock-extended';
 import { mock } from 'jest-mock-extended';
 import { DynamicTool } from 'langchain/tools';
-import type { ISupplyDataFunctions } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { ISupplyDataFunctions } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { logWrapper } from '@utils/logWrapper';
 

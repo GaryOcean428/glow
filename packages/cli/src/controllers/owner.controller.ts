@@ -1,7 +1,7 @@
-import { DismissBannerRequestDto, OwnerSetupRequestDto } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import { SettingsRepository, UserRepository } from '@n8n/db';
-import { Body, GlobalScope, Post, RestController } from '@n8n/decorators';
+import { DismissBannerRequestDto, OwnerSetupRequestDto } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import { SettingsRepository, UserRepository } from '@glow/db';
+import { Body, GlobalScope, Post, RestController } from '@glow/decorators';
 import { Response } from 'express';
 
 import { AuthService } from '@/auth/auth.service';

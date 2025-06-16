@@ -4,7 +4,7 @@ import type {
 	IDataObject,
 	IHookFunctions,
 	INode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { testWebhookTriggerNode } from '@test/nodes/TriggerHelpers';
 

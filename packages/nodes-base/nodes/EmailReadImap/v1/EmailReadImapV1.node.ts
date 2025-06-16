@@ -4,7 +4,7 @@ import find from 'lodash/find';
 import isEmpty from 'lodash/isEmpty';
 import type { Source as ParserSource } from 'mailparser';
 import { simpleParser } from 'mailparser';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 import type {
 	ITriggerFunctions,
 	IBinaryData,
@@ -19,7 +19,7 @@ import type {
 	INodeTypeBaseDescription,
 	INodeTypeDescription,
 	ITriggerResponse,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export async function parseRawEmail(
 	this: ITriggerFunctions,

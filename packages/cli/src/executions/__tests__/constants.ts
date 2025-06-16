@@ -1,5 +1,5 @@
-import type { IWorkflowBase } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { IWorkflowBase } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 /**
  * Workflow producing an execution whose data will be truncated by an instance crash.

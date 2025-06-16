@@ -2,7 +2,7 @@ import {
 	type ILoadOptionsFunctions,
 	type INodePropertyOptions,
 	NodeOperationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { McpAuthenticationOption } from './types';
 import { connectMcpClient, getAllTools, getAuthHeaders } from './utils';

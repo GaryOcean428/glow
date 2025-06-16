@@ -5,7 +5,7 @@ import type { Embeddings } from '@langchain/core/embeddings';
 import type { VectorStore } from '@langchain/core/vectorstores';
 import { mock } from 'jest-mock-extended';
 import type { DynamicTool } from 'langchain/tools';
-import type { ISupplyDataFunctions, NodeParameterValueType } from 'n8n-workflow';
+import type { ISupplyDataFunctions, NodeParameterValueType } from 'glow-workflow';
 
 import { createVectorStoreNode } from './createVectorStoreNode';
 import type { VectorStoreNodeConstructorArgs } from './types';

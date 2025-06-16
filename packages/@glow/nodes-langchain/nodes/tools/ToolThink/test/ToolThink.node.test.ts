@@ -1,6 +1,6 @@
 import { mock } from 'jest-mock-extended';
 import { DynamicTool } from 'langchain/tools';
-import type { ISupplyDataFunctions } from 'n8n-workflow';
+import type { ISupplyDataFunctions } from 'glow-workflow';
 
 import { ToolThink } from '../ToolThink.node';
 

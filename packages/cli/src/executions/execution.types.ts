@@ -1,10 +1,10 @@
-import type { ExecutionSummaries, ExecutionEntity } from '@n8n/db';
+import type { ExecutionSummaries, ExecutionEntity } from '@glow/db';
 import type {
 	AnnotationVote,
 	ExecutionStatus,
 	IDataObject,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { AuthenticatedRequest } from '@/requests';
 

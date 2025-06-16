@@ -3,7 +3,7 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { isExpression as isExpressionUtil, stringifyExpressionResult } from '@/utils/expressions';
 
 import debounce from 'lodash/debounce';
-import { createResultError, createResultOk, type IDataObject, type Result } from 'n8n-workflow';
+import { createResultError, createResultOk, type IDataObject, type Result } from 'glow-workflow';
 import { computed, onMounted, ref, toRef, toValue, watch, type MaybeRefOrGetter } from 'vue';
 import { useWorkflowHelpers, type ResolveParameterOptions } from './useWorkflowHelpers';
 

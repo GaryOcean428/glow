@@ -1,4 +1,4 @@
-import type { WorkflowDeactivated } from '@n8n/api-types/push/workflow';
+import type { WorkflowDeactivated } from '@glow/api-types/push/workflow';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 
 export async function workflowDeactivated({ data }: WorkflowDeactivated) {

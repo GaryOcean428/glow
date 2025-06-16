@@ -1,4 +1,4 @@
-import { Column, Entity } from '@n8n/typeorm';
+import { Column, Entity } from '@glow/typeorm';
 
 import { WithStringId } from './abstract-entity';
 

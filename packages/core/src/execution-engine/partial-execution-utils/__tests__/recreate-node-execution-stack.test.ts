@@ -15,8 +15,8 @@ import type {
 	ISourceData,
 	IWaitingForExecution,
 	IWaitingForExecutionSource,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, type IPinData, type IRunData } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, type IPinData, type IRunData } from 'glow-workflow';
 
 import { createNodeData, toITaskData } from './helpers';
 import { DirectedGraph } from '../directed-graph';

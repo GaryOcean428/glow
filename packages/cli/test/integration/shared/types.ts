@@ -5,7 +5,7 @@ import type { User } from '@n8n/db';
 import type { ICredentialsDb } from '@n8n/db';
 import type { Application } from 'express';
 import type { Server } from 'http';
-import type { ICredentialDataDecryptedObject } from 'n8n-workflow';
+import type { ICredentialDataDecryptedObject } from 'glow-workflow';
 import type TestAgent from 'supertest/lib/agent';
 
 import type { LicenseMocker } from './license';

@@ -1,5 +1,5 @@
 import type { EditorView } from '@codemirror/view';
-import type { Workflow, CodeExecutionMode, CodeNodeEditorLanguage } from 'n8n-workflow';
+import type { Workflow, CodeExecutionMode, CodeNodeEditorLanguage } from 'glow-workflow';
 import type { Node } from 'estree';
 import type { DefineComponent } from 'vue';
 

@@ -2,8 +2,8 @@ import { HumanMessage } from '@langchain/core/messages';
 import { ChatPromptTemplate, PromptTemplate } from '@langchain/core/prompts';
 import { FakeLLM, FakeChatModel } from '@langchain/core/utils/testing';
 import { mock } from 'jest-mock-extended';
-import type { IExecuteFunctions } from 'n8n-workflow';
-import { OperationalError } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
+import { OperationalError } from 'glow-workflow';
 
 import * as imageUtils from '../methods/imageUtils';
 import { createPromptTemplate } from '../methods/promptUtils';

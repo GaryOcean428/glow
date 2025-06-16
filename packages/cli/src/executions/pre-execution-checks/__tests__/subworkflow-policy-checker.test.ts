@@ -1,9 +1,9 @@
-import type { GlobalConfig } from '@n8n/config';
-import type { Project } from '@n8n/db';
-import type { User } from '@n8n/db';
-import type { WorkflowEntity } from '@n8n/db';
+import type { GlobalConfig } from '@glow/config';
+import type { Project } from '@glow/db';
+import type { User } from '@glow/db';
+import type { WorkflowEntity } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import type { INode, Workflow } from 'n8n-workflow';
+import type { INode, Workflow } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import {

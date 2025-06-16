@@ -8,14 +8,14 @@ import type {
 	INodeTypeDescription,
 	IRequestOptions,
 	JsonObject,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	NodeApiError,
 	NodeOperationError,
 	sleep,
 	removeCircularRefs,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { Readable } from 'stream';
 
 import type { IAuthDataSanitizeKeys } from '../GenericFunctions';

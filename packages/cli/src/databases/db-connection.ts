@@ -1,12 +1,12 @@
-import { inTest } from '@n8n/backend-common';
-import { DatabaseConfig } from '@n8n/config';
-import type { Migration } from '@n8n/db';
-import { wrapMigration } from '@n8n/db';
-import { Memoized } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
-import { DataSource } from '@n8n/typeorm';
-import { ErrorReporter } from 'n8n-core';
-import { DbConnectionTimeoutError, ensureError } from 'n8n-workflow';
+import { inTest } from '@glow/backend-common';
+import { DatabaseConfig } from '@glow/config';
+import type { Migration } from '@glow/db';
+import { wrapMigration } from '@glow/db';
+import { Memoized } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
+import { DataSource } from '@glow/typeorm';
+import { ErrorReporter } from 'glow-core';
+import { DbConnectionTimeoutError, ensureError } from 'glow-workflow';
 
 import { Time } from '@/constants';
 

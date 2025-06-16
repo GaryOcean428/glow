@@ -1,5 +1,5 @@
 import type { WorkflowDataWithTemplateId } from '@/Interface';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 /**
  * Generates a workflow JSON object for an AI Agent in n8n.
@@ -24,7 +24,7 @@ export const getEasyAiWorkflowJson = (): WorkflowDataWithTemplateId => {
 				},
 				id: 'b24b05a7-d802-4413-bfb1-23e1e76f6203',
 				name: 'When chat message received',
-				type: '@n8n/n8n-nodes-langchain.chatTrigger',
+				type: '@glow/n8n-nodes-langchain.chatTrigger',
 				typeVersion: 1.1,
 				position: [360, 20],
 				webhookId: 'a889d2ae-2159-402f-b326-5f61e90f602e',
@@ -47,7 +47,7 @@ export const getEasyAiWorkflowJson = (): WorkflowDataWithTemplateId => {
 				},
 				id: 'd5e60eb2-267c-4f68-aefe-439031bcaceb',
 				name: 'OpenAI Model',
-				type: '@n8n/n8n-nodes-langchain.lmChatOpenAi',
+				type: '@glow/n8n-nodes-langchain.lmChatOpenAi',
 				typeVersion: 1,
 				position: [500, 240],
 			},
@@ -62,7 +62,7 @@ export const getEasyAiWorkflowJson = (): WorkflowDataWithTemplateId => {
 				},
 				id: '41174c8a-6ac8-42bd-900e-ca15196600c5',
 				name: 'Agent',
-				type: '@n8n/n8n-nodes-langchain.agent',
+				type: '@glow/n8n-nodes-langchain.agent',
 				typeVersion: 1.7,
 				position: [580, 20],
 			},

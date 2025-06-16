@@ -4,8 +4,8 @@ import type {
 	IExecuteFunctions,
 	INodeExecutionData,
 	ITriggerFunctions,
-} from 'n8n-workflow';
-import { jsonParse, sleep } from 'n8n-workflow';
+} from 'glow-workflow';
+import { jsonParse, sleep } from 'glow-workflow';
 
 import { formatPrivateKey } from '@utils/utilities';
 

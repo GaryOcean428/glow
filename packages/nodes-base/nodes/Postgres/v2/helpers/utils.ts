@@ -5,8 +5,8 @@ import type {
 	INodeExecutionData,
 	INodePropertyOptions,
 	NodeParameterValueType,
-} from 'n8n-workflow';
-import { NodeOperationError, jsonParse } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeOperationError, jsonParse } from 'glow-workflow';
 
 import type {
 	ColumnInfo,

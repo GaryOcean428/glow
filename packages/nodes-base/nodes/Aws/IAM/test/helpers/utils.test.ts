@@ -1,5 +1,5 @@
-import type { IHttpRequestOptions } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IHttpRequestOptions } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import {
 	preprocessTags,

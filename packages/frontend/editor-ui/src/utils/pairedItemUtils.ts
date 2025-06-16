@@ -1,4 +1,4 @@
-import { type IPairedItemData, type IRunData, type ITaskData } from 'n8n-workflow';
+import { type IPairedItemData, type IRunData, type ITaskData } from 'glow-workflow';
 import type { IExecutionResponse, TargetItem } from '@/Interface';
 import { isNotNull } from '@/utils/typeGuards';
 

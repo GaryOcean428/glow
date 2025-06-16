@@ -1,6 +1,6 @@
 import { mock } from 'jest-mock-extended';
-import type { INode } from 'n8n-workflow';
-import { NodeOperationError, type Workflow } from 'n8n-workflow';
+import type { INode } from 'glow-workflow';
+import { NodeOperationError, type Workflow } from 'glow-workflow';
 
 import { objectToError } from '../object-to-error';
 

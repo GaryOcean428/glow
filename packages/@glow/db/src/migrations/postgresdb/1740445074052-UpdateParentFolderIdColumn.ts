@@ -1,4 +1,4 @@
-import { UnexpectedError } from 'n8n-workflow';
+import { UnexpectedError } from 'glow-workflow';
 
 import type { BaseMigration, MigrationContext } from '../migration-types';
 

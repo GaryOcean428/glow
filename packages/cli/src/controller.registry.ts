@@ -1,13 +1,13 @@
-import { inProduction } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { type BooleanLicenseFeature } from '@n8n/constants';
-import { ControllerRegistryMetadata } from '@n8n/decorators';
-import type { AccessScope, Controller, RateLimit } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
+import { inProduction } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { type BooleanLicenseFeature } from '@glow/constants';
+import { ControllerRegistryMetadata } from '@glow/decorators';
+import type { AccessScope, Controller, RateLimit } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
 import { Router } from 'express';
 import type { Application, Request, Response, RequestHandler } from 'express';
 import { rateLimit as expressRateLimit } from 'express-rate-limit';
-import { UnexpectedError } from 'n8n-workflow';
+import { UnexpectedError } from 'glow-workflow';
 import type { ZodClass } from 'zod-class';
 
 import { AuthService } from '@/auth/auth.service';

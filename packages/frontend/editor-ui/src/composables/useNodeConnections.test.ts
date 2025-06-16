@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { useNodeConnections } from '@/composables/useNodeConnections';
 import type { CanvasNodeData } from '@/types';
 import { CanvasConnectionMode } from '@/types';

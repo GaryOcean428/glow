@@ -8,8 +8,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeApiError, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeApiError, NodeOperationError } from 'glow-workflow';
 
 import { eventFields, eventOperations } from './EventDescription';
 import { iterableApiRequest } from './GenericFunctions';

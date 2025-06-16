@@ -2,7 +2,7 @@ import { useCanvasNode } from '@/composables/useCanvasNode';
 import { inject, ref } from 'vue';
 import type { CanvasNodeData, CanvasNodeInjectionData } from '../types';
 import { CanvasConnectionMode, CanvasNodeRenderType } from '../types';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 vi.mock('vue', async () => {
 	const actual = await vi.importActual('vue');

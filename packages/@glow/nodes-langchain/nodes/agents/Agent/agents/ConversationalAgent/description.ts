@@ -1,4 +1,4 @@
-import type { INodeProperties } from 'n8n-workflow';
+import type { INodeProperties } from 'glow-workflow';
 
 import { SYSTEM_MESSAGE, HUMAN_MESSAGE } from './prompt';
 

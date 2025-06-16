@@ -10,7 +10,7 @@ import {
 	type SupplyData,
 	type IDataObject,
 	type INodeInputConfiguration,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { logWrapper } from '@utils/logWrapper';
 import { getConnectionHintNoticeField } from '@utils/sharedFields';

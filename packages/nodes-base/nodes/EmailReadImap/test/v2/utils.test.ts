@@ -1,7 +1,7 @@
 import { type ImapSimple } from '@n8n/imap';
 import { mock } from 'jest-mock-extended';
-import { returnJsonArray } from 'n8n-core';
-import { type IDataObject, type ITriggerFunctions } from 'n8n-workflow';
+import { returnJsonArray } from 'glow-core';
+import { type IDataObject, type ITriggerFunctions } from 'glow-workflow';
 
 import { getNewEmails } from '../../v2/utils';
 

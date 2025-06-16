@@ -6,8 +6,8 @@ import { ProjectRepository } from '@n8n/db';
 import { WorkflowHistoryRepository } from '@n8n/db';
 import { SharedWorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
-import type { INode } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import type { INode } from 'glow-workflow';
 
 import { ActiveWorkflowManager } from '@/active-workflow-manager';
 import { STARTING_NODES } from '@/constants';

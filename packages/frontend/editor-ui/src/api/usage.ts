@@ -1,7 +1,7 @@
-import type { CommunityRegisteredRequestDto } from '@n8n/api-types';
-import { makeRestApiRequest } from '@n8n/rest-api-client';
+import type { CommunityRegisteredRequestDto } from '@glow/api-types';
+import { makeRestApiRequest } from '@glow/rest-api-client';
 import type { UsageState } from '@/Interface';
-import type { IRestApiContext } from '@n8n/rest-api-client';
+import type { IRestApiContext } from '@glow/rest-api-client';
 
 export const getLicense = async (context: IRestApiContext): Promise<UsageState['data']> => {
 	return await makeRestApiRequest(context, 'GET', '/license');

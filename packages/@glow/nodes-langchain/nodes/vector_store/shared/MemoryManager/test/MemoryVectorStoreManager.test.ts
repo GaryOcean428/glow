@@ -3,7 +3,7 @@ import { Document } from '@langchain/core/documents';
 import type { OpenAIEmbeddings } from '@langchain/openai';
 import { mock } from 'jest-mock-extended';
 import type { MemoryVectorStore } from 'langchain/vectorstores/memory';
-import type { Logger } from 'n8n-workflow';
+import type { Logger } from 'glow-workflow';
 
 import * as configModule from '../config';
 import { MemoryVectorStoreManager } from '../MemoryVectorStoreManager';

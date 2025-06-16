@@ -1,4 +1,4 @@
-import type { INodeTypeBaseDescription } from 'n8n-workflow';
+import type { INodeTypeBaseDescription } from 'glow-workflow';
 
 import type {
 	NeededNodeType,

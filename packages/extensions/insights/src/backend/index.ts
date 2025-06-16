@@ -1,4 +1,4 @@
-import { defineBackendExtension } from '@n8n/extension-sdk/backend';
+import { defineBackendExtension } from '@glow/extension-sdk/backend';
 
 export default defineBackendExtension({
 	setup(n8n) {

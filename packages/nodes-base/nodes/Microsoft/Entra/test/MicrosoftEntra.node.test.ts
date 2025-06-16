@@ -1,6 +1,6 @@
 import { NodeTestHarness } from '@nodes-testing/node-test-harness';
-import type { ILoadOptionsFunctions, WorkflowTestData } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { ILoadOptionsFunctions, WorkflowTestData } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { microsoftEntraApiResponse, microsoftEntraNodeResponse } from './mocks';
 import { MicrosoftEntra } from '../MicrosoftEntra.node';

@@ -1,5 +1,5 @@
 import { mock } from 'jest-mock-extended';
-import type { Workflow } from 'n8n-workflow';
+import type { Workflow } from 'glow-workflow';
 
 import { mockInstance } from '@test/utils';
 

@@ -9,7 +9,7 @@ import {
 	type ISupplyDataFunctions,
 	type SupplyData,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { RedisClientOptions } from 'redis';
 import { createClient } from 'redis';
 

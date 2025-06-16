@@ -4,8 +4,8 @@ import type {
 	INodeType,
 	INodeTypeBaseDescription,
 	INodeTypeDescription,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, SEND_AND_WAIT_OPERATION } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, SEND_AND_WAIT_OPERATION } from 'glow-workflow';
 
 import * as send from './send.operation';
 import * as sendAndWait from './sendAndWait.operation';

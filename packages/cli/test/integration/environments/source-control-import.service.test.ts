@@ -18,9 +18,9 @@ import { UserRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import * as fastGlob from 'fast-glob';
 import { mock } from 'jest-mock-extended';
-import { Cipher } from 'n8n-core';
-import type { InstanceSettings } from 'n8n-core';
-import * as utils from 'n8n-workflow';
+import { Cipher } from 'glow-core';
+import type { InstanceSettings } from 'glow-core';
+import * as utils from 'glow-workflow';
 import { nanoid } from 'nanoid';
 import fsp from 'node:fs/promises';
 

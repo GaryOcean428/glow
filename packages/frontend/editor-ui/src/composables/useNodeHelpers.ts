@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import { useHistoryStore } from '@/stores/history.store';
 import { CUSTOM_API_CALL_KEY, PLACEHOLDER_FILLED_AT_EXECUTION_TIME } from '@/constants';
 
-import { NodeHelpers, NodeConnectionTypes } from 'n8n-workflow';
+import { NodeHelpers, NodeConnectionTypes } from 'glow-workflow';
 import type {
 	INodeProperties,
 	INodeCredentialDescription,
@@ -26,7 +26,7 @@ import type {
 	NodeConnectionType,
 	IRunExecutionData,
 	NodeHint,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type {
 	ICredentialsResponse,
@@ -41,7 +41,7 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useCredentialsStore } from '@/stores/credentials.store';
 import get from 'lodash/get';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { EnableNodeToggleCommand } from '@/models/history';
 import { useTelemetry } from './useTelemetry';
 import { hasPermission } from '@/utils/rbac/permissions';

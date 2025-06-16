@@ -1,5 +1,5 @@
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
-import type { ReloadNodeType } from '@n8n/api-types/push/hot-reload';
+import type { ReloadNodeType } from '@glow/api-types/push/hot-reload';
 import { isCommunityPackageName } from '../../../utils/nodeTypesUtils';
 
 /**

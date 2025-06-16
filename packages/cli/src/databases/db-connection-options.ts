@@ -1,18 +1,18 @@
-import { DatabaseConfig, InstanceSettingsConfig } from '@n8n/config';
+import { DatabaseConfig, InstanceSettingsConfig } from '@glow/config';
 import {
 	entities,
 	subscribers,
 	mysqlMigrations,
 	postgresMigrations,
 	sqliteMigrations,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
-import type { DataSourceOptions, LoggerOptions } from '@n8n/typeorm';
-import type { MysqlConnectionOptions } from '@n8n/typeorm/driver/mysql/MysqlConnectionOptions';
-import type { PostgresConnectionOptions } from '@n8n/typeorm/driver/postgres/PostgresConnectionOptions';
-import type { SqliteConnectionOptions } from '@n8n/typeorm/driver/sqlite/SqliteConnectionOptions';
-import type { SqlitePooledConnectionOptions } from '@n8n/typeorm/driver/sqlite-pooled/SqlitePooledConnectionOptions';
-import { UserError } from 'n8n-workflow';
+} from '@glow/db';
+import { Service } from '@glow/di';
+import type { DataSourceOptions, LoggerOptions } from '@glow/typeorm';
+import type { MysqlConnectionOptions } from '@glow/typeorm/driver/mysql/MysqlConnectionOptions';
+import type { PostgresConnectionOptions } from '@glow/typeorm/driver/postgres/PostgresConnectionOptions';
+import type { SqliteConnectionOptions } from '@glow/typeorm/driver/sqlite/SqliteConnectionOptions';
+import type { SqlitePooledConnectionOptions } from '@glow/typeorm/driver/sqlite-pooled/SqlitePooledConnectionOptions';
+import { UserError } from 'glow-workflow';
 import path from 'path';
 import type { TlsOptions } from 'tls';
 

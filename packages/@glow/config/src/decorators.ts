@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { Container, Service } from '@n8n/di';
+import { Container, Service } from '@glow/di';
 import { readFileSync } from 'fs';
 import { z } from 'zod';
 

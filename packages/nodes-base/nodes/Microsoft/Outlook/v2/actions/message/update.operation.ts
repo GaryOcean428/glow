@@ -1,5 +1,5 @@
-import type { IDataObject, IExecuteFunctions, INodeProperties } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IDataObject, IExecuteFunctions, INodeProperties } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { updateDisplayOptions } from '@utils/utilities';
 

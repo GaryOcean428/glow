@@ -9,8 +9,8 @@ import type {
 	INodeTypeDescription,
 	JsonObject,
 	NodeExecutionHint,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeApiError, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeApiError, NodeOperationError } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { calendarFields, calendarOperations } from './CalendarDescription';

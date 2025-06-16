@@ -1,13 +1,13 @@
-import type { TestRun } from '@n8n/db';
-import type { TestCaseExecutionRepository } from '@n8n/db';
-import type { TestRunRepository } from '@n8n/db';
-import type { WorkflowRepository } from '@n8n/db';
+import type { TestRun } from '@glow/db';
+import type { TestCaseExecutionRepository } from '@glow/db';
+import type { TestRunRepository } from '@glow/db';
+import type { WorkflowRepository } from '@glow/db';
 import { readFileSync } from 'fs';
 import { mock } from 'jest-mock-extended';
-import type { ErrorReporter } from 'n8n-core';
-import { EVALUATION_NODE_TYPE, EVALUATION_TRIGGER_NODE_TYPE } from 'n8n-workflow';
-import type { IWorkflowBase } from 'n8n-workflow';
-import type { IRun, ExecutionError } from 'n8n-workflow';
+import type { ErrorReporter } from 'glow-core';
+import { EVALUATION_NODE_TYPE, EVALUATION_TRIGGER_NODE_TYPE } from 'glow-workflow';
+import type { IWorkflowBase } from 'glow-workflow';
+import type { IRun, ExecutionError } from 'glow-workflow';
 import path from 'path';
 
 import type { ActiveExecutions } from '@/active-executions';

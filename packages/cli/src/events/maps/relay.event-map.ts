@@ -1,12 +1,12 @@
-import type { AuthenticationMethod, ProjectRelation } from '@n8n/api-types';
-import type { AuthProviderType, User, IWorkflowDb } from '@n8n/db';
-import type { GlobalRole } from '@n8n/permissions';
+import type { AuthenticationMethod, ProjectRelation } from '@glow/api-types';
+import type { AuthProviderType, User, IWorkflowDb } from '@glow/db';
+import type { GlobalRole } from '@glow/permissions';
 import type {
 	IPersonalizationSurveyAnswersV4,
 	IRun,
 	IWorkflowBase,
 	IWorkflowExecutionDataProcess,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { ConcurrencyQueueType } from '@/concurrency/concurrency-control.service';
 

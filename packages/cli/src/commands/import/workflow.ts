@@ -1,17 +1,17 @@
-import type { WorkflowEntity } from '@n8n/db';
+import type { WorkflowEntity } from '@glow/db';
 import {
 	generateNanoId,
 	ProjectRepository,
 	SharedWorkflowRepository,
 	WorkflowRepository,
 	UserRepository,
-} from '@n8n/db';
-import { Container } from '@n8n/di';
+} from '@glow/db';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
 import glob from 'fast-glob';
 import fs from 'fs';
-import type { IWorkflowBase, WorkflowId } from 'n8n-workflow';
-import { jsonParse, UserError } from 'n8n-workflow';
+import type { IWorkflowBase, WorkflowId } from 'glow-workflow';
+import { jsonParse, UserError } from 'glow-workflow';
 
 import { UM_FIX_INSTRUCTION } from '@/constants';
 import type { IWorkflowToImport } from '@/interfaces';

@@ -11,7 +11,7 @@ import {
 	type INodeTypeDescription,
 	type SupplyData,
 	NodeOperationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getSessionId } from '@utils/helpers';
 import { logWrapper } from '@utils/logWrapper';

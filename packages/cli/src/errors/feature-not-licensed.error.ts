@@ -1,5 +1,5 @@
-import type { LICENSE_FEATURES } from '@n8n/constants';
-import { UserError } from 'n8n-workflow';
+import type { LICENSE_FEATURES } from '@glow/constants';
+import { UserError } from 'glow-workflow';
 
 export class FeatureNotLicensedError extends UserError {
 	constructor(feature: (typeof LICENSE_FEATURES)[keyof typeof LICENSE_FEATURES]) {

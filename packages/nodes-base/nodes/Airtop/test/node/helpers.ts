@@ -1,12 +1,12 @@
 import get from 'lodash/get';
-import { constructExecutionMetaData } from 'n8n-core';
+import { constructExecutionMetaData } from 'glow-core';
 import type {
 	IDataObject,
 	IExecuteFunctions,
 	IGetNodeParameterOptions,
 	INode,
 	INodeExecutionData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export const node: INode = {
 	id: '1',

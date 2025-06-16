@@ -1,5 +1,5 @@
-import { normalizeItems } from 'n8n-core';
-import type { INodeExecutionData } from 'n8n-workflow';
+import { normalizeItems } from 'glow-core';
+import type { INodeExecutionData } from 'glow-workflow';
 
 import { ValidationError } from './errors/validation-error';
 import { isObject } from './obj-utils';

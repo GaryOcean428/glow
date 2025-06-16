@@ -1,10 +1,10 @@
 /* eslint-disable n8n-nodes-base/node-dirname-against-convention */
 import type { Tool } from '@langchain/core/tools';
 import { makeResolverFromLegacyOptions } from '@n8n/vm2';
-import { JavaScriptSandbox } from 'n8n-nodes-base/dist/nodes/Code/JavaScriptSandbox';
-import { getSandboxContext } from 'n8n-nodes-base/dist/nodes/Code/Sandbox';
-import { standardizeOutput } from 'n8n-nodes-base/dist/nodes/Code/utils';
-import { NodeOperationError, NodeConnectionTypes } from 'n8n-workflow';
+import { JavaScriptSandbox } from 'glow-nodes-base/dist/nodes/Code/JavaScriptSandbox';
+import { getSandboxContext } from 'glow-nodes-base/dist/nodes/Code/Sandbox';
+import { standardizeOutput } from 'glow-nodes-base/dist/nodes/Code/utils';
+import { NodeOperationError, NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IExecuteFunctions,
 	INodeExecutionData,
@@ -13,7 +13,7 @@ import type {
 	INodeOutputConfiguration,
 	SupplyData,
 	ISupplyDataFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 // TODO: Add support for execute function. Got already started but got commented out
 

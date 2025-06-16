@@ -1,5 +1,5 @@
-import { Container } from '@n8n/di';
-import { Service } from '@n8n/di';
+import { Container } from '@glow/di';
+import { Service } from '@glow/di';
 
 import { NonMethodError } from '../../errors';
 import { OnPubSubEvent } from '../on-pubsub-event';

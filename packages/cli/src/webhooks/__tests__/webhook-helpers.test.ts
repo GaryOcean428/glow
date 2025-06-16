@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
+import { Logger } from '@glow/backend-common';
 import type express from 'express';
 import { mock, type MockProxy } from 'jest-mock-extended';
-import { BinaryDataService, ErrorReporter } from 'n8n-core';
+import { BinaryDataService, ErrorReporter } from 'glow-core';
 import type {
 	Workflow,
 	INode,
@@ -12,8 +12,8 @@ import type {
 	IWorkflowBase,
 	IRunExecutionData,
 	IExecuteData,
-} from 'n8n-workflow';
-import { createDeferredPromise, FORM_NODE_TYPE, WAIT_NODE_TYPE } from 'n8n-workflow';
+} from 'glow-workflow';
+import { createDeferredPromise, FORM_NODE_TYPE, WAIT_NODE_TYPE } from 'glow-workflow';
 import type { Readable } from 'stream';
 import { finished } from 'stream/promises';
 

@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 import get from 'lodash/get';
 import type {
 	Workflow,
@@ -21,14 +21,14 @@ import type {
 	ISourceData,
 	AiEvent,
 	NodeConnectionType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	ApplicationError,
 	NodeHelpers,
 	NodeConnectionTypes,
 	WAIT_INDEFINITELY,
 	WorkflowDataProxy,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { BinaryDataService } from '@/binary-data/binary-data.service';
 

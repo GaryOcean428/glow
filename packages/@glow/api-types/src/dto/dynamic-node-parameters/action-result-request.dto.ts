@@ -1,4 +1,4 @@
-import type { IDataObject } from 'n8n-workflow';
+import type { IDataObject } from 'glow-workflow';
 import { z } from 'zod';
 
 import { BaseDynamicParametersRequestDto } from './base-dynamic-parameters-request.dto';

@@ -1,5 +1,5 @@
 import type { BaseCallbackConfig } from '@langchain/core/callbacks/manager';
-import type { IExecuteFunctions } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
 
 interface TracingConfig {
 	additionalMetadata?: Record<string, unknown>;

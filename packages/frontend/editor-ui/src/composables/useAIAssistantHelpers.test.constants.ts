@@ -1,6 +1,6 @@
 import { VIEWS } from '@/constants';
 import type { ChatRequest } from '@/types/assistant.types';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 export const PAYLOAD_SIZE_FOR_1_PASS = 4;
 export const PAYLOAD_SIZE_FOR_2_PASSES = 2;

@@ -1,6 +1,6 @@
 import { mock } from 'jest-mock-extended';
-import type { IExecuteFunctions } from 'n8n-workflow';
-import { createResultOk } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
+import { createResultOk } from 'glow-workflow';
 
 import { JsTaskRunnerSandbox } from '../JsTaskRunnerSandbox';
 

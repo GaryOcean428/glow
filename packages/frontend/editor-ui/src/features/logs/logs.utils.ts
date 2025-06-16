@@ -8,11 +8,11 @@ import {
 	type ITaskData,
 	type ITaskStartedData,
 	type Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { LogEntry, LogEntrySelection, LogTreeCreationContext } from './logs.types';
 import { isProxy, isReactive, isRef, toRaw } from 'vue';
 import { CHAT_TRIGGER_NODE_TYPE, MANUAL_CHAT_TRIGGER_NODE_TYPE } from '@/constants';
-import { type ChatMessage } from '@n8n/chat/types';
+import { type ChatMessage } from '@glow/chat/types';
 import get from 'lodash-es/get';
 import isEmpty from 'lodash-es/isEmpty';
 import { v4 as uuid } from 'uuid';

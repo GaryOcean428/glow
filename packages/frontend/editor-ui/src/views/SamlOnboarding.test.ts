@@ -4,7 +4,7 @@ import { createTestingPinia } from '@pinia/testing';
 import merge from 'lodash/merge';
 import SamlOnboarding from '@/views/SamlOnboarding.vue';
 import { useSSOStore } from '@/stores/sso.store';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { SETTINGS_STORE_DEFAULT_STATE, waitAllPromises } from '@/__tests__/utils';
 import { createComponentRenderer } from '@/__tests__/render';
 

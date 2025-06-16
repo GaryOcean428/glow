@@ -1,6 +1,6 @@
-import type { RunningJobSummary } from '@n8n/api-types';
+import type { RunningJobSummary } from '@glow/api-types';
 import type Bull from 'bull';
-import type { ExecutionError, IExecuteResponsePromiseData, IRun } from 'n8n-workflow';
+import type { ExecutionError, IExecuteResponsePromiseData, IRun } from 'glow-workflow';
 import type PCancelable from 'p-cancelable';
 
 export type JobQueue = Bull.Queue<JobData>;

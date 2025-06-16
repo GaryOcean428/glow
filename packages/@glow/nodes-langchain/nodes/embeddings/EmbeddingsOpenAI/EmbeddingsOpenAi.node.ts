@@ -7,7 +7,7 @@ import {
 	type SupplyData,
 	type ISupplyDataFunctions,
 	type INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { ClientOptions } from 'openai';
 
 import { logWrapper } from '@utils/logWrapper';

@@ -1,9 +1,9 @@
-import { Logger } from '@n8n/backend-common';
-import type { User, WorkflowHistory } from '@n8n/db';
-import { WorkflowHistoryRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import type { IWorkflowBase } from 'n8n-workflow';
-import { ensureError } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import type { User, WorkflowHistory } from '@glow/db';
+import { WorkflowHistoryRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import type { IWorkflowBase } from 'glow-workflow';
+import { ensureError } from 'glow-workflow';
 
 import { SharedWorkflowNotFoundError } from '@/errors/shared-workflow-not-found.error';
 import { WorkflowHistoryVersionNotFoundError } from '@/errors/workflow-history-version-not-found.error';

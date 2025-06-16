@@ -5,7 +5,7 @@ import type { BaseMessage } from '@langchain/core/messages';
 import type { Tool } from '@langchain/core/tools';
 import { Toolkit } from 'langchain/agents';
 import type { BaseChatMemory } from 'langchain/memory';
-import { NodeConnectionTypes, NodeOperationError, jsonStringify } from 'n8n-workflow';
+import { NodeConnectionTypes, NodeOperationError, jsonStringify } from 'glow-workflow';
 import type {
 	AiEvent,
 	INode,
@@ -13,7 +13,7 @@ import type {
 	IExecuteFunctions,
 	ISupplyDataFunctions,
 	IWebhookFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { N8nTool } from './N8nTool';
 

@@ -1,5 +1,5 @@
 import type { BaseLanguageModel } from '@langchain/core/language_models/base';
-import { type IExecuteFunctions, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+import { type IExecuteFunctions, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { getPromptInputByType } from '@utils/helpers';
 import { getOptionalOutputParser } from '@utils/output_parsers/N8nOutputParser';

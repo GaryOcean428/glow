@@ -16,7 +16,7 @@ const TEST_COLLECTION = {
 		{
 			id: 1119,
 			icon: 'fa:robot',
-			name: '@n8n/n8n-nodes-langchain.agent',
+			name: '@glow/n8n-nodes-langchain.agent',
 			iconData: {
 				icon: 'robot',
 				type: 'icon',
@@ -26,7 +26,7 @@ const TEST_COLLECTION = {
 		{
 			id: 1121,
 			icon: 'fa:link',
-			name: '@n8n/n8n-nodes-langchain.chainSummarization',
+			name: '@glow/n8n-nodes-langchain.chainSummarization',
 			iconData: {
 				icon: 'link',
 				type: 'icon',
@@ -36,7 +36,7 @@ const TEST_COLLECTION = {
 		{
 			id: 1123,
 			icon: 'fa:link',
-			name: '@n8n/n8n-nodes-langchain.chainLlm',
+			name: '@glow/n8n-nodes-langchain.chainLlm',
 			iconData: {
 				icon: 'link',
 				type: 'icon',

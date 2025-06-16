@@ -17,7 +17,7 @@ import {
 import type { EditorView } from '@codemirror/view';
 import { EditorSelection, type TransactionSpec } from '@codemirror/state';
 import type { SyntaxNode, Tree } from '@lezer/common';
-import type { DocMetadata } from 'n8n-workflow';
+import type { DocMetadata } from 'glow-workflow';
 import { escapeMappingString } from '@/utils/mappingUtils';
 
 /**

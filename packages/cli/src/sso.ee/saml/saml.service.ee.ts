@@ -1,12 +1,12 @@
-import type { SamlPreferences } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import type { Settings, User } from '@n8n/db';
-import { SettingsRepository, UserRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import type { SamlPreferences } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import type { Settings, User } from '@glow/db';
+import { SettingsRepository, UserRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import axios from 'axios';
 import type express from 'express';
 import https from 'https';
-import { jsonParse, UnexpectedError } from 'n8n-workflow';
+import { jsonParse, UnexpectedError } from 'glow-workflow';
 import { type IdentityProviderInstance, type ServiceProviderInstance } from 'samlify';
 import type { BindingContext, PostBindingContext } from 'samlify/types/src/entity';
 

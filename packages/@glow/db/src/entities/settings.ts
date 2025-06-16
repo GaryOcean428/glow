@@ -1,5 +1,5 @@
-import { Column, Entity, PrimaryColumn } from '@n8n/typeorm';
-import type { IDataObject } from 'n8n-workflow';
+import { Column, Entity, PrimaryColumn } from '@glow/typeorm';
+import type { IDataObject } from 'glow-workflow';
 
 interface ISettingsDb {
 	key: string;

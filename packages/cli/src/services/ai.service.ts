@@ -2,11 +2,11 @@ import type {
 	AiApplySuggestionRequestDto,
 	AiAskRequestDto,
 	AiChatRequestDto,
-} from '@n8n/api-types';
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
+} from '@glow/api-types';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
 import { AiAssistantClient } from '@n8n_io/ai-assistant-sdk';
-import { assert, type IUser } from 'n8n-workflow';
+import { assert, type IUser } from 'glow-workflow';
 
 import { GLOW_VERSION } from '../constants';
 import { License } from '../license';

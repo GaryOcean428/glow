@@ -1,7 +1,7 @@
-import { GlobalConfig } from '@n8n/config';
-import { Container, Service } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { Container, Service } from '@glow/di';
 import { caching } from 'cache-manager';
-import { jsonStringify, UserError } from 'n8n-workflow';
+import { jsonStringify, UserError } from 'glow-workflow';
 
 import config from '@/config';
 import { Time } from '@/constants';
