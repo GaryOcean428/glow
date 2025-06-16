@@ -6,15 +6,27 @@ This list shows all the versions which include breaking changes and how to upgra
 
 ### What changed?
 
-The `last_activity` metric included as a part of route metrics has been changed to output a Unix time in seconds from
+1. The `last_activity` metric included as a part of route metrics has been changed to output a Unix time in seconds from
 the previous timestamp label approach. The labeling approach could result in high cardinality within Prometheus and
 thus result in poorer performance.
 
+2. The main n8n server now binds to IPv4 (`0.0.0.0`) by default instead of IPv6 (`::`) to improve compatibility with containerized environments like Docker and Railway.
+
 ### When is action necessary?
 
-If you've been ingesting route metrics from your n8n instance (version 1.81.0 and newer), you should analyze
+1. If you've been ingesting route metrics from your n8n instance (version 1.81.0 and newer), you should analyze
 how the `last_activity` metric has affected your Prometheus instance and potentially clean up the old data. Future
 metrics will also be served in a different format, which needs to be taken into account.
+
+2. If you need n8n to bind to IPv6 interfaces specifically, set the environment variable `N8N_LISTEN_ADDRESS=::` to maintain the previous behavior.
+
+### How to upgrade:
+
+1. For route metrics: Update your Prometheus configuration to handle the new Unix timestamp format for the `last_activity` metric.
+
+2. For IPv6 binding: If your setup specifically requires IPv6, set `N8N_LISTEN_ADDRESS=::` in your environment variables.
+
+## 1.97.1
 
 ### What changed?
 
