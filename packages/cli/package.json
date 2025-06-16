@@ -1,13 +1,13 @@
 {
-  "name": "n8n",
+  "name": "glow",
   "version": "1.97.0",
-  "description": "n8n Workflow Automation Tool",
+  "description": "glow Workflow Automation Tool",
   "main": "dist/index",
   "types": "dist/index.d.ts",
   "oclif": {
     "commands": "./dist/commands",
     "helpClass": "./dist/help",
-    "bin": "n8n"
+    "bin": "glow"
   },
   "scripts": {
     "clean": "rimraf dist .turbo",
@@ -22,12 +22,12 @@
     "lint": "eslint . --quiet",
     "lintfix": "eslint . --fix",
     "start": "run-script-os",
-    "start:default": "cd bin && ./n8n",
-    "start:windows": "cd bin && n8n",
+    "start:default": "cd bin && ./glow",
+    "start:windows": "cd bin && glow",
     "test": "pnpm test:sqlite",
-    "test:dev": "N8N_LOG_LEVEL=silent DB_TYPE=sqlite jest --watch",
-    "test:sqlite": "N8N_LOG_LEVEL=silent DB_TYPE=sqlite jest",
-    "test:postgres": "N8N_LOG_LEVEL=silent DB_TYPE=postgresdb DB_POSTGRESDB_SCHEMA=alt_schema DB_TABLE_PREFIX=test_ jest --no-coverage",
+    "test:dev": "GLOW_LOG_LEVEL=silent DB_TYPE=sqlite jest --watch",
+    "test:sqlite": "GLOW_LOG_LEVEL=silent DB_TYPE=sqlite jest",
+    "test:postgres": "GLOW_LOG_LEVEL=silent DB_TYPE=postgresdb DB_POSTGRESDB_SCHEMA=alt_schema DB_TABLE_PREFIX=test_ jest --no-coverage",
     "test:mariadb": "N8N_LOG_LEVEL=silent DB_TYPE=mariadb DB_TABLE_PREFIX=test_ jest --no-coverage",
     "test:mysql": "N8N_LOG_LEVEL=silent DB_TYPE=mysqldb DB_TABLE_PREFIX=test_ jest --no-coverage",
     "watch": "tsc-watch -p tsconfig.build.json --onCompilationComplete \"tsc-alias -p tsconfig.build.json\""
