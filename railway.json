@@ -7,7 +7,7 @@
 	"deploy": {
 		"runtime": "V2",
 		"numReplicas": 1,
-		"startCommand": "./packages/cli/bin/n8n start",
+		"startCommand": "PATH=$PATH:./packages/cli/bin n8n start",
 		"healthcheckPath": "/healthz",
 		"sleepApplication": false,
 		"restartPolicyType": "ON_FAILURE",
