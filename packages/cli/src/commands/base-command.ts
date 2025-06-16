@@ -119,12 +119,16 @@ export abstract class BaseCommand extends Command {
 		this.nodeTypes = Container.get(NodeTypes);
 		await Container.get(LoadNodesAndCredentials).init();
 
-		await this.dbConnection
-			.init()
-			.catch(
-				async (error: Error) =>
-					await this.exitWithCrash('There was an error initializing DB', error),
-			);
+		// Initialize server first so healthcheck is available even if DB fails
+		await this.server?.init();
+
+		// Initialize database connection - don't crash if it fails initially
+		try {
+			await this.dbConnection.init();
+		} catch (error) {
+			this.logger.error('Failed to initialize database connection', { error });
+			// Log the error but don't crash - healthcheck should still work
+		}
 
 		// This needs to happen after DB.init() or otherwise DB Connection is not
 		// available via the dependency Container that services depend on.
@@ -132,14 +136,17 @@ export abstract class BaseCommand extends Command {
 			this.shutdownService.validate();
 		}
 
-		await this.server?.init();
-
-		await this.dbConnection
-			.migrate()
-			.catch(
-				async (error: Error) =>
-					await this.exitWithCrash('There was an error running database migrations', error),
-			);
+		// Attempt database migration if connection was successful
+		if (this.dbConnection.connectionState.connected) {
+			await this.dbConnection
+				.migrate()
+				.catch(
+					async (error: Error) =>
+						await this.exitWithCrash('There was an error running database migrations', error),
+				);
+		} else {
+			this.logger.warn('Database connection not available, skipping migrations');
+		}
 
 		Container.get(DeprecationService).warn();
 
