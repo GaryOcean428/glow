@@ -21,8 +21,9 @@ export default mergeConfig(
 		],
 		resolve: {
 			alias: {
-				'@': srcPath,
-				'@n8n/chat': srcPath,
+                                '@': srcPath,
+                                '@n8n/chat': srcPath,
+                                '@glow/chat': srcPath,
 			},
 		},
 		define: {

@@ -13,7 +13,8 @@
 		"resolveJsonModule": true,
 		"types": ["vitest/globals"],
 		"paths": {
-			"@glow/chat/*": ["./*"]
+			"@glow/chat/*": ["./*"],
+			"@n8n/chat/*": ["./*"]
 		},
 		"lib": ["esnext", "dom", "dom.iterable", "scripthost"],
 		// TODO: remove all options below this line
