@@ -1,0 +1,28 @@
+{
+  "name": "@glow/codemirror-lang-sql",
+  "version": "1.0.2",
+  "description": "SQL + n8n expression language support for CodeMirror 6 - Glow wrapper",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "dev": "pnpm watch",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "biome format --write .",
+    "format:check": "biome ci .",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
+    "watch": "tsc -p tsconfig.build.json --watch"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "@n8n/codemirror-lang-sql": "1.0.2"
+  },
+  "devDependencies": {
+    "@glow/typescript-config": "workspace:*"
+  }
+}

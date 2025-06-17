@@ -41,7 +41,7 @@
     "@types/xml2js": "catalog:"
   },
   "dependencies": {
-    "@glow/tournament": "1.0.6",
+    "@glow/tournament": "workspace:^",
     "ast-types": "0.15.2",
     "callsites": "catalog:",
     "esprima-next": "5.8.4",

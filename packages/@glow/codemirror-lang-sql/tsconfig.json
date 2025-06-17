@@ -1,0 +1,3 @@
+{
+  "extends": "@glow/typescript-config/base.json"
+}

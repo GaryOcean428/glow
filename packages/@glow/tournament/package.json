@@ -1,0 +1,28 @@
+{
+  "name": "@glow/tournament",
+  "version": "1.0.6",
+  "description": "Tournament wrapper for Glow",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "dev": "pnpm watch",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "biome format --write .",
+    "format:check": "biome ci .",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
+    "watch": "tsc -p tsconfig.build.json --watch"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "tournament": "^3.2.0"
+  },
+  "devDependencies": {
+    "@glow/typescript-config": "workspace:*"
+  }
+}

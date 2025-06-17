@@ -882,7 +882,7 @@
     "@glow/config": "workspace:*",
     "@glow/di": "workspace:*",
     "@glow/imap": "workspace:*",
-    "@glow/vm2": "3.9.25",
+    "@glow/vm2": "workspace:^",
     "alasql": "4.4.0",
     "amqplib": "0.10.6",
     "aws4": "1.11.0",
