@@ -1,6 +1,7 @@
 import { Service } from '@glow/di';
 import { DataSource, In, Repository } from '@glow/typeorm';
 import type { EntityManager } from '@glow/typeorm';
+import type { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 
 import { ExecutionData } from '../entities';
 
@@ -11,7 +12,7 @@ export class ExecutionDataRepository extends Repository<ExecutionData> {
 	}
 
 	async createExecutionDataForExecution(
-		data: Partial<ExecutionData>,
+		data: QueryDeepPartialEntity<ExecutionData>,
 		transactionManager: EntityManager,
 	) {
 		return await transactionManager.insert(ExecutionData, data);
