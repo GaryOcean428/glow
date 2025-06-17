@@ -23,6 +23,7 @@
     "localtunnel": "^2.0.2"
   },
   "devDependencies": {
-    "@glow/typescript-config": "workspace:*"
+    "@glow/typescript-config": "workspace:*",
+    "@types/localtunnel": "^2.0.4"
   }
 }

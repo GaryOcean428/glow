@@ -1,8 +1,15 @@
 {
-  "extends": "@glow/typescript-config/base.json",
+  "extends": [
+    "@glow/typescript-config/tsconfig.common.json",
+    "@glow/typescript-config/tsconfig.backend.json"
+  ],
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "composite": true,
+    "declaration": true,
+    "declaration": true,
+    "tsBuildInfoFile": "dist/build.tsbuildinfo"
   },
   "include": ["src/**/*"],
   "exclude": ["dist", "node_modules"]
