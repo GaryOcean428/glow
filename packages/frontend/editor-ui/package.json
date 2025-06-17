@@ -35,7 +35,7 @@
     "@glow/api-types": "workspace:*",
     "@glow/chat": "workspace:*",
     "@glow/codemirror-lang": "workspace:*",
-    "@glow/codemirror-lang-sql": "^1.0.2",
+    "@glow/codemirror-lang-sql": "workspace:^",
     "@glow/composables": "workspace:*",
     "@glow/constants": "workspace:*",
     "@glow/design-system": "workspace:*",

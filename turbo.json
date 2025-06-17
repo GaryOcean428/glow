@@ -12,10 +12,10 @@
 			"cache": false
 		},
 		"build:backend": {
-			"dependsOn": ["n8n#build"]
+			"dependsOn": ["glow#build"]
 		},
 		"build:frontend": {
-			"dependsOn": ["n8n-editor-ui#build"]
+			"dependsOn": ["glow-editor-ui#build"]
 		},
 		"build:nodes": {
 			"dependsOn": ["n8n-nodes-base#build", "@n8n/n8n-nodes-langchain#build"]

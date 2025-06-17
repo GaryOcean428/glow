@@ -26,7 +26,7 @@
     "@glow/constants": "workspace:^",
     "@glow/di": "workspace:^",
     "@glow/permissions": "workspace:^",
-    "@glow/typeorm": "catalog:",
+    "@glow/typeorm": "workspace:^",
     "class-validator": "0.14.0",
     "flatted": "catalog:",
     "lodash": "catalog:",

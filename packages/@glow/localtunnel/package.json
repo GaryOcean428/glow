@@ -1,0 +1,29 @@
+{
+  "name": "@glow/localtunnel",
+  "version": "3.0.0",
+  "description": "Localtunnel wrapper for Glow",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "dev": "pnpm watch",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "biome format --write .",
+    "format:check": "biome ci .",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
+    "watch": "tsc -p tsconfig.build.json --watch"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "localtunnel": "^2.0.2"
+  },
+  "devDependencies": {
+    "@glow/typescript-config": "workspace:*",
+    "@types/localtunnel": "^2.0.4"
+  }
+}

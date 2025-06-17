@@ -882,7 +882,7 @@
     "@glow/config": "workspace:*",
     "@glow/di": "workspace:*",
     "@glow/imap": "workspace:*",
-    "@glow/vm2": "3.9.25",
+    "@glow/vm2": "workspace:^",
     "alasql": "4.4.0",
     "amqplib": "0.10.6",
     "aws4": "1.11.0",
@@ -943,7 +943,7 @@
     "tmp-promise": "3.0.3",
     "ts-ics": "1.2.2",
     "uuid": "catalog:",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz",
+    "xlsx": "^0.18.5",
     "xml2js": "catalog:",
     "xmlhttprequest-ssl": "3.1.0"
   }

@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@glow/typescript-config/tsconfig.common.json",
+    "@glow/typescript-config/tsconfig.backend.json"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@glow/typeorm",
+  "version": "0.3.20",
+  "description": "TypeORM wrapper for Glow",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "dev": "pnpm watch",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "biome format --write .",
+    "format:check": "biome ci .",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
+    "watch": "tsc -p tsconfig.build.json --watch"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "typeorm": "0.3.20"
+  },
+  "devDependencies": {
+    "@glow/typescript-config": "workspace:*"
+  }
+}

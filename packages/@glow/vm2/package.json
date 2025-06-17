@@ -1,0 +1,28 @@
+{
+  "name": "@glow/vm2",
+  "version": "3.9.19",
+  "description": "VM2 wrapper for Glow",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "dev": "pnpm watch",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "biome format --write .",
+    "format:check": "biome ci .",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
+    "watch": "tsc -p tsconfig.build.json --watch"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "vm2": "3.9.19"
+  },
+  "devDependencies": {
+    "@glow/typescript-config": "workspace:*"
+  }
+}
