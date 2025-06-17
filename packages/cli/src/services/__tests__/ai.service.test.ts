@@ -113,10 +113,40 @@ describe('AiService', () => {
 			expect(result).toEqual(clientResponse);
 		});
 
-		it('should throw error if client is not initialized', async () => {
+		it('should throw descriptive error when AI assistant is not enabled', async () => {
 			license.isAiAssistantEnabled.mockReturnValue(false);
 
-			await expect(aiService.chat(payload, user)).rejects.toThrow('Assistant client not setup');
+			await expect(aiService.chat(payload, user)).rejects.toThrow(
+				'AI Assistant is not enabled. Please check your license configuration.',
+			);
+		});
+
+		it('should throw descriptive error when baseUrl is empty', async () => {
+			const emptyBaseUrlConfig = mock<GlobalConfig>({
+				logging: { level: 'info' },
+				aiAssistant: { baseUrl: '' },
+			});
+			const serviceWithEmptyUrl = new AiService(license, emptyBaseUrlConfig);
+
+			license.isAiAssistantEnabled.mockReturnValue(true);
+
+			await expect(serviceWithEmptyUrl.chat(payload, user)).rejects.toThrow(
+				'AI Assistant is not configured. Please set the GLOW_AI_ASSISTANT_BASE_URL environment variable.',
+			);
+		});
+
+		it('should throw descriptive error when baseUrl is invalid', async () => {
+			const invalidBaseUrlConfig = mock<GlobalConfig>({
+				logging: { level: 'info' },
+				aiAssistant: { baseUrl: 'invalid-url' },
+			});
+			const serviceWithInvalidUrl = new AiService(license, invalidBaseUrlConfig);
+
+			license.isAiAssistantEnabled.mockReturnValue(true);
+
+			await expect(serviceWithInvalidUrl.chat(payload, user)).rejects.toThrow(
+				'AI Assistant base URL is invalid: "invalid-url". Please provide a valid HTTP or HTTPS URL.',
+			);
 		});
 	});
 
@@ -134,11 +164,11 @@ describe('AiService', () => {
 			expect(result).toEqual(clientResponse);
 		});
 
-		it('should throw error if client is not initialized', async () => {
+		it('should throw descriptive error when AI assistant is not enabled', async () => {
 			license.isAiAssistantEnabled.mockReturnValue(false);
 
 			await expect(aiService.applySuggestion(payload, user)).rejects.toThrow(
-				'Assistant client not setup',
+				'AI Assistant is not enabled. Please check your license configuration.',
 			);
 		});
 	});
@@ -157,10 +187,12 @@ describe('AiService', () => {
 			expect(result).toEqual(clientResponse);
 		});
 
-		it('should throw error if client is not initialized', async () => {
+		it('should throw descriptive error when AI assistant is not enabled', async () => {
 			license.isAiAssistantEnabled.mockReturnValue(false);
 
-			await expect(aiService.askAi(payload, user)).rejects.toThrow('Assistant client not setup');
+			await expect(aiService.askAi(payload, user)).rejects.toThrow(
+				'AI Assistant is not enabled. Please check your license configuration.',
+			);
 		});
 	});
 

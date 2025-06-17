@@ -60,7 +60,7 @@ export class AiService {
 		if (!this.client) {
 			await this.init();
 		}
-		assert(this.client, 'Assistant client not setup');
+		assert(this.client, this.getClientNotSetupErrorMessage());
 
 		return await this.client.chat(payload, { id: user.id });
 	}
@@ -69,7 +69,7 @@ export class AiService {
 		if (!this.client) {
 			await this.init();
 		}
-		assert(this.client, 'Assistant client not setup');
+		assert(this.client, this.getClientNotSetupErrorMessage());
 
 		return await this.client.applySuggestion(payload, { id: user.id });
 	}
@@ -78,7 +78,7 @@ export class AiService {
 		if (!this.client) {
 			await this.init();
 		}
-		assert(this.client, 'Assistant client not setup');
+		assert(this.client, this.getClientNotSetupErrorMessage());
 
 		return await this.client.askAi(payload, { id: user.id });
 	}
@@ -87,8 +87,26 @@ export class AiService {
 		if (!this.client) {
 			await this.init();
 		}
-		assert(this.client, 'Assistant client not setup');
+		assert(this.client, this.getClientNotSetupErrorMessage());
 
 		return await this.client.generateAiCreditsCredentials(user);
+	}
+
+	private getClientNotSetupErrorMessage(): string {
+		const baseUrl = this.globalConfig.aiAssistant.baseUrl;
+		
+		if (!baseUrl) {
+			return 'AI Assistant is not configured. Please set the GLOW_AI_ASSISTANT_BASE_URL environment variable.';
+		}
+		
+		if (!this.isValidUrl(baseUrl)) {
+			return `AI Assistant base URL is invalid: "${baseUrl}". Please provide a valid HTTP or HTTPS URL.`;
+		}
+		
+		if (!this.licenseService.isAiAssistantEnabled()) {
+			return 'AI Assistant is not enabled. Please check your license configuration.';
+		}
+		
+		return 'AI Assistant client could not be initialized. Please check your configuration.';
 	}
 }
