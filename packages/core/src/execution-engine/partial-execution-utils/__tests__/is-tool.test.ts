@@ -1,5 +1,5 @@
 import { mock } from 'jest-mock-extended';
-import { type INode, type INodeTypes, NodeConnectionTypes } from 'n8n-workflow';
+import { type INode, type INodeTypes, NodeConnectionTypes } from 'glow-workflow';
 
 import { isTool } from '../is-tool';
 

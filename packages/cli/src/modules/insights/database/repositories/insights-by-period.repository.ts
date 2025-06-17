@@ -1,7 +1,7 @@
-import { GlobalConfig } from '@n8n/config';
-import { Container, Service } from '@n8n/di';
-import type { SelectQueryBuilder } from '@n8n/typeorm';
-import { DataSource, LessThanOrEqual, Repository } from '@n8n/typeorm';
+import { GlobalConfig } from '@glow/config';
+import { Container, Service } from '@glow/di';
+import type { SelectQueryBuilder } from '@glow/typeorm';
+import { DataSource, LessThanOrEqual, Repository } from '@glow/typeorm';
 import { DateTime } from 'luxon';
 import { z } from 'zod';
 

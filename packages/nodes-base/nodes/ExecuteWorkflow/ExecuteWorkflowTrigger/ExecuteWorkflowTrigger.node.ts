@@ -5,7 +5,7 @@ import {
 	type IExecuteFunctions,
 	type INodeType,
 	type INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import {
 	INPUT_SOURCE,

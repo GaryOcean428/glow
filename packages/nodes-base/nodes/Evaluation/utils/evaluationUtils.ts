@@ -1,4 +1,4 @@
-import { NodeOperationError, UserError } from 'n8n-workflow';
+import { NodeOperationError, UserError } from 'glow-workflow';
 import type {
 	FieldType,
 	INodeParameters,
@@ -6,7 +6,7 @@ import type {
 	IDataObject,
 	IExecuteFunctions,
 	INodeExecutionData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getGoogleSheet, getSheet } from './evaluationTriggerUtils';
 import { composeReturnItem, validateEntry } from '../../Set/v2/helpers/utils';

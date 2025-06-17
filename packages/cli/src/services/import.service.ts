@@ -1,5 +1,5 @@
-import { Logger } from '@n8n/backend-common';
-import type { TagEntity, ICredentialsDb, IWorkflowDb } from '@n8n/db';
+import { Logger } from '@glow/backend-common';
+import type { TagEntity, ICredentialsDb, IWorkflowDb } from '@glow/db';
 import {
 	Project,
 	WorkflowEntity,
@@ -7,9 +7,9 @@ import {
 	WorkflowTagMapping,
 	CredentialsRepository,
 	TagRepository,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
-import { type INode, type INodeCredentialsDetails, type IWorkflowBase } from 'n8n-workflow';
+} from '@glow/db';
+import { Service } from '@glow/di';
+import { type INode, type INodeCredentialsDetails, type IWorkflowBase } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { replaceInvalidCredentials } from '@/workflow-helpers';

@@ -5,17 +5,17 @@ import {
 	EDITABLE_CANVAS_VIEWS,
 	WORKFLOW_BUILDER_EXPERIMENT,
 } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type { ChatRequest } from '@/types/assistant.types';
-import type { ChatUI } from '@n8n/design-system/types/assistant';
+import type { ChatUI } from '@glow/design-system/types/assistant';
 import { defineStore } from 'pinia';
 import { computed, ref, watch } from 'vue';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useUsersStore } from './users.store';
 import { useRoute } from 'vue-router';
 import { useSettingsStore } from './settings.store';
-import { assert } from '@n8n/utils/assert';
-import { useI18n } from '@n8n/i18n';
+import { assert } from '@glow/utils/assert';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useUIStore } from './ui.store';
 import { usePostHog } from './posthog.store';

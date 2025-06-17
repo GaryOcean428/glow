@@ -1,7 +1,7 @@
-import type { IExecutionResponse } from '@n8n/db';
-import type { ExecutionRepository } from '@n8n/db';
+import type { IExecutionResponse } from '@glow/db';
+import type { ExecutionRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import { WorkflowOperationError } from 'n8n-workflow';
+import { WorkflowOperationError } from 'glow-workflow';
 
 import type { ActiveExecutions } from '@/active-executions';
 import type { ConcurrencyControlService } from '@/concurrency/concurrency-control.service';

@@ -1,9 +1,9 @@
-import { isObjectLiteral, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { ExecutionRepository } from '@n8n/db';
-import { OnLeaderStepdown, OnLeaderTakeover, OnShutdown } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
-import { ErrorReporter, InstanceSettings } from 'n8n-core';
+import { isObjectLiteral, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { ExecutionRepository } from '@glow/db';
+import { OnLeaderStepdown, OnLeaderTakeover, OnShutdown } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
+import { ErrorReporter, InstanceSettings } from 'glow-core';
 import {
 	BINARY_ENCODING,
 	sleep,
@@ -11,8 +11,8 @@ import {
 	ensureError,
 	ExecutionCancelledError,
 	UnexpectedError,
-} from 'n8n-workflow';
-import type { IExecuteResponsePromiseData } from 'n8n-workflow';
+} from 'glow-workflow';
+import type { IExecuteResponsePromiseData } from 'glow-workflow';
 import assert, { strict } from 'node:assert';
 
 import { ActiveExecutions } from '@/active-executions';

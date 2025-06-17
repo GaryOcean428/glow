@@ -4,7 +4,7 @@ import type { TestCaseExecution } from '@n8n/db';
 import type { AggregatedTestRunMetrics } from '@n8n/db';
 import type { TestCaseExecutionErrorCode, TestRunErrorCode } from '@n8n/db';
 import { Container } from '@n8n/di';
-import type { IDataObject } from 'n8n-workflow';
+import type { IDataObject } from 'glow-workflow';
 
 /**
  * Creates a test run for a workflow

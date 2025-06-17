@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { createTestingPinia } from '@pinia/testing';
 import merge from 'lodash/merge';
 import { SOURCE_CONTROL_PULL_MODAL_KEY, SOURCE_CONTROL_PUSH_MODAL_KEY } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { SETTINGS_STORE_DEFAULT_STATE } from '@/__tests__/utils';
 import MainSidebarSourceControl from '@/components/MainSidebarSourceControl.vue';
 import { useSourceControlStore } from '@/stores/sourceControl.store';

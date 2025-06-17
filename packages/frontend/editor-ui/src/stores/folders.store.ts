@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type {
 	ChangeLocationSearchResult,
 	FolderCreateResponse,
@@ -9,11 +9,11 @@ import type {
 } from '@/Interface';
 import * as workflowsApi from '@/api/workflows';
 import * as workflowsEEApi from '@/api/workflows.ee';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { ref } from 'vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import type { DragTarget, DropTarget } from '@/composables/useFolders';
-import type { PathItem } from '@n8n/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
+import type { PathItem } from '@glow/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
 
 const BREADCRUMBS_MIN_LOADING_TIME = 300;
 

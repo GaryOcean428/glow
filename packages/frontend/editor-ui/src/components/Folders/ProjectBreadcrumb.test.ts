@@ -4,7 +4,7 @@ import ProjectBreadcrumb from './ProjectBreadcrumb.vue';
 import { ProjectTypes } from '@/types/projects.types';
 import type { Project } from '@vue-flow/core';
 
-vi.mock('@n8n/i18n', async (importOriginal) => ({
+vi.mock('@glow/i18n', async (importOriginal) => ({
 	...(await importOriginal()),
 	useI18n: () => ({
 		baseText: vi.fn((key) => {

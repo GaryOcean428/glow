@@ -6,8 +6,8 @@ import type {
 	JsonObject,
 	IRequestOptions,
 	IHttpRequestMethods,
-} from 'n8n-workflow';
-import { NodeApiError, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeOperationError } from 'glow-workflow';
 
 async function getMetadata(
 	this: IHookFunctions | IExecuteFunctions | ILoadOptionsFunctions,

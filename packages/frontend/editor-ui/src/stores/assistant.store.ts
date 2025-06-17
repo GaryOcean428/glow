@@ -6,24 +6,24 @@ import {
 	CREDENTIAL_EDIT_MODAL_KEY,
 	ASK_AI_SLIDE_OUT_DURATION_MS,
 } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type { ChatRequest } from '@/types/assistant.types';
-import type { ChatUI } from '@n8n/design-system/types/assistant';
+import type { ChatUI } from '@glow/design-system/types/assistant';
 import { defineStore } from 'pinia';
-import type { PushPayload } from '@n8n/api-types';
+import type { PushPayload } from '@glow/api-types';
 import { computed, h, ref, watch } from 'vue';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useUsersStore } from './users.store';
 import { useRoute } from 'vue-router';
 import { useSettingsStore } from './settings.store';
-import { assert } from '@n8n/utils/assert';
+import { assert } from '@glow/utils/assert';
 import { useWorkflowsStore } from './workflows.store';
-import type { ICredentialType, INodeParameters, NodeError, INode } from 'n8n-workflow';
-import { deepCopy } from 'n8n-workflow';
+import type { ICredentialType, INodeParameters, NodeError, INode } from 'glow-workflow';
+import { deepCopy } from 'glow-workflow';
 import { ndvEventBus, codeNodeEditorEventBus } from '@/event-bus';
 import { useNDVStore } from './ndv.store';
 import type { IUpdateInformation } from '@/Interface';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useToast } from '@/composables/useToast';
 import { useUIStore } from './ui.store';

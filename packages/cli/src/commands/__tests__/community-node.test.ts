@@ -1,6 +1,6 @@
-import { type InstalledNodes } from '@n8n/db';
-import { type CredentialsEntity } from '@n8n/db';
-import { type User } from '@n8n/db';
+import { type InstalledNodes } from '@glow/db';
+import { type CredentialsEntity } from '@glow/db';
+import { type User } from '@glow/db';
 import { type Config } from '@oclif/core';
 import { mock } from 'jest-mock-extended';
 

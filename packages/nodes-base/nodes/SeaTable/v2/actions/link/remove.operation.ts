@@ -6,7 +6,7 @@ import {
 	type INodeProperties,
 	type IExecuteFunctions,
 	updateDisplayOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { seaTableApiRequest } from '../../GenericFunctions';
 

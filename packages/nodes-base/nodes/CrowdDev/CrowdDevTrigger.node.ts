@@ -6,7 +6,7 @@ import {
 	type IWebhookResponseData,
 	type IHttpRequestOptions,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 interface ICrowdDevCreds {
 	url: string;

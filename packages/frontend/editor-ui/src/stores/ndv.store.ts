@@ -18,9 +18,9 @@ import {
 	LOCAL_STORAGE_NDV_OUTPUT_PANEL_DISPLAY_MODE,
 	LOCAL_STORAGE_TABLE_HOVER_IS_ONBOARDED,
 } from '@/constants';
-import { STORES } from '@n8n/stores';
-import type { INodeIssues } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { STORES } from '@glow/stores';
+import type { INodeIssues } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { defineStore } from 'pinia';
 import { v4 as uuid } from 'uuid';
 import { useWorkflowsStore } from './workflows.store';

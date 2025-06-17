@@ -9,7 +9,7 @@ import type {
 	INodeParameters,
 	IRunExecutionData,
 	ITaskData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export namespace ChatRequest {
 	export interface NodeExecutionSchema {

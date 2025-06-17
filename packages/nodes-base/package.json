@@ -1,7 +1,7 @@
 {
-  "name": "n8n-nodes-base",
+  "name": "glow-nodes-base",
   "version": "1.95.0",
-  "description": "Base nodes of n8n",
+  "description": "Base nodes of glow",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist .turbo",
@@ -20,7 +20,7 @@
   "files": [
     "dist"
   ],
-  "n8n": {
+  "glow": {
     "credentials": [
       "dist/credentials/ActionNetworkApi.credentials.js",
       "dist/credentials/ActiveCampaignApi.credentials.js",
@@ -848,7 +848,7 @@
     ]
   },
   "devDependencies": {
-    "@n8n/typescript-config": "workspace:*",
+    "@glow/typescript-config": "workspace:*",
     "@types/amqplib": "^0.10.1",
     "@types/aws4": "^1.5.1",
     "@types/basic-auth": "catalog:",
@@ -873,16 +873,16 @@
     "@types/uuid": "catalog:",
     "@types/xml2js": "catalog:",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
-    "n8n-core": "workspace:*"
+    "glow-core": "workspace:*"
   },
   "dependencies": {
     "@aws-sdk/client-sso-oidc": "3.808.0",
     "@kafkajs/confluent-schema-registry": "3.8.0",
     "@mozilla/readability": "0.6.0",
-    "@n8n/config": "workspace:*",
-    "@n8n/di": "workspace:*",
-    "@n8n/imap": "workspace:*",
-    "@n8n/vm2": "3.9.25",
+    "@glow/config": "workspace:*",
+    "@glow/di": "workspace:*",
+    "@glow/imap": "workspace:*",
+    "@glow/vm2": "3.9.25",
     "alasql": "4.4.0",
     "amqplib": "0.10.6",
     "aws4": "1.11.0",
@@ -919,7 +919,7 @@
     "mqtt": "5.7.2",
     "mssql": "10.0.2",
     "mysql2": "3.11.0",
-    "n8n-workflow": "workspace:*",
+    "glow-workflow": "workspace:*",
     "node-html-markdown": "1.2.0",
     "node-ssh": "13.2.0",
     "nodemailer": "6.9.9",

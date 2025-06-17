@@ -2,13 +2,13 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { PushMessage, PushType } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { ExecutionRepository, WorkflowRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
-import { ExternalSecretsProxy, WorkflowExecute } from 'n8n-core';
-import { UnexpectedError, Workflow } from 'n8n-workflow';
+import type { PushMessage, PushType } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { ExecutionRepository, WorkflowRepository } from '@glow/db';
+import { Container } from '@glow/di';
+import { ExternalSecretsProxy, WorkflowExecute } from 'glow-core';
+import { UnexpectedError, Workflow } from 'glow-workflow';
 import type {
 	IDataObject,
 	IExecuteData,
@@ -30,7 +30,7 @@ import type {
 	EnvProviderState,
 	ExecuteWorkflowData,
 	RelatedExecution,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { ActiveExecutions } from '@/active-executions';
 import { CredentialsHelper } from '@/credentials-helper';

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { CallbackManager as CallbackManagerLC } from '@langchain/core/callbacks/manager';
-import type { LogScope } from '@n8n/config';
+import type { LogScope } from '@glow/config';
 import type { AxiosProxyConfig, GenericAbortSignal } from 'axios';
 import type * as express from 'express';
 import type FormData from 'form-data';
@@ -2573,11 +2573,11 @@ export interface INodeGraphItem {
 	method?: string; // HTTP Request node v2
 	src_node_id?: string;
 	src_instance_id?: string;
-	agent?: string; //@n8n/n8n-nodes-langchain.agent
+	agent?: string; //@glow/n8n-nodes-langchain.agent
 	prompts?: IDataObject[] | IDataObject; //ai node's prompts, cloud only
 	toolSettings?: IDataObject; //various langchain tool's settings
 	sql?: string; //merge node combineBySql, cloud only
-	workflow_id?: string; //@n8n/n8n-nodes-langchain.toolWorkflow and n8n-nodes-base.executeWorkflow
+	workflow_id?: string; //@glow/n8n-nodes-langchain.toolWorkflow and n8n-nodes-base.executeWorkflow
 	runs?: number;
 	items_total?: number;
 	metric_names?: string[];

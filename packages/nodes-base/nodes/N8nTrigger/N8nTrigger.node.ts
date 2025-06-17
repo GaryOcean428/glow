@@ -3,8 +3,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	ITriggerResponse,
-} from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 type eventType = 'Instance started' | 'Workflow activated' | 'Workflow updated' | undefined;
 

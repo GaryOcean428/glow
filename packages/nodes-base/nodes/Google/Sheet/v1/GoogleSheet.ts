@@ -1,6 +1,6 @@
 import get from 'lodash/get';
-import type { IExecuteFunctions, ILoadOptionsFunctions, IDataObject } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IExecuteFunctions, ILoadOptionsFunctions, IDataObject } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 import { utils as xlsxUtils } from 'xlsx';
 
 import { googleApiRequest } from './GenericFunctions';

@@ -5,8 +5,8 @@ import type {
 	ILoadOptionsFunctions,
 	IHttpRequestMethods,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { NodeApiError, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeOperationError } from 'glow-workflow';
 
 export async function phantombusterApiRequest(
 	this: IExecuteFunctions | ILoadOptionsFunctions,

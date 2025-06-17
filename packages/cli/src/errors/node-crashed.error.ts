@@ -1,5 +1,5 @@
-import type { INode } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { INode } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 export class NodeCrashedError extends NodeOperationError {
 	constructor(node: INode) {

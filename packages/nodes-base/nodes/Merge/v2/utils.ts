@@ -9,8 +9,8 @@ import type {
 	IDataObject,
 	INodeExecutionData,
 	IPairedItemData,
-} from 'n8n-workflow';
-import { ApplicationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError } from 'glow-workflow';
 
 import { fuzzyCompare, preparePairedItemDataArray } from '@utils/utilities';
 

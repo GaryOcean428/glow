@@ -6,7 +6,7 @@ import type {
 	IWebhookFunctions,
 	IHttpRequestMethods,
 	IRequestOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 const BEEMINDER_URI = 'https://www.beeminder.com/api/v1';
 

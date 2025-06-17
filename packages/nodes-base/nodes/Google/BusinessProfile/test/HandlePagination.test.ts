@@ -1,4 +1,4 @@
-import type { DeclarativeRestApiSettings, IExecutePaginationFunctions } from 'n8n-workflow';
+import type { DeclarativeRestApiSettings, IExecutePaginationFunctions } from 'glow-workflow';
 
 import { handlePagination } from '../GenericFunctions';
 

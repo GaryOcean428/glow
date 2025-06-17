@@ -20,8 +20,8 @@ import type {
 	IWorkflowDataProxyAdditionalKeys,
 	NodeParameterValue,
 	Workflow,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeHelpers, WEBHOOK_NODE_TYPE } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeHelpers, WEBHOOK_NODE_TYPE } from 'glow-workflow';
 
 import type {
 	ICredentialsResponse,
@@ -41,7 +41,7 @@ import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import get from 'lodash/get';
 
 import { useEnvironmentsStore } from '@/stores/environments.ee.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useUIStore } from '@/stores/ui.store';
@@ -49,11 +49,11 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { getSourceItems } from '@/utils/pairedItemUtils';
 import { getCredentialTypeName, isCredentialOnlyNodeType } from '@/utils/credentialOnlyNodes';
 import { useDocumentTitle } from '@/composables/useDocumentTitle';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useProjectsStore } from '@/stores/projects.store';
 import { useTagsStore } from '@/stores/tags.store';
 import { useWorkflowsEEStore } from '@/stores/workflows.ee.store';
-import { findWebhook } from '@n8n/rest-api-client/api/webhooks';
+import { findWebhook } from '@glow/rest-api-client/api/webhooks';
 
 export type ResolveParameterOptions = {
 	targetItem?: TargetItem;

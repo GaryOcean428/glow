@@ -4,7 +4,7 @@ import type {
 	ICredentialType,
 	INodeProperties,
 	INodePropertyOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 // Get options for timezones
 const timezones: INodePropertyOptions[] = moment.tz

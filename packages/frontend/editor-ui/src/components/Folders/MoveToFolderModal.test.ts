@@ -15,7 +15,7 @@ import {
 import { useUIStore } from '@/stores/ui.store';
 import { MOVE_FOLDER_MODAL_KEY } from '@/constants';
 import { useSettingsStore } from '@/stores/settings.store';
-import type { FrontendSettings } from '@n8n/api-types';
+import type { FrontendSettings } from '@glow/api-types';
 import type { Project } from '@/types/projects.types';
 import type {
 	ChangeLocationSearchResult,

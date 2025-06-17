@@ -1,6 +1,6 @@
 import get from 'lodash/get';
 import unset from 'lodash/unset';
-import { NodeOperationError, deepCopy, NodeConnectionTypes } from 'n8n-workflow';
+import { NodeOperationError, deepCopy, NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IBinaryData,
 	IDataObject,
@@ -9,7 +9,7 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	NodeExecutionHint,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { prepareFieldsArray } from '../utils/utils';
 

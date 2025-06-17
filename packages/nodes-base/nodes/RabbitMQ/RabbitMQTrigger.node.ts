@@ -9,8 +9,8 @@ import type {
 	IRun,
 	ITriggerFunctions,
 	ITriggerResponse,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { rabbitDefaultOptions } from './DefaultOptions';
 import { MessageTracker, rabbitmqConnectQueue, parseMessage } from './GenericFunctions';

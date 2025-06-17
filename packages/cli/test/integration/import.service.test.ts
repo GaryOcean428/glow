@@ -7,7 +7,7 @@ import { SharedWorkflowRepository } from '@n8n/db';
 import { WorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { mock } from 'jest-mock-extended';
-import type { INode } from 'n8n-workflow';
+import type { INode } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { ImportService } from '@/services/import.service';

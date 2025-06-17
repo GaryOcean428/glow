@@ -17,7 +17,7 @@ vi.mock('./utils', async () => {
 	};
 });
 
-vi.mock('@n8n/stores/useRootStore', () => ({
+vi.mock('@glow/stores/useRootStore', () => ({
 	useRootStore: () => ({
 		pushRef: 'mockRootPushRef',
 		restApiContext: {},

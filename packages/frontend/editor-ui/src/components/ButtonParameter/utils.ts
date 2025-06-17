@@ -1,11 +1,11 @@
 import type { Schema } from '@/Interface';
-import { ApplicationError, type INodeExecutionData } from 'n8n-workflow';
+import { ApplicationError, type INodeExecutionData } from 'glow-workflow';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useDataSchema } from '@/composables/useDataSchema';
 import { executionDataToJson } from '@/utils/nodeTypesUtils';
 import { generateCodeForPrompt } from '@/api/ai';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { type AskAiRequest } from '@/types/assistant.types';
 import { useSettingsStore } from '@/stores/settings.store';
 import { format } from 'prettier';

@@ -1,4 +1,4 @@
-import type { SharedCredentialsRepository } from '@n8n/db';
+import type { SharedCredentialsRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
 
 import { createRawProjectData } from '@/__tests__/project.test-data';

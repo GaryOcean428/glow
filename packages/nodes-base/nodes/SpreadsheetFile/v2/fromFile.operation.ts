@@ -1,6 +1,6 @@
 import { parse as createCSVParser } from 'csv-parse';
-import type { IExecuteFunctions, INodeExecutionData, INodeProperties } from 'n8n-workflow';
-import { BINARY_ENCODING, NodeOperationError } from 'n8n-workflow';
+import type { IExecuteFunctions, INodeExecutionData, INodeProperties } from 'glow-workflow';
+import { BINARY_ENCODING, NodeOperationError } from 'glow-workflow';
 import type { Sheet2JSONOpts, WorkBook, ParsingOptions } from 'xlsx';
 import { read as xlsxRead, readFile as xlsxReadFile, utils as xlsxUtils } from 'xlsx';
 

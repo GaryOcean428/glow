@@ -1,8 +1,8 @@
-import type { CredentialsEntity } from '@n8n/db';
-import type { CredentialsRepository } from '@n8n/db';
+import type { CredentialsEntity } from '@glow/db';
+import type { CredentialsRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import { CREDENTIAL_ERRORS, CredentialDataError, Credentials, type ErrorReporter } from 'n8n-core';
-import { CREDENTIAL_EMPTY_VALUE, type ICredentialType } from 'n8n-workflow';
+import { CREDENTIAL_ERRORS, CredentialDataError, Credentials, type ErrorReporter } from 'glow-core';
+import { CREDENTIAL_EMPTY_VALUE, type ICredentialType } from 'glow-workflow';
 
 import { CREDENTIAL_BLANKING_VALUE } from '@/constants';
 import type { CredentialTypes } from '@/credential-types';

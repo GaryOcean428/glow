@@ -1,4 +1,4 @@
-import type { IDataObject, INodePropertyOptions } from 'n8n-workflow';
+import type { IDataObject, INodePropertyOptions } from 'glow-workflow';
 
 import {
 	getValue,

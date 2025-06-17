@@ -1,13 +1,13 @@
-import type { SourceControlledFile } from '@n8n/api-types';
-import type { Variables } from '@n8n/db';
-import type { FolderWithWorkflowAndSubFolderCount } from '@n8n/db';
-import type { TagEntity } from '@n8n/db';
-import type { User } from '@n8n/db';
-import type { FolderRepository } from '@n8n/db';
-import type { TagRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { SourceControlledFile } from '@glow/api-types';
+import type { Variables } from '@glow/db';
+import type { FolderWithWorkflowAndSubFolderCount } from '@glow/db';
+import type { TagEntity } from '@glow/db';
+import type { User } from '@glow/db';
+import type { FolderRepository } from '@glow/db';
+import type { TagRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
-import { InstanceSettings } from 'n8n-core';
+import { InstanceSettings } from 'glow-core';
 
 import { SourceControlPreferencesService } from '@/environments.ee/source-control/source-control-preferences.service.ee';
 import { SourceControlService } from '@/environments.ee/source-control/source-control.service.ee';

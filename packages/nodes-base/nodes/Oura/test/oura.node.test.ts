@@ -5,7 +5,7 @@ import type {
 	ILoadOptionsFunctions,
 	IHttpRequestMethods,
 	INode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import nock from 'nock';
 
 import { profileResponse } from './apiResponses';

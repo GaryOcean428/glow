@@ -2,8 +2,8 @@ import type {
 	IExecuteSingleFunctions,
 	IN8nHttpFullResponse,
 	INodeExecutionData,
-} from 'n8n-workflow';
-import { NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError } from 'glow-workflow';
 
 import { sendErrorPostReceive } from '../GenericFunctions';
 

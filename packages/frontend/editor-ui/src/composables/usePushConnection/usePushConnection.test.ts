@@ -1,6 +1,6 @@
 import { usePushConnection } from '@/composables/usePushConnection';
 import { testWebhookReceived } from '@/composables/usePushConnection/handlers';
-import type { TestWebhookReceived } from '@n8n/api-types/push/webhook';
+import type { TestWebhookReceived } from '@glow/api-types/push/webhook';
 import { useRouter } from 'vue-router';
 import type { OnPushMessageHandler } from '@/stores/pushConnection.store';
 

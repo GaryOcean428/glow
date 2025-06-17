@@ -1,8 +1,8 @@
-import { BinaryDataQueryDto, BinaryDataSignedQueryDto, ViewableMimeTypes } from '@n8n/api-types';
-import { Get, Query, RestController } from '@n8n/decorators';
+import { BinaryDataQueryDto, BinaryDataSignedQueryDto, ViewableMimeTypes } from '@glow/api-types';
+import { Get, Query, RestController } from '@glow/decorators';
 import { Request, Response } from 'express';
 import { JsonWebTokenError } from 'jsonwebtoken';
-import { BinaryDataService, FileNotFoundError, isValidNonDefaultMode } from 'n8n-core';
+import { BinaryDataService, FileNotFoundError, isValidNonDefaultMode } from 'glow-core';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';
 

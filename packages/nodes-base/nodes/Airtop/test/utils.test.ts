@@ -1,4 +1,4 @@
-import { NodeApiError } from 'n8n-workflow';
+import { NodeApiError } from 'glow-workflow';
 
 import { createMockExecuteFunction } from './node/helpers';
 import { ERROR_MESSAGES, SESSION_STATUS } from '../constants';

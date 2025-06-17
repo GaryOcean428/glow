@@ -1,7 +1,7 @@
 import type { User } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { mock } from 'jest-mock-extended';
-import type { IWorkflowBase } from 'n8n-workflow';
+import type { IWorkflowBase } from 'glow-workflow';
 
 import type {
 	WorkflowClosedMessage,

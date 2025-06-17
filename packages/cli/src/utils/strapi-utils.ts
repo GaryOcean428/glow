@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { Container } from '@glow/di';
 import axios from 'axios';
-import { ErrorReporter } from 'n8n-core';
+import { ErrorReporter } from 'glow-core';
 
 interface ResponseData<T> {
 	data: Array<Entity<T>>;

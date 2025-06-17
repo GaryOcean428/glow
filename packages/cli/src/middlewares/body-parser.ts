@@ -1,8 +1,8 @@
-import { GlobalConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { Container } from '@glow/di';
 import type { Request, RequestHandler } from 'express';
-import { parseIncomingMessage } from 'n8n-core';
-import { jsonParse } from 'n8n-workflow';
+import { parseIncomingMessage } from 'glow-core';
+import { jsonParse } from 'glow-workflow';
 import { parse as parseQueryString } from 'querystring';
 import getRawBody from 'raw-body';
 import { type Readable } from 'stream';

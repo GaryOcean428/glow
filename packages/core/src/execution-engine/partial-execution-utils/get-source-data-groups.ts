@@ -1,4 +1,4 @@
-import { type INode, type IPinData, type IRunData } from 'n8n-workflow';
+import { type INode, type IPinData, type IRunData } from 'glow-workflow';
 
 import type { GraphConnection, DirectedGraph } from './directed-graph';
 

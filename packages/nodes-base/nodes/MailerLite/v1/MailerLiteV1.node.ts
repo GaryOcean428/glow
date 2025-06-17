@@ -5,8 +5,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	INodeTypeBaseDescription,
-} from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { subscriberFields, subscriberOperations } from './SubscriberDescription';
 import {

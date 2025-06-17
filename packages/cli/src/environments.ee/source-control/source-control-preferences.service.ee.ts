@@ -1,11 +1,11 @@
-import { Logger } from '@n8n/backend-common';
-import { SettingsRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { SettingsRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import type { ValidationError } from 'class-validator';
 import { validate } from 'class-validator';
 import { rm as fsRm } from 'fs/promises';
-import { Cipher, InstanceSettings } from 'n8n-core';
-import { jsonParse, UnexpectedError } from 'n8n-workflow';
+import { Cipher, InstanceSettings } from 'glow-core';
+import { jsonParse, UnexpectedError } from 'glow-workflow';
 import { writeFile, chmod, readFile } from 'node:fs/promises';
 import path from 'path';
 

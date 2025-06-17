@@ -1,7 +1,7 @@
 import { useToast } from '@/composables/useToast';
-import { useI18n } from '@n8n/i18n';
-import type { INodeExecutionData, IPinData } from 'n8n-workflow';
-import { jsonParse, jsonStringify, NodeConnectionTypes, NodeHelpers } from 'n8n-workflow';
+import { useI18n } from '@glow/i18n';
+import type { INodeExecutionData, IPinData } from 'glow-workflow';
+import { jsonParse, jsonStringify, NodeConnectionTypes, NodeHelpers } from 'glow-workflow';
 import {
 	MAX_EXPECTED_REQUEST_SIZE,
 	MAX_PINNED_DATA_SIZE,
@@ -15,7 +15,7 @@ import { useExternalHooks } from '@/composables/useExternalHooks';
 import { useTelemetry } from '@/composables/useTelemetry';
 import type { MaybeRef } from 'vue';
 import { computed, unref } from 'vue';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useNodeType } from '@/composables/useNodeType';
 import { useDataSchema } from './useDataSchema';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';

@@ -1,5 +1,5 @@
-import type { IDataObject } from 'n8n-workflow';
-import { ApplicationError, jsonParse } from 'n8n-workflow';
+import type { IDataObject } from 'glow-workflow';
+import { ApplicationError, jsonParse } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import type { Section, TodoistResponse } from './Service';

@@ -2,13 +2,13 @@ import type {
 	AiAskRequestDto,
 	AiApplySuggestionRequestDto,
 	AiChatRequestDto,
-} from '@n8n/api-types';
-import type { GlobalConfig } from '@n8n/config';
+} from '@glow/api-types';
+import type { GlobalConfig } from '@glow/config';
 import { AiAssistantClient, type AiAssistantSDK } from '@n8n_io/ai-assistant-sdk';
 import { mock } from 'jest-mock-extended';
-import type { IUser } from 'n8n-workflow';
+import type { IUser } from 'glow-workflow';
 
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 import type { License } from '@/license';
 
 import { AiService } from '../ai.service';
@@ -58,7 +58,7 @@ describe('AiService', () => {
 			expect(AiAssistantClient).toHaveBeenCalledWith({
 				licenseCert: 'mock-license-cert',
 				consumerId: 'mock-consumer-id',
-				n8nVersion: N8N_VERSION,
+				n8nVersion: GLOW_VERSION,
 				baseUrl,
 				logLevel: 'info',
 			});

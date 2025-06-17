@@ -2,7 +2,7 @@ import type { User } from '@n8n/db';
 import { CredentialsRepository } from '@n8n/db';
 import { SharedCredentialsRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import { randomString } from 'n8n-workflow';
+import { randomString } from 'glow-workflow';
 
 import { createTeamProject } from '@test-integration/db/projects';
 

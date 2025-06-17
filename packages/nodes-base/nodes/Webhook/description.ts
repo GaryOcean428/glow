@@ -1,4 +1,4 @@
-import type { INodeProperties, INodeTypeDescription, IWebhookDescription } from 'n8n-workflow';
+import type { INodeProperties, INodeTypeDescription, IWebhookDescription } from 'glow-workflow';
 
 import { getResponseCode, getResponseData } from './utils';
 

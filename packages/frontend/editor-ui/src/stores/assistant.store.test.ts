@@ -18,7 +18,7 @@ import { reactive } from 'vue';
 import * as chatAPI from '@/api/ai';
 import * as telemetryModule from '@/composables/useTelemetry';
 import type { Telemetry } from '@/plugins/telemetry';
-import type { ChatUI } from '@n8n/design-system/types/assistant';
+import type { ChatUI } from '@glow/design-system/types/assistant';
 
 let settingsStore: ReturnType<typeof useSettingsStore>;
 let posthogStore: ReturnType<typeof usePostHog>;

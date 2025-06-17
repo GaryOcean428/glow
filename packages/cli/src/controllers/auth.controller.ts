@@ -1,9 +1,9 @@
-import { LoginRequestDto, ResolveSignupTokenQueryDto } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import type { User, PublicUser } from '@n8n/db';
-import { UserRepository } from '@n8n/db';
-import { Body, Get, Post, Query, RestController } from '@n8n/decorators';
-import { Container } from '@n8n/di';
+import { LoginRequestDto, ResolveSignupTokenQueryDto } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import type { User, PublicUser } from '@glow/db';
+import { UserRepository } from '@glow/db';
+import { Body, Get, Post, Query, RestController } from '@glow/decorators';
+import { Container } from '@glow/di';
 import { isEmail } from 'class-validator';
 import { Response } from 'express';
 

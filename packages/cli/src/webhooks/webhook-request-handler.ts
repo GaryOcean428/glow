@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { Container } from '@glow/di';
 import type express from 'express';
-import { ensureError, type IHttpRequestMethods } from 'n8n-workflow';
+import { ensureError, type IHttpRequestMethods } from 'glow-workflow';
 
 import { WebhookNotFoundError } from '@/errors/response-errors/webhook-not-found.error';
 import * as ResponseHelper from '@/response-helper';

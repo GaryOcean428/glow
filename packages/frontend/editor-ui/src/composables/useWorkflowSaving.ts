@@ -2,7 +2,7 @@ import { useNpsSurveyStore } from '@/stores/npsSurvey.store';
 import { useUIStore } from '@/stores/ui.store';
 import type { NavigationGuardNext, useRouter } from 'vue-router';
 import { useMessage } from './useMessage';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import {
 	MODAL_CANCEL,
 	MODAL_CLOSE,
@@ -22,7 +22,7 @@ import type {
 	IWorkflowDataUpdate,
 	NotificationOptions,
 } from '@/Interface';
-import type { IDataObject, INode, IWorkflowSettings } from 'n8n-workflow';
+import type { IDataObject, INode, IWorkflowSettings } from 'glow-workflow';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useToast } from './useToast';
 import { useExternalHooks } from './useExternalHooks';

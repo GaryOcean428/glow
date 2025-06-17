@@ -1,6 +1,6 @@
-import { PullWorkFolderRequestDto, PushWorkFolderRequestDto } from '@n8n/api-types';
-import type { SourceControlledFile } from '@n8n/api-types';
-import { Get, Post, Patch, RestController, GlobalScope, Body } from '@n8n/decorators';
+import { PullWorkFolderRequestDto, PushWorkFolderRequestDto } from '@glow/api-types';
+import type { SourceControlledFile } from '@glow/api-types';
+import { Get, Post, Patch, RestController, GlobalScope, Body } from '@glow/decorators';
 import express from 'express';
 import type { PullResult } from 'simple-git';
 

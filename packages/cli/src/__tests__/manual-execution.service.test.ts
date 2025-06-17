@@ -1,6 +1,6 @@
 import { mock } from 'jest-mock-extended';
-import * as core from 'n8n-core';
-import { DirectedGraph, recreateNodeExecutionStack, WorkflowExecute } from 'n8n-core';
+import * as core from 'glow-core';
+import { DirectedGraph, recreateNodeExecutionStack, WorkflowExecute } from 'glow-core';
 import type {
 	Workflow,
 	IWorkflowExecutionDataProcess,
@@ -13,7 +13,7 @@ import type {
 	IWaitingForExecution,
 	IWaitingForExecutionSource,
 	INodeExecutionData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type PCancelable from 'p-cancelable';
 
 import { ManualExecutionService } from '@/manual-execution.service';
@@ -247,7 +247,7 @@ describe('ManualExecutionService', () => {
 			const executionId = 'test-execution-id';
 
 			const mockRun = jest.fn().mockReturnValue('mockRunReturn');
-			require('n8n-core').WorkflowExecute.mockImplementationOnce(() => ({
+			require('glow-core').WorkflowExecute.mockImplementationOnce(() => ({
 				run: mockRun,
 				processRunExecutionData: jest.fn(),
 			}));
@@ -280,7 +280,7 @@ describe('ManualExecutionService', () => {
 			jest.spyOn(manualExecutionService, 'getExecutionStartNode').mockReturnValue(startNode);
 
 			const mockRun = jest.fn().mockReturnValue('mockRunReturn');
-			require('n8n-core').WorkflowExecute.mockImplementationOnce(() => ({
+			require('glow-core').WorkflowExecute.mockImplementationOnce(() => ({
 				run: mockRun,
 				processRunExecutionData: jest.fn(),
 			}));
@@ -325,7 +325,7 @@ describe('ManualExecutionService', () => {
 			jest.spyOn(manualExecutionService, 'getExecutionStartNode').mockReturnValue(startNode);
 
 			const mockRun = jest.fn().mockReturnValue('mockRunReturn');
-			require('n8n-core').WorkflowExecute.mockImplementationOnce(() => ({
+			require('glow-core').WorkflowExecute.mockImplementationOnce(() => ({
 				run: mockRun,
 				processRunExecutionData: jest.fn(),
 			}));
@@ -363,7 +363,7 @@ describe('ManualExecutionService', () => {
 			const executionId = 'test-execution-id';
 
 			const mockRunPartialWorkflow = jest.fn().mockReturnValue('mockPartialReturn');
-			require('n8n-core').WorkflowExecute.mockImplementationOnce(() => ({
+			require('glow-core').WorkflowExecute.mockImplementationOnce(() => ({
 				runPartialWorkflow: mockRunPartialWorkflow,
 				processRunExecutionData: jest.fn(),
 			}));
@@ -401,7 +401,7 @@ describe('ManualExecutionService', () => {
 			const pinData: IPinData = { node1: [{ json: { pinned: true } }] };
 
 			const mockRunPartialWorkflow2 = jest.fn().mockReturnValue('mockPartial2Return');
-			require('n8n-core').WorkflowExecute.mockImplementationOnce(() => ({
+			require('glow-core').WorkflowExecute.mockImplementationOnce(() => ({
 				runPartialWorkflow2: mockRunPartialWorkflow2,
 				processRunExecutionData: jest.fn(),
 			}));

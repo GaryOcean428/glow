@@ -11,7 +11,7 @@ import {
 	type INodePropertyOptions,
 	type INodeType,
 	type INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { alertFields, alertOperations } from './descriptions/AlertDescription';
 import { caseFields, caseOperations } from './descriptions/CaseDescription';

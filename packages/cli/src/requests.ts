@@ -1,12 +1,12 @@
-import type { ProjectIcon, ProjectType } from '@n8n/api-types';
-import type { Variables, Project, User, ListQueryDb, WorkflowHistory } from '@n8n/db';
-import type { AssignableGlobalRole, GlobalRole, ProjectRole, Scope } from '@n8n/permissions';
+import type { ProjectIcon, ProjectType } from '@glow/api-types';
+import type { Variables, Project, User, ListQueryDb, WorkflowHistory } from '@glow/db';
+import type { AssignableGlobalRole, GlobalRole, ProjectRole, Scope } from '@glow/permissions';
 import type express from 'express';
 import type {
 	ICredentialDataDecryptedObject,
 	INodeCredentialTestRequest,
 	IPersonalizationSurveyAnswersV4,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export type APIRequest<
 	RouteParams = {},

@@ -1,5 +1,5 @@
 import { NodeTestHarness } from '@nodes-testing/node-test-harness';
-import { NodeConnectionTypes, type WorkflowTestData } from 'n8n-workflow';
+import { NodeConnectionTypes, type WorkflowTestData } from 'glow-workflow';
 
 import { microsoftEntraApiResponse, microsoftEntraNodeResponse } from './mocks';
 

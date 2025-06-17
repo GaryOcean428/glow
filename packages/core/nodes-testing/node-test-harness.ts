@@ -11,8 +11,8 @@ import type {
 	IWorkflowBase,
 	IWorkflowExecuteAdditionalData,
 	WorkflowTestData,
-} from 'n8n-workflow';
-import { createDeferredPromise, UnexpectedError, Workflow } from 'n8n-workflow';
+} from 'glow-workflow';
+import { createDeferredPromise, UnexpectedError, Workflow } from 'glow-workflow';
 import nock from 'nock';
 import { readFileSync, mkdtempSync, existsSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';

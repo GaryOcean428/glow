@@ -1,6 +1,6 @@
-import { UserRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { Cipher } from 'n8n-core';
+import { UserRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { Cipher } from 'glow-core';
 import { v4 as uuid } from 'uuid';
 
 import { InvalidMfaCodeError } from '@/errors/response-errors/invalid-mfa-code.error';

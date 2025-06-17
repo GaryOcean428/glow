@@ -1,7 +1,7 @@
-import { NoXss } from '@n8n/db';
+import { NoXss } from '@glow/db';
 import { Expose } from 'class-transformer';
 import { IsString, IsArray, IsOptional, IsEmail, IsEnum } from 'class-validator';
-import type { IPersonalizationSurveyAnswersV4 } from 'n8n-workflow';
+import type { IPersonalizationSurveyAnswersV4 } from 'glow-workflow';
 
 export class PersonalizationSurveyAnswersV4 implements IPersonalizationSurveyAnswersV4 {
 	@NoXss()

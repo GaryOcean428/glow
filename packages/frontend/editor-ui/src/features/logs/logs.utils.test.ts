@@ -19,7 +19,7 @@ import {
 	NodeConnectionTypes,
 	type ExecutionError,
 	type ITaskStartedData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { createTestLogTreeCreationContext } from './__test__/data';
 import type { LogEntrySelection } from './logs.types';
 import type { IExecutionResponse } from '@/Interface';

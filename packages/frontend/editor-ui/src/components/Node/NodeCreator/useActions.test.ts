@@ -17,7 +17,7 @@ import {
 	TRIGGER_NODE_CREATOR_VIEW,
 	WEBHOOK_NODE_TYPE,
 } from '@/constants';
-import { CHAT_TRIGGER_NODE_TYPE } from 'n8n-workflow';
+import { CHAT_TRIGGER_NODE_TYPE } from 'glow-workflow';
 
 describe('useActions', () => {
 	beforeAll(() => {

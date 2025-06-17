@@ -1,4 +1,4 @@
-import { Get, RestController } from '@n8n/decorators';
+import { Get, RestController } from '@glow/decorators';
 
 import { RoleService } from '@/services/role.service';
 

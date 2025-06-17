@@ -1,8 +1,8 @@
-import { GlobalConfig } from '@n8n/config';
-import type { PublicUser } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
-import type { FeatureFlags, ITelemetryTrackProperties } from 'n8n-workflow';
+import { GlobalConfig } from '@glow/config';
+import type { PublicUser } from '@glow/db';
+import { Service } from '@glow/di';
+import { InstanceSettings } from 'glow-core';
+import type { FeatureFlags, ITelemetryTrackProperties } from 'glow-workflow';
 import type { PostHog } from 'posthog-node';
 
 @Service()

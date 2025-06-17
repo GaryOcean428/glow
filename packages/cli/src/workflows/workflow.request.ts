@@ -7,7 +7,7 @@ import type {
 	ITaskData,
 	IWorkflowBase,
 	AiAgentRequest,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { AuthenticatedRequest, ListQuery } from '@/requests';
 

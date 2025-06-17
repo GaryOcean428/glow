@@ -9,7 +9,7 @@ import {
 	keyFromCredentialTypeAndName,
 	normalizeTemplateNodeCredentials,
 } from '@/utils/templates/templateTransforms';
-import type { INodeCredentialDescription, INodeCredentialsDetails } from 'n8n-workflow';
+import type { INodeCredentialDescription, INodeCredentialsDetails } from 'glow-workflow';
 import type { NodeTypeProvider } from '@/utils/nodeTypes/nodeTypeTransforms';
 import { getNodeTypeDisplayableCredentials } from '@/utils/nodes/nodeTransforms';
 import sortBy from 'lodash/sortBy';

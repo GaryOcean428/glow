@@ -1,4 +1,4 @@
-import type { TaskRunnersConfig } from '@n8n/config';
+import type { TaskRunnersConfig } from '@glow/config';
 import { mock } from 'jest-mock-extended';
 import type WebSocket from 'ws';
 

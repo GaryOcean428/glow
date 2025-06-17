@@ -12,8 +12,8 @@ import type {
 	INodePropertyOptions,
 	INodeListSearchResult,
 	INodeListSearchItems,
-} from 'n8n-workflow';
-import { NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError } from 'glow-workflow';
 import { parseStringPromise } from 'xml2js';
 
 export async function microsoftApiRequest(

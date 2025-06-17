@@ -1,12 +1,12 @@
-import type { SamlPreferences } from '@n8n/api-types';
+import type { SamlPreferences } from '@glow/api-types';
 import { computed, reactive } from 'vue';
 import { useRoute } from 'vue-router';
 import { defineStore } from 'pinia';
 import { EnterpriseEditionFeature } from '@/constants';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useSettingsStore } from '@/stores/settings.store';
-import * as ssoApi from '@n8n/rest-api-client/api/sso';
-import type { SamlPreferencesExtractedData } from '@n8n/rest-api-client/api/sso';
+import * as ssoApi from '@glow/rest-api-client/api/sso';
+import type { SamlPreferencesExtractedData } from '@glow/rest-api-client/api/sso';
 import { updateCurrentUser } from '@/api/users';
 import { useUsersStore } from '@/stores/users.store';
 

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 import * as assert from 'assert/strict';
 import { setMaxListeners } from 'events';
 import get from 'lodash/get';
@@ -42,7 +42,7 @@ import type {
 	ITaskStartedData,
 	AiAgentRequest,
 	IWorkflowExecutionDataProcess,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	LoggerProxy as Logger,
 	NodeHelpers,
@@ -54,7 +54,7 @@ import {
 	UnexpectedError,
 	UserError,
 	OperationalError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import PCancelable from 'p-cancelable';
 
 import { ErrorReporter } from '@/errors/error-reporter';

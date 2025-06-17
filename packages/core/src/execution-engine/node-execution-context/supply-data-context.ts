@@ -17,8 +17,8 @@ import type {
 	WorkflowExecuteMode,
 	NodeConnectionType,
 	ISourceData,
-} from 'n8n-workflow';
-import { createDeferredPromise, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { createDeferredPromise, NodeConnectionTypes } from 'glow-workflow';
 
 import { BaseExecuteContext } from './base-execute-context';
 import {

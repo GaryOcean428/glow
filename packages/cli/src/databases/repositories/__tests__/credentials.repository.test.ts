@@ -1,6 +1,6 @@
-import { CredentialsEntity } from '@n8n/db';
-import { CredentialsRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { CredentialsEntity } from '@glow/db';
+import { CredentialsRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
 
 import { mockEntityManager } from '@test/mocking';

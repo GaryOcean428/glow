@@ -1,10 +1,10 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { useDebugInfo } from './useDebugInfo';
-import type { RootStoreState } from '@n8n/stores/useRootStore';
+import type { RootStoreState } from '@glow/stores/useRootStore';
 import type { useSettingsStore as useSettingsStoreType } from '@/stores/settings.store';
 import type { RecursivePartial } from '@/type-utils';
 
-vi.mock('@n8n/stores/useRootStore', () => ({
+vi.mock('@glow/stores/useRootStore', () => ({
 	useRootStore: (): Partial<RootStoreState> => ({
 		versionCli: '0.123.0',
 	}),
@@ -49,7 +49,7 @@ vi.mock('@/stores/settings.store', () => ({
 	useSettingsStore,
 }));
 
-vi.mock('@n8n/composables/useDeviceSupport', () => ({
+vi.mock('@glow/composables/useDeviceSupport', () => ({
 	useDeviceSupport: () => ({
 		isTouchDevice: false,
 		userAgent: 'Mozilla/5.0',

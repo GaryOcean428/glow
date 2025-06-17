@@ -10,7 +10,7 @@ import {
 	type INodeType,
 	type INodeTypeDescription,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { flatten, generatePairedItemData, getResolvables } from '@utils/utilities';
 

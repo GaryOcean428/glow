@@ -1,4 +1,4 @@
-import type { User } from '@n8n/db';
+import type { User } from '@glow/db';
 import type { Request, Response } from 'express';
 import type { WebSocket } from 'ws';
 

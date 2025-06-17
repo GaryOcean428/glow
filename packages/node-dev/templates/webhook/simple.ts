@@ -4,7 +4,7 @@ import {
 	INodeTypeDescription,
 	INodeType,
 	IWebhookResponseData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class ClassNameReplace implements INodeType {
 	description: INodeTypeDescription = {

@@ -3,10 +3,10 @@ import {
 	CredentialsGetManyRequestQuery,
 	CredentialsGetOneRequestQuery,
 	GenerateCredentialNameRequestQuery,
-} from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { SharedCredentials, ProjectRelationRepository, SharedCredentialsRepository } from '@n8n/db';
+} from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { SharedCredentials, ProjectRelationRepository, SharedCredentialsRepository } from '@glow/db';
 import {
 	Delete,
 	Get,
@@ -19,11 +19,11 @@ import {
 	Body,
 	Param,
 	Query,
-} from '@n8n/decorators';
+} from '@glow/decorators';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In } from '@n8n/typeorm';
-import { deepCopy } from 'n8n-workflow';
-import type { ICredentialDataDecryptedObject } from 'n8n-workflow';
+import { In } from '@glow/typeorm';
+import { deepCopy } from 'glow-workflow';
+import type { ICredentialDataDecryptedObject } from 'glow-workflow';
 import { z } from 'zod';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';

@@ -1,7 +1,7 @@
-import { InsightsDateFilterDto, ListInsightsWorkflowQueryDto } from '@n8n/api-types';
-import type { InsightsSummary, InsightsByTime, InsightsByWorkflow } from '@n8n/api-types';
-import { Get, GlobalScope, Licensed, Query, RestController } from '@n8n/decorators';
-import type { UserError } from 'n8n-workflow';
+import { InsightsDateFilterDto, ListInsightsWorkflowQueryDto } from '@glow/api-types';
+import type { InsightsSummary, InsightsByTime, InsightsByWorkflow } from '@glow/api-types';
+import { Get, GlobalScope, Licensed, Query, RestController } from '@glow/decorators';
+import type { UserError } from 'glow-workflow';
 
 import { ForbiddenError } from '@/errors/response-errors/forbidden.error';
 import { AuthenticatedRequest } from '@/requests';

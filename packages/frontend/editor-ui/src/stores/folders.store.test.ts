@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
 import { useFoldersStore } from '@/stores/folders.store';
 import * as workflowsApi from '@/api/workflows';
 import type { ChangeLocationSearchResponseItem, IUsedCredential } from '@/Interface';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 
 vi.mock('@/utils/apiUtils', () => ({
 	makeRestApiRequest: vi.fn(),

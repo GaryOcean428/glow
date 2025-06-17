@@ -1,15 +1,15 @@
-import { Logger } from '@n8n/backend-common';
-import type { LdapConfig } from '@n8n/constants';
-import { LDAP_FEATURE_NAME } from '@n8n/constants';
-import { SettingsRepository } from '@n8n/db';
-import type { User, RunningMode, SyncStatus } from '@n8n/db';
-import { Service, Container } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import type { LdapConfig } from '@glow/constants';
+import { LDAP_FEATURE_NAME } from '@glow/constants';
+import { SettingsRepository } from '@glow/db';
+import type { User, RunningMode, SyncStatus } from '@glow/db';
+import { Service, Container } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { QueryFailedError } from '@n8n/typeorm';
+import { QueryFailedError } from '@glow/typeorm';
 import type { Entry as LdapUser, ClientOptions } from 'ldapts';
 import { Client } from 'ldapts';
-import { Cipher } from 'n8n-core';
-import { jsonParse, UnexpectedError } from 'n8n-workflow';
+import { Cipher } from 'glow-core';
+import { jsonParse, UnexpectedError } from 'glow-workflow';
 import type { ConnectionOptions } from 'tls';
 
 import config from '@/config';

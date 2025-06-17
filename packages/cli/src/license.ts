@@ -1,24 +1,24 @@
-import type { LicenseProvider } from '@n8n/backend-common';
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
+import type { LicenseProvider } from '@glow/backend-common';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
 import {
 	LICENSE_FEATURES,
 	LICENSE_QUOTAS,
 	UNLIMITED_LICENSE_QUOTA,
 	type BooleanLicenseFeature,
 	type NumericLicenseFeature,
-} from '@n8n/constants';
-import { SettingsRepository } from '@n8n/db';
-import { OnLeaderStepdown, OnLeaderTakeover, OnPubSubEvent, OnShutdown } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
+} from '@glow/constants';
+import { SettingsRepository } from '@glow/db';
+import { OnLeaderStepdown, OnLeaderTakeover, OnPubSubEvent, OnShutdown } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
 import type { TEntitlement, TLicenseBlock } from '@n8n_io/license-sdk';
 import { LicenseManager } from '@n8n_io/license-sdk';
-import { InstanceSettings } from 'n8n-core';
+import { InstanceSettings } from 'glow-core';
 
 import config from '@/config';
 import { LicenseMetricsService } from '@/metrics/license-metrics.service';
 
-import { N8N_VERSION, SETTINGS_LICENSE_CERT_KEY, Time } from './constants';
+import { GLOW_VERSION, SETTINGS_LICENSE_CERT_KEY, Time } from './constants';
 
 const LICENSE_RENEWAL_DISABLED_WARNING =
 	'Automatic license renewal is disabled. The license will not renew automatically, and access to licensed features may be lost!';
@@ -93,7 +93,7 @@ export class License implements LicenseProvider {
 			this.manager = new LicenseManager({
 				server,
 				tenantId: this.globalConfig.license.tenantId,
-				productIdentifier: `n8n-${N8N_VERSION}`,
+				productIdentifier: `n8n-${GLOW_VERSION}`,
 				autoRenewEnabled: shouldRenew,
 				renewOnInit: shouldRenew,
 				autoRenewOffset,

@@ -11,7 +11,7 @@ import {
 	type IPairedItemData,
 	NodeConnectionTypes,
 	type NodeExecutionHint,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { addBinariesToItem } from './utils';
 import { prepareFieldsArray } from '../utils/utils';

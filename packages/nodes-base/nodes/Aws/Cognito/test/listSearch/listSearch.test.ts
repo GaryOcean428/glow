@@ -2,7 +2,7 @@ import {
 	ApplicationError,
 	type ILoadOptionsFunctions,
 	type INodeListSearchResult,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { IUserPool } from '../../helpers/interfaces';
 import {

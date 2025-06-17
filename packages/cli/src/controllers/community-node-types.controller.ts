@@ -1,5 +1,5 @@
-import type { CommunityNodeType } from '@n8n/api-types';
-import { Get, RestController } from '@n8n/decorators';
+import type { CommunityNodeType } from '@glow/api-types';
+import { Get, RestController } from '@glow/decorators';
 import { Request } from 'express';
 
 import { CommunityNodeTypesService } from '@/services/community-node-types.service';

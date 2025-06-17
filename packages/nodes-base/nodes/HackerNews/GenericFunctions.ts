@@ -6,8 +6,8 @@ import type {
 	JsonObject,
 	IHttpRequestMethods,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError } from 'glow-workflow';
 
 /**
  * Make an API request to HackerNews

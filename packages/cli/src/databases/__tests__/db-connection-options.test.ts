@@ -1,7 +1,7 @@
-import type { GlobalConfig, InstanceSettingsConfig } from '@n8n/config';
-import { mysqlMigrations } from '@n8n/db';
-import { postgresMigrations } from '@n8n/db';
-import { sqliteMigrations } from '@n8n/db';
+import type { GlobalConfig, InstanceSettingsConfig } from '@glow/config';
+import { mysqlMigrations } from '@glow/db';
+import { postgresMigrations } from '@glow/db';
+import { sqliteMigrations } from '@glow/db';
 import { mock } from 'jest-mock-extended';
 import path from 'path';
 

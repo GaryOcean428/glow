@@ -1,5 +1,5 @@
-import { Logger } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { Container } from '@glow/di';
 import uniqBy from 'lodash/uniqBy';
 import type {
 	CodexData,
@@ -15,8 +15,8 @@ import type {
 	INodeTypeNameVersion,
 	IVersionedNodeType,
 	KnownNodesAndCredentials,
-} from 'n8n-workflow';
-import { ApplicationError, isSubNodeType } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, isSubNodeType } from 'glow-workflow';
 import { realpathSync } from 'node:fs';
 import * as path from 'path';
 

@@ -1,9 +1,9 @@
-import type { GlobalConfig } from '@n8n/config';
+import type { GlobalConfig } from '@glow/config';
 import { LicenseManager } from '@n8n_io/license-sdk';
 import { mock } from 'jest-mock-extended';
-import type { InstanceSettings } from 'n8n-core';
+import type { InstanceSettings } from 'glow-core';
 
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 import { License } from '@/license';
 import { mockLogger } from '@test/mocking';
 
@@ -56,7 +56,7 @@ describe('License', () => {
 				offlineMode: false,
 				renewOnInit: true,
 				deviceFingerprint: expect.any(Function),
-				productIdentifier: `n8n-${N8N_VERSION}`,
+				productIdentifier: `n8n-${GLOW_VERSION}`,
 				loadCertStr: expect.any(Function),
 				saveCertStr: expect.any(Function),
 				onFeatureChange: expect.any(Function),
@@ -87,7 +87,7 @@ describe('License', () => {
 				offlineMode: true,
 				renewOnInit: false,
 				deviceFingerprint: expect.any(Function),
-				productIdentifier: `n8n-${N8N_VERSION}`,
+				productIdentifier: `n8n-${GLOW_VERSION}`,
 				loadCertStr: expect.any(Function),
 				saveCertStr: expect.any(Function),
 				onFeatureChange: expect.any(Function),
@@ -218,7 +218,7 @@ describe('License', () => {
 
 describe('License', () => {
 	describe('init', () => {
-		it('when leader main with N8N_LICENSE_AUTO_RENEW_ENABLED=true, should enable renewal', async () => {
+		it('when leader main with GLOW_LICENSE_AUTO_RENEW_ENABLED=true, should enable renewal', async () => {
 			const globalConfig = mock<GlobalConfig>({
 				license: { ...licenseConfig, autoRenewalEnabled: true },
 			});
@@ -238,17 +238,17 @@ describe('License', () => {
 
 		it.each([
 			{
-				scenario: 'when leader main with N8N_LICENSE_AUTO_RENEW_ENABLED=false',
+				scenario: 'when leader main with GLOW_LICENSE_AUTO_RENEW_ENABLED=false',
 				isLeader: true,
 				autoRenewalEnabled: false,
 			},
 			{
-				scenario: 'when follower main with N8N_LICENSE_AUTO_RENEW_ENABLED=true',
+				scenario: 'when follower main with GLOW_LICENSE_AUTO_RENEW_ENABLED=true',
 				isLeader: false,
 				autoRenewalEnabled: true,
 			},
 			{
-				scenario: 'when follower main with N8N_LICENSE_AUTO_RENEW_ENABLED=false',
+				scenario: 'when follower main with GLOW_LICENSE_AUTO_RENEW_ENABLED=false',
 				isLeader: false,
 				autoRenewalEnabled: false,
 			},
@@ -273,7 +273,7 @@ describe('License', () => {
 			expect(LicenseManager).toHaveBeenCalledWith(expect.objectContaining(expectedRenewalSettings));
 		});
 
-		it('when CLI command with N8N_LICENSE_AUTO_RENEW_ENABLED=true, should enable renewal', async () => {
+		it('when CLI command with GLOW_LICENSE_AUTO_RENEW_ENABLED=true, should enable renewal', async () => {
 			const globalConfig = mock<GlobalConfig>({
 				license: { ...licenseConfig, autoRenewalEnabled: true },
 			});

@@ -1,6 +1,6 @@
 import { createPinia, setActivePinia } from 'pinia';
 import { useEvaluationStore } from '@/stores/evaluation.store.ee'; // Adjust the import path as necessary
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { usePostHog } from '@/stores/posthog.store';
 import { useAnnotationTagsStore } from '@/stores/tags.store';
 import type { TestRunRecord } from '@/api/evaluation.ee';
@@ -20,7 +20,7 @@ vi.mock('@/api/evaluation.ee', () => ({
 	deleteTestRun,
 }));
 
-vi.mock('@n8n/stores/useRootStore', () => ({
+vi.mock('@glow/stores/useRootStore', () => ({
 	useRootStore: vi.fn(() => ({
 		restApiContext: { instanceId: 'test-instance-id' },
 	})),

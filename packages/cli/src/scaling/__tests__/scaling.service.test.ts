@@ -1,9 +1,9 @@
-import { GlobalConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { Container } from '@glow/di';
 import * as BullModule from 'bull';
 import { mock } from 'jest-mock-extended';
-import { InstanceSettings } from 'n8n-core';
-import { ApplicationError, ExecutionCancelledError } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { ApplicationError, ExecutionCancelledError } from 'glow-workflow';
 
 import { mockInstance, mockLogger } from '@test/mocking';
 

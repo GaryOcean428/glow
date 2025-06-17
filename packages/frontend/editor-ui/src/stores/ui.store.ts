@@ -43,7 +43,7 @@ import {
 	IMPORT_WORKFLOW_URL_MODAL_KEY,
 	WORKFLOW_EXTRACTION_NAME_MODAL_KEY,
 } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type {
 	XYPosition,
 	Modals,
@@ -55,12 +55,12 @@ import type {
 	AppliedThemeOption,
 } from '@/Interface';
 import { defineStore } from 'pinia';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useUsersStore } from '@/stores/users.store';
-import { dismissBannerPermanently } from '@n8n/rest-api-client';
-import type { BannerName } from '@n8n/api-types';
+import { dismissBannerPermanently } from '@glow/rest-api-client';
+import type { BannerName } from '@glow/api-types';
 import {
 	addThemeToBody,
 	getPreferredTheme,
@@ -71,7 +71,7 @@ import {
 import { computed, ref } from 'vue';
 import type { Connection } from '@vue-flow/core';
 import { useLocalStorage } from '@vueuse/core';
-import type { EventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
 import type { ProjectSharingData } from '@/types/projects.types';
 
 let savedTheme: ThemeOption = 'system';

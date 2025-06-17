@@ -15,9 +15,9 @@ import type {
 	INode,
 	IDataObject,
 	IWorkflowBase,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, TelemetryHelpers } from 'n8n-workflow';
-import { retry } from '@n8n/utils/retry';
+} from 'glow-workflow';
+import { NodeConnectionTypes, TelemetryHelpers } from 'glow-workflow';
+import { retry } from '@glow/utils/retry';
 
 import { useToast } from '@/composables/useToast';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
@@ -28,14 +28,14 @@ import {
 	SINGLE_WEBHOOK_TRIGGERS,
 } from '@/constants';
 
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { displayForm } from '@/utils/executionUtils';
 import { useExternalHooks } from '@/composables/useExternalHooks';
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';
 import type { useRouter } from 'vue-router';
 import { isEmpty } from '@/utils/typesUtils';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import get from 'lodash/get';
 import { useExecutionsStore } from '@/stores/executions.store';
 import { useTelemetry } from './useTelemetry';
@@ -43,7 +43,7 @@ import { useSettingsStore } from '@/stores/settings.store';
 import { usePushConnectionStore } from '@/stores/pushConnection.store';
 import { useNodeDirtiness } from '@/composables/useNodeDirtiness';
 import { useCanvasOperations } from './useCanvasOperations';
-import { useAgentRequestStore } from '@n8n/stores/useAgentRequestStore';
+import { useAgentRequestStore } from '@glow/stores/useAgentRequestStore';
 import { useWorkflowSaving } from './useWorkflowSaving';
 
 export function useRunWorkflow(useRunWorkflowOpts: { router: ReturnType<typeof useRouter> }) {

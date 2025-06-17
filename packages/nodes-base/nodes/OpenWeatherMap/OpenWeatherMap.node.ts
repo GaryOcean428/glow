@@ -6,8 +6,8 @@ import type {
 	INodeTypeDescription,
 	JsonObject,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 export class OpenWeatherMap implements INodeType {
 	description: INodeTypeDescription = {

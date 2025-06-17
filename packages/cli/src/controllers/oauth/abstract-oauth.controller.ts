@@ -1,13 +1,13 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import type { CredentialsEntity, ICredentialsDb } from '@n8n/db';
-import { CredentialsRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import type { CredentialsEntity, ICredentialsDb } from '@glow/db';
+import { CredentialsRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import Csrf from 'csrf';
 import type { Response } from 'express';
-import { Credentials } from 'n8n-core';
-import type { ICredentialDataDecryptedObject, IWorkflowExecuteAdditionalData } from 'n8n-workflow';
-import { jsonParse, UnexpectedError } from 'n8n-workflow';
+import { Credentials } from 'glow-core';
+import type { ICredentialDataDecryptedObject, IWorkflowExecuteAdditionalData } from 'glow-workflow';
+import { jsonParse, UnexpectedError } from 'glow-workflow';
 
 import { RESPONSE_ERROR_MESSAGES, Time } from '@/constants';
 import { CredentialsFinderService } from '@/credentials/credentials-finder.service';
@@ -35,7 +35,7 @@ const MAX_CSRF_AGE = 5 * Time.minutes.toMilliseconds;
 
 // TODO: Flip this flag in v2
 // https://linear.app/n8n/issue/CAT-329
-export const skipAuthOnOAuthCallback = process.env.N8N_SKIP_AUTH_ON_OAUTH_CALLBACK !== 'true';
+export const skipAuthOnOAuthCallback = process.env.GLOW_SKIP_AUTH_ON_OAUTH_CALLBACK !== 'true';
 
 @Service()
 export abstract class AbstractOAuthController {

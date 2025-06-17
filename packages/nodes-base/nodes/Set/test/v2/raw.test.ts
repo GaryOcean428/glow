@@ -1,12 +1,12 @@
 import get from 'lodash/get';
-import { constructExecutionMetaData } from 'n8n-core';
+import { constructExecutionMetaData } from 'glow-core';
 import {
 	NodeOperationError,
 	type IDataObject,
 	type IExecuteFunctions,
 	type IGetNodeParameterOptions,
 	type INode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { type SetNodeOptions } from '../../v2/helpers/interfaces';
 import * as utils from '../../v2/helpers/utils';

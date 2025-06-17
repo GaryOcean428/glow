@@ -1,5 +1,5 @@
 import * as a from 'assert/strict';
-import { type AiAgentRequest, type INode, NodeConnectionTypes } from 'n8n-workflow';
+import { type AiAgentRequest, type INode, NodeConnectionTypes } from 'glow-workflow';
 
 import { type DirectedGraph } from './directed-graph';
 
@@ -29,7 +29,7 @@ export function rewireGraph(
 	const toolExecutor: INode = {
 		name: TOOL_EXECUTOR_NODE_NAME,
 		disabled: false,
-		type: '@n8n/n8n-nodes-langchain.toolExecutor',
+		type: '@glow/n8n-nodes-langchain.toolExecutor',
 		parameters: {
 			query: agentRequest?.query ?? {},
 			toolName: agentRequest?.tool?.name ?? '',

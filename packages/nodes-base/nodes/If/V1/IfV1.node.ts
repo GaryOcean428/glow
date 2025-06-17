@@ -7,8 +7,8 @@ import type {
 	INodeTypeBaseDescription,
 	INodeTypeDescription,
 	NodeParameterValue,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 export class IfV1 implements INodeType {
 	description: INodeTypeDescription;

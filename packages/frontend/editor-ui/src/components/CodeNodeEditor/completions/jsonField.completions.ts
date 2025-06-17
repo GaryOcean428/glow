@@ -3,8 +3,8 @@ import type { Completion, CompletionContext, CompletionResult } from '@codemirro
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useNDVStore } from '@/stores/ndv.store';
 import { isAllowedInDotNotation } from '@/plugins/codemirror/completions/utils';
-import { useI18n } from '@n8n/i18n';
-import type { IPinData, IRunData, IDataObject } from 'n8n-workflow';
+import { useI18n } from '@glow/i18n';
+import type { IPinData, IRunData, IDataObject } from 'glow-workflow';
 
 function useJsonFieldCompletions() {
 	const i18n = useI18n();

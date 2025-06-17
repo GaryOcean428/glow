@@ -15,14 +15,14 @@ import type {
 	Result,
 	Workflow,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	ApplicationError,
 	createDeferredPromise,
 	createEnvProviderState,
 	jsonParse,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { BaseExecuteContext } from './base-execute-context';
 import {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { UnexpectedError } from 'n8n-workflow';
+import { UnexpectedError } from 'glow-workflow';
 
 const REQUEST_TIMEOUT = 30000;
 

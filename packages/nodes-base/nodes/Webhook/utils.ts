@@ -1,12 +1,12 @@
 import basicAuth from 'basic-auth';
 import jwt from 'jsonwebtoken';
-import { NodeOperationError } from 'n8n-workflow';
+import { NodeOperationError } from 'glow-workflow';
 import type {
 	IWebhookFunctions,
 	INodeExecutionData,
 	IDataObject,
 	ICredentialDataDecryptedObject,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { WebhookAuthorizationError } from './error';
 import { formatPrivateKey } from '../../utils/utilities';

@@ -6,7 +6,7 @@ import {
 	type INodeTypeDescription,
 	type JsonObject,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export const apiUrl = 'https://api.peekalink.io';
 

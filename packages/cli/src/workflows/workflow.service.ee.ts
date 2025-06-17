@@ -1,4 +1,4 @@
-import { Logger } from '@n8n/backend-common';
+import { Logger } from '@glow/backend-common';
 import type {
 	CredentialsEntity,
 	CredentialUsedByWorkflow,
@@ -6,7 +6,7 @@ import type {
 	WorkflowEntity,
 	WorkflowWithSharingsAndCredentials,
 	WorkflowWithSharingsMetaDataAndCredentials,
-} from '@n8n/db';
+} from '@glow/db';
 import {
 	Folder,
 	Project,
@@ -15,13 +15,13 @@ import {
 	FolderRepository,
 	SharedWorkflowRepository,
 	WorkflowRepository,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
+} from '@glow/db';
+import { Service } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In, type EntityManager } from '@n8n/typeorm';
+import { In, type EntityManager } from '@glow/typeorm';
 import omit from 'lodash/omit';
-import type { IWorkflowBase, WorkflowId } from 'n8n-workflow';
-import { NodeOperationError, PROJECT_ROOT, UserError, WorkflowActivationError } from 'n8n-workflow';
+import type { IWorkflowBase, WorkflowId } from 'glow-workflow';
+import { NodeOperationError, PROJECT_ROOT, UserError, WorkflowActivationError } from 'glow-workflow';
 
 import { ActiveWorkflowManager } from '@/active-workflow-manager';
 import { CredentialsFinderService } from '@/credentials/credentials-finder.service';

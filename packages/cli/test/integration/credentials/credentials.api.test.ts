@@ -9,9 +9,9 @@ import { Container } from '@n8n/di';
 import type { Scope } from '@sentry/node';
 import * as a from 'assert';
 import { mock } from 'jest-mock-extended';
-import { Credentials } from 'n8n-core';
-import type { ICredentialDataDecryptedObject } from 'n8n-workflow';
-import { randomString } from 'n8n-workflow';
+import { Credentials } from 'glow-core';
+import type { ICredentialDataDecryptedObject } from 'glow-workflow';
+import { randomString } from 'glow-workflow';
 
 import { CREDENTIAL_BLANKING_VALUE } from '@/constants';
 import { CredentialsService } from '@/credentials/credentials.service';

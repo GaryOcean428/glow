@@ -1,10 +1,10 @@
-import { inTest, Logger } from '@n8n/backend-common';
-import { InstanceSettingsConfig } from '@n8n/config';
-import type { InstanceRole, InstanceType } from '@n8n/constants';
-import { Memoized } from '@n8n/decorators';
-import { Service } from '@n8n/di';
+import { inTest, Logger } from '@glow/backend-common';
+import { InstanceSettingsConfig } from '@glow/config';
+import type { InstanceRole, InstanceType } from '@glow/constants';
+import { Memoized } from '@glow/decorators';
+import { Service } from '@glow/di';
 import { createHash, randomBytes } from 'crypto';
-import { ApplicationError, jsonParse, ALPHABET, toResult } from 'n8n-workflow';
+import { ApplicationError, jsonParse, ALPHABET, toResult } from 'glow-workflow';
 import { customAlphabet } from 'nanoid';
 import { chmodSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'path';
@@ -172,7 +172,7 @@ export class InstanceSettings {
 	 * settings file with an auto-generated encryption key.
 	 */
 	private loadOrCreate(): Settings {
-		const encryptionKeyFromEnv = process.env.N8N_ENCRYPTION_KEY;
+		const encryptionKeyFromEnv = process.env.GLOW_ENCRYPTION_KEY;
 		if (existsSync(this.settingsFile)) {
 			const content = readFileSync(this.settingsFile, 'utf8');
 			this.ensureSettingsFilePermissions();
@@ -187,7 +187,7 @@ export class InstanceSettings {
 
 			if (encryptionKeyFromEnv && encryptionKey !== encryptionKeyFromEnv) {
 				throw new ApplicationError(
-					`Mismatching encryption keys. The encryption key in the settings file ${this.settingsFile} does not match the N8N_ENCRYPTION_KEY env var. Please make sure both keys match. More information: https://docs.n8n.io/hosting/environment-variables/configuration-methods/#encryption-key`,
+					`Mismatching encryption keys. The encryption key in the settings file ${this.settingsFile} does not match the GLOW_ENCRYPTION_KEY env var. Please make sure both keys match. More information: https://docs.n8n.io/hosting/environment-variables/configuration-methods/#encryption-key`,
 				);
 			}
 
@@ -238,11 +238,11 @@ export class InstanceSettings {
 		enforce: boolean;
 	} {
 		const { enforceSettingsFilePermissions } = this.config;
-		const isEnvVarSet = !!process.env.N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS;
+		const isEnvVarSet = !!process.env.GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS;
 		if (this.isWindows()) {
 			if (isEnvVarSet) {
 				console.warn(
-					'Ignoring N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS as it is not supported on Windows.',
+					'Ignoring GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS as it is not supported on Windows.',
 				);
 			}
 
@@ -278,7 +278,7 @@ export class InstanceSettings {
 		// If we can't determine the permissions, log a warning and skip the check
 		if (!permissionsResult.ok) {
 			this.logger.warn(
-				`Could not ensure settings file permissions: ${permissionsResult.error.message}. To skip this check, set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.`,
+				`Could not ensure settings file permissions: ${permissionsResult.error.message}. To skip this check, set GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.`,
 			);
 			return;
 		}
@@ -291,7 +291,7 @@ export class InstanceSettings {
 		// If the permissions are incorrect and the flag is not set, log a warning
 		if (!this.enforceSettingsFilePermissions.isSet) {
 			this.logger.warn(
-				`Permissions 0${permissionsResult.result.toString(8)} for n8n settings file ${this.settingsFile} are too wide. This is ignored for now, but in the future n8n will attempt to change the permissions automatically. To automatically enforce correct permissions now set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true (recommended), or turn this check off set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.`,
+				`Permissions 0${permissionsResult.result.toString(8)} for n8n settings file ${this.settingsFile} are too wide. This is ignored for now, but in the future n8n will attempt to change the permissions automatically. To automatically enforce correct permissions now set GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS=true (recommended), or turn this check off set GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.`,
 			);
 			// The default is false so we skip the enforcement for now
 			return;
@@ -307,7 +307,7 @@ export class InstanceSettings {
 				// error and ignore it. We might want to prevent the app startup in the
 				// future in this case.
 				this.logger.warn(
-					`Could not enforce settings file permissions: ${chmodResult.error.message}. To skip this check, set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.`,
+					`Could not enforce settings file permissions: ${chmodResult.error.message}. To skip this check, set GLOW_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.`,
 				);
 			}
 		}

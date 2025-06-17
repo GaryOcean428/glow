@@ -1,5 +1,5 @@
-import { NodeApiError, type IExecuteFunctions, type INode, type IDataObject } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import { NodeApiError, type IExecuteFunctions, type INode, type IDataObject } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { SESSION_MODE } from './actions/common/fields';
 import type { TScrollingMode } from './constants';

@@ -1,9 +1,9 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import type { Project, User, CreateExecutionPayload } from '@n8n/db';
-import { ExecutionRepository, WorkflowRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { ErrorReporter } from 'n8n-core';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import type { Project, User, CreateExecutionPayload } from '@glow/db';
+import { ExecutionRepository, WorkflowRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { ErrorReporter } from 'glow-core';
 import type {
 	IDeferredPromise,
 	IExecuteData,
@@ -16,8 +16,8 @@ import type {
 	WorkflowExecuteMode,
 	IWorkflowExecutionDataProcess,
 	IWorkflowBase,
-} from 'n8n-workflow';
-import { SubworkflowOperationError, Workflow } from 'n8n-workflow';
+} from 'glow-workflow';
+import { SubworkflowOperationError, Workflow } from 'glow-workflow';
 
 import config from '@/config';
 import { ExecutionDataService } from '@/executions/execution-data.service';

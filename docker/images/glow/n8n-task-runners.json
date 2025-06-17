@@ -1,0 +1,36 @@
+{
+	"task-runners": [
+		{
+			"runner-type": "javascript",
+			"workdir": "/home/node",
+			"command": "/usr/local/bin/node",
+			"args": [
+				"--disallow-code-generation-from-strings",
+				"--disable-proto=delete",
+				"/usr/local/lib/node_modules/glow/node_modules/@glow/task-runner/dist/start.js"
+			],
+			"allowed-env": [
+				"PATH",
+				"GENERIC_TIMEZONE",
+				"GLOW_RUNNERS_GRANT_TOKEN",
+				"GLOW_RUNNERS_TASK_BROKER_URI",
+				"GLOW_RUNNERS_MAX_PAYLOAD",
+				"GLOW_RUNNERS_MAX_CONCURRENCY",
+				"GLOW_RUNNERS_TASK_TIMEOUT",
+				"GLOW_RUNNERS_HEARTBEAT_INTERVAL",
+				"GLOW_RUNNERS_HEALTH_CHECK_SERVER_ENABLED",
+				"GLOW_RUNNERS_HEALTH_CHECK_SERVER_HOST",
+				"GLOW_RUNNERS_HEALTH_CHECK_SERVER_PORT",
+				"NODE_FUNCTION_ALLOW_BUILTIN",
+				"NODE_FUNCTION_ALLOW_EXTERNAL",
+				"GLOW_RUNNERS_ALLOW_PROTOTYPE_MUTATION",
+				"NODE_OPTIONS",
+				"NODE_PATH",
+				"GLOW_SENTRY_DSN",
+				"GLOW_VERSION",
+				"ENVIRONMENT",
+				"DEPLOYMENT_NAME"
+			]
+		}
+	]
+}

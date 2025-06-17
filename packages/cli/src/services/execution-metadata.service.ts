@@ -1,6 +1,6 @@
-import type { ExecutionMetadata } from '@n8n/db';
-import { ExecutionMetadataRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import type { ExecutionMetadata } from '@glow/db';
+import { ExecutionMetadataRepository } from '@glow/db';
+import { Service } from '@glow/di';
 
 @Service()
 export class ExecutionMetadataService {

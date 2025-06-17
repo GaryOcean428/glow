@@ -1,5 +1,5 @@
-import { Service } from '@n8n/di';
-import { LoadOptionsContext, RoutingNode, LocalLoadOptionsContext, ExecuteContext } from 'n8n-core';
+import { Service } from '@glow/di';
+import { LoadOptionsContext, RoutingNode, LocalLoadOptionsContext, ExecuteContext } from 'glow-core';
 import type {
 	ILoadOptions,
 	ILoadOptionsFunctions,
@@ -20,8 +20,8 @@ import type {
 	IDataObject,
 	ILocalLoadOptionsFunctions,
 	IExecuteData,
-} from 'n8n-workflow';
-import { Workflow, UnexpectedError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { Workflow, UnexpectedError } from 'glow-workflow';
 
 import { NodeTypes } from '@/node-types';
 

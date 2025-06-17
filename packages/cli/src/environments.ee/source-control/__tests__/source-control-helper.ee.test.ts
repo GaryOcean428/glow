@@ -1,8 +1,8 @@
-import type { SourceControlledFile } from '@n8n/api-types';
-import { Container } from '@n8n/di';
+import type { SourceControlledFile } from '@glow/api-types';
+import { Container } from '@glow/di';
 import { constants as fsConstants, accessSync } from 'fs';
 import { mock } from 'jest-mock-extended';
-import { InstanceSettings } from 'n8n-core';
+import { InstanceSettings } from 'glow-core';
 import path from 'path';
 
 import {

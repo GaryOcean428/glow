@@ -6,8 +6,8 @@ import type {
 	INodeType,
 	INodeTypeBaseDescription,
 	INodeTypeDescription,
-} from 'n8n-workflow';
-import { BINARY_ENCODING, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { BINARY_ENCODING, NodeConnectionTypes } from 'glow-workflow';
 import type { Readable } from 'stream';
 import { v4 as uuid } from 'uuid';
 

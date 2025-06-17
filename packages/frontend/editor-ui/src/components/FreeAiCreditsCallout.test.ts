@@ -7,7 +7,7 @@ import { useUsersStore } from '@/stores/users.store';
 import { useNDVStore } from '@/stores/ndv.store';
 import { usePostHog } from '@/stores/posthog.store';
 import { useProjectsStore } from '@/stores/projects.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useToast } from '@/composables/useToast';
 import { renderComponent } from '@/__tests__/render';
 import { mockedStore } from '@/__tests__/utils';
@@ -45,7 +45,7 @@ vi.mock('@/stores/projects.store', () => ({
 	useProjectsStore: vi.fn(),
 }));
 
-vi.mock('@n8n/stores/useRootStore', () => ({
+vi.mock('@glow/stores/useRootStore', () => ({
 	useRootStore: vi.fn(),
 }));
 
@@ -97,7 +97,7 @@ describe('FreeAiCreditsCallout', () => {
 		});
 
 		(useNDVStore as any).mockReturnValue({
-			activeNode: { type: '@n8n/n8n-nodes-langchain.openAi' },
+			activeNode: { type: '@glow/n8n-nodes-langchain.openAi' },
 		});
 
 		(usePostHog as any).mockReturnValue({
@@ -195,7 +195,7 @@ describe('FreeAiCreditsCallout', () => {
 
 	it('should not be able to claim credits if active node it is not a valid node', async () => {
 		(useNDVStore as any).mockReturnValue({
-			activeNode: { type: '@n8n/n8n-nodes.jira' },
+			activeNode: { type: '@glow/n8n-nodes.jira' },
 		});
 
 		renderComponent(FreeAiCreditsCallout);

@@ -7,7 +7,7 @@ import { SharedCredentialsRepository } from '@n8n/db';
 import { SharedWorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { getOwnerOnlyApiKeyScopes } from '@n8n/permissions';
-import { randomString } from 'n8n-workflow';
+import { randomString } from 'glow-workflow';
 import validator from 'validator';
 
 import { affixRoleToSaveCredential, createCredentials } from '@test-integration/db/credentials';

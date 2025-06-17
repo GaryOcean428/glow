@@ -1,4 +1,4 @@
 {
-	"extends": "./packages/@n8n/typescript-config/tsconfig.common.json",
+	"extends": "./packages/@glow/typescript-config/tsconfig.common.json",
 	"exclude": ["**/dist/**/*", "**/node_modules/**/*", "cypress"]
 }

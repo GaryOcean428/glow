@@ -1,14 +1,14 @@
 import { computed, reactive } from 'vue';
 import { defineStore } from 'pinia';
 import type { CloudPlanState } from '@/Interface';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useUsersStore } from '@/stores/users.store';
 import { getAdminPanelLoginCode, getCurrentPlan, getCurrentUsage } from '@/api/cloudPlans';
 import { DateTime } from 'luxon';
 import { CLOUD_TRIAL_CHECK_INTERVAL } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { hasPermission } from '@/utils/rbac/permissions';
 
 const DEFAULT_STATE: CloudPlanState = {

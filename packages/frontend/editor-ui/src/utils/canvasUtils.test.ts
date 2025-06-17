@@ -8,8 +8,8 @@ import {
 	mapLegacyEndpointsToCanvasConnectionPort,
 	parseCanvasConnectionHandleString,
 } from '@/utils/canvasUtils';
-import type { IConnection, IConnections, INodeTypeDescription } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { IConnection, IConnections, INodeTypeDescription } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type { CanvasConnection } from '@/types';
 import { CanvasConnectionMode } from '@/types';
 import type { INodeUi } from '@/Interface';

@@ -2,7 +2,7 @@ import {
 	MANUAL_TRIGGER_NODE_TYPE,
 	SEND_AND_WAIT_OPERATION,
 	TRIMMED_TASK_DATA_CONNECTIONS_KEY,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type {
 	ITaskData,
 	ExecutionStatus,
@@ -12,7 +12,7 @@ import type {
 	IRunData,
 	ExecutionError,
 	INodeTypeBaseDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type {
 	ExecutionFilterType,
 	ExecutionsQueryFilter,
@@ -32,8 +32,8 @@ import {
 	WORKFLOW_TRIGGER_NODE_TYPE,
 } from '../constants';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
-import { i18n } from '@n8n/i18n';
+import { useRootStore } from '@glow/stores/useRootStore';
+import { i18n } from '@glow/i18n';
 import { h } from 'vue';
 import NodeExecutionErrorMessage from '@/components/NodeExecutionErrorMessage.vue';
 import { parse } from 'flatted';

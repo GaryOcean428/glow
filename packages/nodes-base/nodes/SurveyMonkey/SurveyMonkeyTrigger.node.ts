@@ -9,8 +9,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	IWebhookResponseData,
-} from 'n8n-workflow';
-import { deepCopy, jsonParse, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { deepCopy, jsonParse, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { idsExist, surveyMonkeyApiRequest, surveyMonkeyRequestAllItems } from './GenericFunctions';
 import type { IAnswer, IChoice, IOther, IQuestion, IRow } from './Interfaces';

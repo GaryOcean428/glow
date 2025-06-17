@@ -37,12 +37,12 @@ import {
 
 import type { NodeViewItem, NodeViewItemSection } from '@/components/Node/NodeCreator/viewsData';
 import { AINodesView } from '@/components/Node/NodeCreator/viewsData';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useKeyboardNavigation } from './useKeyboardNavigation';
 
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
-import { AI_TRANSFORM_NODE_TYPE } from 'n8n-workflow';
-import type { NodeConnectionType, INodeInputFilter } from 'n8n-workflow';
+import { AI_TRANSFORM_NODE_TYPE } from 'glow-workflow';
+import type { NodeConnectionType, INodeInputFilter } from 'glow-workflow';
 import { useCanvasStore } from '@/stores/canvas.store';
 import { useSettingsStore } from '@/stores/settings.store';
 

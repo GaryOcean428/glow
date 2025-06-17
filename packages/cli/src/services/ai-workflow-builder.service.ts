@@ -1,9 +1,9 @@
-import { AiWorkflowBuilderService } from '@n8n/ai-workflow-builder';
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
-import type { IUser } from 'n8n-workflow';
+import { AiWorkflowBuilderService } from '@glow/ai-workflow-builder';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
+import type { IUser } from 'glow-workflow';
 
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 import { License } from '@/license';
 import { NodeTypes } from '@/node-types';
 
@@ -27,7 +27,7 @@ export class WorkflowBuilderService {
 				this.license,
 				this.nodeTypes,
 				this.config,
-				N8N_VERSION,
+				GLOW_VERSION,
 			);
 		}
 		return this.service;

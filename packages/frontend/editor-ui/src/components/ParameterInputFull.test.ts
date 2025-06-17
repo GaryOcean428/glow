@@ -5,7 +5,7 @@ import type { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import type { useSettingsStore } from '@/stores/settings.store';
 import { cleanupAppModals, createAppModals } from '@/__tests__/utils';
 import ParameterInputFull from './ParameterInputFull.vue';
-import { FROM_AI_AUTO_GENERATED_MARKER } from 'n8n-workflow';
+import { FROM_AI_AUTO_GENERATED_MARKER } from 'glow-workflow';
 
 type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 

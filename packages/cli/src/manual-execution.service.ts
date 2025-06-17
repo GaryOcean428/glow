@@ -1,5 +1,5 @@
-import { Logger } from '@n8n/backend-common';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { Service } from '@glow/di';
 import * as a from 'assert/strict';
 import {
 	DirectedGraph,
@@ -8,8 +8,8 @@ import {
 	WorkflowExecute,
 	isTool,
 	rewireGraph,
-} from 'n8n-core';
-import { MANUAL_TRIGGER_NODE_TYPE } from 'n8n-workflow';
+} from 'glow-core';
+import { MANUAL_TRIGGER_NODE_TYPE } from 'glow-workflow';
 import type {
 	IExecuteData,
 	IPinData,
@@ -20,7 +20,7 @@ import type {
 	IWorkflowExecuteAdditionalData,
 	IWorkflowExecutionDataProcess,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type PCancelable from 'p-cancelable';
 
 @Service()

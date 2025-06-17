@@ -1,6 +1,6 @@
 import type { DeepMockProxy } from 'jest-mock-extended';
 import { mock, mockDeep } from 'jest-mock-extended';
-import { constructExecutionMetaData } from 'n8n-core';
+import { constructExecutionMetaData } from 'glow-core';
 import {
 	BINARY_ENCODING,
 	WAIT_NODE_TYPE,
@@ -8,7 +8,7 @@ import {
 	type INode,
 	type INodeExecutionData,
 	type NodeTypeAndVersion,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { RespondToWebhook } from '../RespondToWebhook.node';
 

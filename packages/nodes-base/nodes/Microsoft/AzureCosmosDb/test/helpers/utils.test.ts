@@ -5,8 +5,8 @@ import type {
 	IHttpRequestOptions,
 	INode,
 	INodeExecutionData,
-} from 'n8n-workflow';
-import { NodeApiError, NodeOperationError, OperationalError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeOperationError, OperationalError } from 'glow-workflow';
 
 const azureCosmosDbApiRequest = jest.fn();
 jest.mock('../../transport', () => ({ azureCosmosDbApiRequest }));

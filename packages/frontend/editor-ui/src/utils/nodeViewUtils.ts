@@ -15,8 +15,8 @@ import type {
 	INodeTypeDescription,
 	NodeHint,
 	Workflow,
-} from 'n8n-workflow';
-import { NodeHelpers, SEND_AND_WAIT_OPERATION } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeHelpers, SEND_AND_WAIT_OPERATION } from 'glow-workflow';
 import type { RouteLocation } from 'vue-router';
 import type { ViewportBoundaries } from '@/types';
 import {

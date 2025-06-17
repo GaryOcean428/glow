@@ -3,7 +3,7 @@ import { createComponentRenderer } from '@/__tests__/render';
 import NodeErrorView from '@/components/Error/NodeErrorView.vue';
 
 import { createTestingPinia } from '@pinia/testing';
-import type { NodeError } from 'n8n-workflow';
+import type { NodeError } from 'glow-workflow';
 import { useAssistantStore } from '@/stores/assistant.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { mockedStore } from '@/__tests__/utils';

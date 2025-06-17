@@ -1,11 +1,11 @@
 import * as workflowsApi from '@/api/workflows.ee';
 import { EnterpriseEditionFeature } from '@/constants';
-import { STORES } from '@n8n/stores';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { STORES } from '@glow/stores';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useSettingsStore } from '@/stores/settings.store';
 import { defineStore } from 'pinia';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { i18n } from '@n8n/i18n';
+import { i18n } from '@glow/i18n';
 import type { ProjectSharingData } from '@/types/projects.types';
 import { splitName } from '@/utils/projects.utils';
 import { computed } from 'vue';

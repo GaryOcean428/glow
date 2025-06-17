@@ -1,4 +1,4 @@
-import type { Logger } from 'n8n-workflow';
+import type { Logger } from 'glow-workflow';
 import type { Readable } from 'stream';
 
 /**

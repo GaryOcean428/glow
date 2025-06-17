@@ -11,8 +11,8 @@ import type {
 	INodeTypeDescription,
 	INodeIssues,
 	ITaskData,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeHelpers, Workflow } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeHelpers, Workflow } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 import { mock } from 'vitest-mock-extended';
 
@@ -29,7 +29,7 @@ import {
 } from '@/constants';
 import type { IExecutionResponse, INodeUi, IWorkflowDb } from '@/Interface';
 import { CanvasNodeRenderType } from '@/types';
-import type { FrontendSettings } from '@n8n/api-types';
+import type { FrontendSettings } from '@glow/api-types';
 
 export const mockNode = ({
 	id = uuid(),

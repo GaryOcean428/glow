@@ -7,7 +7,7 @@ import {
 	MANUAL_TRIGGER_NODE_TYPE,
 } from '@/constants';
 import { type IExecutionResponse } from '@/Interface';
-import { WorkflowOperationError, type IRunData, type Workflow } from 'n8n-workflow';
+import { WorkflowOperationError, type IRunData, type Workflow } from 'glow-workflow';
 import type { LogTreeCreationContext } from '../logs.types';
 
 export function createTestLogTreeCreationContext(

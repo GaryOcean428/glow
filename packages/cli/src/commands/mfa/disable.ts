@@ -1,5 +1,5 @@
-import { UserRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { UserRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
 
 import { BaseCommand } from '../base-command';

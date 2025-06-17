@@ -1,5 +1,5 @@
-import { LicenseState, Logger } from '@n8n/backend-common';
-import { Service } from '@n8n/di';
+import { LicenseState, Logger } from '@glow/backend-common';
+import { Service } from '@glow/di';
 import { strict } from 'assert';
 
 import { Time } from '@/constants';

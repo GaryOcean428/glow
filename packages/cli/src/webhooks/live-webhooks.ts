@@ -1,9 +1,9 @@
-import { Logger } from '@n8n/backend-common';
-import { WorkflowRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { WorkflowRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import type { Response } from 'express';
-import { Workflow, CHAT_TRIGGER_NODE_TYPE } from 'n8n-workflow';
-import type { INode, IWebhookData, IHttpRequestMethods } from 'n8n-workflow';
+import { Workflow, CHAT_TRIGGER_NODE_TYPE } from 'glow-workflow';
+import type { INode, IWebhookData, IHttpRequestMethods } from 'glow-workflow';
 
 import { NotFoundError } from '@/errors/response-errors/not-found.error';
 import { WebhookNotFoundError } from '@/errors/response-errors/webhook-not-found.error';

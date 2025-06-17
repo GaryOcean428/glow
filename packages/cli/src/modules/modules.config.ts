@@ -1,6 +1,6 @@
-import { CommaSeparatedStringArray, Config, Env } from '@n8n/config';
-import type { InstanceSettings } from 'n8n-core';
-import { UnexpectedError } from 'n8n-workflow';
+import { CommaSeparatedStringArray, Config, Env } from '@glow/config';
+import type { InstanceSettings } from 'glow-core';
+import { UnexpectedError } from 'glow-workflow';
 
 export type ModulePreInitContext = {
 	instance: InstanceSettings;
@@ -28,11 +28,11 @@ class Modules extends CommaSeparatedStringArray<ModuleName> {
 @Config
 export class ModulesConfig {
 	/** Comma-separated list of all modules enabled */
-	@Env('N8N_ENABLED_MODULES')
+	@Env('GLOW_ENABLED_MODULES')
 	enabledModules: Modules = [];
 
 	/** Comma-separated list of all disabled modules */
-	@Env('N8N_DISABLED_MODULES')
+	@Env('GLOW_DISABLED_MODULES')
 	disabledModules: Modules = [];
 
 	// Default modules are always enabled unless explicitly disabled

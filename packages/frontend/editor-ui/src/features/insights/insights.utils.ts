@@ -1,4 +1,4 @@
-import type { InsightsSummary, InsightsSummaryType } from '@n8n/api-types';
+import type { InsightsSummary, InsightsSummaryType } from '@glow/api-types';
 import type { InsightsSummaryDisplay } from '@/features/insights/insights.types';
 import {
 	INSIGHTS_SUMMARY_ORDER,

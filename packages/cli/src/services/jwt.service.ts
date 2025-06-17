@@ -1,7 +1,7 @@
-import { Service } from '@n8n/di';
+import { Service } from '@glow/di';
 import { createHash } from 'crypto';
 import jwt from 'jsonwebtoken';
-import { InstanceSettings } from 'n8n-core';
+import { InstanceSettings } from 'glow-core';
 
 import config from '@/config';
 

@@ -40,7 +40,7 @@ export const MERGE_NODE_TYPE = 'n8n-nodes-base.merge';
 export const AI_TRANSFORM_NODE_TYPE = 'n8n-nodes-base.aiTransform';
 export const FORM_NODE_TYPE = 'n8n-nodes-base.form';
 export const FORM_TRIGGER_NODE_TYPE = 'n8n-nodes-base.formTrigger';
-export const CHAT_TRIGGER_NODE_TYPE = '@n8n/n8n-nodes-langchain.chatTrigger';
+export const CHAT_TRIGGER_NODE_TYPE = '@glow/n8n-nodes-langchain.chatTrigger';
 export const WAIT_NODE_TYPE = 'n8n-nodes-base.wait';
 
 export const STARTING_NODE_TYPES = [
@@ -71,16 +71,16 @@ export const NODES_WITH_RENAMABLE_CONTENT = new Set([
 	AI_TRANSFORM_NODE_TYPE,
 ]);
 
-//@n8n/n8n-nodes-langchain
-export const MANUAL_CHAT_TRIGGER_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.manualChatTrigger';
-export const AGENT_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.agent';
-export const CHAIN_LLM_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.chainLlm';
-export const OPENAI_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.openAi';
+//@glow/n8n-nodes-langchain
+export const MANUAL_CHAT_TRIGGER_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.manualChatTrigger';
+export const AGENT_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.agent';
+export const CHAIN_LLM_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.chainLlm';
+export const OPENAI_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.openAi';
 export const CHAIN_SUMMARIZATION_LANGCHAIN_NODE_TYPE =
-	'@n8n/n8n-nodes-langchain.chainSummarization';
-export const CODE_TOOL_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolCode';
-export const WORKFLOW_TOOL_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolWorkflow';
-export const HTTP_REQUEST_TOOL_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolHttpRequest';
+	'@glow/n8n-nodes-langchain.chainSummarization';
+export const CODE_TOOL_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.toolCode';
+export const WORKFLOW_TOOL_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.toolWorkflow';
+export const HTTP_REQUEST_TOOL_LANGCHAIN_NODE_TYPE = '@glow/n8n-nodes-langchain.toolHttpRequest';
 
 export const LANGCHAIN_CUSTOM_TOOLS = [
 	CODE_TOOL_LANGCHAIN_NODE_TYPE,

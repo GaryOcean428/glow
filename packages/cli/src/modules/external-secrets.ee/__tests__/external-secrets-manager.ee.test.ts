@@ -1,4 +1,4 @@
-import type { Settings, SettingsRepository } from '@n8n/db';
+import type { Settings, SettingsRepository } from '@glow/db';
 import { captor, mock } from 'jest-mock-extended';
 
 import type { License } from '@/license';

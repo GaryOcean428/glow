@@ -1,5 +1,5 @@
-import { createEventBus } from '@n8n/utils/event-bus';
-import type { IDataObject } from 'n8n-workflow';
+import { createEventBus } from '@glow/utils/event-bus';
+import type { IDataObject } from 'glow-workflow';
 
 /** Callback function called after workflow has been save */
 export type OnSaveWorkflowFn = () => void;

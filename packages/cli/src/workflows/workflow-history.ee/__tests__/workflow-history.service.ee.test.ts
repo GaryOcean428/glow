@@ -1,5 +1,5 @@
-import { User } from '@n8n/db';
-import { WorkflowHistoryRepository } from '@n8n/db';
+import { User } from '@glow/db';
+import { WorkflowHistoryRepository } from '@glow/db';
 import { mockClear } from 'jest-mock-extended';
 
 import { WorkflowFinderService } from '@/workflows/workflow-finder.service';

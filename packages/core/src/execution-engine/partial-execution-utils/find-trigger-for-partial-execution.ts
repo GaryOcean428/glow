@@ -1,5 +1,5 @@
 import * as assert from 'assert/strict';
-import type { INode, INodeType, IRunData, Workflow } from 'n8n-workflow';
+import type { INode, INodeType, IRunData, Workflow } from 'glow-workflow';
 
 const isTriggerNode = (nodeType: INodeType) => nodeType.description.group.includes('trigger');
 

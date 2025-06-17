@@ -1,7 +1,7 @@
-import { CommunityRegisteredRequestDto } from '@n8n/api-types';
-import { Get, Post, RestController, GlobalScope, Body } from '@n8n/decorators';
+import { CommunityRegisteredRequestDto } from '@glow/api-types';
+import { Get, Post, RestController, GlobalScope, Body } from '@glow/decorators';
 import type { AxiosError } from 'axios';
-import { InstanceSettings } from 'n8n-core';
+import { InstanceSettings } from 'glow-core';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';
 import { AuthenticatedRequest, LicenseRequest } from '@/requests';

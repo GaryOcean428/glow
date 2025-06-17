@@ -7,7 +7,7 @@ import type {
 	IHttpRequestMethods,
 	IHttpRequestOptions,
 	INodePropertyOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 /**
  * Make an API request to Asana

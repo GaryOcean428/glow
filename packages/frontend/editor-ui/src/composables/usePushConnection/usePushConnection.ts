@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import type { PushMessage } from '@n8n/api-types';
+import type { PushMessage } from '@glow/api-types';
 
 import { usePushConnectionStore } from '@/stores/pushConnection.store';
 import {
@@ -19,7 +19,7 @@ import {
 	workflowActivated,
 	workflowDeactivated,
 } from '@/composables/usePushConnection/handlers';
-import { createEventQueue } from '@n8n/utils/event-queue';
+import { createEventQueue } from '@glow/utils/event-queue';
 import type { useRouter } from 'vue-router';
 
 export function usePushConnection(options: { router: ReturnType<typeof useRouter> }) {

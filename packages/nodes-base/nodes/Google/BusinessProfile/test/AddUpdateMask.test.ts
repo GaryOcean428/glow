@@ -1,4 +1,4 @@
-import type { IExecuteSingleFunctions, IHttpRequestOptions } from 'n8n-workflow';
+import type { IExecuteSingleFunctions, IHttpRequestOptions } from 'glow-workflow';
 
 import { addUpdateMaskPresend } from '../GenericFunctions';
 

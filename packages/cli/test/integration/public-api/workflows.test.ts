@@ -6,8 +6,8 @@ import { ProjectRepository } from '@n8n/db';
 import { WorkflowHistoryRepository } from '@n8n/db';
 import { SharedWorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
-import type { INode } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import type { INode } from 'glow-workflow';
 
 import { ActiveWorkflowManager } from '@/active-workflow-manager';
 import { STARTING_NODES } from '@/constants';
@@ -1293,7 +1293,7 @@ describe('GET /workflows/:id/tags', () => {
 
 	test('should fail due to invalid API Key', testWithAPIKey('get', '/workflows/2/tags', 'abcXYZ'));
 
-	test('should fail if N8N_WORKFLOW_TAGS_DISABLED', async () => {
+	test('should fail if GLOW_WORKFLOW_TAGS_DISABLED', async () => {
 		globalConfig.tags.disabled = true;
 
 		const response = await authOwnerAgent.get('/workflows/2/tags');
@@ -1347,7 +1347,7 @@ describe('PUT /workflows/:id/tags', () => {
 
 	test('should fail due to invalid API Key', testWithAPIKey('put', '/workflows/2/tags', 'abcXYZ'));
 
-	test('should fail if N8N_WORKFLOW_TAGS_DISABLED', async () => {
+	test('should fail if GLOW_WORKFLOW_TAGS_DISABLED', async () => {
 		globalConfig.tags.disabled = true;
 
 		const response = await authOwnerAgent.put('/workflows/2/tags').send([]);

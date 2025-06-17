@@ -4,7 +4,7 @@ import type {
 	IDataObject,
 	NodeInputConnections,
 	NodeParameterValueType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { INodeUi, IUpdateInformation } from '@/Interface';
 import { SWITCH_NODE_TYPE } from '@/constants';
 import isEqual from 'lodash/isEqual';

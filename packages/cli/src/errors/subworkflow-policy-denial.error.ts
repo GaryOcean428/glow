@@ -1,6 +1,6 @@
-import type { Project } from '@n8n/db';
-import { WorkflowOperationError } from 'n8n-workflow';
-import type { INode } from 'n8n-workflow';
+import type { Project } from '@glow/db';
+import { WorkflowOperationError } from 'glow-workflow';
+import type { INode } from 'glow-workflow';
 
 type Options = {
 	/** ID of the subworkflow whose execution was denied. */

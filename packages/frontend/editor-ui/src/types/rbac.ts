@@ -1,4 +1,4 @@
-import type { Resource, ScopeOptions, Scope } from '@n8n/permissions';
+import type { Resource, ScopeOptions, Scope } from '@glow/permissions';
 import type { EnterpriseEditionFeatureValue, IRole } from '@/Interface';
 
 export type AuthenticatedPermissionOptions = {

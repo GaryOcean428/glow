@@ -1,10 +1,10 @@
-import type { CredentialsEntity, User } from '@n8n/db';
-import { Project, SharedCredentials, SharedCredentialsRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { hasGlobalScope, rolesWithScope } from '@n8n/permissions';
+import type { CredentialsEntity, User } from '@glow/db';
+import { Project, SharedCredentials, SharedCredentialsRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { hasGlobalScope, rolesWithScope } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In, type EntityManager } from '@n8n/typeorm';
-import type { ICredentialDataDecryptedObject } from 'n8n-workflow';
+import { In, type EntityManager } from '@glow/typeorm';
+import type { ICredentialDataDecryptedObject } from 'glow-workflow';
 
 import { NotFoundError } from '@/errors/response-errors/not-found.error';
 import { TransferCredentialError } from '@/errors/response-errors/transfer-credential.error';

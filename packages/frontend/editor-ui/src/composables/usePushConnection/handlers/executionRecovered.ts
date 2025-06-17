@@ -1,4 +1,4 @@
-import type { ExecutionRecovered } from '@n8n/api-types/push/execution';
+import type { ExecutionRecovered } from '@glow/api-types/push/execution';
 import { useUIStore } from '@/stores/ui.store';
 import {
 	fetchExecutionData,

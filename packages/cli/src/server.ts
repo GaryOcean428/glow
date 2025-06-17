@@ -1,18 +1,18 @@
-import { inDevelopment, inProduction, LicenseState } from '@n8n/backend-common';
-import { SecurityConfig } from '@n8n/config';
-import { Container, Service } from '@n8n/di';
+import { inDevelopment, inProduction, LicenseState } from '@glow/backend-common';
+import { SecurityConfig } from '@glow/config';
+import { Container, Service } from '@glow/di';
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import { access as fsAccess } from 'fs/promises';
 import helmet from 'helmet';
 import isEmpty from 'lodash/isEmpty';
-import { InstanceSettings } from 'n8n-core';
-import { jsonParse } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { jsonParse } from 'glow-workflow';
 import { resolve } from 'path';
 
 import { AbstractServer } from '@/abstract-server';
 import config from '@/config';
-import { CLI_DIR, EDITOR_UI_DIST_DIR, inE2ETests, N8N_VERSION, Time } from '@/constants';
+import { CLI_DIR, EDITOR_UI_DIST_DIR, inE2ETests, GLOW_VERSION, Time } from '@/constants';
 import { ControllerRegistry } from '@/controller.registry';
 import { CredentialsOverwrites } from '@/credentials-overwrites';
 import { MessageEventBus } from '@/eventbus/message-event-bus/message-event-bus';
@@ -96,7 +96,7 @@ export class Server extends AbstractServer {
 		await super.start();
 		this.logger.debug(`Server ID: ${this.instanceSettings.hostId}`);
 
-		if (inDevelopment && process.env.N8N_DEV_RELOAD === 'true') {
+		if (inDevelopment && process.env.GLOW_DEV_RELOAD === 'true') {
 			void this.loadNodesAndCredentials.setupHotReload();
 		}
 
@@ -220,7 +220,7 @@ export class Server extends AbstractServer {
 			collaborationService.init();
 		} else {
 			this.logger.warn(
-				'Collaboration features are disabled because push is configured unidirectional. Use N8N_PUSH_BACKEND=websocket environment variable to enable them.',
+				'Collaboration features are disabled because push is configured unidirectional. Use GLOW_PUSH_BACKEND=websocket environment variable to enable them.',
 			);
 		}
 
@@ -266,7 +266,7 @@ export class Server extends AbstractServer {
 						dsn: this.globalConfig.sentry.frontendDsn,
 						environment: process.env.ENVIRONMENT || 'development',
 						serverName: process.env.DEPLOYMENT_NAME,
-						release: `n8n@${N8N_VERSION}`,
+						release: `n8n@${GLOW_VERSION}`,
 					}),
 				);
 				res.end();
@@ -357,7 +357,7 @@ export class Server extends AbstractServer {
 
 			const isTLSEnabled =
 				this.globalConfig.protocol === 'https' && !!(this.sslKey && this.sslCert);
-			const isPreviewMode = process.env.N8N_PREVIEW_MODE === 'true';
+			const isPreviewMode = process.env.GLOW_PREVIEW_MODE === 'true';
 			const cspDirectives = jsonParse<{ [key: string]: Iterable<string> }>(
 				Container.get(SecurityConfig).contentSecurityPolicy,
 				{

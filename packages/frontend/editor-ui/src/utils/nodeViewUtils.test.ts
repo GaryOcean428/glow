@@ -10,9 +10,9 @@ import {
 	NODE_SIZE,
 	updateViewportToContainNodes,
 } from './nodeViewUtils';
-import type { INode, INodeTypeDescription, INodeExecutionData, Workflow } from 'n8n-workflow';
+import type { INode, INodeTypeDescription, INodeExecutionData, Workflow } from 'glow-workflow';
 import type { INodeUi, XYPosition } from '@/Interface';
-import { NodeHelpers, SEND_AND_WAIT_OPERATION } from 'n8n-workflow';
+import { NodeHelpers, SEND_AND_WAIT_OPERATION } from 'glow-workflow';
 
 import { describe, it, expect, beforeEach } from 'vitest';
 import { mock, type MockProxy } from 'vitest-mock-extended';

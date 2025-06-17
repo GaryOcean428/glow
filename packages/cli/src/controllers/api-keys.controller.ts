@@ -1,6 +1,6 @@
-import { CreateApiKeyRequestDto, UpdateApiKeyRequestDto } from '@n8n/api-types';
-import { Body, Delete, Get, Param, Patch, Post, RestController } from '@n8n/decorators';
-import { getApiKeyScopesForRole } from '@n8n/permissions';
+import { CreateApiKeyRequestDto, UpdateApiKeyRequestDto } from '@glow/api-types';
+import { Body, Delete, Get, Param, Patch, Post, RestController } from '@glow/decorators';
+import { getApiKeyScopesForRole } from '@glow/permissions';
 import type { RequestHandler } from 'express';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';

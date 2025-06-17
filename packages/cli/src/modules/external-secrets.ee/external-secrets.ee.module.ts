@@ -1,6 +1,6 @@
-import type { BaseN8nModule } from '@n8n/decorators';
-import { N8nModule } from '@n8n/decorators';
-import { ExternalSecretsProxy } from 'n8n-core';
+import type { BaseN8nModule } from '@glow/decorators';
+import { N8nModule } from '@glow/decorators';
+import { ExternalSecretsProxy } from 'glow-core';
 
 import { ExternalSecretsManager } from './external-secrets-manager.ee';
 import './external-secrets.controller.ee';

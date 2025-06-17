@@ -1,6 +1,6 @@
-import { type InstalledNodes, type InstalledPackages, type User } from '@n8n/db';
-import { CredentialsRepository, InstalledNodesRepository, UserRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { type InstalledNodes, type InstalledPackages, type User } from '@glow/db';
+import { CredentialsRepository, InstalledNodesRepository, UserRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
 
 import { CredentialsService } from '@/credentials/credentials.service';

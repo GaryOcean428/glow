@@ -1,11 +1,11 @@
-import type { Project, User, ListQueryDb } from '@n8n/db';
+import type { Project, User, ListQueryDb } from '@glow/db';
 import {
 	ProjectRelationRepository,
 	ProjectRepository,
 	SharedWorkflowRepository,
 	UserRepository,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
+} from '@glow/db';
+import { Service } from '@glow/di';
 
 import { CacheService } from '@/services/cache/cache.service';
 

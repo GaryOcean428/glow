@@ -1,4 +1,4 @@
-import type { User } from '@n8n/db';
+import type { User } from '@glow/db';
 import { type Response } from 'express';
 import { mock } from 'jest-mock-extended';
 

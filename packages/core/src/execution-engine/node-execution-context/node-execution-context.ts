@@ -1,6 +1,6 @@
-import { Logger } from '@n8n/backend-common';
-import { Memoized } from '@n8n/decorators';
-import { Container } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { Memoized } from '@glow/decorators';
+import { Container } from '@glow/di';
 import get from 'lodash/get';
 import type {
 	FunctionsBase,
@@ -21,14 +21,14 @@ import type {
 	NodeTypeAndVersion,
 	Workflow,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	ApplicationError,
 	deepCopy,
 	ExpressionError,
 	NodeHelpers,
 	NodeOperationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import {
 	HTTP_REQUEST_AS_TOOL_NODE_TYPE,

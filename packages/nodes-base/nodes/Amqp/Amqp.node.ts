@@ -8,8 +8,8 @@ import type {
 	INodeCredentialTestResult,
 	ICredentialsDecrypted,
 	ICredentialDataDecryptedObject,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 import type { Connection, ContainerOptions, Dictionary, EventContext, Sender } from 'rhea';
 import { create_container } from 'rhea';
 

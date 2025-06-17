@@ -1,7 +1,7 @@
 import type { CurrentUserResponse, IInviteResponse, InvitableRoleName } from '@/Interface';
-import type { IRestApiContext } from '@n8n/rest-api-client';
-import type { IDataObject } from 'n8n-workflow';
-import { makeRestApiRequest } from '@n8n/rest-api-client';
+import type { IRestApiContext } from '@glow/rest-api-client';
+import type { IDataObject } from 'glow-workflow';
+import { makeRestApiRequest } from '@glow/rest-api-client';
 
 type AcceptInvitationParams = {
 	inviterId: string;

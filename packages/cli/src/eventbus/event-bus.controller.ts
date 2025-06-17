@@ -1,10 +1,10 @@
-import { RestController, Get, Post, Delete, GlobalScope, Licensed } from '@n8n/decorators';
+import { RestController, Get, Post, Delete, GlobalScope, Licensed } from '@glow/decorators';
 import express from 'express';
 import type {
 	MessageEventBusDestinationWebhookOptions,
 	MessageEventBusDestinationOptions,
-} from 'n8n-workflow';
-import { MessageEventBusDestinationTypeNames } from 'n8n-workflow';
+} from 'glow-workflow';
+import { MessageEventBusDestinationTypeNames } from 'glow-workflow';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';
 import { AuthenticatedRequest } from '@/requests';

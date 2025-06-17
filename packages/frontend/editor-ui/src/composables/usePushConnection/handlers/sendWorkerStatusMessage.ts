@@ -1,4 +1,4 @@
-import type { SendWorkerStatusMessage } from '@n8n/api-types';
+import type { SendWorkerStatusMessage } from '@glow/api-types';
 import { useOrchestrationStore } from '@/stores/orchestration.store';
 
 /**

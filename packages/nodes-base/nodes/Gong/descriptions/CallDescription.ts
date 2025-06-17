@@ -5,8 +5,8 @@ import type {
 	IN8nHttpFullResponse,
 	INodeExecutionData,
 	INodeProperties,
-} from 'n8n-workflow';
-import { NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError } from 'glow-workflow';
 
 import {
 	getCursorPaginatorCalls,

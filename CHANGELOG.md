@@ -4,7 +4,7 @@
 ### Bug Fixes
 
 * **core:** Allow dotfiles in sendFile to fix WorkFlow settings 404 error ([#14744](https://github.com/n8n-io/n8n/issues/14744)) ([7928a9b](https://github.com/n8n-io/n8n/commit/7928a9b3c26e676dd77e24aae98054e1ecbbb37b))
-* **core:** Honor absolute paths for `N8N_LOG_FILE_LOCATION` ([#15873](https://github.com/n8n-io/n8n/issues/15873)) ([1e5b905](https://github.com/n8n-io/n8n/commit/1e5b90571d380bb674071d988147d3e854728e41))
+* **core:** Honor absolute paths for `GLOW_LOG_FILE_LOCATION` ([#15873](https://github.com/n8n-io/n8n/issues/15873)) ([1e5b905](https://github.com/n8n-io/n8n/commit/1e5b90571d380bb674071d988147d3e854728e41))
 * **core:** Normalize trailing slash when setting CORS headers for test webhooks ([#15906](https://github.com/n8n-io/n8n/issues/15906)) ([61d0c6a](https://github.com/n8n-io/n8n/commit/61d0c6a6e7f1ad5dd1795a0e1f910425d6e2fc8f))
 
 
@@ -118,7 +118,7 @@
 * **Azure OpenAI Chat Model Node:** Simplify Azure Entra ID Authentication and Auto-Refresh token ([#15335](https://github.com/n8n-io/n8n/issues/15335)) ([e750d53](https://github.com/n8n-io/n8n/commit/e750d5366ec51b09278ed75f2c07bf9946488645))
 * **Basic LLM Chain Node:** Use JSON parsing for Claude 3.7 with thinking enabled ([#15381](https://github.com/n8n-io/n8n/issues/15381)) ([c8b9a7f](https://github.com/n8n-io/n8n/commit/c8b9a7fdebc902b6d68ed1356e79ee976ab1cee7))
 * **core:** Allow strings starting with numbers in alphanumeric string validator ([#15425](https://github.com/n8n-io/n8n/issues/15425)) ([64b3fa3](https://github.com/n8n-io/n8n/commit/64b3fa3d1771a69d62814977d3ac3782a35aeb35))
-* **core:** Load config early to fix `N8N_CONFIG_FILES` ([#15406](https://github.com/n8n-io/n8n/issues/15406)) ([ec63a61](https://github.com/n8n-io/n8n/commit/ec63a616523221ec2216782845e508a59c6d0a05))
+* **core:** Load config early to fix `GLOW_CONFIG_FILES` ([#15406](https://github.com/n8n-io/n8n/issues/15406)) ([ec63a61](https://github.com/n8n-io/n8n/commit/ec63a616523221ec2216782845e508a59c6d0a05))
 * **core:** Load insights module on webhook instance to save insights on webhook workflows ([#15433](https://github.com/n8n-io/n8n/issues/15433)) ([bf5551d](https://github.com/n8n-io/n8n/commit/bf5551d711bb15af3ac104046219abb4686ef1c1))
 * **core:** Make the Insights by time datetime parsing more robust ([#15413](https://github.com/n8n-io/n8n/issues/15413)) ([d9fdef3](https://github.com/n8n-io/n8n/commit/d9fdef3bf9ca2f0bca564493cbae851b7a97bd8e))
 * **core:** Upgrade formidable to address CVE-2025-46653 ([#15341](https://github.com/n8n-io/n8n/issues/15341)) ([d612d7b](https://github.com/n8n-io/n8n/commit/d612d7ba32d2cea093a6ebf149b93c5e9a4bcbe6))
@@ -3225,7 +3225,7 @@
 
 * Add config option to prefer GET request over LIST when using Hashicorp Vault ([#8049](https://github.com/n8n-io/n8n/issues/8049)) ([439a22d](https://github.com/n8n-io/n8n/commit/439a22d68f7bf32f281b1078b71607307640a09b))
 * Add option to `returnIntermediateSteps` for AI agents ([#8113](https://github.com/n8n-io/n8n/issues/8113)) ([7806a65](https://github.com/n8n-io/n8n/commit/7806a65229878a473f5526bad0b94614e8bfa8aa))
-* **core:** Add N8N_GRACEFUL_SHUTDOWN_TIMEOUT env var ([#8068](https://github.com/n8n-io/n8n/issues/8068)) ([614f488](https://github.com/n8n-io/n8n/commit/614f48838626e2af8e3f2e76ee4a144af2d40f72))
+* **core:** Add GLOW_GRACEFUL_SHUTDOWN_TIMEOUT env var ([#8068](https://github.com/n8n-io/n8n/issues/8068)) ([614f488](https://github.com/n8n-io/n8n/commit/614f48838626e2af8e3f2e76ee4a144af2d40f72))
 * **editor:** Add lead enrichment suggestions to workflow list ([#8042](https://github.com/n8n-io/n8n/issues/8042)) ([36a923c](https://github.com/n8n-io/n8n/commit/36a923cf7bd4d42b8f8decbf01255c41d6dc1671)), closes [-update-workflows-list-page-to-show-fake-door-templates#comment-b6644c99](https://github.com/-update-workflows-list-page-to-show-fake-door-templates/issues/comment-b6644c99)
 * **editor:** Finalize workers view ([#8052](https://github.com/n8n-io/n8n/issues/8052)) ([edfa784](https://github.com/n8n-io/n8n/commit/edfa78414d6bce901becc05e9d860f2521139688))
 * **editor:** Gracefully ignore invalid payloads in postMessage handler ([#8096](https://github.com/n8n-io/n8n/issues/8096)) ([9d22c7a](https://github.com/n8n-io/n8n/commit/9d22c7a2782a1908f81bcf80260cd91cb296e239))
@@ -4116,7 +4116,7 @@
 * **core** Stop loading custom/community nodes from n8n's `node_modules` folder ([#6396](https://github.com/n8n-io/n8n/pull/6396)) ([a45a2c8](https://github.com/n8n-io/n8n/commit/a45a2c8c41eb7ffb2d62d5a8877c34eb45799fa9))
 * **core** User management is mandatory now. basic-auth, external-jwt-auth, and no-auth options are removed ([#6362](https://github.com/n8n-io/n8n/pull/6362)) ([8c008f5](https://github.com/n8n-io/n8n/commit/8c008f5d2217030e93d79e2baca0f2965d4d643e))
 * **core** Allow syntax errors and expression errors to fail executions ([#6352](https://github.com/n8n-io/n8n/pull/6352)) ([1197811](https://github.com/n8n-io/n8n/commit/1197811a1e3bc4ad7464d53d7e4860d0e62335a3))
-* **core** Drop support for `request` library and `N8N_USE_DEPRECATED_REQUEST_LIB` env variable ([#6413](https://github.com/n8n-io/n8n/pull/6413)) ([632ea27](https://github.com/n8n-io/n8n/commit/632ea275b7fa352d4af23339208bed66bb948da8))
+* **core** Drop support for `request` library and `GLOW_USE_DEPRECATED_REQUEST_LIB` env variable ([#6413](https://github.com/n8n-io/n8n/pull/6413)) ([632ea27](https://github.com/n8n-io/n8n/commit/632ea275b7fa352d4af23339208bed66bb948da8))
 * **core** Make date extensions outputs match inputs ([#6435](https://github.com/n8n-io/n8n/pull/6435)) ([85372aa](https://github.com/n8n-io/n8n/commit/85372aabdfc52493504d4723ee1829e2ea15151d))
 * **core** Drop support for `executeSingle` method on nodes ([#4853](https://github.com/n8n-io/n8n/pull/4853)) ([9194d8b](https://github.com/n8n-io/n8n/commit/9194d8bb0ecf81e52d47ddfc4b75dc4e0efd492d))
 * **core** Change data processing for multi-input-nodes ([#4238](https://github.com/n8n-io/n8n/pull/4238)) ([b8458a5](https://github.com/n8n-io/n8n/commit/b8458a53f66b79903f0fdb168f6febdefb36d13a))
@@ -5879,7 +5879,7 @@
 
 - **Box Node:** Fix issue with create folder operation showing extra items ([#4309](https://github.com/n8n-io/n8n/issues/4309)) ([28bea7e](https://github.com/n8n-io/n8n/commit/28bea7e109ac487014d16773414b53ddd5b0a631))
 - **core, editor:** Prevent overlapping `runData` and `pinData` ([#4323](https://github.com/n8n-io/n8n/issues/4323)) ([cd74c3e](https://github.com/n8n-io/n8n/commit/cd74c3ebaea57a3894e12774ecb043184538b811))
-- **core:** Expression evaluation of process should respect `N8N_BLOCK_ENV_ACCESS_IN_NODE` ([#4338](https://github.com/n8n-io/n8n/issues/4338)) ([5df09bb](https://github.com/n8n-io/n8n/commit/5df09bb31cb4b463007fc829073b66d1dce85fec))
+- **core:** Expression evaluation of process should respect `GLOW_BLOCK_ENV_ACCESS_IN_NODE` ([#4338](https://github.com/n8n-io/n8n/issues/4338)) ([5df09bb](https://github.com/n8n-io/n8n/commit/5df09bb31cb4b463007fc829073b66d1dce85fec))
 - **editor-ui:** Fix axios baseUrl when hosted under a subfolder ([#4336](https://github.com/n8n-io/n8n/issues/4336)) ([c2e9a03](https://github.com/n8n-io/n8n/commit/c2e9a03ac54443f4fe65651edbce74ad95e8ca7d))
 - **editor:** Change horizontal scrollbar rendering in various places ([#4282](https://github.com/n8n-io/n8n/issues/4282)) ([fdbc11a](https://github.com/n8n-io/n8n/commit/fdbc11a288f9fe9aac36017366b5817a05f4fbbf))
 - **editor:** Disable trigger node execution pinning toolip for schedule nodes ([#4334](https://github.com/n8n-io/n8n/issues/4334)) ([d4b74bd](https://github.com/n8n-io/n8n/commit/d4b74bd66a4929517c0a66665443bf4059a74932))

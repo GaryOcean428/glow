@@ -1,17 +1,17 @@
-import type { DatabaseConfig } from '@n8n/config';
-import type { Migration } from '@n8n/db';
-import * as migrationHelper from '@n8n/db';
-import { DataSource, type DataSourceOptions } from '@n8n/typeorm';
+import type { DatabaseConfig } from '@glow/config';
+import type { Migration } from '@glow/db';
+import * as migrationHelper from '@glow/db';
+import { DataSource, type DataSourceOptions } from '@glow/typeorm';
 import { mock, mockDeep } from 'jest-mock-extended';
-import type { ErrorReporter } from 'n8n-core';
-import { DbConnectionTimeoutError } from 'n8n-workflow';
+import type { ErrorReporter } from 'glow-core';
+import { DbConnectionTimeoutError } from 'glow-workflow';
 
 import { DbConnection } from '@/databases/db-connection';
 import type { DbConnectionOptions } from '@/databases/db-connection-options';
 
-jest.mock('@n8n/typeorm', () => ({
+jest.mock('@glow/typeorm', () => ({
 	DataSource: jest.fn(),
-	...jest.requireActual('@n8n/typeorm'),
+	...jest.requireActual('@glow/typeorm'),
 }));
 
 describe('DbConnection', () => {

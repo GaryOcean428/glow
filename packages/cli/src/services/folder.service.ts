@@ -1,14 +1,14 @@
-import type { CreateFolderDto, DeleteFolderDto, UpdateFolderDto } from '@n8n/api-types';
+import type { CreateFolderDto, DeleteFolderDto, UpdateFolderDto } from '@glow/api-types';
 import type {
 	FolderWithWorkflowAndSubFolderCount,
 	FolderWithWorkflowAndSubFolderCountAndPath,
 	User,
-} from '@n8n/db';
-import { Folder, FolderTagMappingRepository, FolderRepository, WorkflowRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+} from '@glow/db';
+import { Folder, FolderTagMappingRepository, FolderRepository, WorkflowRepository } from '@glow/db';
+import { Service } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { EntityManager } from '@n8n/typeorm';
-import { UserError, PROJECT_ROOT } from 'n8n-workflow';
+import type { EntityManager } from '@glow/typeorm';
+import { UserError, PROJECT_ROOT } from 'glow-workflow';
 
 import { FolderNotFoundError } from '@/errors/folder-not-found.error';
 import type { ListQuery } from '@/requests';

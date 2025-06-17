@@ -11,8 +11,8 @@ import type {
 	INodeExecutionData,
 	INodeParameters,
 	IPairedItemData,
-} from 'n8n-workflow';
-import { ApplicationError, NodeConnectionTypes, NodeHelpers } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, NodeConnectionTypes, NodeHelpers } from 'glow-workflow';
 
 import { fuzzyCompare, preparePairedItemDataArray } from '@utils/utilities';
 

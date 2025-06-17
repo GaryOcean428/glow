@@ -7,7 +7,7 @@ import {
 	inferResourceTypeFromRoute,
 } from '@/utils/rbacUtils';
 import type { RouteLocationNormalized } from 'vue-router';
-import type { Scope } from '@n8n/permissions';
+import type { Scope } from '@glow/permissions';
 
 vi.mock('@/stores/rbac.store', () => ({
 	useRBACStore: vi.fn(),

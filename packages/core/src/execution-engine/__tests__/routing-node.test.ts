@@ -18,8 +18,8 @@ import type {
 	IRunExecutionData,
 	ITaskDataConnections,
 	IWorkflowExecuteAdditionalData,
-} from 'n8n-workflow';
-import { Workflow } from 'n8n-workflow';
+} from 'glow-workflow';
+import { Workflow } from 'glow-workflow';
 
 import * as executionContexts from '@/execution-engine/node-execution-context';
 import { DirectoryLoader } from '@/nodes-loader';

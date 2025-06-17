@@ -3,7 +3,7 @@ import { useSettingsStore } from '@/stores/settings.store';
 import { useSSOStore } from '@/stores/sso.store';
 import merge from 'lodash/merge';
 import { SETTINGS_STORE_DEFAULT_STATE } from '@/__tests__/utils';
-import type { FrontendSettings } from '@n8n/api-types';
+import type { FrontendSettings } from '@glow/api-types';
 
 let ssoStore: ReturnType<typeof useSSOStore>;
 let settingsStore: ReturnType<typeof useSettingsStore>;

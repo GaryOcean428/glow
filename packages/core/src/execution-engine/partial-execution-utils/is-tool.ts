@@ -1,4 +1,4 @@
-import { type INode, type INodeTypes, NodeConnectionTypes } from 'n8n-workflow';
+import { type INode, type INodeTypes, NodeConnectionTypes } from 'glow-workflow';
 
 export function isTool(node: INode, nodeTypes: INodeTypes) {
 	const type = nodeTypes.getByNameAndVersion(node.type, node.typeVersion);

@@ -1,7 +1,7 @@
 import { Container } from '@n8n/di';
 import alasql from 'alasql';
 import type { Database } from 'alasql';
-import { ErrorReporter } from 'n8n-core';
+import { ErrorReporter } from 'glow-core';
 import type {
 	IDataObject,
 	IExecuteFunctions,
@@ -9,8 +9,8 @@ import type {
 	INodeExecutionData,
 	INodeProperties,
 	IPairedItemData,
-} from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { getResolvables, updateDisplayOptions } from '@utils/utilities';
 

@@ -1,20 +1,20 @@
 import type { RunWorkflowChatPayload } from '@/features/logs/composables/useChatMessaging';
 import { useChatMessaging } from '@/features/logs/composables/useChatMessaging';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useRunWorkflow } from '@/composables/useRunWorkflow';
 import { VIEWS } from '@/constants';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { ChatOptionsSymbol, ChatSymbol } from '@n8n/chat/constants';
-import { chatEventBus } from '@n8n/chat/event-buses';
-import type { Chat, ChatMessage, ChatOptions } from '@n8n/chat/types';
+import { ChatOptionsSymbol, ChatSymbol } from '@glow/chat/constants';
+import { chatEventBus } from '@glow/chat/event-buses';
+import type { Chat, ChatMessage, ChatOptions } from '@glow/chat/types';
 import { v4 as uuid } from 'uuid';
 import type { Ref } from 'vue';
 import { computed, provide, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { useLogsStore } from '@/stores/logs.store';
 import { restoreChatHistory } from '@/features/logs/logs.utils';
-import type { INodeParameters } from 'n8n-workflow';
+import type { INodeParameters } from 'glow-workflow';
 import { isChatNode } from '@/utils/aiUtils';
 
 interface ChatState {

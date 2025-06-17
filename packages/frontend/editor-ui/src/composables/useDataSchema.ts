@@ -1,4 +1,4 @@
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import type { INodeUi, Optional, Primitives, Schema, SchemaType } from '@/Interface';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { generatePath, getNodeParentExpression } from '@/utils/mappingUtils';
@@ -13,7 +13,7 @@ import {
 	type INodeTypeDescription,
 	type ITaskDataConnections,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { ref } from 'vue';
 
 export function useDataSchema() {

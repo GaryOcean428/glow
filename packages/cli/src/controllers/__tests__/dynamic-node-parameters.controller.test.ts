@@ -3,14 +3,14 @@ import type {
 	ResourceLocatorRequestDto,
 	ResourceMapperFieldsRequestDto,
 	ActionResultRequestDto,
-} from '@n8n/api-types';
+} from '@glow/api-types';
 import { mock } from 'jest-mock-extended';
 import type {
 	ILoadOptions,
 	IWorkflowExecuteAdditionalData,
 	INodePropertyOptions,
 	NodeParameterValueType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { DynamicNodeParametersController } from '@/controllers/dynamic-node-parameters.controller';
 import type { AuthenticatedRequest } from '@/requests';

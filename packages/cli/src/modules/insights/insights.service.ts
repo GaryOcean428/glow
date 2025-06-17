@@ -2,12 +2,12 @@ import {
 	type InsightsSummary,
 	type InsightsDateRange,
 	INSIGHTS_DATE_RANGE_KEYS,
-} from '@n8n/api-types';
-import { LicenseState, Logger } from '@n8n/backend-common';
-import { OnLeaderStepdown, OnLeaderTakeover, OnShutdown } from '@n8n/decorators';
-import { Service } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
-import { UserError } from 'n8n-workflow';
+} from '@glow/api-types';
+import { LicenseState, Logger } from '@glow/backend-common';
+import { OnLeaderStepdown, OnLeaderTakeover, OnShutdown } from '@glow/decorators';
+import { Service } from '@glow/di';
+import { InstanceSettings } from 'glow-core';
+import { UserError } from 'glow-workflow';
 
 import type { PeriodUnit, TypeUnit } from './database/entities/insights-shared';
 import { NumberToType } from './database/entities/insights-shared';

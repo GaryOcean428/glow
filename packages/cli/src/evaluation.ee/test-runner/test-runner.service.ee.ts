@@ -1,13 +1,13 @@
-import { Logger } from '@n8n/backend-common';
-import type { User, TestRun } from '@n8n/db';
-import { TestCaseExecutionRepository, TestRunRepository, WorkflowRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { ErrorReporter } from 'n8n-core';
+import { Logger } from '@glow/backend-common';
+import type { User, TestRun } from '@glow/db';
+import { TestCaseExecutionRepository, TestRunRepository, WorkflowRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { ErrorReporter } from 'glow-core';
 import {
 	EVALUATION_NODE_TYPE,
 	EVALUATION_TRIGGER_NODE_TYPE,
 	ExecutionCancelledError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type {
 	IDataObject,
 	IRun,
@@ -17,7 +17,7 @@ import type {
 	INodeExecutionData,
 	AssignmentCollectionValue,
 	GenericValue,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import assert from 'node:assert';
 
 import { ActiveExecutions } from '@/active-executions';

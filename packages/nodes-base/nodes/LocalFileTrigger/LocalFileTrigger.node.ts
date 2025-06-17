@@ -6,7 +6,7 @@ import {
 	type INodeTypeDescription,
 	type ITriggerResponse,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class LocalFileTrigger implements INodeType {
 	description: INodeTypeDescription = {

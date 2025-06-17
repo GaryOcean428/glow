@@ -1,6 +1,6 @@
 import { NodeVM } from '@n8n/vm2';
-import type { IExecuteFunctions, INodeExecutionData } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IExecuteFunctions, INodeExecutionData } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 const returnRegExp = /\breturn\b/g;
 export function sortByCode(

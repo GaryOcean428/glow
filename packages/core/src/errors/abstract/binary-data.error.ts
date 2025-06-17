@@ -1,3 +1,3 @@
-import { ApplicationError } from 'n8n-workflow';
+import { ApplicationError } from 'glow-workflow';
 
 export abstract class BinaryDataError extends ApplicationError {}

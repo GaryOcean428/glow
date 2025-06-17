@@ -3,7 +3,7 @@ import { generateNanoId } from '@n8n/db';
 import { WorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { mock } from 'jest-mock-extended';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { INSTANCE_REPORT, WEBHOOK_VALIDATOR_NODE_TYPES } from '@/security-audit/constants';
@@ -13,7 +13,7 @@ import { toReportTitle } from '@/security-audit/utils';
 import {
 	getRiskSection,
 	saveManualTriggerWorkflow,
-	MOCK_09990_N8N_VERSION,
+	MOCK_09990_GLOW_VERSION,
 	simulateOutdatedInstanceOnce,
 	simulateUpToDateInstance,
 } from './utils';
@@ -221,7 +221,7 @@ test('should report outdated instance when outdated', async () => {
 
 	expect(section.nextVersions).toHaveLength(1);
 
-	expect(section.nextVersions[0].name).toBe(MOCK_09990_N8N_VERSION.name);
+	expect(section.nextVersions[0].name).toBe(MOCK_09990_GLOW_VERSION.name);
 });
 
 test('should not report outdated instance when up to date', async () => {

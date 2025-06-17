@@ -1,14 +1,14 @@
 import { createComponentRenderer } from '@/__tests__/render';
 import { createTestingPinia } from '@pinia/testing';
 import { API_KEY_CREATE_OR_EDIT_MODAL_KEY } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { cleanupAppModals, createAppModals, mockedStore, retry } from '@/__tests__/utils';
 import ApiKeyEditModal from './ApiKeyCreateOrEditModal.vue';
 import { fireEvent } from '@testing-library/vue';
 
 import { useApiKeysStore } from '@/stores/apiKeys.store';
 import { DateTime } from 'luxon';
-import type { ApiKeyWithRawValue } from '@n8n/api-types';
+import type { ApiKeyWithRawValue } from '@glow/api-types';
 import { useSettingsStore } from '@/stores/settings.store';
 import { createMockEnterpriseSettings } from '@/__tests__/mocks';
 

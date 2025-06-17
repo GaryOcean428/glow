@@ -1,4 +1,4 @@
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import type { INodeUi, IWorkflowDataCreate } from './Interface';
 
 export const SAMPLE_SUBWORKFLOW_TRIGGER_ID = 'c055762a-8fe7-4141-a639-df2372f30060';

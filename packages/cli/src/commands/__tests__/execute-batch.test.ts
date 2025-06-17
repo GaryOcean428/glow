@@ -1,11 +1,11 @@
-import { GlobalConfig } from '@n8n/config';
-import type { User, WorkflowEntity } from '@n8n/db';
-import { WorkflowRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
-import type { SelectQueryBuilder } from '@n8n/typeorm';
+import { GlobalConfig } from '@glow/config';
+import type { User, WorkflowEntity } from '@glow/db';
+import { WorkflowRepository } from '@glow/db';
+import { Container } from '@glow/di';
+import type { SelectQueryBuilder } from '@glow/typeorm';
 import type { Config } from '@oclif/core';
 import { mock } from 'jest-mock-extended';
-import type { IRun } from 'n8n-workflow';
+import type { IRun } from 'glow-workflow';
 
 import { ActiveExecutions } from '@/active-executions';
 import { DbConnection } from '@/databases/db-connection';

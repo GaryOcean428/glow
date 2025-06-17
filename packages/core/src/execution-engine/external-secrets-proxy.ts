@@ -1,4 +1,4 @@
-import { Service } from '@n8n/di';
+import { Service } from '@glow/di';
 
 export interface IExternalSecretsManager {
 	updateSecrets(): Promise<void>;

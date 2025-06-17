@@ -13,8 +13,8 @@ import type {
 	INodeType,
 	INodeTypes,
 	ICredentialDataDecryptedObject,
-} from 'n8n-workflow';
-import { ApplicationError, ExpressionError, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, ExpressionError, NodeConnectionTypes } from 'glow-workflow';
 
 import { describeCommonTests } from './shared-tests';
 import { ExecuteContext } from '../execute-context';

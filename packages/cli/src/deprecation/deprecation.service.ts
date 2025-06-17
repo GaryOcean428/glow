@@ -1,7 +1,7 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
-import { InstanceSettings } from 'n8n-core';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
+import { InstanceSettings } from 'glow-core';
 
 import config from '@/config';
 
@@ -33,28 +33,28 @@ const SAFE_TO_REMOVE = 'Remove this environment variable; it is no longer needed
 @Service()
 export class DeprecationService {
 	private readonly deprecations: Deprecation[] = [
-		{ envVar: 'N8N_BINARY_DATA_TTL', message: SAFE_TO_REMOVE },
-		{ envVar: 'N8N_PERSISTED_BINARY_DATA_TTL', message: SAFE_TO_REMOVE },
+		{ envVar: 'GLOW_BINARY_DATA_TTL', message: SAFE_TO_REMOVE },
+		{ envVar: 'GLOW_PERSISTED_BINARY_DATA_TTL', message: SAFE_TO_REMOVE },
 		{ envVar: 'EXECUTIONS_DATA_PRUNE_TIMEOUT', message: SAFE_TO_REMOVE },
 		{
-			envVar: 'N8N_BINARY_DATA_MODE',
+			envVar: 'GLOW_BINARY_DATA_MODE',
 			message: '`default` is deprecated. Please switch to `filesystem` mode.',
 			checkValue: (value: string) => value === 'default',
 		},
-		{ envVar: 'N8N_CONFIG_FILES', message: 'Please use .env files or *_FILE env vars instead.' },
+		{ envVar: 'GLOW_CONFIG_FILES', message: 'Please use .env files or *_FILE env vars instead.' },
 		{
 			envVar: 'DB_TYPE',
 			message: 'MySQL and MariaDB are deprecated. Please migrate to PostgreSQL.',
 			checkValue: (value: string) => ['mysqldb', 'mariadb'].includes(value),
 		},
 		{
-			envVar: 'N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN',
+			envVar: 'GLOW_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN',
 			message: `n8n no longer deregisters webhooks at startup and shutdown. ${SAFE_TO_REMOVE}`,
 		},
 		{
-			envVar: 'N8N_RUNNERS_ENABLED',
+			envVar: 'GLOW_RUNNERS_ENABLED',
 			message:
-				'Running n8n without task runners is deprecated. Task runners will be turned on by default in a future version. Please set `N8N_RUNNERS_ENABLED=true` to enable task runners now and avoid potential issues in the future. Learn more: https://docs.n8n.io/hosting/configuration/task-runners/',
+				'Running n8n without task runners is deprecated. Task runners will be turned on by default in a future version. Please set `GLOW_RUNNERS_ENABLED=true` to enable task runners now and avoid potential issues in the future. Learn more: https://docs.n8n.io/hosting/configuration/task-runners/',
 			checkValue: (value?: string) => value?.toLowerCase() !== 'true' && value !== '1',
 			warnIfMissing: true,
 			disableIf: () => this.globalConfig.nodes.exclude.includes('n8n-nodes-base.code'),
@@ -69,21 +69,21 @@ export class DeprecationService {
 			disableIf: () => this.instanceSettings.instanceType !== 'main',
 		},
 		{
-			envVar: 'N8N_PARTIAL_EXECUTION_VERSION_DEFAULT',
+			envVar: 'GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT',
 			checkValue: (value: string) => value === '1',
 			message:
 				'Version 1 of partial executions is deprecated and will be removed as early as v1.85.0',
 		},
 		{
-			envVar: 'N8N_PARTIAL_EXECUTION_VERSION_DEFAULT',
+			envVar: 'GLOW_PARTIAL_EXECUTION_VERSION_DEFAULT',
 			message: 'This environment variable is internal and should not be set.',
 		},
 		{
-			envVar: 'N8N_EXPRESSION_EVALUATOR',
+			envVar: 'GLOW_EXPRESSION_EVALUATOR',
 			message: `n8n has replaced \`tmpl\` with \`tournament\` as expression evaluator. ${SAFE_TO_REMOVE}`,
 		},
 		{
-			envVar: 'N8N_EXPRESSION_REPORT_DIFFERENCE',
+			envVar: 'GLOW_EXPRESSION_REPORT_DIFFERENCE',
 			message: `n8n has replaced \`tmpl\` with \`tournament\` as expression evaluator. ${SAFE_TO_REMOVE}`,
 		},
 		{

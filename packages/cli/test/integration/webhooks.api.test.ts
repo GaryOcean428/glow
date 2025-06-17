@@ -1,13 +1,13 @@
 import type { User } from '@n8n/db';
 import { readFileSync } from 'fs';
 import { mock } from 'jest-mock-extended';
-import type { INode, IWorkflowBase } from 'n8n-workflow';
+import type { INode, IWorkflowBase } from 'glow-workflow';
 import {
 	NodeConnectionTypes,
 	type INodeType,
 	type INodeTypeDescription,
 	type IWebhookFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { agent as testAgent } from 'supertest';
 
 import { NodeTypes } from '@/node-types';

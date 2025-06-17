@@ -1,5 +1,5 @@
-import { ExecutionMetadataRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { ExecutionMetadataRepository } from '@glow/db';
+import { Container } from '@glow/di';
 
 import { ExecutionMetadataService } from '@/services/execution-metadata.service';
 import { mockInstance } from '@test/mocking';

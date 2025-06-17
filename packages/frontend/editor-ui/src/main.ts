@@ -7,15 +7,15 @@ import '@vue-flow/minimap/dist/style.css';
 import '@vue-flow/node-resizer/dist/style.css';
 
 import 'vue-json-pretty/lib/styles.css';
-import '@n8n/design-system/css/index.scss';
-// import '@n8n/design-system/css/tailwind/index.css';
+import '@glow/design-system/css/index.scss';
+// import '@glow/design-system/css/tailwind/index.css';
 
 import './n8n-theme.scss';
 
 import App from '@/App.vue';
 import router from './router';
 
-import { i18nInstance } from '@n8n/i18n';
+import { i18nInstance } from '@glow/i18n';
 import { TelemetryPlugin } from './plugins/telemetry';
 import { GlobalComponentsPlugin } from './plugins/components';
 import { GlobalDirectivesPlugin } from './plugins/directives';

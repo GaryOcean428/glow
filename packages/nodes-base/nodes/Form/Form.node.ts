@@ -7,7 +7,7 @@ import type {
 	IWebhookFunctions,
 	IWebhookResponseData,
 	NodeTypeAndVersion,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	Node,
 	updateDisplayOptions,
@@ -16,7 +16,7 @@ import {
 	FORM_TRIGGER_NODE_TYPE,
 	tryToParseJsonToFormFields,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { cssVariables } from './cssVariables';
 import { renderFormCompletion } from './formCompletionUtils';

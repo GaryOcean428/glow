@@ -3,7 +3,7 @@ import { UserRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { compare } from 'bcryptjs';
 import { mock } from 'jest-mock-extended';
-import { randomString } from 'n8n-workflow';
+import { randomString } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { AuthService } from '@/auth/auth.service';

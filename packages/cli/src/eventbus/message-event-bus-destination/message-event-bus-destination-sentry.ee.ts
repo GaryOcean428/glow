@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
 import * as Sentry from '@sentry/node';
-import { MessageEventBusDestinationTypeNames } from 'n8n-workflow';
+import { MessageEventBusDestinationTypeNames } from 'glow-workflow';
 import type {
 	MessageEventBusDestinationOptions,
 	MessageEventBusDestinationSentryOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 
 import { MessageEventBusDestination } from './message-event-bus-destination.ee';
 import { eventMessageGenericDestinationTestEvent } from '../event-message-classes/event-message-generic';
@@ -46,7 +46,7 @@ export class MessageEventBusDestinationSentry
 			dsn: this.dsn,
 			tracesSampleRate: this.tracesSampleRate,
 			environment,
-			release: N8N_VERSION,
+			release: GLOW_VERSION,
 			transport: Sentry.makeNodeTransport,
 			integrations: Sentry.getDefaultIntegrations({}),
 			stackParser: Sentry.defaultStackParser,

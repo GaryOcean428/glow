@@ -2,12 +2,12 @@ import { createTestingPinia } from '@pinia/testing';
 import { createComponentRenderer } from '@/__tests__/render';
 import FromAiParametersModal from '@/components/FromAiParametersModal.vue';
 import { FROM_AI_PARAMETERS_MODAL_KEY, AI_MCP_TOOL_NODE_TYPE } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import userEvent from '@testing-library/user-event';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { useAgentRequestStore } from '@n8n/stores/useAgentRequestStore';
+import { useAgentRequestStore } from '@glow/stores/useAgentRequestStore';
 import { useRouter } from 'vue-router';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { nextTick } from 'vue';
 

@@ -1,6 +1,6 @@
 import type { Config } from '@oclif/core';
 import { mock } from 'jest-mock-extended';
-import type { Class } from 'n8n-core';
+import type { Class } from 'glow-core';
 
 import type { BaseCommand } from '@/commands/base-command';
 import { MessageEventBus } from '@/eventbus/message-event-bus/message-event-bus';

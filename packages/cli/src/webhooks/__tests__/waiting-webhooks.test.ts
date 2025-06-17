@@ -1,5 +1,5 @@
-import type { IExecutionResponse } from '@n8n/db';
-import type { ExecutionRepository } from '@n8n/db';
+import type { IExecutionResponse } from '@glow/db';
+import type { ExecutionRepository } from '@glow/db';
 import type express from 'express';
 import { mock } from 'jest-mock-extended';
 

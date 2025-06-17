@@ -1,4 +1,4 @@
-import type { ILoadOptionsFunctions, INodePropertyOptions } from 'n8n-workflow';
+import type { ILoadOptionsFunctions, INodePropertyOptions } from 'glow-workflow';
 
 import { getSheetHeaderRow } from '../../Google/Sheet/v2/methods/loadOptions';
 

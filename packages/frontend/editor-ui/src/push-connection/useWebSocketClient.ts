@@ -1,7 +1,7 @@
 import { useHeartbeat } from '@/push-connection/useHeartbeat';
 import { useReconnectTimer } from '@/push-connection/useReconnectTimer';
 import { ref } from 'vue';
-import { createHeartbeatMessage } from '@n8n/api-types';
+import { createHeartbeatMessage } from '@glow/api-types';
 export type UseWebSocketClientOptions<T> = {
 	url: string;
 	onMessage: (data: T) => void;

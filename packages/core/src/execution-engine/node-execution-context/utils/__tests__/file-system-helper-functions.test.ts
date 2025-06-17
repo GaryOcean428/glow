@@ -1,12 +1,12 @@
-import { Container } from '@n8n/di';
-import type { INode } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import type { INode } from 'glow-workflow';
 import { createReadStream } from 'node:fs';
 import { access as fsAccess } from 'node:fs/promises';
 import { join } from 'node:path';
 
 import {
 	BINARY_DATA_STORAGE_PATH,
-	BLOCK_FILE_ACCESS_TO_N8N_FILES,
+	BLOCK_FILE_ACCESS_TO_GLOW_FILES,
 	CONFIG_FILES,
 	CUSTOM_EXTENSION_ENV,
 	RESTRICT_FILE_ACCESS_TO,
@@ -36,7 +36,7 @@ beforeEach(() => {
 
 describe('isFilePathBlocked', () => {
 	beforeEach(() => {
-		process.env[BLOCK_FILE_ACCESS_TO_N8N_FILES] = 'true';
+		process.env[BLOCK_FILE_ACCESS_TO_GLOW_FILES] = 'true';
 	});
 
 	it('should return true for static cache dir', () => {
@@ -73,8 +73,8 @@ describe('isFilePathBlocked', () => {
 		expect(isFilePathBlocked(allowedPath)).toBe(false);
 	});
 
-	it('should return false when BLOCK_FILE_ACCESS_TO_N8N_FILES is false', () => {
-		process.env[BLOCK_FILE_ACCESS_TO_N8N_FILES] = 'false';
+	it('should return false when BLOCK_FILE_ACCESS_TO_GLOW_FILES is false', () => {
+		process.env[BLOCK_FILE_ACCESS_TO_GLOW_FILES] = 'false';
 		const restrictedPath = instanceSettings.n8nFolder;
 		expect(isFilePathBlocked(restrictedPath)).toBe(false);
 	});
@@ -172,7 +172,7 @@ describe('getFileSystemHelperFunctions', () => {
 
 	describe('writeContentToFile', () => {
 		it('should throw error for blocked file path', async () => {
-			process.env[BLOCK_FILE_ACCESS_TO_N8N_FILES] = 'true';
+			process.env[BLOCK_FILE_ACCESS_TO_GLOW_FILES] = 'true';
 
 			await expect(
 				helperFunctions.writeContentToFile(

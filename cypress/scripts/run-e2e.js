@@ -10,7 +10,7 @@ function runTests(options) {
 
 	const userFolder = mkdtempSync(testsDir);
 
-	process.env.N8N_USER_FOLDER = userFolder;
+	process.env.GLOW_USER_FOLDER = userFolder;
 	process.env.E2E_TESTS = 'true';
 	process.env.NODE_OPTIONS = '--dns-result-order=ipv4first';
 

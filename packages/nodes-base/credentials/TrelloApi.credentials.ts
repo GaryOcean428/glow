@@ -4,7 +4,7 @@ import type {
 	ICredentialType,
 	IHttpRequestOptions,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class TrelloApi implements ICredentialType {
 	name = 'trelloApi';

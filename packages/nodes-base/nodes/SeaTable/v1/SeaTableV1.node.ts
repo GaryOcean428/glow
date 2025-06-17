@@ -7,8 +7,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	INodeTypeBaseDescription,
-} from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import {
 	getTableColumns,

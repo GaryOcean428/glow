@@ -3,7 +3,7 @@ import { createEnvProvider, createEnvProviderState } from '@/workflow-data-proxy
 
 describe('createEnvProviderState', () => {
 	afterEach(() => {
-		delete process.env.N8N_BLOCK_ENV_ACCESS_IN_NODE;
+		delete process.env.GLOW_BLOCK_ENV_ACCESS_IN_NODE;
 	});
 
 	it('should return the state with process available and env access allowed', () => {
@@ -14,8 +14,8 @@ describe('createEnvProviderState', () => {
 		});
 	});
 
-	it('should block env access when N8N_BLOCK_ENV_ACCESS_IN_NODE is set to "true"', () => {
-		process.env.N8N_BLOCK_ENV_ACCESS_IN_NODE = 'true';
+	it('should block env access when GLOW_BLOCK_ENV_ACCESS_IN_NODE is set to "true"', () => {
+		process.env.GLOW_BLOCK_ENV_ACCESS_IN_NODE = 'true';
 
 		expect(createEnvProviderState()).toEqual({
 			isProcessAvailable: true,
@@ -72,13 +72,13 @@ describe('createEnvProvider', () => {
 	});
 
 	it('should throw ExpressionError when env access is blocked', () => {
-		process.env.N8N_BLOCK_ENV_ACCESS_IN_NODE = 'true';
+		process.env.GLOW_BLOCK_ENV_ACCESS_IN_NODE = 'true';
 		const proxy = createEnvProvider(1, 1, createEnvProviderState());
 
 		expect(() => proxy.someEnvVar).toThrowError(
 			new ExpressionError('access to env vars denied', {
 				causeDetailed:
-					'If you need access please contact the administrator to remove the environment variable ‘N8N_BLOCK_ENV_ACCESS_IN_NODE‘',
+					'If you need access please contact the administrator to remove the environment variable ‘GLOW_BLOCK_ENV_ACCESS_IN_NODE‘',
 				runIndex: 1,
 				itemIndex: 1,
 			}),

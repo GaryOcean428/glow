@@ -1,4 +1,4 @@
-import type { PullWorkFolderRequestDto, PushWorkFolderRequestDto } from '@n8n/api-types';
+import type { PullWorkFolderRequestDto, PushWorkFolderRequestDto } from '@glow/api-types';
 import type { Response } from 'express';
 import { mock } from 'jest-mock-extended';
 

@@ -1,12 +1,12 @@
-import type { ExecutionRepository } from '@n8n/db';
+import type { ExecutionRepository } from '@glow/db';
 import { captor, mock } from 'jest-mock-extended';
 import type {
 	IDeferredPromise,
 	IExecuteResponsePromiseData,
 	IRun,
 	IWorkflowExecutionDataProcess,
-} from 'n8n-workflow';
-import { ExecutionCancelledError, randomInt, sleep } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ExecutionCancelledError, randomInt, sleep } from 'glow-workflow';
 import PCancelable from 'p-cancelable';
 import { v4 as uuid } from 'uuid';
 

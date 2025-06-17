@@ -4,8 +4,8 @@ import type {
 	IBinaryData,
 	INodeExecutionData,
 	GenericValue,
-} from 'n8n-workflow';
-import { ApplicationError, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError, NodeOperationError } from 'glow-workflow';
 
 export const prepareFieldsArray = (fields: string | string[], fieldName = 'Fields') => {
 	if (typeof fields === 'string') {

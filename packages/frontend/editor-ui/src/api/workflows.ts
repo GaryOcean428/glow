@@ -9,14 +9,14 @@ import type {
 	NewWorkflowResponse,
 	WorkflowListResource,
 } from '@/Interface';
-import type { IRestApiContext } from '@n8n/rest-api-client';
+import type { IRestApiContext } from '@glow/rest-api-client';
 import type {
 	ExecutionFilters,
 	ExecutionOptions,
 	ExecutionSummary,
 	IDataObject,
-} from 'n8n-workflow';
-import { getFullApiResponse, makeRestApiRequest } from '@n8n/rest-api-client';
+} from 'glow-workflow';
+import { getFullApiResponse, makeRestApiRequest } from '@glow/rest-api-client';
 
 export async function getNewWorkflow(context: IRestApiContext, data?: IDataObject) {
 	const response = await makeRestApiRequest<NewWorkflowResponse>(

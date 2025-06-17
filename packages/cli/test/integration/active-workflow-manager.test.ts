@@ -2,16 +2,16 @@ import type { WebhookEntity } from '@n8n/db';
 import { WorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { mock } from 'jest-mock-extended';
-import { InstanceSettings, ExternalSecretsProxy } from 'n8n-core';
-import { FormTrigger } from 'n8n-nodes-base/nodes/Form/FormTrigger.node';
-import { ScheduleTrigger } from 'n8n-nodes-base/nodes/Schedule/ScheduleTrigger.node';
-import { NodeApiError, Workflow } from 'n8n-workflow';
+import { InstanceSettings, ExternalSecretsProxy } from 'glow-core';
+import { FormTrigger } from 'glow-nodes-base/nodes/Form/FormTrigger.node';
+import { ScheduleTrigger } from 'glow-nodes-base/nodes/Schedule/ScheduleTrigger.node';
+import { NodeApiError, Workflow } from 'glow-workflow';
 import type {
 	IWebhookData,
 	IWorkflowBase,
 	WorkflowActivateMode,
 	INodeTypeData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { ActiveExecutions } from '@/active-executions';
 import { ActiveWorkflowManager } from '@/active-workflow-manager';

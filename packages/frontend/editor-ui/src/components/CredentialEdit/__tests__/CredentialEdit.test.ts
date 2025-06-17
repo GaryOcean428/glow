@@ -2,12 +2,12 @@ import { createComponentRenderer } from '@/__tests__/render';
 import CredentialEdit from '@/components/CredentialEdit/CredentialEdit.vue';
 import { createTestingPinia } from '@pinia/testing';
 import { CREDENTIAL_EDIT_MODAL_KEY } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { cleanupAppModals, createAppModals, retry, mockedStore } from '@/__tests__/utils';
 import { useCredentialsStore } from '@/stores/credentials.store';
 import type { ICredentialsResponse } from '@/Interface';
 import { within } from '@testing-library/vue';
-import type { ICredentialType } from 'n8n-workflow';
+import type { ICredentialType } from 'glow-workflow';
 
 const oAuth2Api: ICredentialType = {
 	name: 'oAuth2Api',

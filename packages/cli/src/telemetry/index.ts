@@ -1,19 +1,19 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
 import {
 	ProjectRelationRepository,
 	ProjectRepository,
 	WorkflowRepository,
 	UserRepository,
-} from '@n8n/db';
-import { OnShutdown } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
+} from '@glow/db';
+import { OnShutdown } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
 import type RudderStack from '@rudderstack/rudder-sdk-node';
 import axios from 'axios';
-import { InstanceSettings } from 'n8n-core';
-import type { ITelemetryTrackProperties } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import type { ITelemetryTrackProperties } from 'glow-workflow';
 
-import { LOWEST_SHUTDOWN_PRIORITY, N8N_VERSION } from '@/constants';
+import { LOWEST_SHUTDOWN_PRIORITY, GLOW_VERSION } from '@/constants';
 import type { IExecutionTrackProperties } from '@/interfaces';
 import { License } from '@/license';
 import { PostHogClient } from '@/posthog';
@@ -209,7 +209,7 @@ export class Telemetry {
 		const updatedProperties = {
 			...properties,
 			instance_id: instanceId,
-			version_cli: N8N_VERSION,
+			version_cli: GLOW_VERSION,
 		};
 
 		const payload = {

@@ -11,8 +11,8 @@ import { useHistoryStore } from '@/stores/history.store';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { CanvasNodeDirtiness, type CanvasNodeDirtinessType } from '@/types';
-import type { INodeConnections, NodeConnectionType } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { INodeConnections, NodeConnectionType } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { computed } from 'vue';
 
 /**

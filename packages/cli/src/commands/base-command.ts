@@ -1,8 +1,8 @@
 import 'reflect-metadata';
-import { inDevelopment, inTest, LicenseState, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { LICENSE_FEATURES } from '@n8n/constants';
-import { Container } from '@n8n/di';
+import { inDevelopment, inTest, LicenseState, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { LICENSE_FEATURES } from '@glow/constants';
+import { Container } from '@glow/di';
 import { Command, Errors } from '@oclif/core';
 import {
 	BinaryDataConfig,
@@ -11,12 +11,12 @@ import {
 	ObjectStoreService,
 	DataDeduplicationService,
 	ErrorReporter,
-} from 'n8n-core';
-import { ensureError, sleep, UserError } from 'n8n-workflow';
+} from 'glow-core';
+import { ensureError, sleep, UserError } from 'glow-workflow';
 
 import type { AbstractServer } from '@/abstract-server';
 import config from '@/config';
-import { N8N_VERSION, N8N_RELEASE_DATE } from '@/constants';
+import { GLOW_VERSION, GLOW_RELEASE_DATE } from '@/constants';
 import * as CrashJournal from '@/crash-journal';
 import { DbConnection } from '@/databases/db-connection';
 import { getDataDeduplicationService } from '@/deduplication';
@@ -108,9 +108,9 @@ export abstract class BaseCommand extends Command {
 			serverType: this.instanceSettings.instanceType,
 			dsn: backendDsn,
 			environment,
-			release: `n8n@${N8N_VERSION}`,
+			release: `n8n@${GLOW_VERSION}`,
 			serverName: deploymentName,
-			releaseDate: N8N_RELEASE_DATE,
+			releaseDate: GLOW_RELEASE_DATE,
 		});
 
 		process.once('SIGTERM', this.onTerminationSignal('SIGTERM'));
@@ -210,14 +210,14 @@ export abstract class BaseCommand extends Command {
 
 		if (isSelected && !isAvailable) {
 			throw new UserError(
-				'External storage selected but unavailable. Please make external storage available by adding "s3" to `N8N_AVAILABLE_BINARY_DATA_MODES`.',
+				'External storage selected but unavailable. Please make external storage available by adding "s3" to `GLOW_AVAILABLE_BINARY_DATA_MODES`.',
 			);
 		}
 
 		const isLicensed = Container.get(License).isLicensed(LICENSE_FEATURES.BINARY_DATA_S3);
 		if (!isLicensed) {
 			this.logger.error(
-				'No license found for S3 storage. \n Either set `N8N_DEFAULT_BINARY_DATA_MODE` to something else, or upgrade to a license that supports this feature.',
+				'No license found for S3 storage. \n Either set `GLOW_DEFAULT_BINARY_DATA_MODE` to something else, or upgrade to a license that supports this feature.',
 			);
 			return this.exit(1);
 		}

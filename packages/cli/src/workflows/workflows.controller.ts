@@ -2,10 +2,10 @@ import {
 	ImportWorkflowFromUrlDto,
 	ManualRunQueryDto,
 	TransferWorkflowBodyDto,
-} from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import type { Project } from '@n8n/db';
+} from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import type { Project } from '@glow/db';
 import {
 	SharedWorkflow,
 	WorkflowEntity,
@@ -14,7 +14,7 @@ import {
 	TagRepository,
 	SharedWorkflowRepository,
 	WorkflowRepository,
-} from '@n8n/db';
+} from '@glow/db';
 import {
 	Body,
 	Delete,
@@ -27,12 +27,12 @@ import {
 	Put,
 	Query,
 	RestController,
-} from '@n8n/decorators';
+} from '@glow/decorators';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In, type FindOptionsRelations } from '@n8n/typeorm';
+import { In, type FindOptionsRelations } from '@glow/typeorm';
 import axios from 'axios';
 import express from 'express';
-import { UnexpectedError } from 'n8n-workflow';
+import { UnexpectedError } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';

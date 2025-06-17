@@ -1,4 +1,4 @@
-import type { ResourceMapperField } from 'n8n-workflow';
+import type { ResourceMapperField } from 'glow-workflow';
 import { isResourceMapperFieldListStale } from './nodeTypesUtils';
 
 describe('isResourceMapperFieldListStale', () => {

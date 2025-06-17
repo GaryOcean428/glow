@@ -1,7 +1,7 @@
 import CanvasNode from '@/components/canvas/elements/nodes/CanvasNode.vue';
 import { createComponentRenderer } from '@/__tests__/render';
 import { createPinia, setActivePinia } from 'pinia';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { fireEvent } from '@testing-library/vue';
 import { createCanvasNodeData, createCanvasNodeProps, createCanvasProvide } from '@/__tests__/data';
 import { CanvasNodeRenderType } from '@/types';

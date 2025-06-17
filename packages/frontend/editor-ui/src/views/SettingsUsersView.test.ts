@@ -11,7 +11,7 @@ import { createTestingPinia, type TestingOptions } from '@pinia/testing';
 import merge from 'lodash/merge';
 import { useUIStore } from '@/stores/ui.store';
 import { useSSOStore } from '@/stores/sso.store';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
 
 const loggedInUser = createUser();

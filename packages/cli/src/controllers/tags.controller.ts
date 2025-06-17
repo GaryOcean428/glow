@@ -1,4 +1,4 @@
-import { CreateOrUpdateTagRequestDto, RetrieveTagQueryDto } from '@n8n/api-types';
+import { CreateOrUpdateTagRequestDto, RetrieveTagQueryDto } from '@glow/api-types';
 import {
 	Delete,
 	Get,
@@ -9,7 +9,7 @@ import {
 	Body,
 	Param,
 	Query,
-} from '@n8n/decorators';
+} from '@glow/decorators';
 import { Response } from 'express';
 
 import { AuthenticatedRequest } from '@/requests';

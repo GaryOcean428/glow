@@ -11,9 +11,9 @@ import { useSettingsStore } from '@/stores/settings.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { CanvasNodeDirtiness } from '@/types';
-import { type FrontendSettings } from '@n8n/api-types';
+import { type FrontendSettings } from '@glow/api-types';
 import { createTestingPinia } from '@pinia/testing';
-import { NodeConnectionTypes, type IConnections, type IRunData } from 'n8n-workflow';
+import { NodeConnectionTypes, type IConnections, type IRunData } from 'glow-workflow';
 import { defineComponent } from 'vue';
 import { createRouter, createWebHistory, type RouteLocationNormalizedLoaded } from 'vue-router';
 

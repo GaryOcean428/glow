@@ -1,5 +1,5 @@
-import type { CommunityNodeType } from '@n8n/api-types';
-import type { InstalledPackages } from '@n8n/db';
+import type { CommunityNodeType } from '@glow/api-types';
+import type { InstalledPackages } from '@glow/db';
 import { mock } from 'jest-mock-extended';
 
 import { CommunityPackagesController } from '@/controllers/community-packages.controller';

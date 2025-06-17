@@ -1,12 +1,12 @@
-import { generateNanoId } from '@n8n/db';
+import { generateNanoId } from '@glow/db';
 import type * as express from 'express';
 import { mock } from 'jest-mock-extended';
-import type { ITaskData, IWorkflowBase } from 'n8n-workflow';
+import type { ITaskData, IWorkflowBase } from 'glow-workflow';
 import {
 	type IWebhookData,
 	type IWorkflowExecuteAdditionalData,
 	type Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { NotFoundError } from '@/errors/response-errors/not-found.error';

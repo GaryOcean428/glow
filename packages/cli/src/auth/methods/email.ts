@@ -1,6 +1,6 @@
-import type { User } from '@n8n/db';
-import { UserRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { User } from '@glow/db';
+import { UserRepository } from '@glow/db';
+import { Container } from '@glow/di';
 
 import { AuthError } from '@/errors/response-errors/auth.error';
 import { EventService } from '@/events/event.service';

@@ -1,8 +1,8 @@
-import type { CreateProjectDto, ProjectType, UpdateProjectDto } from '@n8n/api-types';
-import { LicenseState } from '@n8n/backend-common';
-import { DatabaseConfig } from '@n8n/config';
-import { UNLIMITED_LICENSE_QUOTA } from '@n8n/constants';
-import type { User } from '@n8n/db';
+import type { CreateProjectDto, ProjectType, UpdateProjectDto } from '@glow/api-types';
+import { LicenseState } from '@glow/backend-common';
+import { DatabaseConfig } from '@glow/config';
+import { UNLIMITED_LICENSE_QUOTA } from '@glow/constants';
+import type { User } from '@glow/db';
 import {
 	Project,
 	ProjectRelation,
@@ -10,14 +10,14 @@ import {
 	ProjectRepository,
 	SharedCredentialsRepository,
 	SharedWorkflowRepository,
-} from '@n8n/db';
-import { Container, Service } from '@n8n/di';
-import { hasGlobalScope, rolesWithScope, type Scope, type ProjectRole } from '@n8n/permissions';
+} from '@glow/db';
+import { Container, Service } from '@glow/di';
+import { hasGlobalScope, rolesWithScope, type Scope, type ProjectRole } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { FindOptionsWhere, EntityManager } from '@n8n/typeorm';
+import type { FindOptionsWhere, EntityManager } from '@glow/typeorm';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In } from '@n8n/typeorm';
-import { UserError } from 'n8n-workflow';
+import { In } from '@glow/typeorm';
+import { UserError } from 'glow-workflow';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';
 import { ForbiddenError } from '@/errors/response-errors/forbidden.error';

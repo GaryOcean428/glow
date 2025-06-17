@@ -1,5 +1,5 @@
-import { SettingsRepository, type AuthProviderType } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { SettingsRepository, type AuthProviderType } from '@glow/db';
+import { Container } from '@glow/di';
 
 import config from '@/config';
 

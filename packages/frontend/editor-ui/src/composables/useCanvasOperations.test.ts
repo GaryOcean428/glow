@@ -6,8 +6,8 @@ import type {
 	Workflow,
 	INodeConnections,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeHelpers } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeHelpers } from 'glow-workflow';
 import { useCanvasOperations } from '@/composables/useCanvasOperations';
 import type { CanvasConnection, CanvasNode } from '@/types';
 import { CanvasConnectionMode } from '@/types';
@@ -44,7 +44,7 @@ import {
 	STICKY_NODE_TYPE,
 	WEBHOOK_NODE_TYPE,
 } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type { Connection } from '@vue-flow/core';
 import { useClipboard } from '@/composables/useClipboard';
 import { createCanvasConnectionHandleString } from '@/utils/canvasUtils';

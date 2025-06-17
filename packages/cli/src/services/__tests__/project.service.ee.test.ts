@@ -1,13 +1,13 @@
-import type { ProjectRelation } from '@n8n/api-types';
-import type { DatabaseConfig } from '@n8n/config';
+import type { ProjectRelation } from '@glow/api-types';
+import type { DatabaseConfig } from '@glow/config';
 import type {
 	Project,
 	ProjectRepository,
 	SharedCredentialsRepository,
 	ProjectRelationRepository,
 	SharedCredentials,
-} from '@n8n/db';
-import type { EntityManager } from '@n8n/typeorm';
+} from '@glow/db';
+import type { EntityManager } from '@glow/typeorm';
 import { mock } from 'jest-mock-extended';
 
 import type { CacheService } from '../cache/cache.service';

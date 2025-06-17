@@ -2,8 +2,8 @@ import type {
 	INodeTypeDescription,
 	NodeConnectionType,
 	TriggerPanelDefinition,
-} from 'n8n-workflow';
-import { nodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { nodeConnectionTypes } from 'glow-workflow';
 import type { IExecutionResponse, ICredentialsResponse, NewCredentialsModal } from '@/Interface';
 import type { Connection as VueFlowConnection } from '@vue-flow/core';
 import type { RouteLocationRaw } from 'vue-router';

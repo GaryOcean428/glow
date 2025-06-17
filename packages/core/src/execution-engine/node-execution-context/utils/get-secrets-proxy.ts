@@ -1,5 +1,5 @@
-import type { IDataObject, IWorkflowExecuteAdditionalData } from 'n8n-workflow';
-import { ExpressionError } from 'n8n-workflow';
+import type { IDataObject, IWorkflowExecuteAdditionalData } from 'glow-workflow';
+import { ExpressionError } from 'glow-workflow';
 
 function buildSecretsValueProxy(value: IDataObject): unknown {
 	return new Proxy(value, {

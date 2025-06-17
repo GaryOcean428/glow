@@ -1,7 +1,7 @@
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
 import glob from 'fast-glob';
-import type { IWorkflowBase } from 'n8n-workflow';
+import type { IWorkflowBase } from 'glow-workflow';
 import * as path from 'path';
 
 import { LoadNodesAndCredentials } from '@/load-nodes-and-credentials';
@@ -50,7 +50,7 @@ export class NodesRiskReporter implements RiskReporter {
 				title: NODES_REPORT.SECTIONS.OFFICIAL_RISKY_NODES,
 				description: [
 					sentenceStart(officialRiskyNodes.length),
-					"part of n8n's official nodes and may be used to fetch and run any arbitrary code in the host system. This may lead to exploits such as remote code execution.",
+					"part of glow's official nodes and may be used to fetch and run any arbitrary code in the host system. This may lead to exploits such as remote code execution.",
 				].join(' '),
 				recommendation: `Consider reviewing the parameters in these nodes, replacing them with app nodes where possible, and not loading unneeded node types with the NODES_EXCLUDE environment variable. See: ${ENV_VARS_DOCS_URL}`,
 				location: officialRiskyNodes,

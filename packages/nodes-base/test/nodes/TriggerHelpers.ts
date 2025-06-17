@@ -4,9 +4,9 @@ import { mock } from 'jest-mock-extended';
 import get from 'lodash/get';
 import merge from 'lodash/merge';
 import set from 'lodash/set';
-import { PollContext, returnJsonArray } from 'n8n-core';
-import type { InstanceSettings, ExecutionLifecycleHooks } from 'n8n-core';
-import { ScheduledTaskManager } from 'n8n-core/dist/execution-engine/scheduled-task-manager';
+import { PollContext, returnJsonArray } from 'glow-core';
+import type { InstanceSettings, ExecutionLifecycleHooks } from 'glow-core';
+import { ScheduledTaskManager } from 'glow-core/dist/execution-engine/scheduled-task-manager';
 import {
 	createDeferredPromise,
 	type IBinaryData,
@@ -22,7 +22,7 @@ import {
 	type NodeTypeAndVersion,
 	type VersionedNodeType,
 	type Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 type MockDeepPartial<T> = Parameters<typeof mock<T>>[0];
 

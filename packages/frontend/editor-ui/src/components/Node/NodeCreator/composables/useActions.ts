@@ -4,7 +4,7 @@ import {
 	NodeConnectionTypes,
 	type IDataObject,
 	type INodeParameters,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type {
 	ActionTypeDescription,
 	AddedNode,
@@ -33,7 +33,7 @@ import {
 	WEBHOOK_NODE_TYPE,
 } from '@/constants';
 
-import type { BaseTextKey } from '@n8n/i18n';
+import type { BaseTextKey } from '@glow/i18n';
 import type { Telemetry } from '@/plugins/telemetry';
 import { useNodeCreatorStore } from '@/stores/nodeCreator.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
@@ -41,7 +41,7 @@ import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useExternalHooks } from '@/composables/useExternalHooks';
 
 import { sortNodeCreateElements, transformNodeType } from '../utils';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useCanvasStore } from '@/stores/canvas.store';
 
 export const useActions = () => {

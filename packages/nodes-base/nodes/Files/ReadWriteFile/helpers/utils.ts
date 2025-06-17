@@ -1,5 +1,5 @@
-import type { IDataObject, IExecuteFunctions } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IDataObject, IExecuteFunctions } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 export function errorMapper(
 	this: IExecuteFunctions,

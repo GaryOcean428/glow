@@ -1,6 +1,6 @@
-import type { CreateCredentialDto } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import type { Project, User, ICredentialsDb, ScopesField } from '@n8n/db';
+import type { CreateCredentialDto } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import type { Project, User, ICredentialsDb, ScopesField } from '@glow/db';
 import {
 	CredentialsEntity,
 	SharedCredentials,
@@ -8,24 +8,24 @@ import {
 	ProjectRepository,
 	SharedCredentialsRepository,
 	UserRepository,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
-import { hasGlobalScope, type Scope } from '@n8n/permissions';
+} from '@glow/db';
+import { Service } from '@glow/di';
+import { hasGlobalScope, type Scope } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
 import {
 	In,
 	type EntityManager,
 	type FindOptionsRelations,
 	type FindOptionsWhere,
-} from '@n8n/typeorm';
-import { CredentialDataError, Credentials, ErrorReporter } from 'n8n-core';
+} from '@glow/typeorm';
+import { CredentialDataError, Credentials, ErrorReporter } from 'glow-core';
 import type {
 	ICredentialDataDecryptedObject,
 	ICredentialsDecrypted,
 	ICredentialType,
 	INodeProperties,
-} from 'n8n-workflow';
-import { CREDENTIAL_EMPTY_VALUE, deepCopy, NodeHelpers, UnexpectedError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { CREDENTIAL_EMPTY_VALUE, deepCopy, NodeHelpers, UnexpectedError } from 'glow-workflow';
 
 import { CREDENTIAL_BLANKING_VALUE } from '@/constants';
 import { CredentialTypes } from '@/credential-types';

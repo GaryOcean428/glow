@@ -1,8 +1,8 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import type { User } from '@n8n/db';
-import { InvalidAuthTokenRepository, UserRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import type { User } from '@glow/db';
+import { InvalidAuthTokenRepository, UserRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import { createHash } from 'crypto';
 import type { NextFunction, Response } from 'express';
 import { JsonWebTokenError, TokenExpiredError } from 'jsonwebtoken';

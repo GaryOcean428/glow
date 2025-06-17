@@ -7,8 +7,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	JsonObject,
-} from 'n8n-workflow';
-import { deepCopy, BINARY_ENCODING, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { deepCopy, BINARY_ENCODING, NodeConnectionTypes } from 'glow-workflow';
 import { pipeline } from 'stream/promises';
 import { v4 as uuid } from 'uuid';
 

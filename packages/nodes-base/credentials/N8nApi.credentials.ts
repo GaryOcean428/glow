@@ -3,7 +3,7 @@ import type {
 	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class N8nApi implements ICredentialType {
 	name = 'n8nApi';

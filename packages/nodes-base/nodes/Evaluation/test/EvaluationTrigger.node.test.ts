@@ -1,5 +1,5 @@
 import { mock } from 'jest-mock-extended';
-import type { IExecuteFunctions } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
 
 import { GoogleSheet } from '../../Google/Sheet/v2/helpers/GoogleSheet';
 import { EvaluationTrigger } from '../EvaluationTrigger/EvaluationTrigger.node.ee';

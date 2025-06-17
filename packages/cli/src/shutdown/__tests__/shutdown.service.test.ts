@@ -1,9 +1,9 @@
-import { ShutdownRegistryMetadata } from '@n8n/decorators';
-import type { ShutdownServiceClass } from '@n8n/decorators';
-import { Container } from '@n8n/di';
+import { ShutdownRegistryMetadata } from '@glow/decorators';
+import type { ShutdownServiceClass } from '@glow/decorators';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
-import type { ErrorReporter } from 'n8n-core';
-import { UnexpectedError } from 'n8n-workflow';
+import type { ErrorReporter } from 'glow-core';
+import { UnexpectedError } from 'glow-workflow';
 
 import { ShutdownService } from '../shutdown.service';
 

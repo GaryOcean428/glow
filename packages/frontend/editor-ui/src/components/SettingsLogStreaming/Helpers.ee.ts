@@ -2,7 +2,7 @@ import type {
 	INodeCredentials,
 	INodeParameters,
 	MessageEventBusDestinationOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { INodeUi } from '@/Interface';
 
 export function destinationToFakeINodeUi(

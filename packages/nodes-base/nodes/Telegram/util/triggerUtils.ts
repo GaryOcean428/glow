@@ -3,7 +3,7 @@ import {
 	type IDataObject,
 	type IWebhookFunctions,
 	type IWebhookResponseData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { apiRequest, getImageBySize } from '../GenericFunctions';
 import { type IEvent } from '../IEvent';

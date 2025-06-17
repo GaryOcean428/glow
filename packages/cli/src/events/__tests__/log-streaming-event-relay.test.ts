@@ -1,6 +1,6 @@
-import type { IWorkflowDb } from '@n8n/db';
+import type { IWorkflowDb } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import type { INode, IRun, IWorkflowBase } from 'n8n-workflow';
+import type { INode, IRun, IWorkflowBase } from 'glow-workflow';
 
 import type { MessageEventBus } from '@/eventbus/message-event-bus/message-event-bus';
 import { EventService } from '@/events/event.service';

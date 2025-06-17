@@ -1,4 +1,4 @@
-import { i18n } from '@n8n/i18n';
+import { i18n } from '@glow/i18n';
 import {
 	autocompletableNodeNames,
 	receivesNoBinaryData,

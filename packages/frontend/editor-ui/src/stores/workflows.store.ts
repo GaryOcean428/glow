@@ -11,7 +11,7 @@ import {
 	START_NODE_TYPE,
 	WAIT_NODE_TYPE,
 } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import type {
 	IExecutionPushResponse,
 	IExecutionResponse,
@@ -55,7 +55,7 @@ import type {
 	IWorkflowSettings,
 	INodeType,
 	ITaskStartedData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	deepCopy,
 	NodeConnectionTypes,
@@ -63,29 +63,29 @@ import {
 	SEND_AND_WAIT_OPERATION,
 	Workflow,
 	TelemetryHelpers,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import findLast from 'lodash/findLast';
 import isEqual from 'lodash/isEqual';
 import pick from 'lodash/pick';
 
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import * as workflowsApi from '@/api/workflows';
 import { useUIStore } from '@/stores/ui.store';
 import { dataPinningEventBus } from '@/event-bus';
 import { isObject } from '@/utils/objectUtils';
 import { getPairedItemsMapping } from '@/utils/pairedItemUtils';
 import { isJsonKeyObject, isEmpty, stringSizeInBytes, isPresent } from '@/utils/typesUtils';
-import { makeRestApiRequest, ResponseError } from '@n8n/rest-api-client';
+import { makeRestApiRequest, ResponseError } from '@glow/rest-api-client';
 import { unflattenExecutionData } from '@/utils/executionUtils';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { getCredentialOnlyNodeTypeName } from '@/utils/credentialOnlyNodes';
-import { i18n } from '@n8n/i18n';
+import { i18n } from '@glow/i18n';
 
 import { computed, ref, watch } from 'vue';
 import { useProjectsStore } from '@/stores/projects.store';
 import type { ProjectSharingData } from '@/types/projects.types';
-import type { PushPayload } from '@n8n/api-types';
+import type { PushPayload } from '@glow/api-types';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';
 import { useSettingsStore } from './settings.store';
@@ -98,7 +98,7 @@ import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useUsersStore } from '@/stores/users.store';
 import { updateCurrentUserSettings } from '@/api/users';
 import { useExecutingNode } from '@/composables/useExecutingNode';
-import type { NodeExecuteBefore } from '@n8n/api-types/push/execution';
+import type { NodeExecuteBefore } from '@glow/api-types/push/execution';
 import { isChatNode } from '@/utils/aiUtils';
 
 const defaults: Omit<IWorkflowDb, 'id'> & { settings: NonNullable<IWorkflowDb['settings']> } = {

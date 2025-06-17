@@ -6,7 +6,7 @@ import type { IndexedDbCache } from './cache';
 import globalTypes from './type-declarations/globals.d.ts?raw';
 import n8nTypes from './type-declarations/n8n.d.ts?raw';
 
-import type { CodeExecutionMode } from 'n8n-workflow';
+import type { CodeExecutionMode } from 'glow-workflow';
 import { wrapInFunction } from './utils';
 
 type EnvOptions = {
@@ -45,7 +45,7 @@ export async function setupTypescriptEnv({ cache, code, mode }: EnvOptions) {
 
 	removeUnusedLibs(fsMap);
 
-	fsMap.set(TYPESCRIPT_FILES.N8N_TYPES, n8nTypes);
+	fsMap.set(TYPESCRIPT_FILES.GLOW_TYPES, n8nTypes);
 	fsMap.set(TYPESCRIPT_FILES.GLOBAL_TYPES, globalTypes);
 
 	fsMap.set(code.fileName, wrapInFunction(code.content, mode));

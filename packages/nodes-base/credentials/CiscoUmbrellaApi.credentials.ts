@@ -5,7 +5,7 @@ import type {
 	ICredentialType,
 	IHttpRequestHelper,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class CiscoUmbrellaApi implements ICredentialType {
 	name = 'ciscoUmbrellaApi';

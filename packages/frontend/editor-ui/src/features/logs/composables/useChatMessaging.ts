@@ -1,7 +1,7 @@
 import type { ComputedRef, Ref } from 'vue';
 import { computed, ref } from 'vue';
 import { v4 as uuid } from 'uuid';
-import type { ChatMessage } from '@n8n/chat/types';
+import type { ChatMessage } from '@glow/chat/types';
 import type {
 	ITaskData,
 	INodeExecutionData,
@@ -10,12 +10,12 @@ import type {
 	IBinaryData,
 	BinaryFileType,
 	IRunExecutionData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { useToast } from '@/composables/useToast';
 import { useMessage } from '@/composables/useMessage';
 import { usePinnedData } from '@/composables/usePinnedData';
 import { MODAL_CONFIRM } from '@/constants';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import type { IExecutionPushResponse, INodeUi } from '@/Interface';
 import { extractBotResponse, getInputKey } from '@/features/logs/logs.utils';
 

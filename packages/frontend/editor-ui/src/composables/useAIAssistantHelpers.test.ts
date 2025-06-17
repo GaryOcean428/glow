@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import type { INode, IRunExecutionData, NodeConnectionType } from 'n8n-workflow';
+import type { INode, IRunExecutionData, NodeConnectionType } from 'glow-workflow';
 import { useAIAssistantHelpers } from './useAIAssistantHelpers';
 import { createTestingPinia } from '@pinia/testing';
 import { setActivePinia } from 'pinia';

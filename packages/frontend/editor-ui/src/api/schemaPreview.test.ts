@@ -1,7 +1,7 @@
 import { getSchemaPreview } from './schemaPreview';
-import * as apiUtils from '@n8n/rest-api-client';
+import * as apiUtils from '@glow/rest-api-client';
 
-vi.mock('@n8n/rest-api-client');
+vi.mock('@glow/rest-api-client');
 
 describe('API: schemaPreview', () => {
 	describe('getSchemaPreview', () => {
@@ -54,7 +54,7 @@ describe('API: schemaPreview', () => {
 			vi.spyOn(apiUtils, 'request').mockResolvedValue(schema);
 
 			await getSchemaPreview('http://test.com', {
-				nodeType: '@n8n/n8n-nodes-base.asana',
+				nodeType: '@glow/n8n-nodes-base.asana',
 				version: 1,
 				resource: 'resource',
 				operation: 'operation',

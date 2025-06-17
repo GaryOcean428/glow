@@ -1,8 +1,8 @@
 import { SETTINGS_STORE_DEFAULT_STATE } from '@/__tests__/utils';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { createTestingPinia } from '@pinia/testing';
 import merge from 'lodash/merge';
-import type { ResourceMapperFields, ResourceMapperValue } from 'n8n-workflow';
+import type { ResourceMapperFields, ResourceMapperValue } from 'glow-workflow';
 
 export const NODE_PARAMETER_VALUES = {
 	authentication: 'oAuth2',

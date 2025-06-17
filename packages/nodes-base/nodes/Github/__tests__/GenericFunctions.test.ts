@@ -1,5 +1,5 @@
-import type { IExecuteFunctions, IHookFunctions } from 'n8n-workflow';
-import { NodeApiError, NodeOperationError } from 'n8n-workflow';
+import type { IExecuteFunctions, IHookFunctions } from 'glow-workflow';
+import { NodeApiError, NodeOperationError } from 'glow-workflow';
 
 import {
 	githubApiRequest,

@@ -12,8 +12,8 @@ import type {
 	Workflow,
 	WorkflowActivateMode,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
-import { ApplicationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ApplicationError } from 'glow-workflow';
 
 import { HookContext } from '../hook-context';
 

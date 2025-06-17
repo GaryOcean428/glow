@@ -1,16 +1,16 @@
-import type { SourceControlledFile } from '@n8n/api-types';
-import { User } from '@n8n/db';
-import type { SharedCredentials } from '@n8n/db';
-import type { SharedWorkflow } from '@n8n/db';
-import type { FolderRepository } from '@n8n/db';
-import type { TagRepository } from '@n8n/db';
-import type { WorkflowTagMappingRepository } from '@n8n/db';
-import type { SharedCredentialsRepository } from '@n8n/db';
-import type { SharedWorkflowRepository } from '@n8n/db';
-import type { WorkflowRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { SourceControlledFile } from '@glow/api-types';
+import { User } from '@glow/db';
+import type { SharedCredentials } from '@glow/db';
+import type { SharedWorkflow } from '@glow/db';
+import type { FolderRepository } from '@glow/db';
+import type { TagRepository } from '@glow/db';
+import type { WorkflowTagMappingRepository } from '@glow/db';
+import type { SharedCredentialsRepository } from '@glow/db';
+import type { SharedWorkflowRepository } from '@glow/db';
+import type { WorkflowRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { mock, captor } from 'jest-mock-extended';
-import { Cipher, type InstanceSettings } from 'n8n-core';
+import { Cipher, type InstanceSettings } from 'glow-core';
 import fsp from 'node:fs/promises';
 
 import type { VariablesService } from '../../variables/variables.service.ee';

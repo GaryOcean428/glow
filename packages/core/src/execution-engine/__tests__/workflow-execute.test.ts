@@ -1,6 +1,6 @@
 // Disable task runners until we have fixed the "run test workflows" test
 // to mock the Code Node execution
-process.env.N8N_RUNNERS_ENABLED = 'false';
+process.env.GLOW_RUNNERS_ENABLED = 'false';
 
 // NOTE: Diagrams in this file have been created with https://asciiflow.com/#/
 // If you update the tests, please update the diagrams as well.
@@ -33,14 +33,14 @@ import type {
 	WorkflowTestData,
 	RelatedExecution,
 	IExecuteFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	ApplicationError,
 	createDeferredPromise,
 	NodeConnectionTypes,
 	NodeHelpers,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import * as Helpers from '@test/helpers';
 import { legacyWorkflowExecuteTests, v1WorkflowExecuteTests } from '@test/helpers/constants';
@@ -823,7 +823,7 @@ describe('WorkflowExecute', () => {
 			const expectedToolExecutor: INode = {
 				name: 'PartialExecutionToolExecutor',
 				disabled: false,
-				type: '@n8n/n8n-nodes-langchain.toolExecutor',
+				type: '@glow/n8n-nodes-langchain.toolExecutor',
 				parameters: {
 					query: {},
 					toolName: '',

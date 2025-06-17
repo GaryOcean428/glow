@@ -1,5 +1,5 @@
-import type { User } from '@n8n/db';
-import type { UserRepository } from '@n8n/db';
+import type { User } from '@glow/db';
+import type { UserRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
 
 import type { EventService } from '@/events/event.service';

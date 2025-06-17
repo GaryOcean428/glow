@@ -1,4 +1,4 @@
-import type { IWorkflowSettings } from 'n8n-workflow';
+import type { IWorkflowSettings } from 'glow-workflow';
 
 import config from '@/config';
 

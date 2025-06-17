@@ -1,10 +1,10 @@
-import { Logger } from '@n8n/backend-common';
-import { SharedWorkflowRepository } from '@n8n/db';
-import { OnLifecycleEvent, type WorkflowExecuteAfterContext } from '@n8n/decorators';
-import { Service } from '@n8n/di';
-import { In } from '@n8n/typeorm';
+import { Logger } from '@glow/backend-common';
+import { SharedWorkflowRepository } from '@glow/db';
+import { OnLifecycleEvent, type WorkflowExecuteAfterContext } from '@glow/decorators';
+import { Service } from '@glow/di';
+import { In } from '@glow/typeorm';
 import { DateTime } from 'luxon';
-import { UnexpectedError, type ExecutionStatus, type WorkflowExecuteMode } from 'n8n-workflow';
+import { UnexpectedError, type ExecutionStatus, type WorkflowExecuteMode } from 'glow-workflow';
 
 import { InsightsMetadata } from '@/modules/insights/database/entities/insights-metadata';
 import { InsightsRaw } from '@/modules/insights/database/entities/insights-raw';

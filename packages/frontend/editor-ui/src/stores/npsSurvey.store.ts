@@ -8,13 +8,13 @@ import {
 	NPS_SURVEY_MODAL_KEY,
 	CONTACT_PROMPT_MODAL_KEY,
 } from '@/constants';
-import { useRootStore } from '@n8n/stores/useRootStore';
-import type { IUserSettings, NpsSurveyState } from 'n8n-workflow';
+import { useRootStore } from '@glow/stores/useRootStore';
+import type { IUserSettings, NpsSurveyState } from 'glow-workflow';
 import { useSettingsStore } from './settings.store';
-import { updateNpsSurveyState } from '@n8n/rest-api-client/api/npsSurvey';
+import { updateNpsSurveyState } from '@glow/rest-api-client/api/npsSurvey';
 import type { IN8nPrompts } from '@/Interface';
 import { getPromptsData } from '@/api/settings';
-import { assert } from '@n8n/utils/assert';
+import { assert } from '@glow/utils/assert';
 
 export const MAXIMUM_TIMES_TO_SHOW_SURVEY_IF_IGNORED = 3;
 

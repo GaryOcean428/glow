@@ -11,23 +11,23 @@ import {
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import type { IExecutionResponse, INodeUi, IWorkflowDb, IWorkflowSettings } from '@/Interface';
 
-import { deepCopy, SEND_AND_WAIT_OPERATION } from 'n8n-workflow';
+import { deepCopy, SEND_AND_WAIT_OPERATION } from 'glow-workflow';
 import type {
 	IPinData,
 	ExecutionSummary,
 	IConnection,
 	INodeExecutionData,
 	INode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { stringSizeInBytes } from '@/utils/typesUtils';
 import { dataPinningEventBus } from '@/event-bus';
 import { useUIStore } from '@/stores/ui.store';
-import type { PushPayload, FrontendSettings } from '@n8n/api-types';
+import type { PushPayload, FrontendSettings } from '@glow/api-types';
 import { flushPromises } from '@vue/test-utils';
 import { useNDVStore } from '@/stores/ndv.store';
 import { mock } from 'vitest-mock-extended';
 import { mockedStore, type MockedStore } from '@/__tests__/utils';
-import * as apiUtils from '@n8n/rest-api-client';
+import * as apiUtils from '@glow/rest-api-client';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useLocalStorage } from '@vueuse/core';
 import { ref } from 'vue';

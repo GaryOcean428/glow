@@ -1,6 +1,6 @@
-import type { User } from '@n8n/db';
-import type { ApiKey } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { User } from '@glow/db';
+import type { ApiKey } from '@glow/db';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
 
 import { EventService } from '@/events/event.service';

@@ -1,7 +1,7 @@
-import { SecurityConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
+import { SecurityConfig } from '@glow/config';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
-import { UserError } from 'n8n-workflow';
+import { UserError } from 'glow-workflow';
 
 import { RISK_CATEGORIES } from '@/security-audit/constants';
 import type { Risk } from '@/security-audit/types';

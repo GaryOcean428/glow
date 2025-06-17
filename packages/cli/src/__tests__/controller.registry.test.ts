@@ -1,15 +1,15 @@
-jest.mock('@n8n/backend-common', () => {
+jest.mock('@glow/backend-common', () => {
 	return {
-		...jest.requireActual('@n8n/backend-common'),
+		...jest.requireActual('@glow/backend-common'),
 		inProduction: true,
 	};
 });
 
-import type { GlobalConfig } from '@n8n/config';
-import { ControllerRegistryMetadata } from '@n8n/decorators';
-import { Param } from '@n8n/decorators';
-import { Get, Licensed, RestController } from '@n8n/decorators';
-import { Container } from '@n8n/di';
+import type { GlobalConfig } from '@glow/config';
+import { ControllerRegistryMetadata } from '@glow/decorators';
+import { Param } from '@glow/decorators';
+import { Get, Licensed, RestController } from '@glow/decorators';
+import { Container } from '@glow/di';
 import express from 'express';
 import { mock } from 'jest-mock-extended';
 import { agent as testAgent } from 'supertest';

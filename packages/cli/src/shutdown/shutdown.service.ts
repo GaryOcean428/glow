@@ -1,9 +1,9 @@
-import { Logger } from '@n8n/backend-common';
-import type { ShutdownHandler } from '@n8n/decorators';
-import { ShutdownRegistryMetadata } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
-import { ErrorReporter } from 'n8n-core';
-import { assert, UnexpectedError, UserError } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import type { ShutdownHandler } from '@glow/decorators';
+import { ShutdownRegistryMetadata } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
+import { ErrorReporter } from 'glow-core';
+import { assert, UnexpectedError, UserError } from 'glow-workflow';
 
 /** Error reported when a listener fails to shutdown gracefully */
 export class ComponentShutdownError extends UnexpectedError {

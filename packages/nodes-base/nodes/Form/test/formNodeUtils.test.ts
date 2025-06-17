@@ -5,7 +5,7 @@ import {
 	type FormFieldsParameter,
 	type IWebhookFunctions,
 	type NodeTypeAndVersion,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { renderFormNode } from '../formNodeUtils';
 

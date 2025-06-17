@@ -1,7 +1,7 @@
-import { inTest, inDevelopment, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { OnShutdown } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
+import { inTest, inDevelopment, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { OnShutdown } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
 import compression from 'compression';
 import express from 'express';
 import { engine as expressHandlebars } from 'express-handlebars';
@@ -10,7 +10,7 @@ import type { Server } from 'http';
 import isbot from 'isbot';
 
 import config from '@/config';
-import { N8N_VERSION, TEMPLATES_DIR } from '@/constants';
+import { GLOW_VERSION, TEMPLATES_DIR } from '@/constants';
 import { DbConnection } from '@/databases/db-connection';
 import { ServiceUnavailableError } from '@/errors/response-errors/service-unavailable.error';
 import { ExternalHooks } from '@/external-hooks';
@@ -264,7 +264,7 @@ export abstract class AbstractServer {
 		await this.configure();
 
 		if (!inTest) {
-			this.logger.info(`Version: ${N8N_VERSION}`);
+			this.logger.info(`Version: ${GLOW_VERSION}`);
 
 			const defaultLocale = config.getEnv('defaultLocale');
 			if (defaultLocale !== 'en') {

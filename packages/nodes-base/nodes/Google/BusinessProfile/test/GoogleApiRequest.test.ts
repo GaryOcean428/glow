@@ -1,4 +1,4 @@
-import { NodeApiError, type ILoadOptionsFunctions, type IPollFunctions } from 'n8n-workflow';
+import { NodeApiError, type ILoadOptionsFunctions, type IPollFunctions } from 'glow-workflow';
 
 import { googleApiRequest } from '../GenericFunctions';
 

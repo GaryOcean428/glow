@@ -1,5 +1,5 @@
-import type { IRestApiContext } from '@n8n/rest-api-client';
-import { makeRestApiRequest, request } from '@n8n/rest-api-client';
+import type { IRestApiContext } from '@glow/rest-api-client';
+import { makeRestApiRequest, request } from '@glow/rest-api-client';
 
 export interface TestRunRecord {
 	id: string;

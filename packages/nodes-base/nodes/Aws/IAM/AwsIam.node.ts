@@ -1,5 +1,5 @@
-import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { INodeType, INodeTypeDescription } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { user, group } from './descriptions';
 import { BASE_URL } from './helpers/constants';

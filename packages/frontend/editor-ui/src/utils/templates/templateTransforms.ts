@@ -6,7 +6,7 @@ import type {
 	INodeCredentialDescription,
 	INodeCredentials,
 	INodeCredentialsDetails,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export type IWorkflowTemplateNodeWithCredentials = IWorkflowTemplateNode &
 	Required<Pick<IWorkflowTemplateNode, 'credentials'>>;

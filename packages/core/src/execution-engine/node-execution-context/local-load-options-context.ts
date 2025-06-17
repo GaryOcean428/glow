@@ -1,5 +1,5 @@
 import get from 'lodash/get';
-import { ApplicationError, Workflow } from 'n8n-workflow';
+import { ApplicationError, Workflow } from 'glow-workflow';
 import type {
 	INodeParameterResourceLocator,
 	IWorkflowExecuteAdditionalData,
@@ -8,7 +8,7 @@ import type {
 	IWorkflowLoader,
 	IWorkflowNodeContext,
 	INodeTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { LoadWorkflowNodeContext } from './workflow-node-context';
 

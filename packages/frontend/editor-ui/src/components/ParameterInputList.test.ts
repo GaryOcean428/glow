@@ -13,7 +13,7 @@ import {
 	FIXED_COLLECTION_PARAMETERS,
 	TEST_ISSUE,
 } from './ParameterInputList.test.constants';
-import { FORM_NODE_TYPE, FORM_TRIGGER_NODE_TYPE } from 'n8n-workflow';
+import { FORM_NODE_TYPE, FORM_TRIGGER_NODE_TYPE } from 'glow-workflow';
 import type { INodeUi } from '../Interface';
 import type { MockInstance } from 'vitest';
 

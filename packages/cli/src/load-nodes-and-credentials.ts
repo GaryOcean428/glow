@@ -1,9 +1,9 @@
-import { inTest, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Container, Service } from '@n8n/di';
+import { inTest, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Container, Service } from '@glow/di';
 import glob from 'fast-glob';
 import fsPromises from 'fs/promises';
-import type { Class, DirectoryLoader, Types } from 'n8n-core';
+import type { Class, DirectoryLoader, Types } from 'glow-core';
 import {
 	CUSTOM_EXTENSION_ENV,
 	ErrorReporter,
@@ -13,7 +13,7 @@ import {
 	LazyPackageDirectoryLoader,
 	UnrecognizedCredentialTypeError,
 	UnrecognizedNodeTypeError,
-} from 'n8n-core';
+} from 'glow-core';
 import type {
 	KnownNodesAndCredentials,
 	INodeTypeBaseDescription,
@@ -24,8 +24,8 @@ import type {
 	IVersionedNodeType,
 	INodeProperties,
 	LoadedNodesAndCredentials,
-} from 'n8n-workflow';
-import { deepCopy, NodeConnectionTypes, UnexpectedError, UserError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { deepCopy, NodeConnectionTypes, UnexpectedError, UserError } from 'glow-workflow';
 import path from 'path';
 import picocolors from 'picocolors';
 
@@ -76,7 +76,7 @@ export class LoadNodesAndCredentials {
 
 		// Load nodes from `n8n-nodes-base`
 		const basePathsToScan = [
-			// In case "n8n" package is in same node_modules folder.
+			// In case "glow" package is in same node_modules folder.
 			path.join(CLI_DIR, '..'),
 			// In case "n8n" package is the root and the packages are
 			// in the "node_modules" folder underneath it.
@@ -85,7 +85,7 @@ export class LoadNodesAndCredentials {
 
 		for (const nodeModulesDir of basePathsToScan) {
 			await this.loadNodesFromNodeModules(nodeModulesDir, 'n8n-nodes-base');
-			await this.loadNodesFromNodeModules(nodeModulesDir, '@n8n/n8n-nodes-langchain');
+			await this.loadNodesFromNodeModules(nodeModulesDir, '@glow/n8n-nodes-langchain');
 		}
 
 		if (!this.globalConfig.nodes.communityPackages.preventLoading) {

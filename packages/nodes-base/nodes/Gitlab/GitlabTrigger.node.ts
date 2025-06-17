@@ -6,8 +6,8 @@ import type {
 	INodeTypeDescription,
 	IWebhookResponseData,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeApiError } from 'glow-workflow';
 
 import { gitlabApiRequest } from './GenericFunctions';
 

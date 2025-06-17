@@ -1,10 +1,10 @@
-import * as communityNodesApi from '@n8n/rest-api-client/api/communityNodes';
+import * as communityNodesApi from '@glow/rest-api-client/api/communityNodes';
 import { getAvailableCommunityPackageCount } from '@/api/settings';
 import { defineStore } from 'pinia';
-import { useRootStore } from '@n8n/stores/useRootStore';
-import type { PublicInstalledPackage } from 'n8n-workflow';
+import { useRootStore } from '@glow/stores/useRootStore';
+import type { PublicInstalledPackage } from 'glow-workflow';
 import type { CommunityPackageMap } from '@/Interface';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { computed, ref } from 'vue';
 
 const LOADER_DELAY = 300;

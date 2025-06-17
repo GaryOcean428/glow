@@ -1,5 +1,5 @@
-import { SettingsRepository } from '@n8n/db';
-import type { Settings } from '@n8n/db';
+import { SettingsRepository } from '@glow/db';
+import type { Settings } from '@glow/db';
 import axios from 'axios';
 import type express from 'express';
 import { mock } from 'jest-mock-extended';

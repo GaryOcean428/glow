@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref, watch, computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import * as projectsApi from '@/api/projects.api';
 import * as workflowsApi from '@/api/workflows';
 import * as workflowsEEApi from '@/api/workflows.ee';
@@ -13,10 +13,10 @@ import { useSettingsStore } from '@/stores/settings.store';
 import { hasPermission } from '@/utils/rbac/permissions';
 import type { IWorkflowDb } from '@/Interface';
 import { useCredentialsStore } from '@/stores/credentials.store';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { useUsersStore } from '@/stores/users.store';
 import { getResourcePermissions } from '@/permissions';
-import type { CreateProjectDto, UpdateProjectDto } from '@n8n/api-types';
+import type { CreateProjectDto, UpdateProjectDto } from '@glow/api-types';
 import { useSourceControlStore } from '@/stores/sourceControl.store';
 
 export const useProjectsStore = defineStore(STORES.PROJECTS, () => {

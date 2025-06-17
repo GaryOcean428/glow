@@ -1,8 +1,8 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
-import type { ICredentialDataDecryptedObject } from 'n8n-workflow';
-import { deepCopy, jsonParse } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
+import type { ICredentialDataDecryptedObject } from 'glow-workflow';
+import { deepCopy, jsonParse } from 'glow-workflow';
 
 import { CredentialTypes } from '@/credential-types';
 import type { ICredentialsOverwrite } from '@/interfaces';

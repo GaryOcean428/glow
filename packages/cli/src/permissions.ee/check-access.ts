@@ -1,10 +1,10 @@
-import type { User } from '@n8n/db';
-import { ProjectRepository, SharedCredentialsRepository, SharedWorkflowRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
-import { hasGlobalScope, rolesWithScope, type Scope } from '@n8n/permissions';
+import type { User } from '@glow/db';
+import { ProjectRepository, SharedCredentialsRepository, SharedWorkflowRepository } from '@glow/db';
+import { Container } from '@glow/di';
+import { hasGlobalScope, rolesWithScope, type Scope } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In } from '@n8n/typeorm';
-import { UnexpectedError } from 'n8n-workflow';
+import { In } from '@glow/typeorm';
+import { UnexpectedError } from 'glow-workflow';
 
 /**
  * Check if a user has the required scopes. The check can be:

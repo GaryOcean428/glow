@@ -1,7 +1,7 @@
 import type { IResult } from 'mssql';
 import mssql from 'mssql';
-import type { IDataObject, INodeExecutionData } from 'n8n-workflow';
-import { deepCopy } from 'n8n-workflow';
+import type { IDataObject, INodeExecutionData } from 'glow-workflow';
+import { deepCopy } from 'glow-workflow';
 
 import { chunk, flatten } from '@utils/utilities';
 

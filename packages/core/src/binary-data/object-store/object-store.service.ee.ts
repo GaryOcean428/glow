@@ -14,9 +14,9 @@ import {
 	DeleteObjectsCommand,
 	ListObjectsV2Command,
 } from '@aws-sdk/client-s3';
-import { Logger } from '@n8n/backend-common';
-import { Service } from '@n8n/di';
-import { UnexpectedError } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { Service } from '@glow/di';
+import { UnexpectedError } from 'glow-workflow';
 import { createHash } from 'node:crypto';
 import { Readable } from 'node:stream';
 
@@ -40,7 +40,7 @@ export class ObjectStoreService {
 		const { bucket } = s3Config;
 		if (bucket.name === '') {
 			throw new UnexpectedError(
-				'External storage bucket name not configured. Please set `N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME`.',
+				'External storage bucket name not configured. Please set `GLOW_EXTERNAL_STORAGE_S3_BUCKET_NAME`.',
 			);
 		}
 

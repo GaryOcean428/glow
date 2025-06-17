@@ -1,5 +1,5 @@
-import type { IExecuteFunctions, IDataObject, INodeExecutionData } from 'n8n-workflow';
-import { NodeOperationError, UserError } from 'n8n-workflow';
+import type { IExecuteFunctions, IDataObject, INodeExecutionData } from 'glow-workflow';
+import { NodeOperationError, UserError } from 'glow-workflow';
 
 import { cellFormat, handlingExtraData, locationDefine } from './commonDescription';
 import type { GoogleSheet } from '../../helpers/GoogleSheet';

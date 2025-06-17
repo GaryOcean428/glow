@@ -1,6 +1,6 @@
 import type { Plugin } from 'vue';
-import type { ITelemetrySettings } from '@n8n/api-types';
-import type { ITelemetryTrackProperties, IDataObject } from 'n8n-workflow';
+import type { ITelemetrySettings } from '@glow/api-types';
+import type { ITelemetryTrackProperties, IDataObject } from 'glow-workflow';
 import type { RouteLocation } from 'vue-router';
 
 import type { IUpdateInformation } from '@/Interface';
@@ -11,7 +11,7 @@ import {
 	SLACK_NODE_TYPE,
 	TELEGRAM_NODE_TYPE,
 } from '@/constants';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useNDVStore } from '@/stores/ndv.store';
 import { usePostHog } from '@/stores/posthog.store';
 import { useSettingsStore } from '@/stores/settings.store';

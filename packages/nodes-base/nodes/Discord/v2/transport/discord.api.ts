@@ -7,8 +7,8 @@ import type {
 	IHttpRequestMethods,
 	ILoadOptionsFunctions,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { sleep, NodeApiError, jsonParse } from 'n8n-workflow';
+} from 'glow-workflow';
+import { sleep, NodeApiError, jsonParse } from 'glow-workflow';
 
 import { getCredentialsType, requestApi } from './helpers';
 

@@ -1,8 +1,8 @@
-import type { TagEntity } from '@n8n/db';
-import { TagRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { TagEntity } from '@glow/db';
+import { TagRepository } from '@glow/db';
+import { Container } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { FindManyOptions } from '@n8n/typeorm';
+import type { FindManyOptions } from '@glow/typeorm';
 import type express from 'express';
 
 import { TagService } from '@/services/tag.service';

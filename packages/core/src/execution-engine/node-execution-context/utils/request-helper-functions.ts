@@ -6,15 +6,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-shadow */
-import { Logger } from '@n8n/backend-common';
+import { Logger } from '@glow/backend-common';
 import type {
 	ClientOAuth2Options,
 	ClientOAuth2RequestObject,
 	ClientOAuth2TokenData,
 	OAuth2CredentialData,
-} from '@n8n/client-oauth2';
-import { ClientOAuth2 } from '@n8n/client-oauth2';
-import { Container } from '@n8n/di';
+} from '@glow/client-oauth2';
+import { ClientOAuth2 } from '@glow/client-oauth2';
+import { Container } from '@glow/di';
 import type { AxiosError, AxiosHeaders, AxiosRequestConfig, AxiosResponse } from 'axios';
 import axios from 'axios';
 import crypto, { createHmac } from 'crypto';
@@ -48,7 +48,7 @@ import type {
 	RequestHelperFunctions,
 	Workflow,
 	WorkflowExecuteMode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	NodeApiError,
 	NodeOperationError,
@@ -58,7 +58,7 @@ import {
 	jsonParse,
 	ApplicationError,
 	sleep,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { Token } from 'oauth-1.0a';
 import clientOAuth1 from 'oauth-1.0a';
 import { stringify } from 'qs';

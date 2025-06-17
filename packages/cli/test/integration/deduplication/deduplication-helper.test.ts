@@ -1,7 +1,7 @@
-import { DataDeduplicationService } from 'n8n-core';
-import type { ICheckProcessedContextData } from 'n8n-workflow';
-import type { IDeduplicationOutput, INode, DeduplicationItemTypes } from 'n8n-workflow';
-import { Workflow } from 'n8n-workflow';
+import { DataDeduplicationService } from 'glow-core';
+import type { ICheckProcessedContextData } from 'glow-workflow';
+import type { IDeduplicationOutput, INode, DeduplicationItemTypes } from 'glow-workflow';
+import { Workflow } from 'glow-workflow';
 
 import { getDataDeduplicationService } from '@/deduplication';
 import { LoadNodesAndCredentials } from '@/load-nodes-and-credentials';

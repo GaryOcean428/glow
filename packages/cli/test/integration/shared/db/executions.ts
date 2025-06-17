@@ -5,7 +5,7 @@ import { ExecutionMetadataRepository } from '@n8n/db';
 import { ExecutionRepository } from '@n8n/db';
 import { AnnotationTagRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import type { AnnotationVote, IWorkflowBase } from 'n8n-workflow';
+import type { AnnotationVote, IWorkflowBase } from 'glow-workflow';
 
 import { ExecutionService } from '@/executions/execution.service';
 import { Telemetry } from '@/telemetry';

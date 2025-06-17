@@ -5,8 +5,8 @@ import { SharedCredentialsRepository } from '@n8n/db';
 import { SharedWorkflowRepository } from '@n8n/db';
 import { WorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import type { INode, IWorkflowBase } from 'n8n-workflow';
-import { randomInt } from 'n8n-workflow';
+import type { INode, IWorkflowBase } from 'glow-workflow';
+import { randomInt } from 'glow-workflow';
 import { v4 as uuid } from 'uuid';
 
 import { CredentialsPermissionChecker } from '@/executions/pre-execution-checks';

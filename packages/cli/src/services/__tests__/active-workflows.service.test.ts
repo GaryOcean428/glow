@@ -1,7 +1,7 @@
-import { WorkflowEntity } from '@n8n/db';
-import type { User } from '@n8n/db';
-import type { SharedWorkflowRepository } from '@n8n/db';
-import type { WorkflowRepository } from '@n8n/db';
+import { WorkflowEntity } from '@glow/db';
+import type { User } from '@glow/db';
+import type { SharedWorkflowRepository } from '@glow/db';
+import type { WorkflowRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
 
 import type { ActivationErrorsService } from '@/activation-errors.service';

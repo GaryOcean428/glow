@@ -7,7 +7,7 @@ import {
 	INSTANCE_ADMIN,
 	INSTANCE_MEMBERS,
 	INSTANCE_OWNER,
-	N8N_AUTH_COOKIE,
+	GLOW_AUTH_COOKIE,
 } from '../constants';
 import { WorkflowPage } from '../pages';
 import { getUniqueWorkflowName } from '../utils/workflowUtils';
@@ -84,7 +84,7 @@ Cypress.Commands.add('signout', () => {
 		url: `${BACKEND_BASE_URL}/rest/logout`,
 		headers: { 'browser-id': localStorage.getItem('n8n-browserId') },
 	});
-	cy.getCookie(N8N_AUTH_COOKIE).should('not.exist');
+	cy.getCookie(GLOW_AUTH_COOKIE).should('not.exist');
 });
 
 export let settings: Partial<FrontendSettings>;

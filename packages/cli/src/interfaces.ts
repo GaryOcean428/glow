@@ -1,5 +1,5 @@
-import type { ICredentialsBase, IExecutionBase, IExecutionDb, ITagBase } from '@n8n/db';
-import type { AssignableGlobalRole } from '@n8n/permissions';
+import type { ICredentialsBase, IExecutionBase, IExecutionDb, ITagBase } from '@glow/db';
+import type { AssignableGlobalRole } from '@glow/permissions';
 import type { Application } from 'express';
 import type {
 	ExecutionError,
@@ -15,7 +15,7 @@ import type {
 	ExecutionStatus,
 	ExecutionSummary,
 	IWorkflowExecutionDataProcess,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type PCancelable from 'p-cancelable';
 
 import type { ActiveWorkflowManager } from '@/active-workflow-manager';

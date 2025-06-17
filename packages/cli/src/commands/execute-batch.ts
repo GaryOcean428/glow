@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-loop-func */
-import type { User } from '@n8n/db';
-import { WorkflowRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { User } from '@glow/db';
+import { WorkflowRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
 import fs from 'fs';
 import { diff } from 'json-diff';
 import pick from 'lodash/pick';
-import type { IRun, ITaskData, IWorkflowBase, IWorkflowExecutionDataProcess } from 'n8n-workflow';
-import { jsonParse, UnexpectedError } from 'n8n-workflow';
+import type { IRun, ITaskData, IWorkflowBase, IWorkflowExecutionDataProcess } from 'glow-workflow';
+import { jsonParse, UnexpectedError } from 'glow-workflow';
 import os from 'os';
 import { sep } from 'path';
 

@@ -1,5 +1,5 @@
-import type { INodeExecutionData, IDataObject } from 'n8n-workflow';
-import { ApplicationError } from 'n8n-workflow';
+import type { INodeExecutionData, IDataObject } from 'glow-workflow';
+import { ApplicationError } from 'glow-workflow';
 
 /**
  * Automatically put the objects under a 'json' key and don't error,

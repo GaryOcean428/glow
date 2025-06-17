@@ -1,6 +1,6 @@
-import type { User, ExecutionSummaries } from '@n8n/db';
-import { Get, Patch, Post, RestController } from '@n8n/decorators';
-import type { Scope } from '@n8n/permissions';
+import type { User, ExecutionSummaries } from '@glow/db';
+import { Get, Patch, Post, RestController } from '@glow/decorators';
+import type { Scope } from '@glow/permissions';
 
 import { BadRequestError } from '@/errors/response-errors/bad-request.error';
 import { NotFoundError } from '@/errors/response-errors/not-found.error';

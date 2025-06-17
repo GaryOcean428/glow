@@ -1,10 +1,10 @@
-import { ApplicationError } from 'n8n-workflow';
+import { ApplicationError } from 'glow-workflow';
 import type {
 	ICredentialDataDecryptedObject,
 	ICredentialType,
 	IHttpRequestOptions,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class CustomerIoApi implements ICredentialType {
 	name = 'customerIoApi';

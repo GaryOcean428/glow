@@ -6,7 +6,7 @@ import { ProjectRepository } from '@n8n/db';
 import { WorkflowRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
 import { DateTime } from 'luxon';
-import { ApplicationError, PROJECT_ROOT } from 'n8n-workflow';
+import { ApplicationError, PROJECT_ROOT } from 'glow-workflow';
 
 import { ActiveWorkflowManager } from '@/active-workflow-manager';
 import { mockInstance } from '@test/mocking';

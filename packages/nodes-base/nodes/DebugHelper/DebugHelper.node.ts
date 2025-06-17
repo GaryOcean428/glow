@@ -4,13 +4,13 @@ import type {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	ApplicationError,
 	NodeApiError,
 	NodeConnectionTypes,
 	NodeOperationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { generateGarbageMemory, runGarbageCollector } from './functions';
 import {

@@ -1,5 +1,5 @@
-import type { IDataObject, IExecuteFunctions, INode, INodeExecutionData } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IDataObject, IExecuteFunctions, INode, INodeExecutionData } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { generatePairedItemData, wrapData } from '@utils/utilities';
 

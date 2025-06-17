@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 
 import { InstanceSettings } from '@/instance-settings';
 import { mockInstance } from '@test/utils';
@@ -29,10 +29,10 @@ describe('BinaryDataConfig', () => {
 	});
 
 	it('should use values from env variables when defined', () => {
-		process.env.N8N_AVAILABLE_BINARY_DATA_MODES = 'filesystem,s3';
-		process.env.N8N_DEFAULT_BINARY_DATA_MODE = 's3';
-		process.env.N8N_BINARY_DATA_STORAGE_PATH = '/custom/storage/path';
-		process.env.N8N_BINARY_DATA_SIGNING_SECRET = 'super-secret';
+		process.env.GLOW_AVAILABLE_BINARY_DATA_MODES = 'filesystem,s3';
+		process.env.GLOW_DEFAULT_BINARY_DATA_MODE = 's3';
+		process.env.GLOW_BINARY_DATA_STORAGE_PATH = '/custom/storage/path';
+		process.env.GLOW_BINARY_DATA_SIGNING_SECRET = 'super-secret';
 
 		const config = Container.get(BinaryDataConfig);
 
@@ -49,24 +49,24 @@ describe('BinaryDataConfig', () => {
 	});
 
 	it('should fallback to default for mode', () => {
-		process.env.N8N_DEFAULT_BINARY_DATA_MODE = 'invalid-mode';
+		process.env.GLOW_DEFAULT_BINARY_DATA_MODE = 'invalid-mode';
 
 		const config = Container.get(BinaryDataConfig);
 
 		expect(config.mode).toEqual('default');
 		expect(console.warn).toHaveBeenCalledWith(
-			expect.stringContaining('Invalid value for N8N_DEFAULT_BINARY_DATA_MODE'),
+			expect.stringContaining('Invalid value for GLOW_DEFAULT_BINARY_DATA_MODE'),
 		);
 	});
 
 	it('should fallback to default for available modes', () => {
-		process.env.N8N_AVAILABLE_BINARY_DATA_MODES = 'filesystem,invalid-mode,s3';
+		process.env.GLOW_AVAILABLE_BINARY_DATA_MODES = 'filesystem,invalid-mode,s3';
 
 		const config = Container.get(BinaryDataConfig);
 
 		expect(config.availableModes).toEqual(['filesystem']);
 		expect(console.warn).toHaveBeenCalledWith(
-			expect.stringContaining('Invalid value for N8N_AVAILABLE_BINARY_DATA_MODES'),
+			expect.stringContaining('Invalid value for GLOW_AVAILABLE_BINARY_DATA_MODES'),
 		);
 	});
 });

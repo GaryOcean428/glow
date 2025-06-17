@@ -1,5 +1,5 @@
 import { IsInPiPWindowSymbol } from '@/constants';
-import { useProvideTooltipAppendTo } from '@n8n/design-system/composables/useTooltipAppendTo';
+import { useProvideTooltipAppendTo } from '@glow/design-system/composables/useTooltipAppendTo';
 import {
 	computed,
 	type ComputedRef,

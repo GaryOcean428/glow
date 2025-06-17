@@ -1,6 +1,6 @@
-import type { ExecutionRepository } from '@n8n/db';
+import type { ExecutionRepository } from '@glow/db';
 import { mock } from 'jest-mock-extended';
-import type { WorkflowExecuteMode as ExecutionMode } from 'n8n-workflow';
+import type { WorkflowExecuteMode as ExecutionMode } from 'glow-workflow';
 
 import type { ConcurrencyQueueType } from '@/concurrency/concurrency-control.service';
 import {

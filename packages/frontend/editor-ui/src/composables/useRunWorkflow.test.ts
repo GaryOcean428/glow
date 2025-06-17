@@ -2,7 +2,7 @@ import { setActivePinia } from 'pinia';
 import { createTestingPinia } from '@pinia/testing';
 import { useRouter } from 'vue-router';
 import type router from 'vue-router';
-import { ExpressionError, NodeConnectionTypes } from 'n8n-workflow';
+import { ExpressionError, NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IPinData,
 	IRunData,
@@ -11,7 +11,7 @@ import type {
 	ITaskData,
 	INodeConnections,
 	INode,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { useRunWorkflow } from '@/composables/useRunWorkflow';
 import type { IExecutionResponse, IStartRunData, IWorkflowData } from '@/Interface';
@@ -19,13 +19,13 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';
 import { useToast } from './useToast';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { captor, mock } from 'vitest-mock-extended';
 import { useSettingsStore } from '@/stores/settings.store';
 import { usePushConnectionStore } from '@/stores/pushConnection.store';
 import { createTestNode, createTestWorkflow } from '@/__tests__/mocks';
 import { waitFor } from '@testing-library/vue';
-import { useAgentRequestStore } from '@n8n/stores/useAgentRequestStore';
+import { useAgentRequestStore } from '@glow/stores/useAgentRequestStore';
 
 vi.mock('@/stores/workflows.store', () => {
 	const storeState: Partial<ReturnType<typeof useWorkflowsStore>> & {
@@ -85,7 +85,7 @@ vi.mock('@/composables/useTelemetry', () => ({
 	useTelemetry: vi.fn().mockReturnValue({ track: vi.fn() }),
 }));
 
-vi.mock('@n8n/i18n', () => ({
+vi.mock('@glow/i18n', () => ({
 	useI18n: vi.fn().mockReturnValue({ baseText: vi.fn().mockImplementation((key) => key) }),
 }));
 

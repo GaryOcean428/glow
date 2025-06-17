@@ -1,8 +1,8 @@
-import { Post, RestController } from '@n8n/decorators';
+import { Post, RestController } from '@glow/decorators';
 import { Request } from 'express';
 import { readFile } from 'fs/promises';
 import get from 'lodash/get';
-import type { INodeTypeDescription, INodeTypeNameVersion } from 'n8n-workflow';
+import type { INodeTypeDescription, INodeTypeNameVersion } from 'glow-workflow';
 
 import config from '@/config';
 import { NodeTypes } from '@/node-types';

@@ -1,17 +1,17 @@
-import type { LdapConfig, ConnectionSecurity } from '@n8n/constants';
-import type { AuthProviderSyncHistory } from '@n8n/db';
+import type { LdapConfig, ConnectionSecurity } from '@glow/constants';
+import type { AuthProviderSyncHistory } from '@glow/db';
 import {
 	AuthIdentity,
 	User,
 	AuthIdentityRepository,
 	AuthProviderSyncHistoryRepository,
 	UserRepository,
-} from '@n8n/db';
-import { Container } from '@n8n/di';
+} from '@glow/db';
+import { Container } from '@glow/di';
 import { validate } from 'jsonschema';
 import type { Entry as LdapUser } from 'ldapts';
 import { Filter } from 'ldapts/filters/Filter';
-import { randomString } from 'n8n-workflow';
+import { randomString } from 'glow-workflow';
 
 import config from '@/config';
 import { License } from '@/license';

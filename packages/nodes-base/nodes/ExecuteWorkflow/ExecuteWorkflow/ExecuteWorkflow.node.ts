@@ -1,11 +1,11 @@
-import { NodeConnectionTypes, NodeOperationError, parseErrorMetadata } from 'n8n-workflow';
+import { NodeConnectionTypes, NodeOperationError, parseErrorMetadata } from 'glow-workflow';
 import type {
 	ExecuteWorkflowData,
 	IExecuteFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { getWorkflowInfo } from './GenericFunctions';
 import { localResourceMapping } from './methods';

@@ -1,12 +1,12 @@
-import type { UnixTimestamp, UpdateApiKeyRequestDto } from '@n8n/api-types';
-import type { CreateApiKeyRequestDto } from '@n8n/api-types/src/dto/api-keys/create-api-key-request.dto';
-import type { User } from '@n8n/db';
-import { ApiKey, ApiKeyRepository, UserRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import type { GlobalRole, ApiKeyScope } from '@n8n/permissions';
-import { getApiKeyScopesForRole, getOwnerOnlyApiKeyScopes } from '@n8n/permissions';
+import type { UnixTimestamp, UpdateApiKeyRequestDto } from '@glow/api-types';
+import type { CreateApiKeyRequestDto } from '@glow/api-types/src/dto/api-keys/create-api-key-request.dto';
+import type { User } from '@glow/db';
+import { ApiKey, ApiKeyRepository, UserRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import type { GlobalRole, ApiKeyScope } from '@glow/permissions';
+import { getApiKeyScopesForRole, getOwnerOnlyApiKeyScopes } from '@glow/permissions';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { EntityManager } from '@n8n/typeorm';
+import type { EntityManager } from '@glow/typeorm';
 import type { NextFunction, Request, Response } from 'express';
 import { TokenExpiredError } from 'jsonwebtoken';
 import type { OpenAPIV3 } from 'openapi-types';

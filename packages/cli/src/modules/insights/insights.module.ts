@@ -1,5 +1,5 @@
-import type { BaseN8nModule } from '@n8n/decorators';
-import { N8nModule } from '@n8n/decorators';
+import type { BaseN8nModule } from '@glow/decorators';
+import { N8nModule } from '@glow/decorators';
 
 import { InsightsService } from './insights.service';
 

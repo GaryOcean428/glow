@@ -5,7 +5,7 @@ import {
 	type INodeTypeDescription,
 	type IWebhookResponseData,
 	NodeConnectionTypes,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class ChargebeeTrigger implements INodeType {
 	description: INodeTypeDescription = {

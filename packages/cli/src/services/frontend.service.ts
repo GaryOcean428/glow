@@ -1,17 +1,17 @@
-import type { FrontendSettings, ITelemetrySettings } from '@n8n/api-types';
-import { LicenseState, Logger } from '@n8n/backend-common';
-import { GlobalConfig, SecurityConfig } from '@n8n/config';
-import { LICENSE_FEATURES } from '@n8n/constants';
-import { Container, Service } from '@n8n/di';
+import type { FrontendSettings, ITelemetrySettings } from '@glow/api-types';
+import { LicenseState, Logger } from '@glow/backend-common';
+import { GlobalConfig, SecurityConfig } from '@glow/config';
+import { LICENSE_FEATURES } from '@glow/constants';
+import { Container, Service } from '@glow/di';
 import { createWriteStream } from 'fs';
 import { mkdir } from 'fs/promises';
 import uniq from 'lodash/uniq';
-import { BinaryDataConfig, InstanceSettings } from 'n8n-core';
-import type { ICredentialType, INodeTypeBaseDescription } from 'n8n-workflow';
+import { BinaryDataConfig, InstanceSettings } from 'glow-core';
+import type { ICredentialType, INodeTypeBaseDescription } from 'glow-workflow';
 import path from 'path';
 
 import config from '@/config';
-import { inE2ETests, N8N_VERSION } from '@/constants';
+import { inE2ETests, GLOW_VERSION } from '@/constants';
 import { CredentialTypes } from '@/credential-types';
 import { CredentialsOverwrites } from '@/credentials-overwrites';
 import { getLdapLoginLabel } from '@/ldap.ee/helpers.ee';
@@ -91,7 +91,7 @@ export class FrontendService {
 			inE2ETests,
 			isDocker: this.instanceSettings.isDocker,
 			databaseType: this.globalConfig.database.type,
-			previewMode: process.env.N8N_PREVIEW_MODE === 'true',
+			previewMode: process.env.GLOW_PREVIEW_MODE === 'true',
 			endpointForm: this.globalConfig.endpoints.form,
 			endpointFormTest: this.globalConfig.endpoints.formTest,
 			endpointFormWaiting: this.globalConfig.endpoints.formWaiting,
@@ -112,7 +112,7 @@ export class FrontendService {
 			urlBaseEditor: instanceBaseUrl,
 			binaryDataMode: this.binaryDataConfig.mode,
 			nodeJsVersion: process.version.replace(/^v/, ''),
-			versionCli: N8N_VERSION,
+			versionCli: GLOW_VERSION,
 			concurrency: config.getEnv('executions.concurrency.productionLimit'),
 			authCookie: {
 				secure: this.globalConfig.auth.cookie.secure,

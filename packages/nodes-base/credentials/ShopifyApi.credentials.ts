@@ -1,11 +1,11 @@
-import { BINARY_ENCODING } from 'n8n-workflow';
+import { BINARY_ENCODING } from 'glow-workflow';
 import type {
 	ICredentialDataDecryptedObject,
 	ICredentialTestRequest,
 	ICredentialType,
 	IHttpRequestOptions,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 export class ShopifyApi implements ICredentialType {
 	name = 'shopifyApi';
 

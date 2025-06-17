@@ -8,7 +8,7 @@ import {
 } from '@/constants';
 import type { INodeCreateElement } from '@/Interface';
 import { parseCanvasConnectionHandleString } from '@/utils/canvasUtils';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { CanvasConnectionMode } from '@/types';
 
 const workflow_id = 'workflow-id';

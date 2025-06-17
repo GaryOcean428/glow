@@ -1,9 +1,9 @@
-import { Logger } from '@n8n/backend-common';
-import { TaskRunnersConfig } from '@n8n/config';
-import { OnShutdown } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
-import { ErrorReporter } from 'n8n-core';
-import { sleep } from 'n8n-workflow';
+import { Logger } from '@glow/backend-common';
+import { TaskRunnersConfig } from '@glow/config';
+import { OnShutdown } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
+import { ErrorReporter } from 'glow-core';
+import { sleep } from 'glow-workflow';
 import * as a from 'node:assert/strict';
 
 import type { TaskRunnerRestartLoopError } from '@/task-runners/errors/task-runner-restart-loop-error';

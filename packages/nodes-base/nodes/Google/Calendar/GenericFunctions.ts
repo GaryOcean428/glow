@@ -11,8 +11,8 @@ import type {
 	IPollFunctions,
 	IRequestOptions,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeApiError, NodeOperationError, sleep } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeOperationError, sleep } from 'glow-workflow';
 import { RRule } from 'rrule';
 
 import type { RecurringEventInstance } from './EventInterface';

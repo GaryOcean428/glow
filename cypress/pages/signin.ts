@@ -1,6 +1,6 @@
 import { BasePage } from './base';
 import { WorkflowsPage } from './workflows';
-import { N8N_AUTH_COOKIE } from '../constants';
+import { GLOW_AUTH_COOKIE } from '../constants';
 
 /**
  * @deprecated Use functional composables from @composables instead.
@@ -41,7 +41,7 @@ export class SigninPage extends BasePage {
 				},
 				{
 					validate() {
-						cy.getCookie(N8N_AUTH_COOKIE).should('exist');
+						cy.getCookie(GLOW_AUTH_COOKIE).should('exist');
 					},
 				},
 			);

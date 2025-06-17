@@ -4,7 +4,7 @@ import type {
 	IWorkflowExecuteAdditionalData,
 	ResourceMapperFields,
 	NodeParameterValueType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { DynamicNodeParametersService } from '@/services/dynamic-node-parameters.service';
 import * as AdditionalData from '@/workflow-execute-additional-data';

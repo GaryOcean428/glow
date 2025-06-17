@@ -1,5 +1,5 @@
-import { CliWorkflowOperationError, SubworkflowOperationError } from 'n8n-workflow';
-import type { INode, INodeType } from 'n8n-workflow';
+import { CliWorkflowOperationError, SubworkflowOperationError } from 'glow-workflow';
+import type { INode, INodeType } from 'glow-workflow';
 
 import { STARTING_NODES } from '@/constants';
 

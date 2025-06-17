@@ -1,5 +1,5 @@
 import type { TestRunRecord } from '@/api/evaluation.ee';
-import type { IconColor } from '@n8n/design-system/types/icon';
+import type { IconColor } from '@glow/design-system/types/icon';
 
 export const statusDictionary: Record<TestRunRecord['status'], { icon: string; color: IconColor }> =
 	{

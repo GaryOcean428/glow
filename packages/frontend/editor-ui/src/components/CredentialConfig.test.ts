@@ -1,10 +1,10 @@
 import CredentialConfig from './CredentialEdit/CredentialConfig.vue';
 import { screen } from '@testing-library/vue';
-import type { ICredentialDataDecryptedObject, ICredentialType } from 'n8n-workflow';
+import type { ICredentialDataDecryptedObject, ICredentialType } from 'glow-workflow';
 import { createTestingPinia } from '@pinia/testing';
 import type { RenderOptions } from '@/__tests__/render';
 import { createComponentRenderer } from '@/__tests__/render';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 
 const defaultRenderOptions: RenderOptions = {
 	pinia: createTestingPinia({

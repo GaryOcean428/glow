@@ -1,18 +1,18 @@
-import { GlobalConfig } from '@n8n/config';
-import type { WorkflowEntity } from '@n8n/db';
-import { ExecutionRepository } from '@n8n/db';
-import { WorkflowRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import type { WorkflowEntity } from '@glow/db';
+import { ExecutionRepository } from '@glow/db';
+import { WorkflowRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
-import { ExternalSecretsProxy } from 'n8n-core';
-import type { IWorkflowBase } from 'n8n-workflow';
+import { ExternalSecretsProxy } from 'glow-core';
+import type { IWorkflowBase } from 'glow-workflow';
 import type {
 	IExecuteWorkflowInfo,
 	IWorkflowExecuteAdditionalData,
 	ExecuteWorkflowOptions,
 	IRun,
 	INodeExecutionData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type PCancelable from 'p-cancelable';
 
 import { ActiveExecutions } from '@/active-executions';

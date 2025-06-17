@@ -5,8 +5,8 @@ import {
 } from '@/constants';
 import type { INodeUi } from '@/Interface';
 import type { NodeTypeProvider } from '@/utils/nodeTypes/nodeTypeTransforms';
-import type { INodeCredentialDescription, FromAIArgument } from 'n8n-workflow';
-import { NodeHelpers, traverseNodeParameters } from 'n8n-workflow';
+import type { INodeCredentialDescription, FromAIArgument } from 'glow-workflow';
+import { NodeHelpers, traverseNodeParameters } from 'glow-workflow';
 
 /**
  * Returns the credentials that are displayable for the given node.

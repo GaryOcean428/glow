@@ -4,7 +4,7 @@ import type {
 	INodeExecutionData,
 	ISupplyDataFunctions,
 	IWorkflowDataProxyData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { isObject } from './utils';
 import { ValidationError } from './ValidationError';
@@ -22,7 +22,7 @@ export interface SandboxContext extends IWorkflowDataProxyData {
 	helpers: IExecuteFunctions['helpers'];
 }
 
-export const REQUIRED_N8N_ITEM_KEYS = new Set([
+export const REQUIRED_GLOW_ITEM_KEYS = new Set([
 	'json',
 	'binary',
 	'pairedItem',
@@ -130,7 +130,7 @@ export abstract class Sandbox extends EventEmitter {
 			 * item keys to be wrapped in `json` when normalizing items below.
 			 */
 			const mustHaveTopLevelN8nKey = executionResult.some((item) =>
-				Object.keys(item).find((key) => REQUIRED_N8N_ITEM_KEYS.has(key)),
+				Object.keys(item).find((key) => REQUIRED_GLOW_ITEM_KEYS.has(key)),
 			);
 
 			if (mustHaveTopLevelN8nKey) {
@@ -186,7 +186,7 @@ export abstract class Sandbox extends EventEmitter {
 
 	private validateTopLevelKeys(item: INodeExecutionData, itemIndex: number) {
 		Object.keys(item).forEach((key) => {
-			if (REQUIRED_N8N_ITEM_KEYS.has(key)) return;
+			if (REQUIRED_GLOW_ITEM_KEYS.has(key)) return;
 			throw new ValidationError({
 				message: `Unknown top-level item key: ${key}`,
 				description: 'Access the properties of an item under `.json`, e.g. `item.json`',

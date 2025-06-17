@@ -12,7 +12,7 @@ import type {
 	JsonObject,
 	IRequestOptions,
 	IHttpRequestMethods,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	BINARY_ENCODING,
 	NodeApiError,
@@ -21,7 +21,7 @@ import {
 	jsonParse,
 	removeCircularRefs,
 	sleep,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { Readable } from 'stream';
 
 import { keysToLowercase } from '@utils/utilities';

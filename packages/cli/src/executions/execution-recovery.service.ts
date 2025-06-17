@@ -1,11 +1,11 @@
-import { Logger } from '@n8n/backend-common';
-import type { IExecutionResponse } from '@n8n/db';
-import { ExecutionRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import type { IExecutionResponse } from '@glow/db';
+import { ExecutionRepository } from '@glow/db';
+import { Service } from '@glow/di';
 import type { DateTime } from 'luxon';
-import { InstanceSettings } from 'n8n-core';
-import { sleep } from 'n8n-workflow';
-import type { IRun, ITaskData } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { sleep } from 'glow-workflow';
+import type { IRun, ITaskData } from 'glow-workflow';
 
 import { ARTIFICIAL_TASK_DATA } from '@/constants';
 import { NodeCrashedError } from '@/errors/node-crashed.error';

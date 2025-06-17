@@ -1,19 +1,19 @@
-import { Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
+import { Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
 import type {
 	User,
 	CreateExecutionPayload,
 	ExecutionSummaries,
 	IExecutionResponse,
 	IGetExecutionsQueryFilter,
-} from '@n8n/db';
+} from '@glow/db';
 import {
 	ExecutionAnnotationRepository,
 	ExecutionRepository,
 	AnnotationTagMappingRepository,
 	WorkflowRepository,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
+} from '@glow/db';
+import { Service } from '@glow/di';
 import { validate as jsonSchemaValidate } from 'jsonschema';
 import type {
 	ExecutionError,
@@ -23,14 +23,14 @@ import type {
 	IWorkflowBase,
 	WorkflowExecuteMode,
 	IWorkflowExecutionDataProcess,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	ExecutionStatusList,
 	UnexpectedError,
 	UserError,
 	Workflow,
 	WorkflowOperationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { ActiveExecutions } from '@/active-executions';
 import { ConcurrencyControlService } from '@/concurrency/concurrency-control.service';

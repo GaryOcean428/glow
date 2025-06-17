@@ -1,8 +1,8 @@
-import type { CommunityNodeType } from '@n8n/api-types';
-import { Logger, inProduction } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
-import { ensureError, type INodeTypeDescription } from 'n8n-workflow';
+import type { CommunityNodeType } from '@glow/api-types';
+import { Logger, inProduction } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
+import { ensureError, type INodeTypeDescription } from 'glow-workflow';
 
 import { CommunityPackagesService } from './community-packages.service';
 import { getCommunityNodeTypes } from '../utils/community-node-types-utils';

@@ -1,11 +1,11 @@
 import { useAIAssistantHelpers } from '@/composables/useAIAssistantHelpers';
 import { AI_ASSISTANT_MAX_CONTENT_LENGTH } from '@/constants';
 import type { ICredentialsResponse } from '@/Interface';
-import type { IRestApiContext } from '@n8n/rest-api-client';
+import type { IRestApiContext } from '@glow/rest-api-client';
 import type { AskAiRequest, ChatRequest, ReplaceCodeRequest } from '@/types/assistant.types';
-import { makeRestApiRequest, streamRequest } from '@n8n/rest-api-client';
+import { makeRestApiRequest, streamRequest } from '@glow/rest-api-client';
 import { getObjectSizeInKB } from '@/utils/objectUtils';
-import type { IDataObject } from 'n8n-workflow';
+import type { IDataObject } from 'glow-workflow';
 
 export function chatWithBuilder(
 	ctx: IRestApiContext,

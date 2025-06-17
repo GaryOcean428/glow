@@ -1,11 +1,11 @@
 import { mock } from 'jest-mock-extended';
-import { RoutingNode, UnrecognizedNodeTypeError } from 'n8n-core';
+import { RoutingNode, UnrecognizedNodeTypeError } from 'glow-core';
 import type {
 	LoadedClass,
 	INodeType,
 	IVersionedNodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { LoadNodesAndCredentials } from '@/load-nodes-and-credentials';
 import { NodeTypes } from '@/node-types';

@@ -1,5 +1,5 @@
-import type { ILoadOptionsFunctions, IExecuteFunctions } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { ILoadOptionsFunctions, IExecuteFunctions } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 import nock from 'nock';
 
 import { returnData } from '../../../E2eTest/mock';

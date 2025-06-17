@@ -9,7 +9,7 @@ import type {
 	INodeProperties,
 	INodeType,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	jsonParse,
 	BINARY_ENCODING,
@@ -19,7 +19,7 @@ import {
 	FORM_TRIGGER_NODE_TYPE,
 	CHAT_TRIGGER_NODE_TYPE,
 	WAIT_NODE_TYPE,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { Readable } from 'stream';
 
 import { configuredOutputs } from './utils';

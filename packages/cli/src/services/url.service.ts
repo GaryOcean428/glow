@@ -1,5 +1,5 @@
-import { GlobalConfig } from '@n8n/config';
-import { Service } from '@n8n/di';
+import { GlobalConfig } from '@glow/config';
+import { Service } from '@glow/di';
 
 import config from '@/config';
 

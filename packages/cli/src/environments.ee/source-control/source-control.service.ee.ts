@@ -2,19 +2,19 @@ import type {
 	PullWorkFolderRequestDto,
 	PushWorkFolderRequestDto,
 	SourceControlledFile,
-} from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
+} from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
 import {
 	type Variables,
 	type TagEntity,
 	FolderRepository,
 	TagRepository,
 	type User,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
-import { hasGlobalScope } from '@n8n/permissions';
+} from '@glow/db';
+import { Service } from '@glow/di';
+import { hasGlobalScope } from '@glow/permissions';
 import { writeFileSync } from 'fs';
-import { UnexpectedError, UserError } from 'n8n-workflow';
+import { UnexpectedError, UserError } from 'glow-workflow';
 import path from 'path';
 import type { PushResult } from 'simple-git';
 

@@ -1,5 +1,5 @@
 import { NodeVM, makeResolverFromLegacyOptions, type Resolver } from '@n8n/vm2';
-import type { IExecuteFunctions, INodeExecutionData } from 'n8n-workflow';
+import type { IExecuteFunctions, INodeExecutionData } from 'glow-workflow';
 
 import { ExecutionError } from './ExecutionError';
 import {

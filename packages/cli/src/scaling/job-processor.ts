@@ -1,15 +1,15 @@
-import type { RunningJobSummary } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import { ExecutionRepository, WorkflowRepository } from '@n8n/db';
-import { Service } from '@n8n/di';
-import { WorkflowHasIssuesError, InstanceSettings, WorkflowExecute } from 'n8n-core';
+import type { RunningJobSummary } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import { ExecutionRepository, WorkflowRepository } from '@glow/db';
+import { Service } from '@glow/di';
+import { WorkflowHasIssuesError, InstanceSettings, WorkflowExecute } from 'glow-core';
 import type {
 	ExecutionStatus,
 	IExecuteResponsePromiseData,
 	IRun,
 	IWorkflowExecutionDataProcess,
-} from 'n8n-workflow';
-import { BINARY_ENCODING, Workflow, UnexpectedError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { BINARY_ENCODING, Workflow, UnexpectedError } from 'glow-workflow';
 import type PCancelable from 'p-cancelable';
 
 import config from '@/config';

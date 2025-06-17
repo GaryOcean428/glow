@@ -6,8 +6,8 @@ import type {
 	IN8nHttpFullResponse,
 	INodeExecutionData,
 	INodeProperties,
-} from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { handleErrorPostReceive, microsoftApiRequest } from '../GenericFunctions';
 

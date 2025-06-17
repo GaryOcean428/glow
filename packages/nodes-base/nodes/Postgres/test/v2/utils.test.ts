@@ -1,5 +1,5 @@
-import type { IDataObject, IExecuteFunctions, INode } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IDataObject, IExecuteFunctions, INode } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 import pgPromise from 'pg-promise';
 
 import type { ColumnInfo } from '../../v2/helpers/interfaces';

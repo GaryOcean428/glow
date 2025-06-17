@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { ICredentialType, INodeProperties } from 'glow-workflow';
 
 export class WorkableApi implements ICredentialType {
 	name = 'workableApi';

@@ -1,6 +1,6 @@
 /* eslint-disable n8n-nodes-base/node-param-display-name-miscased */
 import { NodeTestHarness } from '@nodes-testing/node-test-harness';
-import { jsonParse } from 'n8n-workflow';
+import { jsonParse } from 'glow-workflow';
 import nock from 'nock';
 
 import labels from '../fixtures/labels.json';

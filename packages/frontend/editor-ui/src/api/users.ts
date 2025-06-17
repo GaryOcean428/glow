@@ -3,16 +3,16 @@ import type {
 	PasswordUpdateRequestDto,
 	SettingsUpdateRequestDto,
 	UserUpdateRequestDto,
-} from '@n8n/api-types';
+} from '@glow/api-types';
 import type {
 	CurrentUserResponse,
 	IPersonalizationLatestVersion,
 	IUserResponse,
 	InvitableRoleName,
 } from '@/Interface';
-import type { IRestApiContext } from '@n8n/rest-api-client';
-import type { IDataObject, IUserSettings } from 'n8n-workflow';
-import { makeRestApiRequest } from '@n8n/rest-api-client';
+import type { IRestApiContext } from '@glow/rest-api-client';
+import type { IDataObject, IUserSettings } from 'glow-workflow';
+import { makeRestApiRequest } from '@glow/rest-api-client';
 
 export async function loginCurrentUser(
 	context: IRestApiContext,

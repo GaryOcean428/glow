@@ -13,7 +13,7 @@ import { waitFor } from '@testing-library/vue';
 import type { TestRunRecord } from '@/api/evaluation.ee';
 import { PLACEHOLDER_EMPTY_WORKFLOW_ID } from '@/constants';
 import { useTelemetry } from '@/composables/useTelemetry';
-import { EVALUATION_NODE_TYPE, EVALUATION_TRIGGER_NODE_TYPE, NodeHelpers } from 'n8n-workflow';
+import { EVALUATION_NODE_TYPE, EVALUATION_TRIGGER_NODE_TYPE, NodeHelpers } from 'glow-workflow';
 import { mockNodeTypeDescription } from '@/__tests__/mocks';
 
 vi.mock('@/composables/useTelemetry', () => {

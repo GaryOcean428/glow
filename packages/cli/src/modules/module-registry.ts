@@ -1,7 +1,7 @@
-import type { LifecycleContext } from '@n8n/decorators';
-import { LifecycleMetadata, ModuleMetadata } from '@n8n/decorators';
-import { Container, Service } from '@n8n/di';
-import type { ExecutionLifecycleHooks } from 'n8n-core';
+import type { LifecycleContext } from '@glow/decorators';
+import { LifecycleMetadata, ModuleMetadata } from '@glow/decorators';
+import { Container, Service } from '@glow/di';
+import type { ExecutionLifecycleHooks } from 'glow-core';
 import type {
 	IDataObject,
 	IRun,
@@ -10,7 +10,7 @@ import type {
 	ITaskStartedData,
 	IWorkflowBase,
 	Workflow,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 @Service()
 export class ModuleRegistry {

@@ -9,7 +9,7 @@ import {
 	type INodeType,
 	type INodeTypeBaseDescription,
 	type INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { oldVersionNotice } from '@utils/descriptions';
 

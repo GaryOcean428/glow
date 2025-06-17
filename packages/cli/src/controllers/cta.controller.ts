@@ -1,4 +1,4 @@
-import { Get, RestController } from '@n8n/decorators';
+import { Get, RestController } from '@glow/decorators';
 import express from 'express';
 
 import { AuthenticatedRequest } from '@/requests';

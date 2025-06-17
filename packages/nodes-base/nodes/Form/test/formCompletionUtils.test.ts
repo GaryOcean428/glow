@@ -1,6 +1,6 @@
 import { type Response } from 'express';
 import { type MockProxy, mock } from 'jest-mock-extended';
-import { type INode, type IWebhookFunctions } from 'n8n-workflow';
+import { type INode, type IWebhookFunctions } from 'glow-workflow';
 
 import { binaryResponse, renderFormCompletion } from '../formCompletionUtils';
 

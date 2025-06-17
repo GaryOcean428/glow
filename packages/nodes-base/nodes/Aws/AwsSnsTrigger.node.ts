@@ -8,8 +8,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	IWebhookResponseData,
-} from 'n8n-workflow';
-import { jsonParse, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { jsonParse, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { awsApiRequestSOAP } from './GenericFunctions';
 

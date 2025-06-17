@@ -1,8 +1,8 @@
 import { setActivePinia } from 'pinia';
 import { createTestingPinia } from '@pinia/testing';
 import { AI_CATEGORY_AGENTS, AI_CATEGORY_CHAINS, AI_TRANSFORM_NODE_TYPE } from '@/constants';
-import type { INodeTypeDescription } from 'n8n-workflow';
-import { START_NODE_TYPE } from 'n8n-workflow';
+import type { INodeTypeDescription } from 'glow-workflow';
+import { START_NODE_TYPE } from 'glow-workflow';
 import { useSettingsStore } from '@/stores/settings.store';
 import { AIView } from './viewsData';
 import { mockNodeTypeDescription } from '@/__tests__/mocks';

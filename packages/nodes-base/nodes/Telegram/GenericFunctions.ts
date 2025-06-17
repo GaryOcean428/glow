@@ -7,8 +7,8 @@ import type {
 	IRequestOptions,
 	IWebhookFunctions,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError } from 'glow-workflow';
 
 import { getSendAndWaitConfig } from '../../utils/sendAndWait/utils';
 import { createUtmCampaignLink } from '../../utils/utilities';

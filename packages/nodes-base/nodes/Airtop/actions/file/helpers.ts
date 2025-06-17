@@ -1,5 +1,5 @@
-import type { IExecuteFunctions } from 'n8n-workflow';
-import { jsonParse, NodeApiError } from 'n8n-workflow';
+import type { IExecuteFunctions } from 'glow-workflow';
+import { jsonParse, NodeApiError } from 'glow-workflow';
 import type { Stream } from 'stream';
 
 import { BASE_URL, ERROR_MESSAGES, OPERATION_TIMEOUT } from '../../constants';

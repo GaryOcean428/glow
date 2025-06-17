@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-import { inTest, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
+import { inTest, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Container } from '@glow/di';
 import { once as eventOnce } from 'events';
 import { createReadStream, existsSync, rmSync } from 'fs';
 import remove from 'lodash/remove';
-import { InstanceSettings } from 'n8n-core';
-import { EventMessageTypeNames, jsonParse } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { EventMessageTypeNames, jsonParse } from 'glow-workflow';
 import path, { parse } from 'path';
 import readline from 'readline';
 import { Worker } from 'worker_threads';

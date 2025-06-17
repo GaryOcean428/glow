@@ -1,6 +1,6 @@
-import type { SourceControlledFile } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import type { Variables, Project, TagEntity, User, WorkflowTagMapping } from '@n8n/db';
+import type { SourceControlledFile } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import type { Variables, Project, TagEntity, User, WorkflowTagMapping } from '@glow/db';
 import {
 	SharedCredentials,
 	CredentialsRepository,
@@ -13,13 +13,13 @@ import {
 	SharedWorkflowRepository,
 	WorkflowRepository,
 	UserRepository,
-} from '@n8n/db';
-import { Service } from '@n8n/di';
+} from '@glow/db';
+import { Service } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { In } from '@n8n/typeorm';
+import { In } from '@glow/typeorm';
 import glob from 'fast-glob';
-import { Credentials, ErrorReporter, InstanceSettings } from 'n8n-core';
-import { jsonParse, ensureError, UserError, UnexpectedError } from 'n8n-workflow';
+import { Credentials, ErrorReporter, InstanceSettings } from 'glow-core';
+import { jsonParse, ensureError, UserError, UnexpectedError } from 'glow-workflow';
 import { readFile as fsReadFile } from 'node:fs/promises';
 import path from 'path';
 

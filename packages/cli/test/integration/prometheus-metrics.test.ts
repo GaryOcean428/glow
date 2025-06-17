@@ -6,7 +6,7 @@ import { parse as semverParse } from 'semver';
 import request, { type Response } from 'supertest';
 
 import config from '@/config';
-import { N8N_VERSION } from '@/constants';
+import { GLOW_VERSION } from '@/constants';
 import { EventService } from '@/events/event.service';
 import { PrometheusMetricsService } from '@/metrics/prometheus-metrics.service';
 import { CacheService } from '@/services/cache/cache.service';
@@ -76,7 +76,7 @@ describe('PrometheusMetricsService', () => {
 		expect(response.status).toEqual(200);
 		expect(response.type).toEqual('text/plain');
 
-		const n8nVersion = semverParse(N8N_VERSION);
+		const n8nVersion = semverParse(GLOW_VERSION);
 
 		if (!n8nVersion) fail('Failed to parse n8n version');
 

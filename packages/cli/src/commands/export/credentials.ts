@@ -1,10 +1,10 @@
-import type { ICredentialsDb } from '@n8n/db';
-import { CredentialsRepository } from '@n8n/db';
-import { Container } from '@n8n/di';
+import type { ICredentialsDb } from '@glow/db';
+import { CredentialsRepository } from '@glow/db';
+import { Container } from '@glow/di';
 import { Flags } from '@oclif/core';
 import fs from 'fs';
-import { Credentials } from 'n8n-core';
-import { UserError } from 'n8n-workflow';
+import { Credentials } from 'glow-core';
+import { UserError } from 'glow-workflow';
 import path from 'path';
 
 import type { ICredentialsDecryptedDb } from '@/interfaces';

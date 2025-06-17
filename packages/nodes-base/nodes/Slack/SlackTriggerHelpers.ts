@@ -1,5 +1,5 @@
-import type { IHttpRequestOptions, IWebhookFunctions } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import type { IHttpRequestOptions, IWebhookFunctions } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { slackApiRequest } from './V2/GenericFunctions';
 

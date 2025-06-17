@@ -1,4 +1,4 @@
-import { DateTimeColumn } from '@n8n/db';
+import { DateTimeColumn } from '@glow/db';
 import {
 	BaseEntity,
 	Column,
@@ -6,8 +6,8 @@ import {
 	JoinColumn,
 	ManyToOne,
 	PrimaryGeneratedColumn,
-} from '@n8n/typeorm';
-import { UnexpectedError } from 'n8n-workflow';
+} from '@glow/typeorm';
+import { UnexpectedError } from 'glow-workflow';
 
 import { InsightsMetadata } from './insights-metadata';
 import type { PeriodUnit } from './insights-shared';

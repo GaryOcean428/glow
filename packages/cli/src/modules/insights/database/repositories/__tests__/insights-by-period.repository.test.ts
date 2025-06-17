@@ -1,4 +1,4 @@
-import { Container } from '@n8n/di';
+import { Container } from '@glow/di';
 import { DateTime } from 'luxon';
 
 import { InsightsConfig } from '@/modules/insights/insights.config';

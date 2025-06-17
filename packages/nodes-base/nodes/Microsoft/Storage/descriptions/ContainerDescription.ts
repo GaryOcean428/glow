@@ -8,8 +8,8 @@ import type {
 	INodeExecutionData,
 	INodeProperties,
 	ResourceMapperValue,
-} from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import {
 	handleErrorPostReceive,

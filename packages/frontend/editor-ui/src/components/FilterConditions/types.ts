@@ -1,5 +1,5 @@
-import type { BaseTextKey } from '@n8n/i18n';
-import type { FilterConditionValue, FilterOperatorValue } from 'n8n-workflow';
+import type { BaseTextKey } from '@glow/i18n';
+import type { FilterConditionValue, FilterOperatorValue } from 'glow-workflow';
 
 export interface FilterOperator extends FilterOperatorValue {
 	name: BaseTextKey;

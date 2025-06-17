@@ -4,7 +4,7 @@ import {
 	type IWebhookFunctions,
 	type FormFieldsParameter,
 	type IWebhookResponseData,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { renderForm } from './utils';
 

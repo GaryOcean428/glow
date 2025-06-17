@@ -4,7 +4,7 @@ import type {
 	ICredentialType,
 	INodeProperties,
 	Icon,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 export class VirusTotalApi implements ICredentialType {
 	name = 'virusTotalApi';

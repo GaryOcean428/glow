@@ -3,7 +3,7 @@ import type {
 	ICredentialType,
 	IHttpRequestOptions,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { createHmac } from 'node:crypto';
 
 import {

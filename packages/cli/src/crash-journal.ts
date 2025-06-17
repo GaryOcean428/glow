@@ -1,9 +1,9 @@
-import { inProduction, Logger } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
+import { inProduction, Logger } from '@glow/backend-common';
+import { Container } from '@glow/di';
 import { existsSync } from 'fs';
 import { mkdir, utimes, open, rm } from 'fs/promises';
-import { InstanceSettings } from 'n8n-core';
-import { sleep } from 'n8n-workflow';
+import { InstanceSettings } from 'glow-core';
+import { sleep } from 'glow-workflow';
 import { join, dirname } from 'path';
 
 export const touchFile = async (filePath: string): Promise<void> => {

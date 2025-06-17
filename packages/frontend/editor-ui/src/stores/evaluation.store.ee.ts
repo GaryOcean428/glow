@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia';
 import { computed, ref } from 'vue';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import * as evaluationsApi from '@/api/evaluation.ee';
 import type { TestCaseExecutionRecord, TestRunRecord } from '@/api/evaluation.ee';
 import { usePostHog } from './posthog.store';
 import { WORKFLOW_EVALUATION_EXPERIMENT } from '@/constants';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { EVALUATION_NODE_TYPE, EVALUATION_TRIGGER_NODE_TYPE, NodeHelpers } from 'n8n-workflow';
+import { EVALUATION_NODE_TYPE, EVALUATION_TRIGGER_NODE_TYPE, NodeHelpers } from 'glow-workflow';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useSettingsStore } from '@/stores/settings.store';
 

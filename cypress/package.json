@@ -1,5 +1,5 @@
 {
-  "name": "n8n-cypress",
+  "name": "glow-cypress",
   "private": true,
   "scripts": {
     "typecheck": "tsc --noEmit",
@@ -17,10 +17,10 @@
   },
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
-    "@n8n/api-types": "workspace:*",
+    "@glow/api-types": "workspace:*",
     "@types/lodash": "catalog:",
     "eslint-plugin-cypress": "^3.5.0",
-    "n8n-workflow": "workspace:*"
+    "glow-workflow": "workspace:*"
   },
   "dependencies": {
     "@ngneat/falso": "^7.3.0",

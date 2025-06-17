@@ -18,13 +18,13 @@ thus result in poorer performance.
 how the `last_activity` metric has affected your Prometheus instance and potentially clean up the old data. Future
 metrics will also be served in a different format, which needs to be taken into account.
 
-2. If you need n8n to bind to IPv6 interfaces specifically, set the environment variable `N8N_LISTEN_ADDRESS=::` to maintain the previous behavior.
+2. If you need n8n to bind to IPv6 interfaces specifically, set the environment variable `GLOW_LISTEN_ADDRESS=::` to maintain the previous behavior.
 
 ### How to upgrade:
 
 1. For route metrics: Update your Prometheus configuration to handle the new Unix timestamp format for the `last_activity` metric.
 
-2. For IPv6 binding: If your setup specifically requires IPv6, set `N8N_LISTEN_ADDRESS=::` in your environment variables.
+2. For IPv6 binding: If your setup specifically requires IPv6, set `GLOW_LISTEN_ADDRESS=::` in your environment variables.
 
 ## 1.97.1
 
@@ -100,13 +100,13 @@ The `verbose` log level was merged into the `debug` log level.
 
 ### When is action necessary?
 
-If you are setting the env var `N8N_LOG_LEVEL=verbose`, please update your log level to `N8N_LOG_LEVEL=debug`.
+If you are setting the env var `GLOW_LOG_LEVEL=verbose`, please update your log level to `GLOW_LOG_LEVEL=debug`.
 
 ## 1.55.0
 
 ### What changed?
 
-The `N8N_BLOCK_FILE_ACCESS_TO_N8N_FILES` environment variable now also blocks access to n8n's static cache directory at `~/.cache/n8n/public`.
+The `GLOW_BLOCK_FILE_ACCESS_TO_GLOW_FILES` environment variable now also blocks access to n8n's static cache directory at `~/.cache/n8n/public`.
 
 ### When is action necessary?
 
@@ -116,7 +116,7 @@ If you are writing to or reading from a file at n8n's static cache directory via
 
 ### What changed?
 
-Prometheus metrics enabled via `N8N_METRICS_INCLUDE_DEFAULT_METRICS` and `N8N_METRICS_INCLUDE_API_ENDPOINTS` were fixed to include the default `n8n_` prefix.
+Prometheus metrics enabled via `GLOW_METRICS_INCLUDE_DEFAULT_METRICS` and `GLOW_METRICS_INCLUDE_API_ENDPOINTS` were fixed to include the default `n8n_` prefix.
 
 ### When is action necessary?
 
@@ -162,7 +162,7 @@ n8n auth cookie has `Secure` flag set by default now.
 
 ### When is action necessary?
 
-If you are running n8n without HTTP**S** on a domain other than `localhost`, you need to either setup HTTPS, or you can disable the secure flag by setting the env variable `N8N_SECURE_COOKIE` to `false`.
+If you are running n8n without HTTP**S** on a domain other than `localhost`, you need to either setup HTTPS, or you can disable the secure flag by setting the env variable `GLOW_SECURE_COOKIE` to `false`.
 
 ## 1.27.0
 
@@ -181,17 +181,17 @@ If you have the environment variable `EXECUTIONS_PROCESS` or the config field `e
 
 ### What changed?
 
-If the `N8N_ENCRYPTION_KEY` environment variable on a main instance does not match the `encryptionKey` in the config file, the main instance will not initialize. If the `N8N_ENCRYPTION_KEY` environment variable is missing on a worker, the worker will not initialize.
+If the `GLOW_ENCRYPTION_KEY` environment variable on a main instance does not match the `encryptionKey` in the config file, the main instance will not initialize. If the `GLOW_ENCRYPTION_KEY` environment variable is missing on a worker, the worker will not initialize.
 
 ### When is action necessary?
 
-If passing an `N8N_ENCRYPTION_KEY` environment variable to the main instance, make sure it matches the `encryptionKey` in the config file. If you are using workers, pass the `N8N_ENCRYPTION_KEY` environment variable to them.
+If passing an `GLOW_ENCRYPTION_KEY` environment variable to the main instance, make sure it matches the `encryptionKey` in the config file. If you are using workers, pass the `GLOW_ENCRYPTION_KEY` environment variable to them.
 
 ## 1.24.0
 
 ### What changed?
 
-The flag `N8N_CACHE_ENABLED` was removed. The cache is now always enabled.
+The flag `GLOW_CACHE_ENABLED` was removed. The cache is now always enabled.
 
 Additionally, expressions in credentials now follow the paired item, so if you have multiple input items, n8n will try to pair the matching row to fill in the credential details.
 
@@ -199,7 +199,7 @@ In the Monday.com Node, due to API changes, the data structure of entries in `co
 
 ### When is action necessary?
 
-If you are using the flag `N8N_CACHE_ENABLED`, remove it from your settings.
+If you are using the flag `GLOW_CACHE_ENABLED`, remove it from your settings.
 
 In regards to credentials, if you use expression in credentials, you might want to revisit them. Previously, n8n would stick to the first item only, but now it will try to match the proper paired item.
 
@@ -233,13 +233,13 @@ If you are using `.hash` helpers in expressions with hash algorithm `ripemd160`,
 
 ### What changed?
 
-Until now, in main mode, n8n used to deregister webhooks at shutdown and reregister them at startup. Queue mode and the flag `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` skipped webhook deregistration.
+Until now, in main mode, n8n used to deregister webhooks at shutdown and reregister them at startup. Queue mode and the flag `GLOW_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` skipped webhook deregistration.
 
-As from now, in both main and queue modes, n8n no longer deregisters webhooks at startup and shutdown, and the flag `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` is removed. n8n assumes that third-party services will retry unhandled webhook requests.
+As from now, in both main and queue modes, n8n no longer deregisters webhooks at startup and shutdown, and the flag `GLOW_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN` is removed. n8n assumes that third-party services will retry unhandled webhook requests.
 
 ### When is action necessary?
 
-If using the flag `N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN`, note that it no longer has effect and can be removed from your settings.
+If using the flag `GLOW_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN`, note that it no longer has effect and can be removed from your settings.
 
 ## 1.9.0
 
@@ -260,7 +260,7 @@ const binaryStream = await this.helpers.getBinaryStream(id); // since 1.9.0
 
 ### What changed?
 
-The env vars `N8N_BINARY_DATA_TTL` and `EXECUTIONS_DATA_PRUNE_TIMEOUT` no longer have any effect and can be safely removed. Instead of relying on a TTL system for binary data, n8n currently cleans up binary data together with executions during pruning.
+The env vars `GLOW_BINARY_DATA_TTL` and `EXECUTIONS_DATA_PRUNE_TIMEOUT` no longer have any effect and can be safely removed. Instead of relying on a TTL system for binary data, n8n currently cleans up binary data together with executions during pruning.
 
 ### When is action necessary?
 
@@ -270,7 +270,7 @@ If using these flags, remove them from your settings and be mindful of the new b
 
 ### What changed?
 
-The env var `N8N_PERSISTED_BINARY_DATA_TTL` no longer has any effect and can be removed. This legacy flag was originally introduced to support ephemeral executions (see [details](https://github.com/n8n-io/n8n/pull/7046)), which are no longer supported.
+The env var `GLOW_PERSISTED_BINARY_DATA_TTL` no longer has any effect and can be removed. This legacy flag was originally introduced to support ephemeral executions (see [details](https://github.com/n8n-io/n8n/pull/7046)), which are no longer supported.
 
 ### When is action necessary?
 

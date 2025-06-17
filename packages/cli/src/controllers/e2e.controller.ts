@@ -1,10 +1,10 @@
-import type { PushMessage } from '@n8n/api-types';
-import { Logger } from '@n8n/backend-common';
-import type { BooleanLicenseFeature, NumericLicenseFeature } from '@n8n/constants';
-import { LICENSE_FEATURES, LICENSE_QUOTAS, UNLIMITED_LICENSE_QUOTA } from '@n8n/constants';
-import { SettingsRepository, UserRepository } from '@n8n/db';
-import { Patch, Post, RestController } from '@n8n/decorators';
-import { Container } from '@n8n/di';
+import type { PushMessage } from '@glow/api-types';
+import { Logger } from '@glow/backend-common';
+import type { BooleanLicenseFeature, NumericLicenseFeature } from '@glow/constants';
+import { LICENSE_FEATURES, LICENSE_QUOTAS, UNLIMITED_LICENSE_QUOTA } from '@glow/constants';
+import { SettingsRepository, UserRepository } from '@glow/db';
+import { Patch, Post, RestController } from '@glow/decorators';
+import { Container } from '@glow/di';
 import { Request } from 'express';
 import { v4 as uuid } from 'uuid';
 

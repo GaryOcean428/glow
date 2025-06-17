@@ -4,14 +4,14 @@ import {
 	SEND_AND_WAIT_OPERATION,
 	tryToParseJsonToFormFields,
 	updateDisplayOptions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type {
 	INodeProperties,
 	IExecuteFunctions,
 	IWebhookFunctions,
 	IDataObject,
 	FormFieldsParameter,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { limitWaitTimeProperties } from './descriptions';
 import {

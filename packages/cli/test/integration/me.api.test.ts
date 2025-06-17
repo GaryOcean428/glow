@@ -3,7 +3,7 @@ import type { User } from '@n8n/db';
 import { ProjectRepository } from '@n8n/db';
 import { UserRepository } from '@n8n/db';
 import { Container } from '@n8n/di';
-import type { IPersonalizationSurveyAnswersV4 } from 'n8n-workflow';
+import type { IPersonalizationSurveyAnswersV4 } from 'glow-workflow';
 import validator from 'validator';
 
 import { mockInstance } from '@test/mocking';

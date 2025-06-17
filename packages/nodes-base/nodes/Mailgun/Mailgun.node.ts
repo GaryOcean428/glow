@@ -6,8 +6,8 @@ import type {
 	INodeTypeDescription,
 	JsonObject,
 	IRequestOptions,
-} from 'n8n-workflow';
-import { NodeApiError, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeConnectionTypes } from 'glow-workflow';
 
 export class Mailgun implements INodeType {
 	description: INodeTypeDescription = {

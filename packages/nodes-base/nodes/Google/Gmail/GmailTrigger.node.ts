@@ -7,8 +7,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	IPollFunctions,
-} from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import {
 	googleApiRequest,

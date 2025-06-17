@@ -1,5 +1,5 @@
 import { mock } from 'jest-mock-extended';
-import { ApplicationError } from 'n8n-workflow';
+import { ApplicationError } from 'glow-workflow';
 import type {
 	Workflow,
 	INode,
@@ -10,7 +10,7 @@ import type {
 	INodeTypes,
 	ITriggerFunctions,
 	IRun,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { ExecutionLifecycleHooks } from '../execution-lifecycle-hooks';
 import { TriggersAndPollers } from '../triggers-and-pollers';

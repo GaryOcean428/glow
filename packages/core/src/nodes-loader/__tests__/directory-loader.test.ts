@@ -4,8 +4,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	IVersionedNodeType,
-} from 'n8n-workflow';
-import { deepCopy } from 'n8n-workflow';
+} from 'glow-workflow';
+import { deepCopy } from 'glow-workflow';
 import fs from 'node:fs';
 import fsPromises from 'node:fs/promises';
 

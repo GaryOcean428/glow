@@ -6,19 +6,19 @@ import type {
 } from '@/Interface';
 import { getNewWorkflow } from '@/api/workflows';
 import { VIEWS } from '@/constants';
-import type { useRootStore } from '@n8n/stores/useRootStore';
+import type { useRootStore } from '@glow/stores/useRootStore';
 import type { useWorkflowsStore } from '@/stores/workflows.store';
 import { getNodesWithNormalizedPosition } from '@/utils/nodeViewUtils';
 import type { NodeTypeProvider } from '@/utils/nodeTypes/nodeTypeTransforms';
 import type { TemplateCredentialKey } from '@/utils/templates/templateTransforms';
 import { replaceAllTemplateNodeCredentials } from '@/utils/templates/templateTransforms';
-import type { INodeCredentialsDetails } from 'n8n-workflow';
+import type { INodeCredentialsDetails } from 'glow-workflow';
 import type { RouteLocationRaw, Router } from 'vue-router';
 import type { TemplatesStore } from '@/stores/templates.store';
 import type { NodeTypesStore } from '@/stores/nodeTypes.store';
 import type { Telemetry } from '@/plugins/telemetry';
 import type { useExternalHooks } from '@/composables/useExternalHooks';
-import { assert } from '@n8n/utils/assert';
+import { assert } from '@glow/utils/assert';
 import { doesNodeHaveCredentialsToFill } from '@/utils/nodes/nodeTransforms';
 import { tryToParseNumber } from '@/utils/typesUtils';
 

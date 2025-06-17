@@ -1,4 +1,4 @@
-import type { NodeDescriptionUpdated } from '@n8n/api-types/push/hot-reload';
+import type { NodeDescriptionUpdated } from '@glow/api-types/push/hot-reload';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useCredentialsStore } from '@/stores/credentials.store';
 

@@ -1,5 +1,5 @@
-import { LicenseState } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
+import { LicenseState } from '@glow/backend-common';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
 
 import type { AuthenticatedRequest } from '@/requests';

@@ -10,8 +10,8 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeApiError, NodeConnectionTypes } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeConnectionTypes } from 'glow-workflow';
 
 import { jenkinsApiRequest, tolerateTrailingSlash } from './GenericFunctions';
 

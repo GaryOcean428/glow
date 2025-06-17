@@ -3,13 +3,13 @@ import type {
 	IConnections,
 	INodeTypeDescription,
 	NodeConnectionType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type { INodeUi } from '@/Interface';
 import type { BoundingBox, CanvasConnection, CanvasConnectionPort } from '@/types';
 import { CanvasConnectionMode } from '@/types';
 import type { Connection } from '@vue-flow/core';
 import { isValidCanvasConnectionMode, isValidNodeConnectionType } from '@/utils/typeGuards';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 /**
  * Maps multiple legacy n8n connections to VueFlow connections

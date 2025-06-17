@@ -1,5 +1,5 @@
-import { Container } from '@n8n/di';
-import type { SchedulingFunctions, Workflow } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import type { SchedulingFunctions, Workflow } from 'glow-workflow';
 
 import { ScheduledTaskManager } from '../../scheduled-task-manager';
 

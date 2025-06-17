@@ -8,8 +8,8 @@ import type {
 	INodeTypeDescription,
 	JsonObject,
 	IHttpRequestMethods,
-} from 'n8n-workflow';
-import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'glow-workflow';
 
 import { accountFields, accountOperations } from './AccountDescription';
 import type { IAccount } from './AccountInterface';

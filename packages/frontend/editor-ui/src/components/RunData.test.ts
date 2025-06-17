@@ -2,14 +2,14 @@ import { createTestWorkflowObject, defaultNodeDescriptions } from '@/__tests__/m
 import { createComponentRenderer } from '@/__tests__/render';
 import { SETTINGS_STORE_DEFAULT_STATE } from '@/__tests__/utils';
 import RunData from '@/components/RunData.vue';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { SET_NODE_TYPE } from '@/constants';
 import type { INodeUi, IRunDataDisplayMode, NodePanelType } from '@/Interface';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { createTestingPinia } from '@pinia/testing';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/vue';
-import type { INodeExecutionData, ITaskData, ITaskMetadata } from 'n8n-workflow';
+import type { INodeExecutionData, ITaskData, ITaskMetadata } from 'glow-workflow';
 import { setActivePinia } from 'pinia';
 import { useNodeTypesStore } from '../stores/nodeTypes.store';
 

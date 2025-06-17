@@ -1,7 +1,7 @@
 import { mock } from 'jest-mock-extended';
-import type { DirectoryLoader } from 'n8n-core';
-import type { INodeProperties, INodeTypeDescription } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { DirectoryLoader } from 'glow-core';
+import type { INodeProperties, INodeTypeDescription } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 
 import { LoadNodesAndCredentials } from '../load-nodes-and-credentials';
 

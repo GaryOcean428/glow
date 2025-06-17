@@ -5,8 +5,8 @@ import type {
 	ILoadOptionsFunctions,
 	IRequestOptions,
 	JsonObject,
-} from 'n8n-workflow';
-import { BINARY_ENCODING, NodeApiError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { BINARY_ENCODING, NodeApiError } from 'glow-workflow';
 
 export async function freshdeskApiRequest(
 	this: IExecuteFunctions | ILoadOptionsFunctions,

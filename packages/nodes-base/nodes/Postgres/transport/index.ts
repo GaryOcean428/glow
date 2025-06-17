@@ -3,7 +3,7 @@ import type {
 	ICredentialTestFunctions,
 	ILoadOptionsFunctions,
 	ITriggerFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { createServer, type AddressInfo } from 'node:net';
 import pgPromise from 'pg-promise';
 

@@ -1,11 +1,11 @@
-import { inTest, Logger } from '@n8n/backend-common';
-import { GlobalConfig } from '@n8n/config';
-import { Container } from '@n8n/di';
+import { inTest, Logger } from '@glow/backend-common';
+import { GlobalConfig } from '@glow/config';
+import { Container } from '@glow/di';
 import convict from 'convict';
 import { flatten } from 'flat';
 import { readFileSync } from 'fs';
 import merge from 'lodash/merge';
-import { setGlobalState, UserError } from 'n8n-workflow';
+import { setGlobalState, UserError } from 'glow-workflow';
 import assert from 'node:assert';
 
 import { inE2ETests } from '@/constants';
@@ -16,14 +16,14 @@ if (inE2ETests) {
 	globalConfig.diagnostics.enabled = false;
 	globalConfig.publicApi.disabled = true;
 	process.env.EXTERNAL_FRONTEND_HOOKS_URLS = '';
-	process.env.N8N_PERSONALIZATION_ENABLED = 'false';
-	process.env.N8N_AI_ENABLED = 'true';
+	process.env.GLOW_PERSONALIZATION_ENABLED = 'false';
+	process.env.GLOW_AI_ENABLED = 'true';
 } else if (inTest) {
 	globalConfig.logging.level = 'silent';
 	globalConfig.publicApi.disabled = true;
 	process.env.SKIP_STATISTICS_EVENTS = 'true';
 	globalConfig.auth.cookie.secure = false;
-	process.env.N8N_SKIP_AUTH_ON_OAUTH_CALLBACK = 'true';
+	process.env.GLOW_SKIP_AUTH_ON_OAUTH_CALLBACK = 'true';
 }
 
 // Load schema after process.env has been overwritten
@@ -39,9 +39,9 @@ const logger = Container.get(Logger);
 if (!inE2ETests && !inTest) {
 	// Overwrite default configuration with settings which got defined in
 	// optional configuration files
-	const { N8N_CONFIG_FILES } = process.env;
-	if (N8N_CONFIG_FILES !== undefined) {
-		const configFiles = N8N_CONFIG_FILES.split(',');
+	const { GLOW_CONFIG_FILES } = process.env;
+	if (GLOW_CONFIG_FILES !== undefined) {
+		const configFiles = GLOW_CONFIG_FILES.split(',');
 		for (const configFile of configFiles) {
 			if (!configFile) continue;
 			// NOTE: This is "temporary" code until we have migrated all config to the new package
@@ -101,7 +101,7 @@ const userManagement = config.get('userManagement');
 if (userManagement.jwtRefreshTimeoutHours >= userManagement.jwtSessionDurationHours) {
 	if (!inTest)
 		logger.warn(
-			'N8N_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS needs to smaller than N8N_USER_MANAGEMENT_JWT_DURATION_HOURS. Setting N8N_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS to 0 for now.',
+			'GLOW_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS needs to smaller than GLOW_USER_MANAGEMENT_JWT_DURATION_HOURS. Setting GLOW_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS to 0 for now.',
 		);
 
 	config.set('userManagement.jwtRefreshTimeoutHours', 0);

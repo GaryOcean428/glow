@@ -5,8 +5,8 @@ import type {
 	INodePropertyOptions,
 	ResourceMapperField,
 	ResourceMapperFields,
-} from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 
 import { apiRequest } from '../transport';
 

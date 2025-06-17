@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { inDevelopment, Logger } from '@n8n/backend-common';
-import { Container } from '@n8n/di';
+import { inDevelopment, Logger } from '@glow/backend-common';
+import { Container } from '@glow/di';
 import type { Request, Response } from 'express';
-import { ErrorReporter } from 'n8n-core';
-import { FORM_TRIGGER_PATH_IDENTIFIER, NodeApiError } from 'n8n-workflow';
+import { ErrorReporter } from 'glow-core';
+import { FORM_TRIGGER_PATH_IDENTIFIER, NodeApiError } from 'glow-workflow';
 import { Readable } from 'node:stream';
 import picocolors from 'picocolors';
 

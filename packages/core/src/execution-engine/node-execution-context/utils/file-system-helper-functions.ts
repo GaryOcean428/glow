@@ -1,13 +1,13 @@
-import { Container } from '@n8n/di';
-import type { FileSystemHelperFunctions, INode } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import type { FileSystemHelperFunctions, INode } from 'glow-workflow';
+import { NodeOperationError } from 'glow-workflow';
 import { createReadStream } from 'node:fs';
 import { access as fsAccess, writeFile as fsWriteFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 
 import {
 	BINARY_DATA_STORAGE_PATH,
-	BLOCK_FILE_ACCESS_TO_N8N_FILES,
+	BLOCK_FILE_ACCESS_TO_GLOW_FILES,
 	CONFIG_FILES,
 	CUSTOM_EXTENSION_ENV,
 	RESTRICT_FILE_ACCESS_TO,
@@ -31,7 +31,7 @@ const getAllowedPaths = () => {
 export function isFilePathBlocked(filePath: string): boolean {
 	const allowedPaths = getAllowedPaths();
 	const resolvedFilePath = resolve(filePath);
-	const blockFileAccessToN8nFiles = process.env[BLOCK_FILE_ACCESS_TO_N8N_FILES] !== 'false';
+	const blockFileAccessToN8nFiles = process.env[BLOCK_FILE_ACCESS_TO_GLOW_FILES] !== 'false';
 
 	//if allowed paths are defined, allow access only to those paths
 	if (allowedPaths.length) {

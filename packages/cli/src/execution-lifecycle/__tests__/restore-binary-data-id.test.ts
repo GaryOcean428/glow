@@ -1,6 +1,6 @@
-import { Container } from '@n8n/di';
-import { BinaryDataConfig, BinaryDataService } from 'n8n-core';
-import type { IRun } from 'n8n-workflow';
+import { Container } from '@glow/di';
+import { BinaryDataConfig, BinaryDataService } from 'glow-core';
+import type { IRun } from 'glow-workflow';
 
 import { restoreBinaryDataId } from '@/execution-lifecycle/restore-binary-data-id';
 import { mockInstance } from '@test/mocking';

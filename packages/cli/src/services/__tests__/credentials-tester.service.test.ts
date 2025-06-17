@@ -1,5 +1,5 @@
 import mock from 'jest-mock-extended/lib/Mock';
-import type { ICredentialType, INodeType } from 'n8n-workflow';
+import type { ICredentialType, INodeType } from 'glow-workflow';
 
 import type { CredentialTypes } from '@/credential-types';
 import type { NodeTypes } from '@/node-types';

@@ -13,8 +13,8 @@ import type {
 	INodeTypeDescription,
 	ITriggerResponse,
 	JsonObject,
-} from 'n8n-workflow';
-import { NodeConnectionTypes, NodeOperationError, TriggerCloseError } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeConnectionTypes, NodeOperationError, TriggerCloseError } from 'glow-workflow';
 import rfc2047 from 'rfc2047';
 
 import type { ICredentialsDataImap } from '@credentials/Imap.credentials';

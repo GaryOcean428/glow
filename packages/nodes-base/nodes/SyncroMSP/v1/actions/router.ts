@@ -1,5 +1,5 @@
-import type { IExecuteFunctions, INodeExecutionData, JsonObject } from 'n8n-workflow';
-import { NodeApiError } from 'n8n-workflow';
+import type { IExecuteFunctions, INodeExecutionData, JsonObject } from 'glow-workflow';
+import { NodeApiError } from 'glow-workflow';
 
 import * as contact from './contact';
 import * as customer from './customer';

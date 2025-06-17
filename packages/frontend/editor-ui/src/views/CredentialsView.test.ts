@@ -6,12 +6,12 @@ import CredentialsView from '@/views/CredentialsView.vue';
 import { useUIStore } from '@/stores/ui.store';
 import { mockedStore } from '@/__tests__/utils';
 import { waitFor, within, fireEvent } from '@testing-library/vue';
-import { STORES } from '@n8n/stores';
+import { STORES } from '@glow/stores';
 import { CREDENTIAL_SELECT_MODAL_KEY, VIEWS } from '@/constants';
 import { useProjectsStore } from '@/stores/projects.store';
 import { createRouter, createWebHistory } from 'vue-router';
 import { flushPromises } from '@vue/test-utils';
-import { CREDENTIAL_EMPTY_VALUE } from 'n8n-workflow';
+import { CREDENTIAL_EMPTY_VALUE } from 'glow-workflow';
 
 vi.mock('@/composables/useGlobalEntityCreation', () => ({
 	useGlobalEntityCreation: () => ({

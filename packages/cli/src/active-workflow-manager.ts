@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { Logger } from '@n8n/backend-common';
-import { WorkflowsConfig } from '@n8n/config';
-import type { WorkflowEntity, IWorkflowDb } from '@n8n/db';
-import { WorkflowRepository } from '@n8n/db';
-import { OnLeaderStepdown, OnLeaderTakeover, OnPubSubEvent, OnShutdown } from '@n8n/decorators';
-import { Service } from '@n8n/di';
+import { Logger } from '@glow/backend-common';
+import { WorkflowsConfig } from '@glow/config';
+import type { WorkflowEntity, IWorkflowDb } from '@glow/db';
+import { WorkflowRepository } from '@glow/db';
+import { OnLeaderStepdown, OnLeaderTakeover, OnPubSubEvent, OnShutdown } from '@glow/decorators';
+import { Service } from '@glow/di';
 import chunk from 'lodash/chunk';
 import {
 	ActiveWorkflows,
@@ -14,7 +14,7 @@ import {
 	TriggerContext,
 	type IGetExecutePollFunctions,
 	type IGetExecuteTriggerFunctions,
-} from 'n8n-core';
+} from 'glow-core';
 import type {
 	ExecutionError,
 	IDeferredPromise,
@@ -28,14 +28,14 @@ import type {
 	WorkflowExecuteMode,
 	INodeType,
 	WorkflowId,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	Workflow,
 	WorkflowActivationError,
 	WebhookPathTakenError,
 	UnexpectedError,
 	ensureError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { strict } from 'node:assert';
 
 import { ActivationErrorsService } from '@/activation-errors.service';

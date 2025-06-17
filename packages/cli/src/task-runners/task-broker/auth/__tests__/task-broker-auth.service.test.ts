@@ -1,5 +1,5 @@
-import { GlobalConfig } from '@n8n/config';
-import { sleep } from 'n8n-workflow';
+import { GlobalConfig } from '@glow/config';
+import { sleep } from 'glow-workflow';
 
 import config from '@/config';
 import { CacheService } from '@/services/cache/cache.service';

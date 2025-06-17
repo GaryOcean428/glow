@@ -5,14 +5,14 @@ import type {
 	INodeProperties,
 	IDisplayOptions,
 	IWebhookFunctions,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	NodeConnectionTypes,
 	WAIT_INDEFINITELY,
 	FORM_TRIGGER_NODE_TYPE,
 	tryToParseDateTime,
 	NodeOperationError,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import { updateDisplayOptions } from '../../utils/utilities';
 import {
