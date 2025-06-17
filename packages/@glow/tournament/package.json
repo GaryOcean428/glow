@@ -20,7 +20,8 @@
     "dist/**/*"
   ],
   "dependencies": {
-    "tournament": "^3.2.0"
+    "ast-types": "0.15.2",
+    "recast": "0.22.0"
   },
   "devDependencies": {
     "@glow/typescript-config": "workspace:*"

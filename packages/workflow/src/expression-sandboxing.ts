@@ -1,4 +1,7 @@
 import { type ASTAfterHook, astBuilders as b, astVisit } from '@glow/tournament';
+import type { ASTNode } from 'ast-types';
+import type { NodePath } from 'ast-types/lib/node-path';
+import { namedTypes } from 'ast-types';
 
 import { ExpressionError } from './errors';
 import { isSafeObjectProperty } from './utils';
@@ -6,9 +9,9 @@ import { isSafeObjectProperty } from './utils';
 export const sanitizerName = '__sanitize';
 const sanitizerIdentifier = b.identifier(sanitizerName);
 
-export const PrototypeSanitizer: ASTAfterHook = (ast, dataNode) => {
+export const PrototypeSanitizer: ASTAfterHook = (ast: ASTNode, dataNode: namedTypes.Identifier) => {
 	astVisit(ast, {
-		visitMemberExpression(path) {
+		visitMemberExpression(path: NodePath) {
 			this.traverse(path);
 			const node = path.node;
 			if (!node.computed) {
