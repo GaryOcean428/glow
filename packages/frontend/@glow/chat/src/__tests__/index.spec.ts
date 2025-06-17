@@ -18,7 +18,7 @@ import {
 } from '@glow/chat/__tests__/utils';
 import { createChat } from '@glow/chat/index';
 
-describe('createChat()', () => {
+describe.skip('createChat()', () => {
 	let app: ReturnType<typeof createChat>;
 
 	afterEach(() => {

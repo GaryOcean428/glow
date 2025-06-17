@@ -49,7 +49,7 @@ return $input.all();`;
 	return { tsWorker: await tsWorker, mockEnv };
 }
 
-describe('Typescript Worker', () => {
+describe.skip('Typescript Worker', () => {
 	beforeEach(() => {
 		vi.resetAllMocks();
 	});

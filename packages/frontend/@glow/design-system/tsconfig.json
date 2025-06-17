@@ -13,6 +13,7 @@
 		],
 		"paths": {
 			"@glow/design-system*": ["./src*"],
+			"@n8n/design-system*": ["./src*"],
 			"@glow/composables*": ["../composables/src*"],
 			"@glow/utils*": ["../../../@glow/utils/src*"]
 		}
