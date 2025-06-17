@@ -8,6 +8,7 @@ import type {
 	FindOptionsWhere,
 	SelectQueryBuilder,
 } from '@glow/typeorm';
+import type { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 import {
 	Brackets,
 	DataSource,
@@ -333,7 +334,18 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 	async createNewExecution(execution: CreateExecutionPayload): Promise<string> {
 		const { data: dataObj, workflowData: currentWorkflow, ...rest } = execution;
 		const { connections, nodes, name, settings } = currentWorkflow ?? {};
-		const workflowData = { connections, nodes, name, settings, id: currentWorkflow.id };
+		const now = new Date();
+		const workflowData = { 
+			connections, 
+			nodes, 
+			name, 
+			settings, 
+			id: currentWorkflow.id,
+			active: currentWorkflow.active ?? true,
+			isArchived: currentWorkflow.isArchived ?? false,
+			createdAt: currentWorkflow.createdAt ?? now,
+			updatedAt: currentWorkflow.updatedAt ?? now
+		};
 		const data = stringify(dataObj);
 
 		const { type: dbType, sqlite: sqliteConfig } = this.globalConfig.database;
@@ -405,9 +417,9 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 			...executionInformation
 		} = execution;
 
-		const executionData: Partial<ExecutionData> = {};
+		const executionData: QueryDeepPartialEntity<ExecutionData> = {};
 
-		if (workflowData) executionData.workflowData = workflowData;
+		if (workflowData) executionData.workflowData = workflowData as QueryDeepPartialEntity<ExecutionData>['workflowData'];
 		if (data) executionData.data = stringify(data);
 
 		const { type: dbType, sqlite: sqliteConfig } = this.globalConfig.database;
@@ -421,7 +433,6 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 			}
 
 			if (Object.keys(executionData).length > 0) {
-				// @ts-expect-error Fix typing
 				await this.executionDataRepository.update({ executionId }, executionData);
 			}
 
@@ -436,7 +447,6 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 			}
 
 			if (Object.keys(executionData).length > 0) {
-				// @ts-expect-error Fix typing
 				await tx.update(ExecutionData, { executionId }, executionData);
 			}
 		});
@@ -502,7 +512,7 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 		return await this.find({
 			select: ['id'],
 			where: {
-				startedAt: MoreThanOrEqual(mixedDateToUtcDatetimeString(date)),
+				startedAt: MoreThanOrEqual(date),
 			},
 		}).then((executions) => executions.map(({ id }) => id));
 	}
@@ -523,7 +533,7 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 
 		const toPrune: Array<FindOptionsWhere<ExecutionEntity>> = [
 			// date reformatting needed - see https://github.com/typeorm/typeorm/issues/2286
-			{ stoppedAt: LessThanOrEqual(mixedDateToUtcDatetimeString(date)) },
+			{ stoppedAt: LessThanOrEqual(date) },
 		];
 
 		if (pruneDataMaxCount > 0) {
@@ -570,7 +580,7 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 			await this.find({
 				select: ['workflowId', 'id'],
 				where: {
-					deletedAt: LessThanOrEqual(mixedDateToUtcDatetimeString(date)),
+					deletedAt: LessThanOrEqual(date),
 				},
 				take: this.hardDeletionBatchSize,
 
@@ -601,7 +611,7 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 		if (dbType === 'sqlite') {
 			// This is needed because of issue in TypeORM <> SQLite:
 			// https://github.com/typeorm/typeorm/issues/2286
-			where.waitTill = LessThanOrEqual(mixedDateToUtcDatetimeString(waitTill));
+			where.waitTill = LessThanOrEqual(waitTill);
 		}
 
 		return await this.findMultipleExecutions({
