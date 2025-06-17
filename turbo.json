@@ -18,7 +18,7 @@
 			"dependsOn": ["glow-editor-ui#build"]
 		},
 		"build:nodes": {
-			"dependsOn": ["n8n-nodes-base#build", "@n8n/n8n-nodes-langchain#build"]
+                    "dependsOn": ["glow-nodes-base#build", "@glow/nodes-langchain#build"]
 		},
 		"build": {
 			"dependsOn": ["^build"],
@@ -32,42 +32,42 @@
 		"lint:backend": {
 			"dependsOn": [
 				"^build",
-				"@n8n/api-types#lint",
-				"@n8n/config#lint",
-				"@n8n/decorators#lint",
-				"@n8n/constants#lint",
-				"@n8n/backend-common#lint",
-				"@n8n/integration-test-utils#lint",
-				"@n8n/db#lint",
-				"@n8n/di#lint",
-				"@n8n/client-oauth2#lint",
-				"@n8n/imap#lint",
-				"@n8n/permissions#lint",
-				"@n8n/task-runner#lint",
-				"n8n-workflow#lint",
-				"n8n-core#lint",
-				"n8n-node-dev#lint",
-				"n8n#lint"
+                                "@glow/api-types#lint",
+                                "@glow/config#lint",
+                                "@glow/decorators#lint",
+                                "@glow/constants#lint",
+                                "@glow/backend-common#lint",
+                                "@glow/integration-test-utils#lint",
+                                "@glow/db#lint",
+                                "@glow/di#lint",
+                                "@glow/client-oauth2#lint",
+                                "@glow/imap#lint",
+                                "@glow/permissions#lint",
+                                "@glow/task-runner#lint",
+                                "glow-workflow#lint",
+                                "glow-core#lint",
+                                "glow-node-dev#lint",
+                                "glow#lint"
 			]
 		},
 		"lint:frontend": {
 			"dependsOn": [
 				"^build",
-				"@n8n/chat#lint",
-				"@n8n/codemirror-lang#lint",
-				"@n8n/storybook#lint",
-				"n8n-cypress#lint",
-				"@n8n/composables#build",
-				"@n8n/design-system#lint",
-				"n8n-editor-ui#lint"
+                                "@glow/chat#lint",
+                                "@glow/codemirror-lang#lint",
+                                "@glow/storybook#lint",
+                                "glow-cypress#lint",
+                                "@glow/composables#build",
+                                "@glow/design-system#lint",
+                                "glow-editor-ui#lint"
 			]
 		},
 		"lint:nodes": {
 			"dependsOn": [
 				"^build",
-				"n8n-nodes-base#lint",
-				"@n8n/n8n-nodes-langchain#lint",
-				"@n8n/json-schema-to-zod#lint"
+                                "glow-nodes-base#lint",
+                                "@glow/nodes-langchain#lint",
+                                "@glow/json-schema-to-zod#lint"
 			]
 		},
 		"lint": {
@@ -76,38 +76,38 @@
 		"lintfix": {},
 		"test:backend": {
 			"dependsOn": [
-				"@n8n/api-types#test",
-				"@n8n/config#test",
-				"@n8n/decorators#test",
-				"@n8n/db#test",
-				"@n8n/di#test",
-				"@n8n/client-oauth2#test",
-				"@n8n/imap#test",
-				"@n8n/permissions#test",
-				"@n8n/task-runner#test",
-				"n8n-workflow#test",
-				"n8n-core#test",
-				"n8n#test"
+                                "@glow/api-types#test",
+                                "@glow/config#test",
+                                "@glow/decorators#test",
+                                "@glow/db#test",
+                                "@glow/di#test",
+                                "@glow/client-oauth2#test",
+                                "@glow/imap#test",
+                                "@glow/permissions#test",
+                                "@glow/task-runner#test",
+                                "glow-workflow#test",
+                                "glow-core#test",
+                                "glow#test"
 			],
 			"outputs": ["coverage/**", "junit.xml", "cobertura-coverage.xml"],
 			"inputs": ["jest.config.*", "package.json", "pnpm-lock.yaml"]
 		},
 		"test:frontend": {
 			"dependsOn": [
-				"@n8n/chat#test",
-				"@n8n/codemirror-lang#test",
-				"@n8n/composables#build",
-				"@n8n/design-system#test",
-				"n8n-editor-ui#test"
+                                "@glow/chat#test",
+                                "@glow/codemirror-lang#test",
+                                "@glow/composables#build",
+                                "@glow/design-system#test",
+                                "glow-editor-ui#test"
 			],
 			"outputs": ["coverage/**", "junit.xml", "cobertura-coverage.xml"],
 			"inputs": ["jest.config.*", "package.json", "pnpm-lock.yaml"]
 		},
 		"test:nodes": {
 			"dependsOn": [
-				"n8n-nodes-base#test",
-				"@n8n/n8n-nodes-langchain#test",
-				"@n8n/json-schema-to-zod#test"
+                                "glow-nodes-base#test",
+                                "@glow/nodes-langchain#test",
+                                "@glow/json-schema-to-zod#test"
 			],
 			"outputs": ["coverage/**", "junit.xml", "cobertura-coverage.xml"],
 			"inputs": ["jest.config.*", "package.json", "pnpm-lock.yaml"]
