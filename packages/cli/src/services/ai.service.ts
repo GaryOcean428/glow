@@ -27,9 +27,15 @@ export class AiService {
 			return;
 		}
 
+		const baseUrl = this.globalConfig.aiAssistant.baseUrl;
+		
+		// Check if baseUrl is valid before initializing client
+		if (!baseUrl || !this.isValidUrl(baseUrl)) {
+			return;
+		}
+
 		const licenseCert = await this.licenseService.loadCertStr();
 		const consumerId = this.licenseService.getConsumerId();
-		const baseUrl = this.globalConfig.aiAssistant.baseUrl;
 		const logLevel = this.globalConfig.logging.level;
 
 		this.client = new AiAssistantClient({
@@ -39,6 +45,15 @@ export class AiService {
 			baseUrl,
 			logLevel,
 		});
+	}
+
+	private isValidUrl(urlString: string): boolean {
+		try {
+			const url = new URL(urlString);
+			return url.protocol === 'http:' || url.protocol === 'https:';
+		} catch {
+			return false;
+		}
 	}
 
 	async chat(payload: AiChatRequestDto, user: IUser) {

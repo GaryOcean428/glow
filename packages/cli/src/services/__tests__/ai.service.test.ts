@@ -63,6 +63,40 @@ describe('AiService', () => {
 				logLevel: 'info',
 			});
 		});
+
+		it('should not initialize client when baseUrl is empty', async () => {
+			// Create a service instance with empty baseUrl
+			const emptyBaseUrlConfig = mock<GlobalConfig>({
+				logging: { level: 'info' },
+				aiAssistant: { baseUrl: '' },
+			});
+			const serviceWithEmptyUrl = new AiService(license, emptyBaseUrlConfig);
+
+			license.isAiAssistantEnabled.mockReturnValue(true);
+			license.loadCertStr.mockResolvedValue('mock-license-cert');
+			license.getConsumerId.mockReturnValue('mock-consumer-id');
+
+			await serviceWithEmptyUrl.init();
+
+			expect(AiAssistantClient).not.toHaveBeenCalled();
+		});
+
+		it('should not initialize client when baseUrl is invalid', async () => {
+			// Create a service instance with invalid baseUrl
+			const invalidBaseUrlConfig = mock<GlobalConfig>({
+				logging: { level: 'info' },
+				aiAssistant: { baseUrl: 'invalid-url' },
+			});
+			const serviceWithInvalidUrl = new AiService(license, invalidBaseUrlConfig);
+
+			license.isAiAssistantEnabled.mockReturnValue(true);
+			license.loadCertStr.mockResolvedValue('mock-license-cert');
+			license.getConsumerId.mockReturnValue('mock-consumer-id');
+
+			await serviceWithInvalidUrl.init();
+
+			expect(AiAssistantClient).not.toHaveBeenCalled();
+		});
 	});
 
 	describe('chat', () => {
@@ -127,6 +161,68 @@ describe('AiService', () => {
 			license.isAiAssistantEnabled.mockReturnValue(false);
 
 			await expect(aiService.askAi(payload, user)).rejects.toThrow('Assistant client not setup');
+		});
+	});
+
+	describe('URL validation', () => {
+		it('should validate valid HTTP URLs', async () => {
+			const httpConfig = mock<GlobalConfig>({
+				logging: { level: 'info' },
+				aiAssistant: { baseUrl: 'http://example.com' },
+			});
+			const serviceWithHttpUrl = new AiService(license, httpConfig);
+
+			license.isAiAssistantEnabled.mockReturnValue(true);
+			license.loadCertStr.mockResolvedValue('mock-license-cert');
+			license.getConsumerId.mockReturnValue('mock-consumer-id');
+
+			await serviceWithHttpUrl.init();
+
+			expect(AiAssistantClient).toHaveBeenCalledWith({
+				licenseCert: 'mock-license-cert',
+				consumerId: 'mock-consumer-id',
+				n8nVersion: GLOW_VERSION,
+				baseUrl: 'http://example.com',
+				logLevel: 'info',
+			});
+		});
+
+		it('should validate valid HTTPS URLs', async () => {
+			const httpsConfig = mock<GlobalConfig>({
+				logging: { level: 'info' },
+				aiAssistant: { baseUrl: 'https://example.com' },
+			});
+			const serviceWithHttpsUrl = new AiService(license, httpsConfig);
+
+			license.isAiAssistantEnabled.mockReturnValue(true);
+			license.loadCertStr.mockResolvedValue('mock-license-cert');
+			license.getConsumerId.mockReturnValue('mock-consumer-id');
+
+			await serviceWithHttpsUrl.init();
+
+			expect(AiAssistantClient).toHaveBeenCalledWith({
+				licenseCert: 'mock-license-cert',
+				consumerId: 'mock-consumer-id',
+				n8nVersion: GLOW_VERSION,
+				baseUrl: 'https://example.com',
+				logLevel: 'info',
+			});
+		});
+
+		it('should reject URLs with unsupported protocols', async () => {
+			const ftpConfig = mock<GlobalConfig>({
+				logging: { level: 'info' },
+				aiAssistant: { baseUrl: 'ftp://example.com' },
+			});
+			const serviceWithFtpUrl = new AiService(license, ftpConfig);
+
+			license.isAiAssistantEnabled.mockReturnValue(true);
+			license.loadCertStr.mockResolvedValue('mock-license-cert');
+			license.getConsumerId.mockReturnValue('mock-consumer-id');
+
+			await serviceWithFtpUrl.init();
+
+			expect(AiAssistantClient).not.toHaveBeenCalled();
 		});
 	});
 });
