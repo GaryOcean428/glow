@@ -1,7 +1,7 @@
 import { Service } from '@glow/di';
 import type { EntityManager } from '@glow/typeorm';
 import { DataSource, In, Not, Repository } from '@glow/typeorm';
-import type { DeepPartial } from '@glow/typeorm/common/DeepPartial';
+import type { DeepPartial } from '@glow/typeorm';
 import type { IDataObject } from 'glow-workflow';
 
 import { TestCaseExecution } from '../entities';

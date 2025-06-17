@@ -63,4 +63,4 @@ export interface Migration extends Function {
 
 export type InsertResult = Array<{ insertId: number }>;
 
-export { QueryFailedError } from '@glow/typeorm/error/QueryFailedError';
+export { QueryFailedError } from '@glow/typeorm';

@@ -20,7 +20,12 @@ import {
 	Raw,
 	Repository,
 } from '@glow/typeorm';
-import { DateUtils } from '@glow/typeorm/util/DateUtils';
+// Utility function to convert Date to UTC datetime string format
+// Replaces TypeORM's mixedDateToUtcDatetimeString
+function mixedDateToUtcDatetimeString(value: Date | string): string {
+	const date = value instanceof Date ? value : new Date(value);
+	return date.toISOString().slice(0, 19).replace('T', ' ');
+}
 import { parse, stringify } from 'flatted';
 import pick from 'lodash/pick';
 import { BinaryDataService, ErrorReporter } from 'glow-core';
@@ -98,14 +103,14 @@ function parseFiltersToQueryBuilder(
 	if (filters?.startedAfter) {
 		qb.andWhere({
 			startedAt: MoreThanOrEqual(
-				DateUtils.mixedDateToUtcDatetimeString(new Date(filters.startedAfter)),
+				mixedDateToUtcDatetimeString(new Date(filters.startedAfter)),
 			),
 		});
 	}
 	if (filters?.startedBefore) {
 		qb.andWhere({
 			startedAt: LessThanOrEqual(
-				DateUtils.mixedDateToUtcDatetimeString(new Date(filters.startedBefore)),
+				mixedDateToUtcDatetimeString(new Date(filters.startedBefore)),
 			),
 		});
 	}
@@ -117,11 +122,11 @@ function parseFiltersToQueryBuilder(
 }
 
 const lessThanOrEqual = (date: string): unknown => {
-	return LessThanOrEqual(DateUtils.mixedDateToUtcDatetimeString(new Date(date)));
+	return LessThanOrEqual(mixedDateToUtcDatetimeString(new Date(date)));
 };
 
 const moreThanOrEqual = (date: string): unknown => {
-	return MoreThanOrEqual(DateUtils.mixedDateToUtcDatetimeString(new Date(date)));
+	return MoreThanOrEqual(mixedDateToUtcDatetimeString(new Date(date)));
 };
 
 @Service()
@@ -497,7 +502,7 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 		return await this.find({
 			select: ['id'],
 			where: {
-				startedAt: MoreThanOrEqual(DateUtils.mixedDateToUtcDatetimeString(date)),
+				startedAt: MoreThanOrEqual(mixedDateToUtcDatetimeString(date)),
 			},
 		}).then((executions) => executions.map(({ id }) => id));
 	}
@@ -518,7 +523,7 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 
 		const toPrune: Array<FindOptionsWhere<ExecutionEntity>> = [
 			// date reformatting needed - see https://github.com/typeorm/typeorm/issues/2286
-			{ stoppedAt: LessThanOrEqual(DateUtils.mixedDateToUtcDatetimeString(date)) },
+			{ stoppedAt: LessThanOrEqual(mixedDateToUtcDatetimeString(date)) },
 		];
 
 		if (pruneDataMaxCount > 0) {
@@ -565,7 +570,7 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 			await this.find({
 				select: ['workflowId', 'id'],
 				where: {
-					deletedAt: LessThanOrEqual(DateUtils.mixedDateToUtcDatetimeString(date)),
+					deletedAt: LessThanOrEqual(mixedDateToUtcDatetimeString(date)),
 				},
 				take: this.hardDeletionBatchSize,
 
@@ -596,7 +601,7 @@ export class ExecutionRepository extends Repository<ExecutionEntity> {
 		if (dbType === 'sqlite') {
 			// This is needed because of issue in TypeORM <> SQLite:
 			// https://github.com/typeorm/typeorm/issues/2286
-			where.waitTill = LessThanOrEqual(DateUtils.mixedDateToUtcDatetimeString(waitTill));
+			where.waitTill = LessThanOrEqual(mixedDateToUtcDatetimeString(waitTill));
 		}
 
 		return await this.findMultipleExecutions({

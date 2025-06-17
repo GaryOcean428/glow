@@ -2,7 +2,7 @@ import { Logger } from '@glow/backend-common';
 import { GlobalConfig } from '@glow/config';
 import { Container } from '@glow/di';
 import type { ObjectLiteral } from '@glow/typeorm';
-import type { QueryRunner } from '@glow/typeorm/query-runner/QueryRunner';
+import type { QueryRunner } from '@glow/typeorm';
 import { readFileSync, rmSync } from 'fs';
 import { InstanceSettings } from 'glow-core';
 import { jsonParse, UnexpectedError } from 'glow-workflow';
