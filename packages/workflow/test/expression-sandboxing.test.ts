@@ -1,4 +1,4 @@
-import { Tournament } from '@n8n/tournament';
+import { Tournament } from '@glow/tournament';
 
 import { PrototypeSanitizer, sanitizer } from '@/expression-sandboxing';
 

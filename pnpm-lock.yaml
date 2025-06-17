@@ -787,7 +787,7 @@ importers:
         version: 4.3.0
       '@getzep/zep-cloud':
         specifier: 1.0.12
-        version: 1.0.12(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)(langchain@0.3.11(fc28bd1f302bb917a5e40717ea79b336))
+        version: 1.0.12(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)(langchain@0.3.11(0728a6e30bffd6edb6c05533944ea781))
       '@getzep/zep-js':
         specifier: 0.9.0
         version: 0.9.0
@@ -829,7 +829,7 @@ importers:
         version: 0.3.2(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)
       '@langchain/community':
         specifier: 'catalog:'
-        version: 0.3.24(ebe328c7cf781c3643719655a5f4f70d)
+        version: 0.3.24(52cc0f044636a96981691161e65c4210)
       '@langchain/core':
         specifier: 'catalog:'
         version: 0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1))
@@ -925,7 +925,7 @@ importers:
         version: 23.0.1
       langchain:
         specifier: 0.3.11
-        version: 0.3.11(fc28bd1f302bb917a5e40717ea79b336)
+        version: 0.3.11(0728a6e30bffd6edb6c05533944ea781)
       lodash:
         specifier: 'catalog:'
         version: 4.17.21
@@ -1100,9 +1100,12 @@ importers:
 
   packages/@glow/tournament:
     dependencies:
-      tournament:
-        specifier: ^3.2.0
-        version: 3.2.0
+      ast-types:
+        specifier: 0.15.2
+        version: 0.15.2
+      recast:
+        specifier: 0.22.0
+        version: 0.22.0
     devDependencies:
       '@glow/typescript-config':
         specifier: workspace:*
@@ -7473,9 +7476,6 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
 
-  autonomy@1.0.1:
-    resolution: {integrity: sha512-U5EgXgduorjEbdO2o33FKRQTldqTlawzz5iWqFuKEFN+vg8Hx8v8BrcRZlph+eSSiqxdoXZlWgv4CUufIGa/Dg==}
-
   autoprefixer@10.4.19:
     resolution: {integrity: sha512-BaENR2+zBZ8xXhM4pUaKUxlVdxZ0EZhjvbopwnXmxRUfqDmwSpC2lAi/QXvx7NRdPCo1WKEcEF6mV64si1z4Ew==}
     engines: {node: ^10 || ^12 || >=14}
@@ -9834,9 +9834,6 @@ packages:
     resolution: {integrity: sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==}
     engines: {node: '>=8.0.0'}
 
-  interlude@1.1.1:
-    resolution: {integrity: sha512-d40iH0EIJ+Z36LcAE7ZVeRb1R8KgaQiMt7+jikC54Ks0iLAiG+6W6Rxeou2tFCyRNpyhBm53V06dFWWmrfmpXw==}
-
   internal-slot@1.0.7:
     resolution: {integrity: sha512-NGnrKwXzSms2qUUih/ILZ5JBqNTSa1+ZmP6flaIp6KmSElgE9qdndzS3cqjrDovwFdmwsGsLdeFgB6suw+1e9g==}
     engines: {node: '>= 0.4'}
@@ -11662,9 +11659,6 @@ packages:
   openurl@1.1.1:
     resolution: {integrity: sha512-d/gTkTb1i1GKz5k3XE3XFV/PxQ1k45zDqGP2OA7YhgsaLoqm6qRvARAZOFer1fcXritWlGBRCu/UgeS4HAnXAA==}
 
-  operators@0.1.7:
-    resolution: {integrity: sha512-od4UeVqQ0rLYv19TFVo2G9jBfAoU/7TAbYkExIIVKA/q0Wgsoe6zRWxG/wPohGa+NYv7S+rb5mmtSgnnV1EAmg==}
-
   option@0.2.4:
     resolution: {integrity: sha512-pkEqbDyl8ou5cpq+VsnQbe/WlEy5qS7xPzMS1U55OCG9KPvwFD46zDbxQIj3egJSFc3D+XhYOPUzz49zQAVy7A==}
 
@@ -13161,9 +13155,6 @@ packages:
   stylis@4.3.1:
     resolution: {integrity: sha512-EQepAV+wMsIaGVGX1RECzgrcqRRU/0sYOHkeLsZ3fzHaHXZy4DaOOX0vOlGQdlsjkh3mFHAIlVimpwAs4dslyQ==}
 
-  subset@0.1.7:
-    resolution: {integrity: sha512-uDb9g7HU/cyVpkxjK3ua9EFtlD1UxRWXSTtmr6D6Cl1QdXmZ8xA4Gf/fqd2U6f1QerpfhB5mFJHYqN0D1/z9lA==}
-
   sucrase@3.35.0:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
     engines: {node: '>=16 || 14 >=14.17'}
@@ -13395,9 +13386,6 @@ packages:
   tough-cookie@5.1.2:
     resolution: {integrity: sha512-FVDYdxtnj0G6Qm/DhNPSb8Ju59ULcup3tuJxkFb5K8Bv2pUXILbf0xZWU8PX8Ov19OXljbUyveOFwRMwkXzO+A==}
     engines: {node: '>=16'}
-
-  tournament@3.2.0:
-    resolution: {integrity: sha512-QjX1dkuL/hLrw2uWSsd/ZroUPTWlxlvIf/3QXwMbX5Y2+LyvNKJvJtmQsRtV1vQOWE/W1RfDMPdfzydBicqJZg==}
 
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
@@ -16795,7 +16783,7 @@ snapshots:
   '@gar/promisify@1.1.3':
     optional: true
 
-  '@getzep/zep-cloud@1.0.12(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)(langchain@0.3.11(fc28bd1f302bb917a5e40717ea79b336))':
+  '@getzep/zep-cloud@1.0.12(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)(langchain@0.3.11(0728a6e30bffd6edb6c05533944ea781))':
     dependencies:
       form-data: 4.0.0
       node-fetch: 2.7.0(encoding@0.1.13)
@@ -16804,7 +16792,7 @@ snapshots:
       zod: 3.24.1
     optionalDependencies:
       '@langchain/core': 0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1))
-      langchain: 0.3.11(fc28bd1f302bb917a5e40717ea79b336)
+      langchain: 0.3.11(0728a6e30bffd6edb6c05533944ea781)
     transitivePeerDependencies:
       - encoding
 
@@ -17328,7 +17316,7 @@ snapshots:
       - aws-crt
       - encoding
 
-  '@langchain/community@0.3.24(ebe328c7cf781c3643719655a5f4f70d)':
+  '@langchain/community@0.3.24(52cc0f044636a96981691161e65c4210)':
     dependencies:
       '@browserbasehq/stagehand': 1.9.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.5.0)(encoding@0.1.13)(openai@4.78.1(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1)
       '@ibm-cloud/watsonx-ai': 1.1.2
@@ -17339,7 +17327,7 @@ snapshots:
       flat: 5.0.2
       ibm-cloud-sdk-core: 5.3.2
       js-yaml: 4.1.0
-      langchain: 0.3.11(fc28bd1f302bb917a5e40717ea79b336)
+      langchain: 0.3.11(0728a6e30bffd6edb6c05533944ea781)
       langsmith: 0.2.15(openai@4.78.1(encoding@0.1.13)(zod@3.24.1))
       openai: 4.78.1(encoding@0.1.13)(zod@3.24.1)
       uuid: 10.0.0
@@ -17354,7 +17342,7 @@ snapshots:
       '@aws-sdk/credential-provider-node': 3.808.0
       '@azure/storage-blob': 12.26.0
       '@browserbasehq/sdk': 2.6.0(encoding@0.1.13)
-      '@getzep/zep-cloud': 1.0.12(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)(langchain@0.3.11(fc28bd1f302bb917a5e40717ea79b336))
+      '@getzep/zep-cloud': 1.0.12(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)(langchain@0.3.11(0728a6e30bffd6edb6c05533944ea781))
       '@getzep/zep-js': 0.9.0
       '@google-ai/generativelanguage': 2.6.0(encoding@0.1.13)
       '@google-cloud/storage': 7.12.1(encoding@0.1.13)
@@ -20699,7 +20687,7 @@ snapshots:
 
   ast-types@0.15.2:
     dependencies:
-      tslib: 2.6.2
+      tslib: 2.8.1
 
   ast-types@0.16.1:
     dependencies:
@@ -20718,8 +20706,6 @@ snapshots:
   asynckit@0.4.0: {}
 
   at-least-node@1.0.0: {}
-
-  autonomy@1.0.1: {}
 
   autoprefixer@10.4.19(postcss@8.5.3):
     dependencies:
@@ -20757,14 +20743,6 @@ snapshots:
       - debug
 
   axios@1.8.3:
-    dependencies:
-      follow-redirects: 1.15.9(debug@4.4.1)
-      form-data: 4.0.2
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
-
-  axios@1.9.0:
     dependencies:
       follow-redirects: 1.15.9(debug@4.4.1)
       form-data: 4.0.2
@@ -23510,7 +23488,7 @@ snapshots:
       isstream: 0.1.2
       jsonwebtoken: 9.0.2
       mime-types: 2.1.35
-      retry-axios: 2.6.0(axios@1.9.0)
+      retry-axios: 2.6.0(axios@1.9.0(debug@4.4.1))
       tough-cookie: 4.1.4
     transitivePeerDependencies:
       - supports-color
@@ -23575,7 +23553,7 @@ snapshots:
 
   infisical-node@1.3.0:
     dependencies:
-      axios: 1.9.0
+      axios: 1.9.0(debug@4.4.1)
       dotenv: 16.5.0
       tweetnacl: 1.0.3
       tweetnacl-util: 0.15.1
@@ -23610,12 +23588,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       through: 2.3.8
-
-  interlude@1.1.1:
-    dependencies:
-      autonomy: 1.0.1
-      operators: 0.1.7
-      subset: 0.1.7
 
   internal-slot@1.0.7:
     dependencies:
@@ -24506,7 +24478,7 @@ snapshots:
 
   kuler@2.0.0: {}
 
-  langchain@0.3.11(fc28bd1f302bb917a5e40717ea79b336):
+  langchain@0.3.11(0728a6e30bffd6edb6c05533944ea781):
     dependencies:
       '@langchain/core': 0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1))
       '@langchain/openai': 0.3.17(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)
@@ -24530,7 +24502,7 @@ snapshots:
       '@langchain/groq': 0.1.3(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)
       '@langchain/mistralai': 0.2.0(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))
       '@langchain/ollama': 0.1.4(@langchain/core@0.3.48(openai@4.78.1(encoding@0.1.13)(zod@3.24.1)))
-      axios: 1.9.0
+      axios: 1.9.0(debug@4.4.1)
       cheerio: 1.0.0
       handlebars: 4.7.8
       typeorm: 0.3.20(ioredis@5.3.2)(mongodb@6.11.0(@aws-sdk/credential-providers@3.808.0)(gcp-metadata@5.3.0(encoding@0.1.13))(socks@2.8.3))(mssql@10.0.2)(mysql2@3.11.0)(pg@8.12.0)(redis@4.6.12)(sqlite3@5.1.7)(ts-node@10.9.2(@types/node@20.17.57)(typescript@5.8.2))
@@ -25933,8 +25905,6 @@ snapshots:
 
   openurl@1.1.1: {}
 
-  operators@0.1.7: {}
-
   option@0.2.4: {}
 
   optionator@0.8.3:
@@ -26336,7 +26306,7 @@ snapshots:
 
   posthog-node@3.2.1:
     dependencies:
-      axios: 1.9.0
+      axios: 1.9.0(debug@4.4.1)
       rusha: 0.8.14
     transitivePeerDependencies:
       - debug
@@ -26906,9 +26876,9 @@ snapshots:
       onetime: 5.1.2
       signal-exit: 3.0.7
 
-  retry-axios@2.6.0(axios@1.9.0):
+  retry-axios@2.6.0(axios@1.9.0(debug@4.4.1)):
     dependencies:
-      axios: 1.9.0
+      axios: 1.9.0(debug@4.4.1)
 
   retry-request@7.0.2(encoding@0.1.13):
     dependencies:
@@ -27363,7 +27333,7 @@ snapshots:
       asn1.js: 5.4.1
       asn1.js-rfc2560: 5.0.1(asn1.js@5.4.1)
       asn1.js-rfc5280: 3.0.0
-      axios: 1.9.0
+      axios: 1.9.0(debug@4.4.1)
       big-integer: 1.6.52
       bignumber.js: 9.1.2
       binascii: 0.0.2
@@ -27682,8 +27652,6 @@ snapshots:
 
   stylis@4.3.1: {}
 
-  subset@0.1.7: {}
-
   sucrase@3.35.0:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.8
@@ -27983,10 +27951,6 @@ snapshots:
   tough-cookie@5.1.2:
     dependencies:
       tldts: 6.1.86
-
-  tournament@3.2.0:
-    dependencies:
-      interlude: 1.1.1
 
   tr46@0.0.3: {}
 
