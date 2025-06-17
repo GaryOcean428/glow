@@ -1,4 +1,4 @@
-import { Service } from '@n8n/di';
+import { Service } from '@glow/di';
 import { ICredentialsHelper } from 'glow-workflow';
 import type {
 	ICredentialDataDecryptedObject,

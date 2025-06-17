@@ -1,10 +1,10 @@
-const sharedOptions = require('@n8n/eslint-config/shared');
+const sharedOptions = require('@glow/eslint-config/shared');
 
 /**
  * @type {import('@types/eslint').ESLint.ConfigData}
  */
 module.exports = {
-	extends: ['@n8n/eslint-config/node'],
+	extends: ['@glow/eslint-config/node'],
 
 	...sharedOptions(__dirname),
 

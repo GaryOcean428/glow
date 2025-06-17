@@ -1,5 +1,5 @@
-import type { Constructable } from '@n8n/di';
-import { Container } from '@n8n/di';
+import type { Constructable } from '@glow/di';
+import { Container } from '@glow/di';
 import { mock } from 'jest-mock-extended';
 import { Duplex } from 'stream';
 import type { DeepPartial } from 'ts-essentials';
