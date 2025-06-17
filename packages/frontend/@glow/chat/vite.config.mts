@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
 import icons from 'unplugin-icons/vite';
 import dts from 'vite-plugin-dts';
-import { vitestConfig } from '@n8n/vitest-config/frontend';
+import { vitestConfig } from '@glow/vitest-config/frontend';
 
 const includeVue = process.env.INCLUDE_VUE === 'true';
 const srcPath = resolve(__dirname, 'src');

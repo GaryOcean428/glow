@@ -4,7 +4,7 @@ import { defineConfig, mergeConfig } from 'vite';
 import components from 'unplugin-vue-components/vite';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
-import { vitestConfig } from '@n8n/vitest-config/frontend';
+import { vitestConfig } from '@glow/vitest-config/frontend';
 
 const packagesDir = resolve(__dirname, '..', '..', '..');
 
