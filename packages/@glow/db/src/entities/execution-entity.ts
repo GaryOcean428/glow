@@ -10,7 +10,7 @@ import {
 	Relation,
 	DeleteDateColumn,
 } from '@glow/typeorm';
-import type { SimpleColumnType } from '@glow/typeorm/driver/types/ColumnTypes';
+import type { ColumnType } from '@glow/typeorm';
 import { ExecutionStatus, WorkflowExecuteMode } from 'glow-workflow';
 
 import { DateTimeColumn, datetimeColumnType } from './abstract-entity';
@@ -59,7 +59,7 @@ export class ExecutionEntity {
 	 * is `null` when an execution is enqueued but has not started yet.
 	 */
 	@Column({
-		type: datetimeColumnType as SimpleColumnType,
+		type: datetimeColumnType as ColumnType,
 		nullable: true,
 	})
 	startedAt: Date | null;
@@ -68,7 +68,7 @@ export class ExecutionEntity {
 	@DateTimeColumn({ nullable: true })
 	stoppedAt: Date;
 
-	@DeleteDateColumn({ type: datetimeColumnType as SimpleColumnType, nullable: true })
+	@DeleteDateColumn({ type: datetimeColumnType as ColumnType, nullable: true })
 	deletedAt: Date;
 
 	@Column({ nullable: true })
