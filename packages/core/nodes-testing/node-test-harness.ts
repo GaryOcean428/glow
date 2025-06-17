@@ -1,5 +1,5 @@
-import { Memoized } from '@n8n/decorators';
-import { Container } from '@n8n/di';
+import { Memoized } from '@glow/decorators';
+import { Container } from '@glow/di';
 import callsites from 'callsites';
 import glob from 'fast-glob';
 import { mock } from 'jest-mock-extended';

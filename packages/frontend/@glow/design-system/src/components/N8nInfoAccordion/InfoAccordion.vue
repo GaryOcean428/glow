@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { createEventBus, type EventBus } from '@n8n/utils/event-bus';
+import { createEventBus, type EventBus } from '@glow/utils/event-bus';
 import { onMounted, ref } from 'vue';
 
 import type { IconColor } from '@n8n/design-system/types/icon';

@@ -1,4 +1,4 @@
-import { Service } from '@n8n/di';
+import { Service } from '@glow/di';
 import { NodeHelpers } from 'glow-workflow';
 import type { INodeType, INodeTypes, IVersionedNodeType } from 'glow-workflow';
 
