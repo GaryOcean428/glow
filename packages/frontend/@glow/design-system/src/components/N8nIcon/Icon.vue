@@ -2,7 +2,7 @@
 import type { FontAwesomeIconProps } from '@fortawesome/vue-fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-import type { IconSize, IconColor } from '@n8n/design-system/types/icon';
+import type { IconSize, IconColor } from '@glow/design-system/types/icon';
 
 import N8nText from '../N8nText';
 

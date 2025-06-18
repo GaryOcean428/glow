@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useWorkflowExtraction } from '@/composables/useWorkflowExtraction';
 import { WORKFLOW_EXTRACTION_NAME_MODAL_KEY } from '@/constants';
 import type { INodeUi } from '@/Interface';
-import { N8nFormInput } from '@n8n/design-system';
-import { createEventBus } from '@n8n/utils/event-bus';
-import type { ExtractableSubgraphData } from 'n8n-workflow';
+import { N8nFormInput } from '@glow/design-system';
+import { createEventBus } from '@glow/utils/event-bus';
+import type { ExtractableSubgraphData } from 'glow-workflow';
 import { computed, onMounted, ref } from 'vue';
 
 const props = defineProps<{

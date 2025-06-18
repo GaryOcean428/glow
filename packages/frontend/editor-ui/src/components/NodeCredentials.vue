@@ -6,14 +6,14 @@ import {
 	type INodeCredentialDescription,
 	type INodeCredentialsDetails,
 	type NodeParameterValueType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useToast } from '@/composables/useToast';
 
 import TitledList from '@/components/TitledList.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { CREDENTIAL_ONLY_NODE_PREFIX, KEEP_AUTH_IN_NDV_FOR_NODES } from '@/constants';
 import { ndvEventBus } from '@/event-bus';
@@ -22,7 +22,7 @@ import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { assert } from '@n8n/utils/assert';
+import { assert } from '@glow/utils/assert';
 import {
 	getAllNodeCredentialForAuthType,
 	getAuthTypeForNodeCredential,
@@ -39,7 +39,7 @@ import {
 	N8nSelect,
 	N8nText,
 	N8nTooltip,
-} from '@n8n/design-system';
+} from '@glow/design-system';
 import { isEmpty } from '@/utils/typesUtils';
 
 interface CredentialDropdownOption extends ICredentialsResponse {

@@ -7,7 +7,7 @@ import { useToast } from '@/composables/useToast';
 import { useMessage } from '@/composables/useMessage';
 import { useDocumentTitle } from '@/composables/useDocumentTitle';
 import type { IFormInput, IFormInputs } from '@/Interface';
-import type { LdapConfig, LdapSyncData, LdapSyncTable } from '@n8n/rest-api-client/api/ldap';
+import type { LdapConfig, LdapSyncData, LdapSyncTable } from '@glow/rest-api-client/api/ldap';
 import { MODAL_CONFIRM } from '@/constants';
 
 import humanizeDuration from 'humanize-duration';
@@ -15,9 +15,9 @@ import { ElTable, ElTableColumn } from 'element-plus';
 import type { Events } from 'v3-infinite-loading';
 import InfiniteLoading from 'v3-infinite-loading';
 import { useSettingsStore } from '@/stores/settings.store';
-import { createFormEventBus } from '@n8n/design-system/utils';
+import { createFormEventBus } from '@glow/design-system/utils';
 import type { TableColumnCtx } from 'element-plus';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
 
 type TableRow = {

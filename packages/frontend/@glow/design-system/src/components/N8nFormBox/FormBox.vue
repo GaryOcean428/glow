@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { IFormInput } from '@n8n/design-system/types';
+import type { IFormInput } from '@glow/design-system/types';
 
 import { createFormEventBus } from '../../utils';
 import N8nButton from '../N8nButton';

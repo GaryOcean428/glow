@@ -2,8 +2,8 @@
 import Modal from './Modal.vue';
 import { SOURCE_CONTROL_PUSH_MODAL_KEY, VIEWS } from '@/constants';
 import { computed, onMounted, ref, toRaw, watch } from 'vue';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { useI18n } from '@n8n/i18n';
+import type { EventBus } from '@glow/utils/event-bus';
+import { useI18n } from '@glow/i18n';
 import { useLoadingService } from '@/composables/useLoadingService';
 import { useToast } from '@/composables/useToast';
 import { useSourceControlStore } from '@/stores/sourceControl.store';
@@ -28,7 +28,7 @@ import {
 	N8nOption,
 	N8nInputLabel,
 	N8nInfoTip,
-} from '@n8n/design-system';
+} from '@glow/design-system';
 import {
 	type SourceControlledFile,
 	SOURCE_CONTROL_FILE_STATUS,

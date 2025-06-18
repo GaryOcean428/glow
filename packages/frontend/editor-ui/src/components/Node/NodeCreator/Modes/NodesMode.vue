@@ -17,7 +17,7 @@ import {
 	HITL_SUBCATEGORY,
 } from '@/constants';
 
-import type { BaseTextKey } from '@n8n/i18n';
+import type { BaseTextKey } from '@glow/i18n';
 import { useNodeCreatorStore } from '@/stores/nodeCreator.store';
 
 import { TriggerView, RegularView, AIView, AINodesView } from '../viewsData';
@@ -32,12 +32,12 @@ import { useKeyboardNavigation } from '../composables/useKeyboardNavigation';
 import ItemsRenderer from '../Renderers/ItemsRenderer.vue';
 import CategorizedItemsRenderer from '../Renderers/CategorizedItemsRenderer.vue';
 import NoResults from '../Panel/NoResults.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 import { getNodeIconSource } from '@/utils/nodeIcon';
 
 import { useActions } from '../composables/useActions';
-import { SEND_AND_WAIT_OPERATION, type INodeParameters } from 'n8n-workflow';
+import { SEND_AND_WAIT_OPERATION, type INodeParameters } from 'glow-workflow';
 
 import { isCommunityPackageName } from '@/utils/nodeTypesUtils';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';

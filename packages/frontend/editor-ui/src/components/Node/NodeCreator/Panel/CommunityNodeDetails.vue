@@ -4,7 +4,7 @@ import { useViewStacks } from '../composables/useViewStacks';
 import { useUsersStore } from '@/stores/users.store';
 import { useCommunityNodesStore } from '@/stores/communityNodes.store';
 import { useToast } from '@/composables/useToast';
-import { i18n } from '@n8n/i18n';
+import { i18n } from '@glow/i18n';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useNodeCreatorStore } from '@/stores/nodeCreator.store';
 import { useCredentialsStore } from '@/stores/credentials.store';
@@ -14,7 +14,7 @@ import { getNodeIconSource } from '@/utils/nodeIcon';
 
 import { prepareCommunityNodeDetailsViewStack, removePreviewToken } from '../utils';
 
-import { N8nText } from '@n8n/design-system';
+import { N8nText } from '@glow/design-system';
 
 const {
 	activeViewStack,

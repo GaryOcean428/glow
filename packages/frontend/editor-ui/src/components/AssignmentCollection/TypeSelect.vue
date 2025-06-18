@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
-import type { BaseTextKey } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
+import type { BaseTextKey } from '@glow/i18n';
 import { ASSIGNMENT_TYPES } from './constants';
 import { computed } from 'vue';
 

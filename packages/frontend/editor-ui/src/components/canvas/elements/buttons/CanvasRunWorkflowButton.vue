@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import KeyboardShortcutTooltip from '@/components/KeyboardShortcutTooltip.vue';
 import { type INodeUi } from '@/Interface';
-import { truncateBeforeLast } from '@n8n/utils/string/truncate';
-import { type ActionDropdownItem, N8nActionDropdown, N8nButton, N8nText } from '@n8n/design-system';
-import { useI18n } from '@n8n/i18n';
-import { type INodeTypeDescription } from 'n8n-workflow';
+import { truncateBeforeLast } from '@glow/utils/string/truncate';
+import { type ActionDropdownItem, N8nActionDropdown, N8nButton, N8nText } from '@glow/design-system';
+import { useI18n } from '@glow/i18n';
+import { type INodeTypeDescription } from 'glow-workflow';
 import { computed } from 'vue';
 import { isChatNode } from '@/utils/aiUtils';
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import type { UserAction } from '@n8n/design-system';
-import { useI18n } from '@n8n/i18n';
+import type { UserAction } from '@glow/design-system';
+import { useI18n } from '@glow/i18n';
 import type {
 	WorkflowHistory,
 	WorkflowVersionId,

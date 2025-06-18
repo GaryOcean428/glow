@@ -6,12 +6,12 @@ import { PLACEHOLDER_EMPTY_WORKFLOW_ID } from '@/constants';
 import { useCanvasOperations } from '@/composables/useCanvasOperations';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useToast } from '@/composables/useToast';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useEvaluationStore } from '@/stores/evaluation.store.ee';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 
 import { computed, watch } from 'vue';
-import { N8nLink, N8nText } from '@n8n/design-system';
+import { N8nLink, N8nText } from '@glow/design-system';
 import EvaluationsPaywall from '@/components/Evaluations.ee/Paywall/EvaluationsPaywall.vue';
 import SetupWizard from '@/components/Evaluations.ee/SetupWizard/SetupWizard.vue';
 

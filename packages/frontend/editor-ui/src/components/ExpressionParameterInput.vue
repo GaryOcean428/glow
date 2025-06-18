@@ -14,8 +14,8 @@ import { dropInExpressionEditor } from '@/plugins/codemirror/dragAndDrop';
 import type { Segment } from '@/types/expressions';
 import { startCompletion } from '@codemirror/autocomplete';
 import type { EditorState, SelectionRange } from '@codemirror/state';
-import type { IDataObject } from 'n8n-workflow';
-import { createEventBus, type EventBus } from '@n8n/utils/event-bus';
+import type { IDataObject } from 'glow-workflow';
+import { createEventBus, type EventBus } from '@glow/utils/event-bus';
 
 const isFocused = ref(false);
 const segments = ref<Segment[]>([]);

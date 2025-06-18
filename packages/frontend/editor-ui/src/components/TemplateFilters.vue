@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue';
 import type { ITemplatesCategory } from '@/Interface';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 interface Props {
 	categories?: ITemplatesCategory[];

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import N8nNotice from '@n8n/design-system/components/N8nNotice';
+import N8nNotice from '@glow/design-system/components/N8nNotice';
 import { formatList } from '@/utils/formatters/listFormatter';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import type {
 	AppCredentials,
 	BaseNode,

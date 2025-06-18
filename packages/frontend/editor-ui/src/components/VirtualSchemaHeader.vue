@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import NodeIcon from '@/components/NodeIcon.vue';
-import { type INodeTypeDescription } from 'n8n-workflow';
-import { useI18n } from '@n8n/i18n';
+import { type INodeTypeDescription } from 'glow-workflow';
+import { useI18n } from '@glow/i18n';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { SCHEMA_PREVIEW_DOCS_URL } from '@/constants';
 

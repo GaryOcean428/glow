@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { type ContextMenuAction, useContextMenu } from '@/composables/useContextMenu';
 import { useStyles } from '@/composables/useStyles';
-import { N8nActionDropdown } from '@n8n/design-system';
+import { N8nActionDropdown } from '@glow/design-system';
 import { watch, ref } from 'vue';
 
 const contextMenu = useContextMenu();

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
-import { N8nText } from '@n8n/design-system';
+import { useI18n } from '@glow/i18n';
+import { N8nText } from '@glow/design-system';
 
 const {
 	dataCount,

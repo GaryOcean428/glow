@@ -21,10 +21,10 @@ import type {
 import { CanvasNodeRenderType } from '@/types';
 import { updateViewportToContainNodes, getMousePosition, GRID_SIZE } from '@/utils/nodeViewUtils';
 import { isPresent } from '@/utils/typesUtils';
-import { useDeviceSupport } from '@n8n/composables/useDeviceSupport';
-import { useShortKeyPress } from '@n8n/composables/useShortKeyPress';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { useDeviceSupport } from '@glow/composables/useDeviceSupport';
+import { useShortKeyPress } from '@glow/composables/useShortKeyPress';
+import type { EventBus } from '@glow/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import type {
 	Connection,
 	Dimensions,
@@ -37,7 +37,7 @@ import type {
 import { MarkerType, PanelPosition, useVueFlow, VueFlow } from '@vue-flow/core';
 import { MiniMap } from '@vue-flow/minimap';
 import { onKeyDown, onKeyUp, useThrottleFn } from '@vueuse/core';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import {
 	computed,
 	nextTick,

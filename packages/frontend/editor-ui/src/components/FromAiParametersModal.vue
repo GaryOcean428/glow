@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useRunWorkflow } from '@/composables/useRunWorkflow';
 import { FROM_AI_PARAMETERS_MODAL_KEY, AI_MCP_TOOL_NODE_TYPE } from '@/constants';
-import { useAgentRequestStore, type IAgentRequest } from '@n8n/stores/useAgentRequestStore';
+import { useAgentRequestStore, type IAgentRequest } from '@glow/stores/useAgentRequestStore';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import {
 	type FromAIArgument,
 	type IDataObject,
 	NodeConnectionTypes,
 	traverseNodeParameters,
-} from 'n8n-workflow';
-import type { IFormInput } from '@n8n/design-system';
+} from 'glow-workflow';
+import type { IFormInput } from '@glow/design-system';
 import { computed, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { useTelemetry } from '@/composables/useTelemetry';

@@ -5,13 +5,13 @@ import DraggableTarget from '@/components/DraggableTarget.vue';
 import ExpressionParameterInput from '@/components/ExpressionParameterInput.vue';
 import ParameterIssues from '@/components/ParameterIssues.vue';
 import { useDebounce } from '@/composables/useDebounce';
-import { useI18n } from '@n8n/i18n';
-import type { BaseTextKey } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
+import type { BaseTextKey } from '@glow/i18n';
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';
 import { ndvEventBus } from '@/event-bus';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useUIStore } from '@/stores/ui.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import {
@@ -20,8 +20,8 @@ import {
 	hasOnlyListMode as hasOnlyListModeUtil,
 } from '@/utils/nodeTypesUtils';
 import stringify from 'fast-json-stable-stringify';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { createEventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import {
 	isResourceLocatorValue,
 	type INode,
@@ -32,7 +32,7 @@ import {
 	type INodePropertyMode,
 	type INodePropertyModeTypeOptions,
 	type NodeParameterValue,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	computed,
 	nextTick,
@@ -53,7 +53,7 @@ import {
 	updateFromAIOverrideValues,
 	type FromAIOverride,
 } from '../../utils/fromAIOverrideUtils';
-import { N8nNotice } from '@n8n/design-system';
+import { N8nNotice } from '@glow/design-system';
 import { completeExpressionSyntax } from '@/utils/expressions';
 
 /**

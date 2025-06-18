@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import type { UserAction } from '@n8n/design-system';
-import { N8nButton, N8nTooltip } from '@n8n/design-system';
-import { useI18n } from '@n8n/i18n';
+import type { UserAction } from '@glow/design-system';
+import { N8nButton, N8nTooltip } from '@glow/design-system';
+import { useI18n } from '@glow/i18n';
 import { type ProjectIcon as ProjectIconType, ProjectTypes } from '@/types/projects.types';
 import { useProjectsStore } from '@/stores/projects.store';
 import ProjectTabs from '@/components/Projects/ProjectTabs.vue';

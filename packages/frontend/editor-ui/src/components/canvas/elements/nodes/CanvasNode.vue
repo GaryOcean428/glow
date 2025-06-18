@@ -30,8 +30,8 @@ import {
 	createCanvasConnectionHandleString,
 	insertSpacersBetweenEndpoints,
 } from '@/utils/canvasUtils';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { createEventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import isEqual from 'lodash/isEqual';
 import CanvasNodeTrigger from '@/components/canvas/elements/nodes/render-types/parts/CanvasNodeTrigger.vue';
 

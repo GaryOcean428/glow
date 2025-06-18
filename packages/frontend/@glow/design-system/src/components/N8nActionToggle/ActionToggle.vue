@@ -2,8 +2,8 @@
 import { ElDropdown, ElDropdownMenu, ElDropdownItem, type Placement } from 'element-plus';
 import { ref } from 'vue';
 
-import type { UserAction } from '@n8n/design-system/types';
-import type { IconOrientation, IconSize } from '@n8n/design-system/types/icon';
+import type { UserAction } from '@glow/design-system/types';
+import type { IconOrientation, IconSize } from '@glow/design-system/types/icon';
 
 import N8nIcon from '../N8nIcon';
 

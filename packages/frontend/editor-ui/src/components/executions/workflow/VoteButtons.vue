@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AnnotationVote } from 'n8n-workflow';
+import type { AnnotationVote } from 'glow-workflow';
 
 defineProps<{
 	vote: AnnotationVote | null;

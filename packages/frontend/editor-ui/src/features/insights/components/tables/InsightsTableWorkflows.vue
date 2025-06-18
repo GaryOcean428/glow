@@ -1,5 +1,5 @@
 <script lang="ts" setup="">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { INSIGHTS_UNIT_MAPPING } from '@/features/insights/insights.constants';
 import {
 	transformInsightsAverageRunTime,
@@ -7,11 +7,11 @@ import {
 	transformInsightsTimeSaved,
 } from '@/features/insights/insights.utils';
 import type { InsightsByWorkflow } from '@n8n/api-types';
-import { N8nTooltip } from '@n8n/design-system';
+import { N8nTooltip } from '@glow/design-system';
 import N8nDataTableServer, {
 	type TableHeader,
-} from '@n8n/design-system/components/N8nDataTableServer/N8nDataTableServer.vue';
-import { smartDecimal } from '@n8n/utils/number/smartDecimal';
+} from '@glow/design-system/components/N8nDataTableServer/N8nDataTableServer.vue';
+import { smartDecimal } from '@glow/utils/number/smartDecimal';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { VIEWS } from '@/constants';
 import { computed, ref, watch } from 'vue';

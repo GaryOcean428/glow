@@ -7,7 +7,7 @@ import type {
 	NodeConnectionType,
 	NodeParameterValue,
 	INodeCredentialDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import {
 	NodeHelpers,
 	NodeConnectionTypes,
@@ -16,7 +16,7 @@ import {
 	isINodePropertiesList,
 	isINodePropertyOptionsList,
 	displayParameter,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type {
 	CurlToJSONResponse,
 	INodeUi,
@@ -44,10 +44,10 @@ import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useHistoryStore } from '@/stores/history.store';
 import { RenameNodeCommand } from '@/models/history';
 import { useCredentialsStore } from '@/stores/credentials.store';
-import type { EventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
 import { useExternalHooks } from '@/composables/useExternalHooks';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { importCurlEventBus, ndvEventBus } from '@/event-bus';
 import { ProjectTypes } from '@/types/projects.types';

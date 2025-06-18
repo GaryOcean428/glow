@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useCredentialsStore } from '@/stores/credentials.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useUIStore } from '@/stores/ui.store';
 import { getThemedValue } from '@/utils/nodeTypesUtils';
-import { N8nNodeIcon } from '@n8n/design-system';
-import type { ICredentialType } from 'n8n-workflow';
+import { N8nNodeIcon } from '@glow/design-system';
+import type { ICredentialType } from 'glow-workflow';
 import { computed } from 'vue';
 
 const props = defineProps<{

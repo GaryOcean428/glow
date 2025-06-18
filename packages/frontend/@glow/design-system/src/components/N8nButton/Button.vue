@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, useAttrs, useCssModule, watchEffect } from 'vue';
 
-import type { ButtonProps } from '@n8n/design-system/types/button';
+import type { ButtonProps } from '@glow/design-system/types/button';
 
 import N8nIcon from '../N8nIcon';
 import N8nSpinner from '../N8nSpinner';

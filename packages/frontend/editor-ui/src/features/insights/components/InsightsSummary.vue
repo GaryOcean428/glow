@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { VIEWS } from '@/constants';
 import {
@@ -9,7 +9,7 @@ import {
 } from '@/features/insights/insights.constants';
 import type { InsightsSummaryDisplay } from '@/features/insights/insights.types';
 import type { InsightsDateRange, InsightsSummary } from '@n8n/api-types';
-import { smartDecimal } from '@n8n/utils/number/smartDecimal';
+import { smartDecimal } from '@glow/utils/number/smartDecimal';
 import { computed, useCssModule } from 'vue';
 import { useRoute } from 'vue-router';
 

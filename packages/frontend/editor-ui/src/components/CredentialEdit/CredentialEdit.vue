@@ -16,8 +16,8 @@ import type {
 	INodeParameters,
 	INodeProperties,
 	ITelemetryTrackProperties,
-} from 'n8n-workflow';
-import { NodeHelpers } from 'n8n-workflow';
+} from 'glow-workflow';
+import { NodeHelpers } from 'glow-workflow';
 
 import CredentialConfig from '@/components/CredentialEdit/CredentialConfig.vue';
 import CredentialInfo from '@/components/CredentialEdit/CredentialInfo.vue';
@@ -36,12 +36,12 @@ import { useSettingsStore } from '@/stores/settings.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import type { Project, ProjectSharingData } from '@/types/projects.types';
-import { N8nInlineTextEdit, N8nText, type IMenuItem } from '@n8n/design-system';
-import { assert } from '@n8n/utils/assert';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { N8nInlineTextEdit, N8nText, type IMenuItem } from '@glow/design-system';
+import { assert } from '@glow/utils/assert';
+import { createEventBus } from '@glow/utils/event-bus';
 
 import { useExternalHooks } from '@/composables/useExternalHooks';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useProjectsStore } from '@/stores/projects.store';
 import { isExpression, isTestableExpression } from '@/utils/expressions';

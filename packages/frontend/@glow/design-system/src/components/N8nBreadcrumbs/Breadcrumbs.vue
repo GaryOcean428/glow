@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue';
 
-import type { UserAction } from '@n8n/design-system/types';
+import type { UserAction } from '@glow/design-system/types';
 
 import N8nLoading from '../N8nLoading';
 

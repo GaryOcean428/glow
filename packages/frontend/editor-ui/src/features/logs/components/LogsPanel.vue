@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { nextTick, computed, useTemplateRef } from 'vue';
-import { N8nResizeWrapper } from '@n8n/design-system';
+import { N8nResizeWrapper } from '@glow/design-system';
 import { useChatState } from '@/features/logs/composables/useChatState';
 import LogsOverviewPanel from '@/features/logs/components/LogsOverviewPanel.vue';
 import ChatMessagesPanel from '@/features/logs/components/ChatMessagesPanel.vue';

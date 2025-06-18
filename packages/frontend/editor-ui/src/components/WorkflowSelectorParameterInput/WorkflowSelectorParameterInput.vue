@@ -2,15 +2,15 @@
 import type { ComponentInstance } from 'vue';
 import { computed, ref, onMounted, onUnmounted, watch } from 'vue';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { createEventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import type {
 	INodeParameterResourceLocator,
 	INodeProperties,
 	NodeParameterValue,
 	ResourceLocatorModes,
-} from 'n8n-workflow';
-import { useI18n } from '@n8n/i18n';
+} from 'glow-workflow';
+import { useI18n } from '@glow/i18n';
 import ResourceLocatorDropdown from '@/components/ResourceLocator/ResourceLocatorDropdown.vue';
 import ParameterIssues from '@/components/ParameterIssues.vue';
 import { onClickOutside } from '@vueuse/core';

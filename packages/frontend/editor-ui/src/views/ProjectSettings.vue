@@ -2,11 +2,11 @@
 import type { ProjectRole, TeamProjectRole } from '@n8n/permissions';
 import { computed, ref, watch, onBeforeMount, onMounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
-import { deepCopy } from 'n8n-workflow';
-import { N8nFormInput } from '@n8n/design-system';
+import { deepCopy } from 'glow-workflow';
+import { N8nFormInput } from '@glow/design-system';
 import { useUsersStore } from '@/stores/users.store';
 import type { IUser } from '@/Interface';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useProjectsStore } from '@/stores/projects.store';
 import type { ProjectIcon, Project, ProjectRelation } from '@/types/projects.types';
 import { useToast } from '@/composables/useToast';

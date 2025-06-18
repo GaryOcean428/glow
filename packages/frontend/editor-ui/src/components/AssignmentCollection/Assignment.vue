@@ -7,10 +7,10 @@ import ParameterIssues from '@/components/ParameterIssues.vue';
 import { useResolvedExpression } from '@/composables/useResolvedExpression';
 import useEnvironmentsStore from '@/stores/environments.ee.store';
 import { useNDVStore } from '@/stores/ndv.store';
-import type { AssignmentValue, INodeProperties } from 'n8n-workflow';
+import type { AssignmentValue, INodeProperties } from 'glow-workflow';
 import { computed, ref } from 'vue';
 import TypeSelect from './TypeSelect.vue';
-import { N8nIconButton } from '@n8n/design-system';
+import { N8nIconButton } from '@glow/design-system';
 
 interface Props {
 	path: string;

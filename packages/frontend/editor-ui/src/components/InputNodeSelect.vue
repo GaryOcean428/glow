@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { isPresent } from '@/utils/typesUtils';
-import type { IConnectedNode, Workflow } from 'n8n-workflow';
+import type { IConnectedNode, Workflow } from 'glow-workflow';
 import { computed } from 'vue';
 import NodeIcon from './NodeIcon.vue';
-import { truncate } from '@n8n/utils/string/truncate';
+import { truncate } from '@glow/utils/string/truncate';
 
 type Props = {
 	nodes: IConnectedNode[];

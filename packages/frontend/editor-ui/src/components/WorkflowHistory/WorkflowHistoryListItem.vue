@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { computed, ref, onMounted } from 'vue';
 import dateformat from 'dateformat';
-import type { UserAction } from '@n8n/design-system';
+import type { UserAction } from '@glow/design-system';
 import type {
 	WorkflowHistory,
 	WorkflowVersionId,
 	WorkflowHistoryActionTypes,
 } from '@/types/workflowHistory';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 const props = defineProps<{
 	item: WorkflowHistory;

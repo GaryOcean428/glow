@@ -2,7 +2,7 @@
 import VariablesForm from '@/components/VariablesForm.vue';
 import VariablesUsageBadge from '@/components/VariablesUsageBadge.vue';
 import { useDocumentTitle } from '@/composables/useDocumentTitle';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useMessage } from '@/composables/useMessage';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useToast } from '@/composables/useToast';
@@ -31,8 +31,8 @@ import {
 	N8nCheckbox,
 	N8nInputLabel,
 	N8nTooltip,
-} from '@n8n/design-system';
-import { uid } from '@n8n/design-system/utils';
+} from '@glow/design-system';
+import { uid } from '@glow/design-system/utils';
 import { useAsyncState } from '@vueuse/core';
 import pickBy from 'lodash/pickBy';
 

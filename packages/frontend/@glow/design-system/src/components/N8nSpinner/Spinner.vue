@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { TextSize } from '@n8n/design-system/types/text';
+import type { TextSize } from '@glow/design-system/types/text';
 
 import N8nIcon from '../N8nIcon';
 

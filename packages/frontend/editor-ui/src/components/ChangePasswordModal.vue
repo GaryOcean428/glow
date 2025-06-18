@@ -4,10 +4,10 @@ import { useToast } from '@/composables/useToast';
 import { CHANGE_PASSWORD_MODAL_KEY } from '../constants';
 import Modal from '@/components/Modal.vue';
 import { useUsersStore } from '@/stores/users.store';
-import { createFormEventBus } from '@n8n/design-system/utils';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createFormEventBus } from '@glow/design-system/utils';
+import { createEventBus } from '@glow/utils/event-bus';
 import type { IFormInputs, IFormInput } from '@/Interface';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 const config = ref<IFormInputs | null>(null);
 const formBus = createFormEventBus();

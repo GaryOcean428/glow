@@ -2,7 +2,7 @@
 import ConcurrentExecutionsHeader from '@/components/executions/ConcurrentExecutionsHeader.vue';
 import ExecutionsFilter from '@/components/executions/ExecutionsFilter.vue';
 import GlobalExecutionsListItem from '@/components/executions/global/GlobalExecutionsListItem.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useMessage } from '@/composables/useMessage';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
 import { useTelemetry } from '@/composables/useTelemetry';
@@ -15,10 +15,10 @@ import { useExecutionsStore } from '@/stores/executions.store';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { executionRetryMessage } from '@/utils/executionUtils';
-import { N8nButton, N8nCheckbox, N8nTableBase } from '@n8n/design-system';
+import { N8nButton, N8nCheckbox, N8nTableBase } from '@glow/design-system';
 import { useIntersectionObserver } from '@vueuse/core';
 import { ElSkeletonItem } from 'element-plus';
-import type { ExecutionSummary } from 'n8n-workflow';
+import type { ExecutionSummary } from 'glow-workflow';
 import { computed, ref, useTemplateRef, watch, type ComponentPublicInstance } from 'vue';
 
 const props = withDefaults(

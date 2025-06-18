@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { SimplifiedNodeType } from '@/Interface';
 import { getNodeIconSource, type NodeIconSource } from '@/utils/nodeIcon';
-import { N8nNodeIcon } from '@n8n/design-system';
+import { N8nNodeIcon } from '@glow/design-system';
 import { computed } from 'vue';
-import type { VersionNode } from '@n8n/rest-api-client/api/versions';
+import type { VersionNode } from '@glow/rest-api-client/api/versions';
 
 type Props = {
 	size?: number;

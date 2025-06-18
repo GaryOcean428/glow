@@ -2,7 +2,7 @@
 import parseDiff from 'parse-diff';
 import { computed } from 'vue';
 
-import { useI18n } from '@n8n/design-system/composables/useI18n';
+import { useI18n } from '@glow/design-system/composables/useI18n';
 
 const MIN_LINES = 4;
 

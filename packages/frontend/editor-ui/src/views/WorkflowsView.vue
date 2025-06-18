@@ -16,7 +16,7 @@ import { useDebounce } from '@/composables/useDebounce';
 import { useDocumentTitle } from '@/composables/useDocumentTitle';
 import type { DragTarget, DropTarget } from '@/composables/useFolders';
 import { useFolders } from '@/composables/useFolders';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useMessage } from '@/composables/useMessage';
 import { useProjectPages } from '@/composables/useProjectPages';
 import { useTelemetry } from '@/composables/useTelemetry';
@@ -60,11 +60,11 @@ import {
 	N8nOption,
 	N8nSelect,
 	N8nText,
-} from '@n8n/design-system';
-import type { PathItem } from '@n8n/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
-import { createEventBus } from '@n8n/utils/event-bus';
+} from '@glow/design-system';
+import type { PathItem } from '@glow/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
+import { createEventBus } from '@glow/utils/event-bus';
 import debounce from 'lodash/debounce';
-import { PROJECT_ROOT } from 'n8n-workflow';
+import { PROJECT_ROOT } from 'glow-workflow';
 import { useTemplateRef, computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { type LocationQueryRaw, useRoute, useRouter } from 'vue-router';
 

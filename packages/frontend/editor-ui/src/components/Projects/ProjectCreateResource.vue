@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { ButtonType } from '@n8n/design-system';
-import { N8nIconButton, N8nActionToggle } from '@n8n/design-system';
+import type { ButtonType } from '@glow/design-system';
+import { N8nIconButton, N8nActionToggle } from '@glow/design-system';
 import { ref } from 'vue';
 
 type Action = {

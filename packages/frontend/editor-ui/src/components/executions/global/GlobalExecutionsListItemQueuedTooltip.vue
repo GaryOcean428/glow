@@ -1,6 +1,6 @@
 <script lang="ts" setup="">
-import type { ExecutionStatus } from 'n8n-workflow';
-import { useI18n } from '@n8n/i18n';
+import type { ExecutionStatus } from 'glow-workflow';
+import { useI18n } from '@glow/i18n';
 
 const props = defineProps<{
 	status: ExecutionStatus;

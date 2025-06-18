@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
-import { N8nText, N8nButton, N8nCallout } from '@n8n/design-system';
+import { useI18n } from '@glow/i18n';
+import { N8nText, N8nButton, N8nCallout } from '@glow/design-system';
 import { ref, computed } from 'vue';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useEvaluationStore } from '@/stores/evaluation.store.ee';

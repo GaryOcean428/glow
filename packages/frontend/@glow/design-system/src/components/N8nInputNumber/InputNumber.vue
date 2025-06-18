@@ -2,7 +2,7 @@
 import { ElInputNumber } from 'element-plus';
 import { computed } from 'vue';
 
-import type { ElementPlusSizePropType, InputSize } from '@n8n/design-system/types';
+import type { ElementPlusSizePropType, InputSize } from '@glow/design-system/types';
 
 type InputNumberProps = {
 	size?: InputSize;

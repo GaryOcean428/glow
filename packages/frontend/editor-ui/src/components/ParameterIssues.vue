@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TitledList from '@/components/TitledList.vue';
-import { useI18n } from '@n8n/i18n';
-import { N8nTooltip, N8nIcon } from '@n8n/design-system';
+import { useI18n } from '@glow/i18n';
+import { N8nTooltip, N8nIcon } from '@glow/design-system';
 
 defineProps<{
 	issues: string[];

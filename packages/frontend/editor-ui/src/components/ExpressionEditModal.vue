@@ -10,20 +10,20 @@ import { createExpressionTelemetryPayload } from '@/utils/telemetryUtils';
 
 import { useTelemetry } from '@/composables/useTelemetry';
 import type { Segment } from '@/types/expressions';
-import type { INodeProperties } from 'n8n-workflow';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import type { INodeProperties } from 'glow-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { outputTheme } from './ExpressionEditorModal/theme';
 import ExpressionOutput from './InlineExpressionEditor/ExpressionOutput.vue';
 import VirtualSchema from '@/components/VirtualSchema.vue';
 import OutputItemSelect from './InlineExpressionEditor/OutputItemSelect.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useDebounce } from '@/composables/useDebounce';
 import DraggableTarget from './DraggableTarget.vue';
 import { dropInExpressionEditor } from '@/plugins/codemirror/dragAndDrop';
 
 import { APP_MODALS_ELEMENT_ID } from '@/constants';
-import { N8nInput, N8nText } from '@n8n/design-system';
-import { N8nResizeWrapper, type ResizeData } from '@n8n/design-system';
+import { N8nInput, N8nText } from '@glow/design-system';
+import { N8nResizeWrapper, type ResizeData } from '@glow/design-system';
 import { useThrottleFn } from '@vueuse/core';
 
 const DEFAULT_LEFT_SIDEBAR_WIDTH = 360;

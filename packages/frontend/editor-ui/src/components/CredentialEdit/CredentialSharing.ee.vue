@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AllRolesMap } from '@n8n/permissions';
 import ProjectSharing from '@/components/Projects/ProjectSharing.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
 import { EnterpriseEditionFeature } from '@/constants';
 import type { ICredentialsDecryptedResponse, ICredentialsResponse } from '@/Interface';
@@ -14,8 +14,8 @@ import { useUsersStore } from '@/stores/users.store';
 import type { ProjectListItem, ProjectSharingData } from '@/types/projects.types';
 import { ProjectTypes } from '@/types/projects.types';
 import { splitName } from '@/utils/projects.utils';
-import type { EventBus } from '@n8n/utils/event-bus';
-import type { ICredentialDataDecryptedObject } from 'n8n-workflow';
+import type { EventBus } from '@glow/utils/event-bus';
+import type { ICredentialDataDecryptedObject } from 'glow-workflow';
 import { computed, onMounted, ref, watch } from 'vue';
 
 type Props = {

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { computed, ref } from 'vue';
 
 import RunsSection from '@/components/Evaluations.ee/ListRuns/RunsSection.vue';
 import { useEvaluationStore } from '@/stores/evaluation.store.ee';
-import { N8nButton } from '@n8n/design-system';
+import { N8nButton } from '@glow/design-system';
 import orderBy from 'lodash/orderBy';
 import { useToast } from '@/composables/useToast';
 

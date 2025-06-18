@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent, ref } from 'vue';
 import VueJsonPretty from 'vue-json-pretty';
-import type { INodeExecutionData } from 'n8n-workflow';
+import type { INodeExecutionData } from 'glow-workflow';
 import Draggable from '@/components/Draggable.vue';
 import { executionDataToJson } from '@/utils/nodeTypesUtils';
 import { isString } from '@/utils/typeGuards';

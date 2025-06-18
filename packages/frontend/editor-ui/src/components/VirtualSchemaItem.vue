@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { N8nTooltip } from '@n8n/design-system';
+import { N8nTooltip } from '@glow/design-system';
 import TextWithHighlights from './TextWithHighlights.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 

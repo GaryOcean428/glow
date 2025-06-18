@@ -4,12 +4,12 @@ import type {
 	INodePropertyTypeOptions,
 	ResourceMapperField,
 	ResourceMapperFields,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { computed, reactive, watch } from 'vue';
-import { i18n as locale } from '@n8n/i18n';
+import { i18n as locale } from '@glow/i18n';
 import { useNodeSpecificationValues } from '@/composables/useNodeSpecificationValues';
 import ParameterOptions from '@/components/ParameterOptions.vue';
-import { N8nInputLabel, N8nNotice, N8nSelect } from '@n8n/design-system';
+import { N8nInputLabel, N8nNotice, N8nSelect } from '@glow/design-system';
 
 interface Props {
 	parameter: INodeProperties;

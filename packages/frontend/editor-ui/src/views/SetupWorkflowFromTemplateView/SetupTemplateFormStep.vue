@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import N8nHeading from '@n8n/design-system/components/N8nHeading';
+import N8nHeading from '@glow/design-system/components/N8nHeading';
 import NodeIcon from '@/components/NodeIcon.vue';
 import CredentialPicker from '@/components/CredentialPicker/CredentialPicker.vue';
 import IconSuccess from './IconSuccess.vue';
@@ -11,7 +11,7 @@ import type {
 	BaseNode,
 	CredentialUsages,
 } from '@/views/SetupWorkflowFromTemplateView/useCredentialSetupState';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import type { TemplateCredentialKey } from '@/utils/templates/templateTransforms';
 

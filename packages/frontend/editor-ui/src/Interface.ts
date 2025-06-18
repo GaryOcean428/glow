@@ -228,7 +228,7 @@ export interface ITableData {
 	};
 }
 
-// Simple version of n8n-workflow.Workflow
+// Simple version of glow-workflow.Workflow
 export interface IWorkflowData {
 	id?: string;
 	name?: string;

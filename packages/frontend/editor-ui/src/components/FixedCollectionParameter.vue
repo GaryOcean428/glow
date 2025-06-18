@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import type { IUpdateInformation } from '@/Interface';
 
-import type { INodeParameters, INodeProperties, NodeParameterValueType } from 'n8n-workflow';
-import { deepCopy, isINodePropertyCollectionList } from 'n8n-workflow';
+import type { INodeParameters, INodeProperties, NodeParameterValueType } from 'glow-workflow';
+import { deepCopy, isINodePropertyCollectionList } from 'glow-workflow';
 
 import get from 'lodash/get';
 
 import { computed, ref, watch, onBeforeMount } from 'vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import {
 	N8nIconButton,
 	N8nSelect,
@@ -15,7 +15,7 @@ import {
 	N8nInputLabel,
 	N8nText,
 	N8nButton,
-} from '@n8n/design-system';
+} from '@glow/design-system';
 import ParameterInputList from './ParameterInputList.vue';
 import Draggable from 'vuedraggable';
 import { useWorkflowsStore } from '@/stores/workflows.store';

@@ -3,20 +3,20 @@ import { ref, computed, onMounted } from 'vue';
 import snakeCase from 'lodash/snakeCase';
 import { useSessionStorage } from '@vueuse/core';
 
-import { N8nButton, N8nInput, N8nTooltip } from '@n8n/design-system/components';
-import { randomInt } from 'n8n-workflow';
-import type { CodeExecutionMode, INodeExecutionData } from 'n8n-workflow';
+import { N8nButton, N8nInput, N8nTooltip } from '@glow/design-system/components';
+import { randomInt } from 'glow-workflow';
+import type { CodeExecutionMode, INodeExecutionData } from 'glow-workflow';
 
-import type { BaseTextKey } from '@n8n/i18n';
+import type { BaseTextKey } from '@glow/i18n';
 import type { INodeUi, Schema } from '@/Interface';
 import { generateCodeForPrompt } from '@/api/ai';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useDataSchema } from '@/composables/useDataSchema';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useMessage } from '@/composables/useMessage';
 import { useToast } from '@/composables/useToast';
 import { useNDVStore } from '@/stores/ndv.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { executionDataToJson } from '@/utils/nodeTypesUtils';
 import {

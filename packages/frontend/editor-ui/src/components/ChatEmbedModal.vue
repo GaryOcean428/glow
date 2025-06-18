@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { createEventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import Modal from './Modal.vue';
 import { CHAT_EMBED_MODAL_KEY, CHAT_TRIGGER_NODE_TYPE, WEBHOOK_NODE_TYPE } from '../constants';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import HtmlEditor from '@/components/HtmlEditor/HtmlEditor.vue';
 import JsEditor from '@/components/JsEditor/JsEditor.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 const props = withDefaults(
 	defineProps<{
@@ -84,18 +84,18 @@ function indentLines(code: string, indent: string = '	') {
 
 const importCode = 'import'; // To avoid vite from parsing the import statement
 const commonCode = computed(() => ({
-	import: `${importCode} '@n8n/chat/style.css';
-${importCode} { createChat } from '@n8n/chat';`,
+	import: `${importCode} '@glow/chat/style.css';
+${importCode} { createChat } from '@glow/chat';`,
 	createChat: `createChat({
 	webhookUrl: '${webhookUrl.value}'
 });`,
-	install: 'npm install @n8n/chat',
+	install: 'npm install @glow/chat',
 }));
 
 const cdnCode = computed(
-	() => `<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+	() => `<link href="https://cdn.jsdelivr.net/npm/@glow/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
-${importCode} { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+${importCode} { createChat } from 'https://cdn.jsdelivr.net/npm/@glow/chat/dist/chat.bundle.es.js';
 
 ${commonCode.value.createChat}
 </${'script'}>`,

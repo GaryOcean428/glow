@@ -2,12 +2,12 @@
 import { useBuilderStore } from '@/stores/builder.store';
 import { useUsersStore } from '@/stores/users.store';
 import { computed, watch, ref, onBeforeUnmount } from 'vue';
-import AskAssistantChat from '@n8n/design-system/components/AskAssistantChat/AskAssistantChat.vue';
+import AskAssistantChat from '@glow/design-system/components/AskAssistantChat/AskAssistantChat.vue';
 import { useTelemetry } from '@/composables/useTelemetry';
 import type { IWorkflowDataUpdate } from '@/Interface';
 import { nodeViewEventBus } from '@/event-bus';
 import { v4 as uuid } from 'uuid';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { STICKY_NODE_TYPE } from '@/constants';
 
 const emit = defineEmits<{

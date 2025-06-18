@@ -2,13 +2,13 @@
 import { computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useSetupTemplateStore } from './setupTemplate.store';
-import N8nHeading from '@n8n/design-system/components/N8nHeading';
-import N8nLink from '@n8n/design-system/components/N8nLink';
+import N8nHeading from '@glow/design-system/components/N8nHeading';
+import N8nLink from '@glow/design-system/components/N8nLink';
 import AppsRequiringCredsNotice from './AppsRequiringCredsNotice.vue';
 import SetupTemplateFormStep from './SetupTemplateFormStep.vue';
 import TemplatesView from '../TemplatesView.vue';
 import { VIEWS } from '@/constants';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 // Store
 const setupTemplateStore = useSetupTemplateStore();

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import { createEventBus } from '@n8n/utils/event-bus';
-import { useI18n } from '@n8n/i18n';
+import { createEventBus } from '@glow/utils/event-bus';
+import { useI18n } from '@glow/i18n';
 import { hasPermission } from '@/utils/rbac/permissions';
 import { getResourcePermissions } from '@/permissions';
 import { useToast } from '@/composables/useToast';

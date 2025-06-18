@@ -4,7 +4,7 @@ import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { captureException } from '@sentry/vue';
 
-import { N8nText, N8nLink } from '@n8n/design-system';
+import { N8nText, N8nLink } from '@glow/design-system';
 
 export interface Props {
 	packageName: string;

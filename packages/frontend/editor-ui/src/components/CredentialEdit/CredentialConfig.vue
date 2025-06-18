@@ -6,12 +6,12 @@ import type {
 	ICredentialDataDecryptedObject,
 	ICredentialType,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 
 import type { IUpdateInformation } from '@/Interface';
 import AuthTypeSelector from '@/components/CredentialEdit/AuthTypeSelector.vue';
 import EnterpriseEdition from '@/components/EnterpriseEdition.ee.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import {
 	BUILTIN_CREDENTIALS_DOCS_URL,
@@ -20,10 +20,10 @@ import {
 	NEW_ASSISTANT_SESSION_MODAL,
 } from '@/constants';
 import type { PermissionsRecord } from '@/permissions';
-import { addCredentialTranslation } from '@n8n/i18n';
+import { addCredentialTranslation } from '@glow/i18n';
 import { useCredentialsStore } from '@/stores/credentials.store';
 import { useNDVStore } from '@/stores/ndv.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useUIStore } from '@/stores/ui.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import Banner from '../Banner.vue';
@@ -32,7 +32,7 @@ import CredentialInputs from './CredentialInputs.vue';
 import GoogleAuthButton from './GoogleAuthButton.vue';
 import OauthButton from './OauthButton.vue';
 import { useAssistantStore } from '@/stores/assistant.store';
-import InlineAskAssistantButton from '@n8n/design-system/components/InlineAskAssistantButton/InlineAskAssistantButton.vue';
+import InlineAskAssistantButton from '@glow/design-system/components/InlineAskAssistantButton/InlineAskAssistantButton.vue';
 
 type Props = {
 	mode: string;

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import CommunityNodeInstallHint from '../Panel/CommunityNodeInstallHint.vue';
-import { N8nButton } from '@n8n/design-system';
+import { N8nButton } from '@glow/design-system';
 
 export interface Props {
 	isPreview: boolean;

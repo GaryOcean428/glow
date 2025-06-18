@@ -9,8 +9,8 @@ import { MODAL_CONFIRM } from '@/constants';
 import { useSourceControlStore } from '@/stores/sourceControl.store';
 import type { SshKeyTypes } from '@/types/sourceControl.types';
 import type { TupleToUnion } from '@/utils/typeHelpers';
-import type { Rule, RuleGroup } from '@n8n/design-system/types';
-import { useI18n } from '@n8n/i18n';
+import type { Rule, RuleGroup } from '@glow/design-system/types';
+import { useI18n } from '@glow/i18n';
 import { computed, onMounted, reactive, ref } from 'vue';
 
 const locale = useI18n();

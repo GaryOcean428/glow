@@ -18,10 +18,10 @@ import {
 	ResourceType,
 	splitName,
 } from '@/utils/projects.utils';
-import { useI18n } from '@n8n/i18n';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { sortByProperty } from '@n8n/utils/sort/sortByProperty';
-import { truncate } from '@n8n/utils/string/truncate';
+import { useI18n } from '@glow/i18n';
+import type { EventBus } from '@glow/utils/event-bus';
+import { sortByProperty } from '@glow/utils/sort/sortByProperty';
+import { truncate } from '@glow/utils/string/truncate';
 import { computed, h, onMounted, ref } from 'vue';
 
 const props = defineProps<{

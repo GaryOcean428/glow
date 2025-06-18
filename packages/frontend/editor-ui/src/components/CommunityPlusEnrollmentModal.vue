@@ -1,11 +1,11 @@
 <script lang="ts" setup="">
 import { ref } from 'vue';
-import { createEventBus } from '@n8n/utils/event-bus';
-import type { Validatable, IValidator } from '@n8n/design-system';
-import { N8nFormInput } from '@n8n/design-system';
+import { createEventBus } from '@glow/utils/event-bus';
+import type { Validatable, IValidator } from '@glow/design-system';
+import { N8nFormInput } from '@glow/design-system';
 import { VALID_EMAIL_REGEX, COMMUNITY_PLUS_DOCS_URL } from '@/constants';
 import Modal from '@/components/Modal.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useToast } from '@/composables/useToast';
 import { useUsageStore } from '@/stores/usage.store';
 import { useTelemetry } from '@/composables/useTelemetry';

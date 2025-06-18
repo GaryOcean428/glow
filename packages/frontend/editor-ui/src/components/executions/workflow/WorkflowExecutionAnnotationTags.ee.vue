@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import AnnotationTagsDropdown from '@/components/AnnotationTagsDropdown.ee.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useToast } from '@/composables/useToast';
 import { useExecutionsStore } from '@/stores/executions.store';
 import { useTelemetry } from '@/composables/useTelemetry';
-import { createEventBus } from '@n8n/utils/event-bus';
-import type { ExecutionSummary } from 'n8n-workflow';
+import { createEventBus } from '@glow/utils/event-bus';
+import type { ExecutionSummary } from 'glow-workflow';
 import { computed, ref } from 'vue';
 
 const props = defineProps<{

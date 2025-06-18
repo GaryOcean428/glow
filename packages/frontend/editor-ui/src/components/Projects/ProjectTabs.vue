@@ -3,8 +3,8 @@ import { ref, watch, computed } from 'vue';
 import type { RouteRecordName } from 'vue-router';
 import { useRoute } from 'vue-router';
 import { VIEWS } from '@/constants';
-import { useI18n } from '@n8n/i18n';
-import type { BaseTextKey } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
+import type { BaseTextKey } from '@glow/i18n';
 
 type Props = {
 	showSettings?: boolean;

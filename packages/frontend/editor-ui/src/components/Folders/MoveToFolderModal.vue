@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref, watch } from 'vue';
-import { useI18n } from '@n8n/i18n';
-import { sortByProperty } from '@n8n/utils/sort/sortByProperty';
+import { useI18n } from '@glow/i18n';
+import { sortByProperty } from '@glow/utils/sort/sortByProperty';
 import { EnterpriseEditionFeature, MOVE_FOLDER_MODAL_KEY } from '@/constants';
 import { useFoldersStore } from '@/stores/folders.store';
 import { useProjectsStore } from '@/stores/projects.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useCredentialsStore } from '@/stores/credentials.store';
-import { type EventBus, createEventBus } from '@n8n/utils/event-bus';
+import { type EventBus, createEventBus } from '@glow/utils/event-bus';
 import {
 	ProjectTypes,
 	type ProjectListItem,
