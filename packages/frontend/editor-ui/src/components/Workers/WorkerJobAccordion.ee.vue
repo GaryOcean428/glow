@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RunningJobSummary } from '@n8n/api-types';
+import type { RunningJobSummary } from '@glow/api-types';
 import WorkerAccordion from './WorkerAccordion.ee.vue';
 import { useI18n } from '@glow/i18n';
 

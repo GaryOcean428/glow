@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ViewableMimeTypes } from '@n8n/api-types';
+import { ViewableMimeTypes } from '@glow/api-types';
 import { useStorage } from '@/composables/useStorage';
 import { saveAs } from 'file-saver';
 import type {

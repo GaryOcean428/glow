@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { WorkerStatus } from '@n8n/api-types';
+import type { WorkerStatus } from '@glow/api-types';
 import WorkerAccordion from './WorkerAccordion.ee.vue';
 import { useClipboard } from '@/composables/useClipboard';
 import { useI18n } from '@glow/i18n';

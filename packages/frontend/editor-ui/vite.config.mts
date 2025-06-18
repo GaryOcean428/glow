@@ -32,6 +32,10 @@ const alias = [
 		replacement: resolve(packagesDir, 'frontend', '@glow', 'api-requests', 'src$1'),
 	},
 	{
+		find: /^@glow\/api-types(.+)$/,
+		replacement: resolve(packagesDir, '@glow', 'api-types', 'src$1'),
+	},
+	{
 		find: /^@glow\/composables(.+)$/,
 		replacement: resolve(packagesDir, 'frontend', '@glow', 'composables', 'src$1'),
 	},

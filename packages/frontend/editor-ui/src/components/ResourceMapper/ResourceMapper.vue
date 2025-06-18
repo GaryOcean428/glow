@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ResourceMapperFieldsRequestDto } from '@n8n/api-types';
+import type { ResourceMapperFieldsRequestDto } from '@glow/api-types';
 import type { IUpdateInformation } from '@/Interface';
 import { resolveRequiredParameters } from '@/composables/useWorkflowHelpers';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';

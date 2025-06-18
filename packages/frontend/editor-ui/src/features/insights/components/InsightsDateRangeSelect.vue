@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useInsightsStore } from '@/features/insights/insights.store';
-import type { InsightsDateRange } from '@n8n/api-types';
+import type { InsightsDateRange } from '@glow/api-types';
 import { N8nOption, N8nSelect } from '@glow/design-system';
 import { ref } from 'vue';
 import { TIME_RANGE_LABELS, UNLICENSED_TIME_RANGE } from '../insights.constants';

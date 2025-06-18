@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, onBeforeUnmount, ref } from 'vue';
-import type { WorkerStatus } from '@n8n/api-types';
+import type { WorkerStatus } from '@glow/api-types';
 
 import { useOrchestrationStore } from '@/stores/orchestration.store';
 import { averageWorkerLoadFromLoadsAsString, memAsGb } from '../../utils/workerUtils';

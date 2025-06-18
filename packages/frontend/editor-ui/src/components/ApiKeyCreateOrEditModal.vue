@@ -12,7 +12,7 @@ import { useToast } from '@/composables/useToast';
 import type { BaseTextKey } from '@glow/i18n';
 import { N8nText } from '@glow/design-system';
 import { DateTime } from 'luxon';
-import type { ApiKey, ApiKeyWithRawValue, CreateApiKeyRequestDto } from '@n8n/api-types';
+import type { ApiKey, ApiKeyWithRawValue, CreateApiKeyRequestDto } from '@glow/api-types';
 import ApiKeyScopes from '@/components/ApiKeyScopes.vue';
 import type { ApiKeyScope } from '@n8n/permissions';
 import { useSettingsStore } from '@/stores/settings.store';

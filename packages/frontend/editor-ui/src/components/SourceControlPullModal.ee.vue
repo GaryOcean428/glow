@@ -21,7 +21,7 @@ import {
 } from '@/utils/sourceControlUtils';
 import { DynamicScroller, DynamicScrollerItem } from 'vue-virtual-scroller';
 import 'vue-virtual-scroller/dist/vue-virtual-scroller.css';
-import { type SourceControlledFile, SOURCE_CONTROL_FILE_TYPE } from '@n8n/api-types';
+import { type SourceControlledFile, SOURCE_CONTROL_FILE_TYPE } from '@glow/api-types';
 
 type SourceControlledFileType = SourceControlledFile['type'];
 

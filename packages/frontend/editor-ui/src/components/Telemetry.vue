@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ITelemetrySettings } from '@n8n/api-types';
+import type { ITelemetrySettings } from '@glow/api-types';
 import { useRootStore } from '@glow/stores/useRootStore';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useUsersStore } from '@/stores/users.store';

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useUIStore } from '@/stores/ui.store';
 import { computed, useSlots } from 'vue';
-import type { BannerName } from '@n8n/api-types';
+import type { BannerName } from '@glow/api-types';
 import { useI18n } from '@glow/i18n';
 
 interface Props {

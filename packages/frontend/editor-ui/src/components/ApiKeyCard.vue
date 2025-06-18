@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { useI18n } from '@glow/i18n';
-import type { ApiKey } from '@n8n/api-types';
+import type { ApiKey } from '@glow/api-types';
 import { DateTime } from 'luxon';
 
 const API_KEY_ITEM_ACTIONS = {

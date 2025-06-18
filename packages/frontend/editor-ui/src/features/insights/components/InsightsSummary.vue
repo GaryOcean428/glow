@@ -8,7 +8,7 @@ import {
 	TIME_RANGE_LABELS,
 } from '@/features/insights/insights.constants';
 import type { InsightsSummaryDisplay } from '@/features/insights/insights.types';
-import type { InsightsDateRange, InsightsSummary } from '@n8n/api-types';
+import type { InsightsDateRange, InsightsSummary } from '@glow/api-types';
 import { smartDecimal } from '@glow/utils/number/smartDecimal';
 import { computed, useCssModule } from 'vue';
 import { useRoute } from 'vue-router';

@@ -34,7 +34,7 @@ import {
 	SOURCE_CONTROL_FILE_STATUS,
 	SOURCE_CONTROL_FILE_TYPE,
 	SOURCE_CONTROL_FILE_LOCATION,
-} from '@n8n/api-types';
+} from '@glow/api-types';
 import groupBy from 'lodash/groupBy';
 import orderBy from 'lodash/orderBy';
 import { getStatusText, getStatusTheme, getPushPriorityByStatus } from '@/utils/sourceControlUtils';

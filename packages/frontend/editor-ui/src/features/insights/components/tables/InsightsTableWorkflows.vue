@@ -6,7 +6,7 @@ import {
 	transformInsightsFailureRate,
 	transformInsightsTimeSaved,
 } from '@/features/insights/insights.utils';
-import type { InsightsByWorkflow } from '@n8n/api-types';
+import type { InsightsByWorkflow } from '@glow/api-types';
 import { N8nTooltip } from '@glow/design-system';
 import N8nDataTableServer, {
 	type TableHeader,
