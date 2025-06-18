@@ -14,18 +14,18 @@ import {
 	PLACEHOLDER_EMPTY_WORKFLOW_ID,
 	WORKFLOW_SETTINGS_MODAL_KEY,
 } from '@/constants';
-import type { WorkflowSettings } from 'n8n-workflow';
-import { deepCopy } from 'n8n-workflow';
+import type { WorkflowSettings } from 'glow-workflow';
+import { deepCopy } from 'glow-workflow';
 import { useSettingsStore } from '@/stores/settings.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { useWorkflowsEEStore } from '@/stores/workflows.ee.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import { useExternalHooks } from '@/composables/useExternalHooks';
 import { useSourceControlStore } from '@/stores/sourceControl.store';
 import { ProjectTypes } from '@/types/projects.types';
 import { getResourcePermissions } from '@/permissions';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 
 const route = useRoute();

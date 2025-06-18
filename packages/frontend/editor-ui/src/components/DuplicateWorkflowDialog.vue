@@ -7,11 +7,11 @@ import Modal from '@/components/Modal.vue';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import type { IWorkflowDataUpdate } from '@/Interface';
-import { createEventBus, type EventBus } from '@n8n/utils/event-bus';
+import { createEventBus, type EventBus } from '@glow/utils/event-bus';
 import { useCredentialsStore } from '@/stores/credentials.store';
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';
 import { useRouter } from 'vue-router';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useWorkflowSaving } from '@/composables/useWorkflowSaving';
 

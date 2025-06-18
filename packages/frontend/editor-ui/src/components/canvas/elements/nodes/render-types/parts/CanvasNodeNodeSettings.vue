@@ -2,7 +2,7 @@
 import NodeSettings from '@/components/NodeSettings.vue';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import { computed } from 'vue';
 
 const { nodeId } = defineProps<{ nodeId: string }>();

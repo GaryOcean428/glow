@@ -78,7 +78,7 @@ import CommunityPlusEnrollmentModal from '@/components/CommunityPlusEnrollmentMo
 import WorkflowActivationConflictingWebhookModal from '@/components/WorkflowActivationConflictingWebhookModal.vue';
 import FromAiParametersModal from '@/components/FromAiParametersModal.vue';
 import ImportWorkflowUrlModal from '@/components/ImportWorkflowUrlModal.vue';
-import type { EventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
 </script>
 
 <template>

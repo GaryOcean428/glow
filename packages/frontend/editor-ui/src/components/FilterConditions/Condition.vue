@@ -3,14 +3,14 @@ import type { IUpdateInformation } from '@/Interface';
 import InputTriple from '@/components/InputTriple/InputTriple.vue';
 import ParameterInputFull from '@/components/ParameterInputFull.vue';
 import ParameterIssues from '@/components/ParameterIssues.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { DateTime } from 'luxon';
 import type {
 	FilterConditionValue,
 	FilterOptionsValue,
 	INodeProperties,
 	NodeParameterValue,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { computed, ref } from 'vue';
 import OperatorSelect from './OperatorSelect.vue';
 import { type FilterOperatorId } from './constants';

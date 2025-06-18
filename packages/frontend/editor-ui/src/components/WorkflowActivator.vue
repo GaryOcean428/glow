@@ -5,7 +5,7 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { getActivatableTriggerNodes } from '@/utils/nodeTypesUtils';
 import type { VNode } from 'vue';
 import { computed, h, watch } from 'vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import type { PermissionsRecord } from '@/permissions';
 import {
 	WORKFLOW_ACTIVATION_CONFLICTING_WEBHOOK_MODAL_KEY,
@@ -15,7 +15,7 @@ import {
 import WorkflowActivationErrorMessage from './WorkflowActivationErrorMessage.vue';
 import { useCredentialsStore } from '@/stores/credentials.store';
 import type { INodeUi, IUsedCredential } from '@/Interface';
-import { OPEN_AI_API_CREDENTIAL_TYPE } from 'n8n-workflow';
+import { OPEN_AI_API_CREDENTIAL_TYPE } from 'glow-workflow';
 import { useUIStore } from '@/stores/ui.store';
 
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';

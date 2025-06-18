@@ -13,7 +13,7 @@ import {
 	AI_TRANSFORM_JS_CODE,
 	AI_TRANSFORM_NODE_TYPE,
 	type INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
@@ -24,7 +24,7 @@ import { nodeViewEventBus } from '@/event-bus';
 import { usePinnedData } from '@/composables/usePinnedData';
 import { useRunWorkflow } from '@/composables/useRunWorkflow';
 import { useRouter } from 'vue-router';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { type IUpdateInformation } from '@/Interface';
 import { generateCodeForAiTransform } from '@/components/ButtonParameter/utils';

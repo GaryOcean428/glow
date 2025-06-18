@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { KeyboardShortcut } from '@/Interface';
-import { N8nKeyboardShortcut, N8nTooltip } from '@n8n/design-system';
+import { N8nKeyboardShortcut, N8nTooltip } from '@glow/design-system';
 import type { Placement } from 'element-plus';
 
 interface Props {

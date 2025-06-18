@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue';
 import type { Project, ProjectListItem, ProjectSharingData } from '@/types/projects.types';
 import ProjectSharing from '@/components/Projects/ProjectSharing.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 type Props = {
 	currentProject: Project | null;

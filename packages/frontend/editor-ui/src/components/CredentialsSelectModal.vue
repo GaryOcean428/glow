@@ -4,12 +4,12 @@ import { useTelemetry } from '@/composables/useTelemetry';
 import { useCredentialsStore } from '@/stores/credentials.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { N8nButton, N8nSelect } from '@n8n/design-system';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { N8nButton, N8nSelect } from '@glow/design-system';
+import { createEventBus } from '@glow/utils/event-bus';
 import { onMounted, ref } from 'vue';
 import { CREDENTIAL_SELECT_MODAL_KEY } from '../constants';
 import Modal from './Modal.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 const externalHooks = useExternalHooks();
 const telemetry = useTelemetry();

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { ITaskData } from 'n8n-workflow';
+import type { ITaskData } from 'glow-workflow';
 import { convertToDisplayDateComponents } from '@/utils/formatters/dateFormatter';
 import { computed } from 'vue';
-import { useI18n } from '@n8n/i18n';
-import { N8nInfoTip } from '@n8n/design-system';
+import { useI18n } from '@glow/i18n';
+import { N8nInfoTip } from '@glow/design-system';
 
 const i18n = useI18n();
 

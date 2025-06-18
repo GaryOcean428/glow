@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import type { IUpdateInformation } from '@/Interface';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { isValueExpression as isValueExpressionUtil } from '@/utils/nodeTypesUtils';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import type {
 	INodeParameterResourceLocator,
 	INodeProperties,
 	IParameterLabel,
 	NodeParameterValueType,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { computed, ref } from 'vue';
 import ParameterInputWrapper from './ParameterInputWrapper.vue';
 import ParameterOptions from './ParameterOptions.vue';

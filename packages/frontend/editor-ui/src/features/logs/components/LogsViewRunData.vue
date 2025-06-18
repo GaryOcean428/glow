@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import RunData from '@/components/RunData.vue';
 import { type LogEntry } from '@/features/logs/logs.types';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { type IRunDataDisplayMode, type NodePanelType } from '@/Interface';
 import { useNDVStore } from '@/stores/ndv.store';
 import { waitingNodeTooltip } from '@/utils/executionUtils';
-import { N8nLink, N8nText } from '@n8n/design-system';
+import { N8nLink, N8nText } from '@glow/design-system';
 import { computed, ref } from 'vue';
 import { I18nT } from 'vue-i18n';
 

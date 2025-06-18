@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import Canvas from '@/components/canvas/Canvas.vue';
 import { computed, ref, toRef, useCssModule } from 'vue';
-import type { Workflow } from 'n8n-workflow';
+import type { Workflow } from 'glow-workflow';
 import type { IWorkflowDb } from '@/Interface';
 import { useCanvasMapping } from '@/composables/useCanvasMapping';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { createEventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import type { CanvasEventBusEvents } from '@/types';
 import { useVueFlow } from '@vue-flow/core';
 import { throttledRef } from '@vueuse/core';

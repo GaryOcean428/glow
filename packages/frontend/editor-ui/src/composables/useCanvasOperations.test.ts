@@ -54,7 +54,7 @@ import type { CanvasLayoutEvent } from './useCanvasLayout';
 import { useTelemetry } from './useTelemetry';
 import { useToast } from '@/composables/useToast';
 
-vi.mock('n8n-workflow', async (importOriginal) => {
+vi.mock('glow-workflow', async (importOriginal) => {
 	const actual = await importOriginal<{}>();
 	return {
 		...actual,

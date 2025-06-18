@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { generateBarChartOptions } from '@/features/insights/chartjs.utils';
 import { GRANULARITY_DATE_FORMAT_MASK } from '@/features/insights/insights.constants';
-import { smartDecimal } from '@n8n/utils/number/smartDecimal';
+import { smartDecimal } from '@glow/utils/number/smartDecimal';
 import { useCssVar } from '@vueuse/core';
 import type { ChartData } from 'chart.js';
 import { computed } from 'vue';

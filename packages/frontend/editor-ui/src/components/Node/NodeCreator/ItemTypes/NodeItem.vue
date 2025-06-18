@@ -17,10 +17,10 @@ import OfficialIcon from 'virtual:icons/mdi/verified';
 import { useNodeType } from '@/composables/useNodeType';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
-import { N8nTooltip } from '@n8n/design-system';
+import { N8nTooltip } from '@glow/design-system';
 import { useActions } from '../composables/useActions';
 import { useViewStacks } from '../composables/useViewStacks';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { isNodePreviewKey, removePreviewToken } from '../utils';
 
 export interface Props {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, computed, watch } from 'vue';
-import { createEventBus } from '@n8n/utils/event-bus';
-import type { IRunData, Workflow, NodeConnectionType, IConnectedNode } from 'n8n-workflow';
-import { jsonParse, NodeHelpers, NodeConnectionTypes } from 'n8n-workflow';
+import { createEventBus } from '@glow/utils/event-bus';
+import type { IRunData, Workflow, NodeConnectionType, IConnectedNode } from 'glow-workflow';
+import { jsonParse, NodeHelpers, NodeConnectionTypes } from 'glow-workflow';
 import type {
 	IRunDataDisplayMode,
 	IUpdateInformation,
@@ -32,13 +32,13 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useSettingsStore } from '@/stores/settings.store';
-import { useDeviceSupport } from '@n8n/composables/useDeviceSupport';
+import { useDeviceSupport } from '@glow/composables/useDeviceSupport';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useMessage } from '@/composables/useMessage';
 import { useExternalHooks } from '@/composables/useExternalHooks';
 import { usePinnedData } from '@/composables/usePinnedData';
 import { useTelemetry } from '@/composables/useTelemetry';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { storeToRefs } from 'pinia';
 import { useStyles } from '@/composables/useStyles';
 

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue';
 import get from 'lodash/get';
-import type { INodeParameters, INodeProperties } from 'n8n-workflow';
-import { deepCopy } from 'n8n-workflow';
+import type { INodeParameters, INodeProperties } from 'glow-workflow';
+import { deepCopy } from 'glow-workflow';
 
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import type { IUpdateInformation } from '@/Interface';
 import CollectionParameter from '@/components/CollectionParameter.vue';
 import ParameterInputFull from '@/components/ParameterInputFull.vue';
-import { N8nButton, N8nInputLabel, N8nText } from '@n8n/design-system';
+import { N8nButton, N8nInputLabel, N8nText } from '@glow/design-system';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { useNDVStore } from '@/stores/ndv.store';
 import { storeToRefs } from 'pinia';

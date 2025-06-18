@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useStyles } from '@/composables/useStyles';
 import { useAssistantStore } from '@/stores/assistant.store';
 import { useLogsStore } from '@/stores/logs.store';
-import AssistantAvatar from '@n8n/design-system/components/AskAssistantAvatar/AssistantAvatar.vue';
-import AskAssistantButton from '@n8n/design-system/components/AskAssistantButton/AskAssistantButton.vue';
+import AssistantAvatar from '@glow/design-system/components/AskAssistantAvatar/AssistantAvatar.vue';
+import AskAssistantButton from '@glow/design-system/components/AskAssistantButton/AskAssistantButton.vue';
 import { computed } from 'vue';
 
 const assistantStore = useAssistantStore();

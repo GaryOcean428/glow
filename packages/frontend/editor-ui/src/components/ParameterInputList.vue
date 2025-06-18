@@ -4,8 +4,8 @@ import type {
 	INodeProperties,
 	NodeParameterValue,
 	NodeParameterValueType,
-} from 'n8n-workflow';
-import { ADD_FORM_NOTICE, deepCopy, NodeHelpers } from 'n8n-workflow';
+} from 'glow-workflow';
+import { ADD_FORM_NOTICE, deepCopy, NodeHelpers } from 'glow-workflow';
 import { computed, defineAsyncComponent, onErrorCaptured, ref, watch, type WatchSource } from 'vue';
 
 import type { IUpdateInformation } from '@/Interface';
@@ -17,7 +17,7 @@ import ImportCurlParameter from '@/components/ImportCurlParameter.vue';
 import MultipleParameter from '@/components/MultipleParameter.vue';
 import ParameterInputFull from '@/components/ParameterInputFull.vue';
 import ResourceMapper from '@/components/ResourceMapper/ResourceMapper.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';
 import {
@@ -38,7 +38,7 @@ import { captureException } from '@sentry/vue';
 import { computedWithControl } from '@vueuse/core';
 import get from 'lodash/get';
 import set from 'lodash/set';
-import { N8nIcon, N8nIconButton, N8nInputLabel, N8nNotice, N8nText } from '@n8n/design-system';
+import { N8nIcon, N8nIconButton, N8nInputLabel, N8nNotice, N8nText } from '@glow/design-system';
 import { storeToRefs } from 'pinia';
 
 const LazyFixedCollectionParameter = defineAsyncComponent(

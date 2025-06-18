@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { IUpdateInformation } from '@/Interface';
 
-import { type INodeProperties } from 'n8n-workflow';
+import { type INodeProperties } from 'glow-workflow';
 import { buildValueFromOverride, type FromAIOverride } from '../../utils/fromAIOverrideUtils';
 import { computed } from 'vue';
-import { N8nSelectableList } from '@n8n/design-system';
+import { N8nSelectableList } from '@glow/design-system';
 
 type Props = {
 	parameter: INodeProperties;

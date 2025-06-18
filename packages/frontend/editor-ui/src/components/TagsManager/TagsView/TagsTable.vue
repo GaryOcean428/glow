@@ -3,9 +3,9 @@ import { ElTable } from 'element-plus';
 import { MAX_TAG_NAME_LENGTH } from '@/constants';
 import type { ITagRow } from '@/Interface';
 import { onMounted, ref, watch } from 'vue';
-import { N8nInput } from '@n8n/design-system';
-import type { BaseTextKey } from '@n8n/i18n';
-import { useI18n } from '@n8n/i18n';
+import { N8nInput } from '@glow/design-system';
+import type { BaseTextKey } from '@glow/i18n';
+import { useI18n } from '@glow/i18n';
 
 interface Props {
 	rows: ITagRow[];

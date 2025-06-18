@@ -5,7 +5,7 @@ import { BaseEdge } from '@vue-flow/core';
 import { computed, onMounted, ref, useCssModule } from 'vue';
 import { getEdgeRenderData } from './utils';
 import { useCanvas } from '@/composables/useCanvas';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import { parseCanvasConnectionHandleString } from '@/utils/canvasUtils';
 
 const props = defineProps<ConnectionLineProps>();

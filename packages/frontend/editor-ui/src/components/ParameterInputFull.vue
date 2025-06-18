@@ -7,19 +7,19 @@ import ParameterInputWrapper from '@/components/ParameterInputWrapper.vue';
 import ParameterOptions from '@/components/ParameterOptions.vue';
 import FromAiOverrideButton from '@/components/ParameterInputOverrides/FromAiOverrideButton.vue';
 import FromAiOverrideField from '@/components/ParameterInputOverrides/FromAiOverrideField.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useToast } from '@/composables/useToast';
 import { useNDVStore } from '@/stores/ndv.store';
 import { getMappedResult } from '@/utils/mappingUtils';
 import { hasExpressionMapping, hasOnlyListMode, isValueExpression } from '@/utils/nodeTypesUtils';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import {
 	isResourceLocatorValue,
 	type INodeProperties,
 	type IParameterLabel,
 	type NodeParameterValueType,
-} from 'n8n-workflow';
-import { N8nInputLabel } from '@n8n/design-system';
+} from 'glow-workflow';
+import { N8nInputLabel } from '@glow/design-system';
 import {
 	buildValueFromOverride,
 	type FromAIOverride,

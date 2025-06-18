@@ -2,9 +2,9 @@
 import Modal from './Modal.vue';
 import { EXTERNAL_SECRETS_PROVIDER_MODAL_KEY, MODAL_CONFIRM } from '@/constants';
 import { computed, onMounted, ref } from 'vue';
-import type { EventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
 import { useExternalSecretsProvider } from '@/composables/useExternalSecretsProvider';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useMessage } from '@/composables/useMessage';
 import { useToast } from '@/composables/useToast';
 import { useExternalSecretsStore } from '@/stores/externalSecrets.ee.store';
@@ -14,10 +14,10 @@ import type {
 	ExternalSecretsProviderData,
 	ExternalSecretsProvider,
 } from '@/Interface';
-import type { IParameterLabel } from 'n8n-workflow';
+import type { IParameterLabel } from 'glow-workflow';
 import ExternalSecretsProviderImage from '@/components/ExternalSecretsProviderImage.ee.vue';
 import ExternalSecretsProviderConnectionSwitch from '@/components/ExternalSecretsProviderConnectionSwitch.ee.vue';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 
 const props = defineProps<{
 	data: { eventBus: EventBus; name: string };

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import { useI18n } from '@n8n/design-system/composables/useI18n';
+import { useI18n } from '@glow/design-system/composables/useI18n';
 
 import BaseWorkflowMessage from './BaseWorkflowMessage.vue';
 import type { ChatUI } from '../../../../types/assistant';

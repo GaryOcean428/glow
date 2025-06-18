@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import InsightsSummary from '@/features/insights/components/InsightsSummary.vue';
 import { useInsightsStore } from '@/features/insights/insights.store';
-import type { InsightsDateRange, InsightsSummaryType } from '@n8n/api-types';
+import type { InsightsDateRange, InsightsSummaryType } from '@glow/api-types';
 import { computed, defineAsyncComponent, onMounted, ref, watch } from 'vue';
 import { TELEMETRY_TIME_RANGE, UNLICENSED_TIME_RANGE } from '../insights.constants';
 import InsightsDateRangeSelect from './InsightsDateRangeSelect.vue';

@@ -3,12 +3,12 @@ import { computed, onBeforeMount, onMounted, ref } from 'vue';
 import { MODAL_CONFIRM } from '@/constants';
 import { useMessage } from '@/composables/useMessage';
 import { useLogStreamingStore } from '@/stores/logStreaming.store';
-import type { MessageEventBusDestinationOptions } from 'n8n-workflow';
-import { deepCopy, defaultMessageEventBusDestinationOptions } from 'n8n-workflow';
-import type { BaseTextKey } from '@n8n/i18n';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { useI18n } from '@n8n/i18n';
-import { assert } from '@n8n/utils/assert';
+import type { MessageEventBusDestinationOptions } from 'glow-workflow';
+import { deepCopy, defaultMessageEventBusDestinationOptions } from 'glow-workflow';
+import type { BaseTextKey } from '@glow/i18n';
+import type { EventBus } from '@glow/utils/event-bus';
+import { useI18n } from '@glow/i18n';
+import { assert } from '@glow/utils/assert';
 
 const DESTINATION_LIST_ITEM_ACTIONS = {
 	OPEN: 'open',

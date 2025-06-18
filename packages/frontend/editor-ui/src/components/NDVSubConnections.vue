@@ -3,7 +3,7 @@ import type { INodeUi } from '@/Interface';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { computed, ref, watch } from 'vue';
-import { NodeHelpers } from 'n8n-workflow';
+import { NodeHelpers } from 'glow-workflow';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import NodeIcon from '@/components/NodeIcon.vue';
 import TitledList from '@/components/TitledList.vue';
@@ -11,10 +11,10 @@ import type {
 	NodeConnectionType,
 	INodeInputConfiguration,
 	INodeTypeDescription,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { useDebounce } from '@/composables/useDebounce';
 import { OnClickOutside } from '@vueuse/components';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNDVStore } from '@/stores/ndv.store';
 
 interface Props {

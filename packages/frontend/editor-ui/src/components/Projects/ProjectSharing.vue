@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { AllRolesMap } from '@n8n/permissions';
 import { computed, ref, watch } from 'vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import {
 	ProjectTypes,
 	type ProjectIcon as ProjectIconItem,
@@ -9,7 +9,7 @@ import {
 	type ProjectSharingData,
 } from '@/types/projects.types';
 import ProjectSharingInfo from '@/components/Projects/ProjectSharingInfo.vue';
-import { sortByProperty } from '@n8n/utils/sort/sortByProperty';
+import { sortByProperty } from '@glow/utils/sort/sortByProperty';
 
 const locale = useI18n();
 

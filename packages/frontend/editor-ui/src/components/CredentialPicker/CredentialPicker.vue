@@ -2,9 +2,9 @@
 import { computed, ref } from 'vue';
 import { listenForModalChanges, useUIStore } from '@/stores/ui.store';
 import { listenForCredentialChanges, useCredentialsStore } from '@/stores/credentials.store';
-import { assert } from '@n8n/utils/assert';
+import { assert } from '@glow/utils/assert';
 import CredentialsDropdown from './CredentialsDropdown.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { CREDENTIAL_EDIT_MODAL_KEY } from '@/constants';
 
 const props = defineProps<{

@@ -11,10 +11,10 @@ import {
 } from '@/constants';
 import { useUsersStore } from '@/stores/users.store';
 import { useSettingsStore } from '@/stores/settings.store';
-import { createFormEventBus } from '@n8n/design-system/utils';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createFormEventBus } from '@glow/design-system/utils';
+import { createEventBus } from '@glow/utils/event-bus';
 import { useClipboard } from '@/composables/useClipboard';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
 
 const NAME_EMAIL_FORMAT_REGEX = /^.* <(.*)>$/;

@@ -30,14 +30,14 @@ import { useTagsStore } from '@/stores/tags.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useUsersStore } from '@/stores/users.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 
 import { saveAs } from 'file-saver';
 import { useDocumentTitle } from '@/composables/useDocumentTitle';
 import { useMessage } from '@/composables/useMessage';
 import { useToast } from '@/composables/useToast';
 import { getResourcePermissions } from '@/permissions';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import { nodeViewEventBus } from '@/event-bus';
 import { hasPermission } from '@/utils/rbac/permissions';
 import { useCanvasStore } from '@/stores/canvas.store';
@@ -53,11 +53,11 @@ import type {
 } from '@/Interface';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
 import { useTelemetry } from '@/composables/useTelemetry';
-import type { PathItem } from '@n8n/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
-import { N8nInlineTextEdit } from '@n8n/design-system';
+import type { PathItem } from '@glow/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
+import { N8nInlineTextEdit } from '@glow/design-system';
 import { useFoldersStore } from '@/stores/folders.store';
 import { useNpsSurveyStore } from '@/stores/npsSurvey.store';
-import { type BaseTextKey, useI18n } from '@n8n/i18n';
+import { type BaseTextKey, useI18n } from '@glow/i18n';
 import { ProjectTypes } from '@/types/projects.types';
 import { useWorkflowSaving } from '@/composables/useWorkflowSaving';
 

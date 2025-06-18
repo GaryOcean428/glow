@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ResourceMapperFieldsRequestDto } from '@n8n/api-types';
+import type { ResourceMapperFieldsRequestDto } from '@glow/api-types';
 import type { IUpdateInformation } from '@/Interface';
 import { resolveRequiredParameters } from '@/composables/useWorkflowHelpers';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
@@ -12,8 +12,8 @@ import type {
 	ResourceMapperField,
 	ResourceMapperFields,
 	ResourceMapperValue,
-} from 'n8n-workflow';
-import { deepCopy, NodeHelpers } from 'n8n-workflow';
+} from 'glow-workflow';
+import { deepCopy, NodeHelpers } from 'glow-workflow';
 import { computed, onMounted, reactive, watch } from 'vue';
 import MappingModeSelect from './MappingModeSelect.vue';
 import MatchingColumnsSelect from './MatchingColumnsSelect.vue';
@@ -24,11 +24,11 @@ import {
 	parseResourceMapperFieldName,
 } from '@/utils/nodeTypesUtils';
 import { isFullExecutionResponse, isResourceMapperValue } from '@/utils/typeGuards';
-import { i18n as locale } from '@n8n/i18n';
+import { i18n as locale } from '@glow/i18n';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useDocumentVisibility } from '@/composables/useDocumentVisibility';
-import { N8nButton, N8nCallout, N8nNotice } from '@n8n/design-system';
+import { N8nButton, N8nCallout, N8nNotice } from '@glow/design-system';
 import isEqual from 'lodash/isEqual';
 
 type Props = {

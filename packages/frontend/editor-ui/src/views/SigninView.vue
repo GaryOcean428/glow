@@ -6,7 +6,7 @@ import AuthView from './AuthView.vue';
 import MfaView from './MfaView.vue';
 
 import { useToast } from '@/composables/useToast';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 
 import { useUsersStore } from '@/stores/users.store';
@@ -15,7 +15,7 @@ import { useCloudPlanStore } from '@/stores/cloudPlan.store';
 
 import type { IFormBoxConfig } from '@/Interface';
 import { MFA_AUTHENTICATION_REQUIRED_ERROR_CODE, VIEWS, MFA_FORM } from '@/constants';
-import type { LoginRequestDto } from '@n8n/api-types';
+import type { LoginRequestDto } from '@glow/api-types';
 
 export type EmailOrLdapLoginIdAndPassword = Pick<
 	LoginRequestDto,

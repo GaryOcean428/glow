@@ -2,9 +2,9 @@
 import type { ExternalSecretsProvider } from '@/Interface';
 import { useExternalSecretsStore } from '@/stores/externalSecrets.ee.store';
 import { useToast } from '@/composables/useToast';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { computed, onMounted, ref } from 'vue';
-import type { EventBus } from '@n8n/utils/event-bus';
+import type { EventBus } from '@glow/utils/event-bus';
 
 const emit = defineEmits<{
 	change: [value: boolean];

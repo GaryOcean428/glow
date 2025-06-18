@@ -22,8 +22,8 @@ import type {
 	INodePropertyOptions,
 	IParameterLabel,
 	NodeParameterValueType,
-} from 'n8n-workflow';
-import { CREDENTIAL_EMPTY_VALUE, isResourceLocatorValue, NodeHelpers } from 'n8n-workflow';
+} from 'glow-workflow';
+import { CREDENTIAL_EMPTY_VALUE, isResourceLocatorValue, NodeHelpers } from 'glow-workflow';
 
 import CodeNodeEditor from '@/components/CodeNodeEditor/CodeNodeEditor.vue';
 import CredentialsSelect from '@/components/CredentialsSelect.vue';
@@ -50,7 +50,7 @@ import {
 
 import { useDebounce } from '@/composables/useDebounce';
 import { useExternalHooks } from '@/composables/useExternalHooks';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';
@@ -61,9 +61,9 @@ import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { isCredentialOnlyNodeType } from '@/utils/credentialOnlyNodes';
-import { N8nIcon, N8nInput, N8nInputNumber, N8nOption, N8nSelect } from '@n8n/design-system';
-import type { EventBus } from '@n8n/utils/event-bus';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { N8nIcon, N8nInput, N8nInputNumber, N8nOption, N8nSelect } from '@glow/design-system';
+import type { EventBus } from '@glow/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import { useElementSize } from '@vueuse/core';
 import { captureMessage } from '@sentry/vue';
 import { completeExpressionSyntax, shouldConvertToExpression } from '@/utils/expressions';

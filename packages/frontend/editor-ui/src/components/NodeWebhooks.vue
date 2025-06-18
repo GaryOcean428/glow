@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { INodeTypeDescription, IWebhookDescription } from 'n8n-workflow';
+import type { INodeTypeDescription, IWebhookDescription } from 'glow-workflow';
 import { useToast } from '@/composables/useToast';
 import {
 	CHAT_TRIGGER_NODE_TYPE,
@@ -12,7 +12,7 @@ import { useClipboard } from '@/composables/useClipboard';
 import { useWorkflowHelpers } from '@/composables/useWorkflowHelpers';
 import type { INodeUi } from '@/Interface';
 import { computed, ref, watch } from 'vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 
 const props = defineProps<{

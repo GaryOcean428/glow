@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
-import type { BaseTextKey } from '@n8n/i18n';
-import { N8nButton, N8nText } from '@n8n/design-system';
+import type { BaseTextKey } from '@glow/i18n';
+import { N8nButton, N8nText } from '@glow/design-system';
 import { ElDialog } from 'element-plus';
 import { computed } from 'vue';
 

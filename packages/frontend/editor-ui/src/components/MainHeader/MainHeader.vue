@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TabBar from '@/components/MainHeader/TabBar.vue';
 import WorkflowDetails from '@/components/MainHeader/WorkflowDetails.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { usePushConnection } from '@/composables/usePushConnection';
 import {
 	LOCAL_STORAGE_HIDE_GITHUB_STAR_BUTTON,
@@ -10,7 +10,7 @@ import {
 	STICKY_NODE_TYPE,
 	VIEWS,
 	WORKFLOW_EVALUATION_EXPERIMENT,
-	N8N_MAIN_GITHUB_REPO_URL,
+	GLOW_MAIN_GITHUB_REPO_URL,
 } from '@/constants';
 import { useExecutionsStore } from '@/stores/executions.store';
 import { useNDVStore } from '@/stores/ndv.store';
@@ -276,7 +276,7 @@ function hideGithubButton() {
 				<div v-if="showGitHubButton" :class="[$style['github-button'], 'hidden-sm-and-down']">
 					<div :class="$style['github-button-container']">
 						<GithubButton
-							:href="N8N_MAIN_GITHUB_REPO_URL"
+							:href="GLOW_MAIN_GITHUB_REPO_URL"
 							:data-color-scheme="uiStore.appliedTheme"
 							data-size="large"
 							data-show-count="true"

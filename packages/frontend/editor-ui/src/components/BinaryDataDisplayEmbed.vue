@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import type { IBinaryData } from 'n8n-workflow';
-import { jsonParse } from 'n8n-workflow';
+import type { IBinaryData } from 'glow-workflow';
+import { jsonParse } from 'glow-workflow';
 import VueJsonPretty from 'vue-json-pretty';
 import RunDataHtml from '@/components/RunDataHtml.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 const props = defineProps<{
 	binaryData: IBinaryData;

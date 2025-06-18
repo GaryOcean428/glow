@@ -5,9 +5,9 @@ import Modal from '@/components/Modal.vue';
 import ProjectSharing from '@/components/Projects/ProjectSharing.vue';
 import { useUsersStore } from '@/stores/users.store';
 import { useProjectsStore } from '@/stores/projects.store';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import type { ProjectSharingData } from '@/types/projects.types';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 
 const props = defineProps<{
 	modalName: string;

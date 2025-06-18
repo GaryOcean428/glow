@@ -6,14 +6,14 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { getMappedExpression } from '@/utils/mappingUtils';
 import { getPairedItemId } from '@/utils/pairedItemUtils';
 import { shorten } from '@/utils/typesUtils';
-import type { GenericValue, IDataObject, INodeExecutionData } from 'n8n-workflow';
+import type { GenericValue, IDataObject, INodeExecutionData } from 'glow-workflow';
 import { computed, onMounted, ref, watch } from 'vue';
 import Draggable from '@/components/Draggable.vue';
 import MappingPill from './MappingPill.vue';
 import TextWithHighlights from './TextWithHighlights.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
-import { N8nIconButton, N8nInfoTip, N8nTooltip, N8nTree } from '@n8n/design-system';
+import { N8nIconButton, N8nInfoTip, N8nTooltip, N8nTree } from '@glow/design-system';
 import { storeToRefs } from 'pinia';
 import { useExecutionHelpers } from '@/composables/useExecutionHelpers';
 

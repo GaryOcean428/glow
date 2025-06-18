@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { ChatMessage, ChatMessageText } from '@n8n/chat/types';
-import { useI18n } from '@n8n/i18n';
-import MessagesList from '@n8n/chat/components/MessagesList.vue';
+import type { ChatMessage, ChatMessageText } from '@glow/chat/types';
+import { useI18n } from '@glow/i18n';
+import MessagesList from '@glow/chat/components/MessagesList.vue';
 import MessageOptionTooltip from './MessageOptionTooltip.vue';
 import MessageOptionAction from './MessageOptionAction.vue';
-import { chatEventBus } from '@n8n/chat/event-buses';
-import type { ArrowKeyDownPayload } from '@n8n/chat/components/Input.vue';
-import ChatInput from '@n8n/chat/components/Input.vue';
+import { chatEventBus } from '@glow/chat/event-buses';
+import type { ArrowKeyDownPayload } from '@glow/chat/components/Input.vue';
+import ChatInput from '@glow/chat/components/Input.vue';
 import { computed, ref } from 'vue';
 import { useClipboard } from '@/composables/useClipboard';
 import { useToast } from '@/composables/useToast';
 import LogsPanelHeader from '@/features/logs/components/LogsPanelHeader.vue';
-import { N8nButton, N8nIconButton, N8nTooltip } from '@n8n/design-system';
+import { N8nButton, N8nIconButton, N8nTooltip } from '@glow/design-system';
 
 interface Props {
 	pastChatMessages: string[];

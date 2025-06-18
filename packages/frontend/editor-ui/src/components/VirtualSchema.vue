@@ -12,21 +12,21 @@ import {
 	type SchemaNode,
 } from '@/composables/useDataSchema';
 import { useExternalHooks } from '@/composables/useExternalHooks';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useTelemetry } from '@/composables/useTelemetry';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { executionDataToJson } from '@/utils/nodeTypesUtils';
-import { N8nText } from '@n8n/design-system';
+import { N8nText } from '@glow/design-system';
 import {
 	createResultError,
 	type NodeConnectionType,
 	NodeConnectionTypes,
 	type IConnectedNode,
 	type IDataObject,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { computed, ref, watch } from 'vue';
 import {
 	DynamicScroller,

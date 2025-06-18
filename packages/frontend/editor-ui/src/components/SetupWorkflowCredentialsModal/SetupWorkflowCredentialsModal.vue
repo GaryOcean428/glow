@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import Modal from '@/components/Modal.vue';
 import { useSetupWorkflowCredentialsModalState } from '@/components/SetupWorkflowCredentialsModal/useSetupWorkflowCredentialsModalState';
-import { useI18n } from '@n8n/i18n';
-import N8nHeading from '@n8n/design-system/components/N8nHeading';
+import { useI18n } from '@glow/i18n';
+import N8nHeading from '@glow/design-system/components/N8nHeading';
 import AppsRequiringCredsNotice from '@/views/SetupWorkflowFromTemplateView/AppsRequiringCredsNotice.vue';
 import SetupTemplateFormStep from '@/views/SetupWorkflowFromTemplateView/SetupTemplateFormStep.vue';
 import { onMounted, onUnmounted } from 'vue';

@@ -13,7 +13,7 @@ import { useCredentialsStore } from '@/stores/credentials.store';
 import { useUIStore } from '@/stores/ui.store';
 import { DRAG_EVENT_DATA_KEY } from '@/constants';
 import { useAssistantStore } from '@/stores/assistant.store';
-import N8nIconButton from '@n8n/design-system/components/N8nIconButton/IconButton.vue';
+import N8nIconButton from '@glow/design-system/components/N8nIconButton/IconButton.vue';
 import { useBuilderStore } from '@/stores/builder.store';
 
 export interface Props {

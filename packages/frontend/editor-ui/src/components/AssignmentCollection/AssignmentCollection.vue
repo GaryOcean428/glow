@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useDebounce } from '@/composables/useDebounce';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNDVStore } from '@/stores/ndv.store';
 import type {
 	AssignmentCollectionValue,
@@ -8,7 +8,7 @@ import type {
 	FieldTypeMap,
 	INode,
 	INodeProperties,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { computed, reactive, watch } from 'vue';
 import DropArea from '../DropArea/DropArea.vue';
 import ParameterOptions from '../ParameterOptions.vue';

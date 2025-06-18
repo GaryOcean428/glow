@@ -1,5 +1,5 @@
 <script setup lang="ts" generic="T extends object">
-import { N8nIcon, N8nTooltip } from '@n8n/design-system';
+import { N8nIcon, N8nTooltip } from '@glow/design-system';
 import type { TableInstance } from 'element-plus';
 import { ElTable, ElTableColumn } from 'element-plus';
 import isEqual from 'lodash/isEqual';

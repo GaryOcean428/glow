@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { GenericValue } from 'n8n-workflow';
+import type { GenericValue } from 'glow-workflow';
 import { computed } from 'vue';
 
 const props = defineProps<{

@@ -24,36 +24,40 @@ const alias = [
 	{ find: '@', replacement: resolve(__dirname, 'src') },
 	{ find: 'stream', replacement: 'stream-browserify' },
 	{
-		find: /^@n8n\/chat(.+)$/,
-		replacement: resolve(packagesDir, 'frontend', '@n8n', 'chat', 'src$1'),
+		find: /^@glow\/chat(.+)$/,
+		replacement: resolve(packagesDir, 'frontend', '@glow', 'chat', 'src$1'),
 	},
 	{
-		find: /^@n8n\/api-requests(.+)$/,
-		replacement: resolve(packagesDir, 'frontend', '@n8n', 'api-requests', 'src$1'),
+		find: /^@glow\/api-requests(.+)$/,
+		replacement: resolve(packagesDir, 'frontend', '@glow', 'api-requests', 'src$1'),
 	},
 	{
-		find: /^@n8n\/composables(.+)$/,
-		replacement: resolve(packagesDir, 'frontend', '@n8n', 'composables', 'src$1'),
+		find: /^@glow\/api-types(.+)$/,
+		replacement: resolve(packagesDir, '@glow', 'api-types', 'src$1'),
 	},
 	{
-		find: /^@n8n\/constants(.+)$/,
-		replacement: resolve(packagesDir, '@n8n', 'constants', 'src$1'),
+		find: /^@glow\/composables(.+)$/,
+		replacement: resolve(packagesDir, 'frontend', '@glow', 'composables', 'src$1'),
 	},
 	{
-		find: /^@n8n\/design-system(.+)$/,
-		replacement: resolve(packagesDir, 'frontend', '@n8n', 'design-system', 'src$1'),
+		find: /^@glow\/constants(.+)$/,
+		replacement: resolve(packagesDir, '@glow', 'constants', 'src$1'),
 	},
 	{
-		find: /^@n8n\/i18n(.+)$/,
-		replacement: resolve(packagesDir, 'frontend', '@n8n', 'i18n', 'src$1'),
+		find: /^@glow\/design-system(.+)$/,
+		replacement: resolve(packagesDir, 'frontend', '@glow', 'design-system', 'src$1'),
 	},
 	{
-		find: /^@n8n\/stores(.+)$/,
-		replacement: resolve(packagesDir, 'frontend', '@n8n', 'stores', 'src$1'),
+		find: /^@glow\/i18n(.+)$/,
+		replacement: resolve(packagesDir, 'frontend', '@glow', 'i18n', 'src$1'),
 	},
 	{
-		find: /^@n8n\/utils(.+)$/,
-		replacement: resolve(packagesDir, '@n8n', 'utils', 'src$1'),
+		find: /^@glow\/stores(.+)$/,
+		replacement: resolve(packagesDir, 'frontend', '@glow', 'stores', 'src$1'),
+	},
+	{
+		find: /^@glow\/utils(.+)$/,
+		replacement: resolve(packagesDir, '@glow', 'utils', 'src$1'),
 	},
 	...['orderBy', 'camelCase', 'cloneDeep', 'startCase'].map((name) => ({
 		find: new RegExp(`^lodash.${name}$`, 'i'),
@@ -134,7 +138,7 @@ export default mergeConfig(
 					additionalData: [
 						'',
 						'@use "@/n8n-theme-variables.scss" as *;',
-						'@use "@n8n/design-system/css/mixins" as mixins;',
+						'@use "@glow/design-system/css/mixins" as mixins;',
 					].join('\n'),
 				},
 			},

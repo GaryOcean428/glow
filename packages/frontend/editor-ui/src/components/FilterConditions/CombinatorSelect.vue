@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
-import type { FilterTypeCombinator } from 'n8n-workflow';
+import { useI18n } from '@glow/i18n';
+import type { FilterTypeCombinator } from 'glow-workflow';
 
 interface Props {
 	options: FilterTypeCombinator[];

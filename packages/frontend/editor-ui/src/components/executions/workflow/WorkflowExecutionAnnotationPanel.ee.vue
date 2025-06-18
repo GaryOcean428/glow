@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import type { ExecutionSummary } from 'n8n-workflow';
-import { useI18n } from '@n8n/i18n';
+import type { ExecutionSummary } from 'glow-workflow';
+import { useI18n } from '@glow/i18n';
 import { ElDropdown } from 'element-plus';
 import { getResourcePermissions } from '@/permissions';
 import { useWorkflowsStore } from '@/stores/workflows.store';

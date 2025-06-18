@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import type { ChangeLocationSearchResult } from '@/Interface';
 import { useFoldersStore } from '@/stores/folders.store';
-import { N8nSelect } from '@n8n/design-system';
+import { N8nSelect } from '@glow/design-system';
 import { computed, ref, watch } from 'vue';
 
 /**

@@ -5,10 +5,10 @@ import { useSettingsStore } from '@/stores/settings.store';
 import { useUIStore } from '@/stores/ui.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { PLACEHOLDER_EMPTY_WORKFLOW_ID, WORKFLOW_SETTINGS_MODAL_KEY } from '@/constants';
-import type { IWorkflowSettings } from 'n8n-workflow';
-import { deepCopy } from 'n8n-workflow';
+import type { IWorkflowSettings } from 'glow-workflow';
+import { deepCopy } from 'glow-workflow';
 import { useNpsSurveyStore } from '@/stores/npsSurvey.store';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useWorkflowSaving } from '@/composables/useWorkflowSaving';
 
 interface IWorkflowSaveSettings {

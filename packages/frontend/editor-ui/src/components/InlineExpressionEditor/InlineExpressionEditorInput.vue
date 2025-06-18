@@ -10,7 +10,7 @@ import { editorKeymap } from '@/plugins/codemirror/keymap';
 import { n8nAutocompletion, n8nLang } from '@/plugins/codemirror/n8nLang';
 import { infoBoxTooltips } from '@/plugins/codemirror/tooltips/InfoBoxTooltip';
 import type { Segment } from '@/types/expressions';
-import type { IDataObject } from 'n8n-workflow';
+import type { IDataObject } from 'glow-workflow';
 import { inputTheme } from './theme';
 import { onKeyStroke } from '@vueuse/core';
 import { expressionCloseBrackets } from '@/plugins/codemirror/expressionCloseBrackets';

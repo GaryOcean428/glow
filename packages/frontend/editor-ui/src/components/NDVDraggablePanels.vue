@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useStorage } from '@/composables/useStorage';
 
-import type { INodeTypeDescription } from 'n8n-workflow';
+import type { INodeTypeDescription } from 'glow-workflow';
 import PanelDragButton from './PanelDragButton.vue';
 
 import { LOCAL_STORAGE_MAIN_PANEL_RELATIVE_WIDTH, MAIN_NODE_PANEL_WIDTH } from '@/constants';

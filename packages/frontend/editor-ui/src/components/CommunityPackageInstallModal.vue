@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import Modal from '@/components/Modal.vue';
 import {
 	COMMUNITY_PACKAGE_INSTALL_MODAL_KEY,
@@ -11,7 +11,7 @@ import { useToast } from '@/composables/useToast';
 import { useCommunityNodesStore } from '@/stores/communityNodes.store';
 import { ref } from 'vue';
 import { useTelemetry } from '@/composables/useTelemetry';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 
 const communityNodesStore = useCommunityNodesStore();

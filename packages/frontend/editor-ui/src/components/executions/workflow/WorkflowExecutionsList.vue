@@ -4,7 +4,7 @@ import { useWorkflowSaving } from '@/composables/useWorkflowSaving';
 import { MAIN_HEADER_TABS } from '@/constants';
 import type { ExecutionFilterType, IWorkflowDb } from '@/Interface';
 import { getNodeViewTab } from '@/utils/nodeViewUtils';
-import type { ExecutionSummary } from 'n8n-workflow';
+import type { ExecutionSummary } from 'glow-workflow';
 import { computed } from 'vue';
 import { onBeforeRouteLeave, useRouter } from 'vue-router';
 

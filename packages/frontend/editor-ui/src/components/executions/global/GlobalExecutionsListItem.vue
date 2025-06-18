@@ -2,7 +2,7 @@
 import AnimatedSpinner from '@/components/AnimatedSpinner.vue';
 import ExecutionsTime from '@/components/executions/ExecutionsTime.vue';
 import { useExecutionHelpers } from '@/composables/useExecutionHelpers';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { VIEWS } from '@/constants';
 import type { PermissionsRecord } from '@/permissions';
 import { convertToDisplayDate } from '@/utils/formatters/dateFormatter';
@@ -13,10 +13,10 @@ import {
 	N8nIconButton,
 	N8nText,
 	N8nTooltip,
-} from '@n8n/design-system';
-import type { IconColor } from '@n8n/design-system/types/icon';
-import type { ExecutionStatus, ExecutionSummary } from 'n8n-workflow';
-import { WAIT_INDEFINITELY } from 'n8n-workflow';
+} from '@glow/design-system';
+import type { IconColor } from '@glow/design-system/types/icon';
+import type { ExecutionStatus, ExecutionSummary } from 'glow-workflow';
+import { WAIT_INDEFINITELY } from 'glow-workflow';
 import { computed, ref, useCssModule } from 'vue';
 
 type Command = 'retrySaved' | 'retryOriginal' | 'delete';

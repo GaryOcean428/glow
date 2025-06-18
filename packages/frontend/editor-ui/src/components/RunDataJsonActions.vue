@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import jp from 'jsonpath';
 import type { INodeUi } from '@/Interface';
-import type { IDataObject } from 'n8n-workflow';
+import type { IDataObject } from 'glow-workflow';
 import { clearJsonKey, convertPath } from '@/utils/typesUtils';
 import { executionDataToJson } from '@/utils/nodeTypesUtils';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useNDVStore } from '@/stores/ndv.store';
 import { useNodeHelpers } from '@/composables/useNodeHelpers';
 import { useToast } from '@/composables/useToast';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { nonExistingJsonPath } from '@/constants';
 import { useClipboard } from '@/composables/useClipboard';
 import { usePinnedData } from '@/composables/usePinnedData';

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { N8nTooltip } from '@n8n/design-system';
-import { useI18n } from '@n8n/i18n';
+import { N8nTooltip } from '@glow/design-system';
+import { useI18n } from '@glow/i18n';
 import { useToast } from '@/composables/useToast';
 import { useClipboard } from '@/composables/useClipboard';
 

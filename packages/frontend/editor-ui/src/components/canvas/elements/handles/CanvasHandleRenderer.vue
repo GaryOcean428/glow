@@ -5,7 +5,7 @@ import type { CanvasConnectionPort, CanvasElementPortWithRenderData } from '@/ty
 import { CanvasConnectionMode } from '@/types';
 import type { ValidConnectionFunc } from '@vue-flow/core';
 import { Handle } from '@vue-flow/core';
-import { NodeConnectionTypes } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'glow-workflow';
 import CanvasHandleMainInput from '@/components/canvas/elements/handles/render-types/CanvasHandleMainInput.vue';
 import CanvasHandleMainOutput from '@/components/canvas/elements/handles/render-types/CanvasHandleMainOutput.vue';
 import CanvasHandleNonMainInput from '@/components/canvas/elements/handles/render-types/CanvasHandleNonMainInput.vue';

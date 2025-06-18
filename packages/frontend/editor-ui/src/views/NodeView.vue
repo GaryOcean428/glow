@@ -18,7 +18,7 @@ import WorkflowCanvas from '@/components/canvas/WorkflowCanvas.vue';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useUIStore } from '@/stores/ui.store';
 import CanvasRunWorkflowButton from '@/components/canvas/elements/buttons/CanvasRunWorkflowButton.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useRunWorkflow } from '@/composables/useRunWorkflow';
 import { useGlobalLinkActions } from '@/composables/useGlobalLinkActions';
@@ -75,20 +75,20 @@ import {
 	jsonParse,
 	EVALUATION_TRIGGER_NODE_TYPE,
 	EVALUATION_NODE_TYPE,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import type {
 	NodeConnectionType,
 	IDataObject,
 	ExecutionSummary,
 	IConnection,
 	INodeParameters,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { useToast } from '@/composables/useToast';
 import { useSettingsStore } from '@/stores/settings.store';
 import { useCredentialsStore } from '@/stores/credentials.store';
 import useEnvironmentsStore from '@/stores/environments.ee.store';
 import { useExternalSecretsStore } from '@/stores/externalSecrets.ee.store';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { historyBus } from '@/models/history';
 import { useCanvasOperations } from '@/composables/useCanvasOperations';
 import { useExecutionsStore } from '@/stores/executions.store';
@@ -113,7 +113,7 @@ import CanvasStopWaitingForWebhookButton from '@/components/canvas/elements/butt
 import { nodeViewEventBus } from '@/event-bus';
 import { tryToParseNumber } from '@/utils/typesUtils';
 import { useTemplatesStore } from '@/stores/templates.store';
-import { N8nCallout } from '@n8n/design-system';
+import { N8nCallout } from '@glow/design-system';
 import type { PinDataSource } from '@/composables/usePinnedData';
 import { useClipboard } from '@/composables/useClipboard';
 import { useBeforeUnload } from '@/composables/useBeforeUnload';
@@ -128,7 +128,7 @@ import { useBuilderStore } from '@/stores/builder.store';
 import { useFoldersStore } from '@/stores/folders.store';
 import KeyboardShortcutTooltip from '@/components/KeyboardShortcutTooltip.vue';
 import { useWorkflowExtraction } from '@/composables/useWorkflowExtraction';
-import { useAgentRequestStore } from '@n8n/stores/useAgentRequestStore';
+import { useAgentRequestStore } from '@glow/stores/useAgentRequestStore';
 import { needsAgentInput } from '@/utils/nodes/nodeTransforms';
 import { useLogsStore } from '@/stores/logs.store';
 import { canvasEventBus } from '@/event-bus/canvas';

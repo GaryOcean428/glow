@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import LogsPanelHeader from '@/features/logs/components/LogsPanelHeader.vue';
 import { useClearExecutionButtonVisible } from '@/features/logs/composables/useClearExecutionButtonVisible';
-import { useI18n } from '@n8n/i18n';
-import { N8nButton, N8nRadioButtons, N8nText, N8nTooltip } from '@n8n/design-system';
+import { useI18n } from '@glow/i18n';
+import { N8nButton, N8nRadioButtons, N8nText, N8nTooltip } from '@glow/design-system';
 import { computed, nextTick, toRef, watch } from 'vue';
 import LogsOverviewRow from '@/features/logs/components/LogsOverviewRow.vue';
 import { useRunWorkflow } from '@/composables/useRunWorkflow';

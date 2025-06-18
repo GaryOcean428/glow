@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 import Modal from '@/components/Modal.vue';
 import { WORKFLOW_ACTIVATION_CONFLICTING_WEBHOOK_MODAL_KEY } from '@/constants';
 import { useUIStore } from '@/stores/ui.store';
 
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 import { computed } from 'vue';
 
 const modalBus = createEventBus();

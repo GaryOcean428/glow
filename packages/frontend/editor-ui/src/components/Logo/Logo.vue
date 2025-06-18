@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FrontendSettings } from '@n8n/api-types';
+import type { FrontendSettings } from '@glow/api-types';
 import { computed, onMounted, useCssModule, useTemplateRef } from 'vue';
 import { useFavicon } from '@vueuse/core';
 

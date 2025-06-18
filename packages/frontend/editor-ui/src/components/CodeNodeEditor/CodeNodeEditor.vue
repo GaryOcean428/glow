@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ViewUpdate } from '@codemirror/view';
-import type { CodeExecutionMode, CodeNodeEditorLanguage } from 'n8n-workflow';
+import type { CodeExecutionMode, CodeNodeEditorLanguage } from 'glow-workflow';
 import { format } from 'prettier';
 import jsParser from 'prettier/plugins/babel';
 import * as estree from 'prettier/plugins/estree';
@@ -8,10 +8,10 @@ import { computed, onBeforeUnmount, onMounted, ref, toRaw, watch } from 'vue';
 
 import { CODE_NODE_TYPE } from '@/constants';
 import { codeNodeEditorEventBus } from '@/event-bus';
-import { useRootStore } from '@n8n/stores/useRootStore';
+import { useRootStore } from '@glow/stores/useRootStore';
 
 import { useCodeEditor } from '@/composables/useCodeEditor';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useMessage } from '@/composables/useMessage';
 import { useTelemetry } from '@/composables/useTelemetry';
 import AskAI from './AskAI/AskAI.vue';

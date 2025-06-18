@@ -8,12 +8,12 @@ import type {
 	NodePropertyTypes,
 	ResourceMapperField,
 	ResourceMapperValue,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import ParameterInputFull from '@/components/ParameterInputFull.vue';
 import ParameterIssues from '@/components//ParameterIssues.vue';
 import ParameterOptions from '@/components//ParameterOptions.vue';
 import { computed } from 'vue';
-import { i18n as locale } from '@n8n/i18n';
+import { i18n as locale } from '@glow/i18n';
 import { useNDVStore } from '@/stores/ndv.store';
 import {
 	fieldCannotBeDeleted,
@@ -28,8 +28,8 @@ import {
 	N8nOption,
 	N8nSelect,
 	N8nTooltip,
-} from '@n8n/design-system';
-import { useI18n } from '@n8n/i18n';
+} from '@glow/design-system';
+import { useI18n } from '@glow/i18n';
 
 interface Props {
 	parameter: INodeProperties;

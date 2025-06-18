@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
 
-import Message from '@n8n/chat/components/Message.vue';
-import MessageTyping from '@n8n/chat/components/MessageTyping.vue';
-import { useChat } from '@n8n/chat/composables';
-import type { ChatMessage } from '@n8n/chat/types';
+import Message from '@glow/chat/components/Message.vue';
+import MessageTyping from '@glow/chat/components/MessageTyping.vue';
+import { useChat } from '@glow/chat/composables';
+import type { ChatMessage } from '@glow/chat/types';
 
 defineProps<{
 	messages: ChatMessage[];

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, watch, onMounted, ref } from 'vue';
-import { createEventBus } from '@n8n/utils/event-bus';
+import { createEventBus } from '@glow/utils/event-bus';
 
 import Modal from './Modal.vue';
 import {
@@ -18,15 +18,15 @@ import { useUIStore } from '@/stores/ui.store';
 import { useUsersStore } from '@/stores/users.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useWorkflowsEEStore } from '@/stores/workflows.ee.store';
-import type { ITelemetryTrackProperties } from 'n8n-workflow';
-import type { BaseTextKey } from '@n8n/i18n';
+import type { ITelemetryTrackProperties } from 'glow-workflow';
+import type { BaseTextKey } from '@glow/i18n';
 import ProjectSharing from '@/components/Projects/ProjectSharing.vue';
 import { useProjectsStore } from '@/stores/projects.store';
 import type { ProjectSharingData, Project } from '@/types/projects.types';
 import { ProjectTypes } from '@/types/projects.types';
 import { useRolesStore } from '@/stores/roles.store';
 import { usePageRedirectionHelper } from '@/composables/usePageRedirectionHelper';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { telemetry } from '@/plugins/telemetry';
 
 const props = defineProps<{

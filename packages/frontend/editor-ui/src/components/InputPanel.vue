@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useTelemetry } from '@/composables/useTelemetry';
 import {
 	CRON_NODE_TYPE,
@@ -12,7 +12,7 @@ import { useWorkflowsStore } from '@/stores/workflows.store';
 import { useNDVStore } from '@/stores/ndv.store';
 import { waitingNodeTooltip } from '@/utils/executionUtils';
 import uniqBy from 'lodash/uniqBy';
-import { N8nIcon, N8nRadioButtons, N8nText, N8nTooltip } from '@n8n/design-system';
+import { N8nIcon, N8nRadioButtons, N8nText, N8nTooltip } from '@glow/design-system';
 import {
 	type INodeInputConfiguration,
 	type INodeOutputConfiguration,
@@ -20,7 +20,7 @@ import {
 	type NodeConnectionType,
 	NodeConnectionTypes,
 	NodeHelpers,
-} from 'n8n-workflow';
+} from 'glow-workflow';
 import { storeToRefs } from 'pinia';
 import { computed, ref, watch } from 'vue';
 import InputNodeSelect from './InputNodeSelect.vue';

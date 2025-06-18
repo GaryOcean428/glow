@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, nextTick, useTemplateRef, watch } from 'vue';
-import { N8nButton, N8nIcon, N8nIconButton, N8nText } from '@n8n/design-system';
+import { N8nButton, N8nIcon, N8nIconButton, N8nText } from '@glow/design-system';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import LogsViewConsumedTokenCountText from '@/features/logs/components/LogsViewConsumedTokenCountText.vue';
 import upperFirst from 'lodash/upperFirst';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { I18nT } from 'vue-i18n';
 import { toDayMonth, toTime } from '@/utils/formatters/dateFormatter';
 import LogsViewNodeName from '@/features/logs/components/LogsViewNodeName.vue';

@@ -2,11 +2,11 @@
 import type { IAiData, IAiDataContent } from '@/Interface';
 import { useNodeTypesStore } from '@/stores/nodeTypes.store';
 import { useWorkflowsStore } from '@/stores/workflows.store';
-import type { INodeTypeDescription, NodeConnectionType, NodeError } from 'n8n-workflow';
+import type { INodeTypeDescription, NodeConnectionType, NodeError } from 'glow-workflow';
 import { computed } from 'vue';
 import NodeIcon from '@/components/NodeIcon.vue';
 import AiRunContentBlock from './AiRunContentBlock.vue';
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { getConsumedTokens } from '@/components/RunDataAi/utils';
 import ConsumedTokensDetails from '@/components/ConsumedTokensDetails.vue';
 import ViewSubExecution from '../ViewSubExecution.vue';

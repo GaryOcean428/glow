@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useI18n } from '@n8n/i18n';
+import { useI18n } from '@glow/i18n';
 import { useProjectsStore } from '@/stores/projects.store';
 import { ProjectTypes } from '@/types/projects.types';
-import type { UserAction } from '@n8n/design-system/types';
-import { type PathItem } from '@n8n/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
+import type { UserAction } from '@glow/design-system/types';
+import { type PathItem } from '@glow/design-system/components/N8nBreadcrumbs/Breadcrumbs.vue';
 import { computed, onBeforeUnmount, ref, watch } from 'vue';
 import { useFoldersStore } from '@/stores/folders.store';
 import type { FolderPathItem, FolderShortInfo } from '@/Interface';

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { i18n } from '@n8n/i18n';
+import { i18n } from '@glow/i18n';
 
-import { N8nText, N8nLink } from '@n8n/design-system';
+import { N8nText, N8nLink } from '@glow/design-system';
 
 export interface Props {
 	packageName: string;
