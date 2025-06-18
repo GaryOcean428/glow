@@ -4,7 +4,7 @@ import { resolve } from 'path';
 import { readFile } from 'fs/promises';
 
 const packagesDir = resolve(__dirname, '..');
-const aiNodesDir = resolve(packagesDir, '@n8n', 'nodes-langchain');
+const aiNodesDir = resolve(packagesDir, '@glow', 'nodes-langchain');
 const cliDir = resolve(packagesDir, 'cli');
 
 const externalFiles = [
@@ -34,7 +34,7 @@ const externalPackageDependencies = Array.from(externalPackageImports).map(
 
 const commonIgnoredFiles = ['!**/*.d.ts', '!**/*.test.ts'];
 
-export default defineConfig([
+const configs = [
 	{
 		entry: [
 			'{credentials,nodes,test,types,utils}/**/*.ts',
@@ -47,7 +47,11 @@ export default defineConfig([
 		sourcemap: true,
 		silent: true,
 	},
-	{
+];
+
+// Only add the second config if there are external package dependencies
+if (externalPackageDependencies.length > 0) {
+	configs.push({
 		entry: [...externalPackageDependencies, ...commonIgnoredFiles],
 		format: ['cjs'],
 		dts: {
@@ -58,5 +62,7 @@ export default defineConfig([
 		bundle: false,
 		sourcemap: true,
 		silent: true,
-	},
-]);
+	});
+}
+
+export default defineConfig(configs);
