@@ -33,7 +33,7 @@
     "watch": "tsc-watch -p tsconfig.build.json --onCompilationComplete \"tsc-alias -p tsconfig.build.json\""
   },
   "bin": {
-    "glow": "./bin/n8n"
+    "glow": "./bin/glow"
   },
   "keywords": [
     "automate",
