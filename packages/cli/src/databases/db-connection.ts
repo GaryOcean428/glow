@@ -4,7 +4,7 @@ import type { Migration } from '@glow/db';
 import { wrapMigration } from '@glow/db';
 import { Memoized } from '@glow/decorators';
 import { Container, Service } from '@glow/di';
-import { DataSource } from '@glow/typeorm';
+import { DataSource, type DataSourceOptions } from '@glow/typeorm';
 import { ErrorReporter } from 'glow-core';
 import { DbConnectionTimeoutError, ensureError } from 'glow-workflow';
 
@@ -33,7 +33,7 @@ export class DbConnection {
 		private readonly connectionOptions: DbConnectionOptions,
 		private readonly databaseConfig: DatabaseConfig,
 	) {
-		this.dataSource = new DataSource(this.options);
+		this.dataSource = new DataSource(this.options as DataSourceOptions);
 		Container.set(DataSource, this.dataSource);
 	}
 

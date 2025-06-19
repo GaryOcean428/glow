@@ -7,8 +7,7 @@ import {
 } from '@glow/db';
 import { Service } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { FindManyOptions, FindOneOptions, FindOptionsWhere } from '@glow/typeorm';
-import type { QueryDeepPartialEntity } from '@glow/typeorm/query-builder/QueryPartialEntity';
+import type { FindManyOptions, FindOneOptions, FindOptionsWhere, QueryDeepPartialEntity } from '@glow/typeorm';
 import RudderStack, { type constructorOptions } from '@rudderstack/rudder-sdk-node';
 import type { NextFunction, Response } from 'express';
 

@@ -15,7 +15,7 @@ import type { Scope } from '@glow/permissions';
 import type { EntityManager } from '@glow/typeorm';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
 import { In } from '@glow/typeorm';
-import type { QueryDeepPartialEntity } from '@glow/typeorm/query-builder/QueryPartialEntity';
+import type { QueryDeepPartialEntity } from '@glow/typeorm';
 import omit from 'lodash/omit';
 import pick from 'lodash/pick';
 import { BinaryDataService } from 'glow-core';
