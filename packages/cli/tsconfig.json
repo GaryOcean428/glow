@@ -33,6 +33,7 @@
 		{ "path": "../@glow/integration-test-utils/tsconfig.build.json" },
 		{ "path": "../@glow/di/tsconfig.build.json" },
 		{ "path": "../@glow/nodes-langchain/tsconfig.build.json" },
-		{ "path": "../@glow/permissions/tsconfig.build.json" }
+		{ "path": "../@glow/permissions/tsconfig.build.json" },
+		{ "path": "../@glow/typeorm/tsconfig.build.json" }
 	]
 }

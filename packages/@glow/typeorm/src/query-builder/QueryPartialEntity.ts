@@ -1,0 +1,1 @@
+export type { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';

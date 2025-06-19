@@ -5,6 +5,32 @@
   "main": "dist/index.js",
   "module": "src/index.ts",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./driver/mysql/MysqlConnectionOptions": {
+      "types": "./dist/driver/mysql/MysqlConnectionOptions.d.ts",
+      "default": "./dist/driver/mysql/MysqlConnectionOptions.js"
+    },
+    "./driver/postgres/PostgresConnectionOptions": {
+      "types": "./dist/driver/postgres/PostgresConnectionOptions.d.ts",
+      "default": "./dist/driver/postgres/PostgresConnectionOptions.js"
+    },
+    "./driver/sqlite/SqliteConnectionOptions": {
+      "types": "./dist/driver/sqlite/SqliteConnectionOptions.d.ts",
+      "default": "./dist/driver/sqlite/SqliteConnectionOptions.js"
+    },
+    "./driver/sqlite-pooled/SqlitePooledConnectionOptions": {
+      "types": "./dist/driver/sqlite-pooled/SqlitePooledConnectionOptions.d.ts",
+      "default": "./dist/driver/sqlite-pooled/SqlitePooledConnectionOptions.js"
+    },
+    "./query-builder/QueryPartialEntity": {
+      "types": "./dist/query-builder/QueryPartialEntity.d.ts",
+      "default": "./dist/query-builder/QueryPartialEntity.js"
+    }
+  },
   "scripts": {
     "clean": "rimraf dist .turbo",
     "dev": "pnpm watch",

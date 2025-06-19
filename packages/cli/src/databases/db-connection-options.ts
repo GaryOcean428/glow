@@ -7,11 +7,17 @@ import {
 	sqliteMigrations,
 } from '@glow/db';
 import { Service } from '@glow/di';
-import type { DataSourceOptions, LoggerOptions } from '@glow/typeorm';
-import type { MysqlConnectionOptions } from '@glow/typeorm/driver/mysql/MysqlConnectionOptions';
-import type { PostgresConnectionOptions } from '@glow/typeorm/driver/postgres/PostgresConnectionOptions';
-import type { SqliteConnectionOptions } from '@glow/typeorm/driver/sqlite/SqliteConnectionOptions';
-import type { SqlitePooledConnectionOptions } from '@glow/typeorm/driver/sqlite-pooled/SqlitePooledConnectionOptions';
+import type { 
+	DataSourceOptions, 
+	LoggerOptions,
+	MysqlConnectionOptions,
+	PostgresConnectionOptions,
+	SqliteConnectionOptions
+} from '@glow/typeorm';
+import type { SqlitePooledConnectionOptions } from '@glow/typeorm';
+
+// Custom data source options that includes our sqlite-pooled driver
+export type GlowDataSourceOptions = DataSourceOptions | SqlitePooledConnectionOptions;
 import { UserError } from 'glow-workflow';
 import path from 'path';
 import type { TlsOptions } from 'tls';
@@ -38,7 +44,7 @@ export class DbConnectionOptions {
 		};
 	}
 
-	getOptions(): DataSourceOptions {
+	getOptions(): GlowDataSourceOptions {
 		const { type: dbType } = this.config;
 		switch (dbType) {
 			case 'sqlite':
@@ -90,19 +96,19 @@ export class DbConnectionOptions {
 
 		if (sqliteConfig.poolSize > 0) {
 			return {
-				type: 'sqlite-pooled',
+				type: 'sqlite-pooled' as const,
 				poolSize: sqliteConfig.poolSize,
 				enableWAL: true,
 				acquireTimeout: 60_000,
 				destroyTimeout: 5_000,
 				...commonOptions,
-			};
+			} as SqlitePooledConnectionOptions;
 		} else {
 			return {
-				type: 'sqlite',
+				type: 'sqlite' as const,
 				enableWAL: sqliteConfig.enableWAL,
 				...commonOptions,
-			};
+			} as SqliteConnectionOptions;
 		}
 	}
 
@@ -123,7 +129,7 @@ export class DbConnectionOptions {
 		}
 
 		return {
-			type: 'postgres',
+			type: 'postgres' as const,
 			...this.getCommonOptions(),
 			...this.getOverrides('postgresdb'),
 			schema: postgresConfig.schema,
@@ -134,16 +140,16 @@ export class DbConnectionOptions {
 			extra: {
 				idleTimeoutMillis: postgresConfig.idleTimeoutMs,
 			},
-		};
+		} as PostgresConnectionOptions;
 	}
 
 	private getMysqlConnectionOptions(dbType: 'mariadb' | 'mysqldb'): MysqlConnectionOptions {
 		return {
-			type: dbType === 'mysqldb' ? 'mysql' : 'mariadb',
+			type: dbType === 'mysqldb' ? ('mysql' as const) : ('mariadb' as const),
 			...this.getCommonOptions(),
 			...this.getOverrides('mysqldb'),
 			migrations: mysqlMigrations,
 			timezone: 'Z', // set UTC as default
-		};
+		} as MysqlConnectionOptions;
 	}
 }

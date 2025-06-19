@@ -1,0 +1,1 @@
+export type { SqliteConnectionOptions } from 'typeorm/driver/sqlite/SqliteConnectionOptions';
