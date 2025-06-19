@@ -3,12 +3,10 @@ import type { Migration } from '@glow/db';
 import { wrapMigration } from '@glow/db';
 import { Container } from '@glow/di';
 // eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import type { DataSourceOptions as ConnectionOptions } from '@glow/typeorm';
-// eslint-disable-next-line n8n-local-rules/misplaced-n8n-typeorm-import
-import { MigrationExecutor, DataSource as Connection } from '@glow/typeorm';
+import { MigrationExecutor, DataSource as Connection, type DataSourceOptions } from '@glow/typeorm';
 import { Command, Flags } from '@oclif/core';
 
-import { DbConnectionOptions } from '@/databases/db-connection-options';
+import { DbConnectionOptions, type GlowDataSourceOptions } from '@/databases/db-connection-options';
 
 // This function is extracted to make it easier to unit test it.
 // Mocking turned into a mess due to this command using typeorm and the db
@@ -79,7 +77,7 @@ export class DbRevertMigrationCommand extends Command {
 	}
 
 	async run() {
-		const connectionOptions: ConnectionOptions = {
+		const connectionOptions: GlowDataSourceOptions = {
 			...Container.get(DbConnectionOptions).getOptions(),
 			subscribers: [],
 			synchronize: false,
@@ -88,7 +86,7 @@ export class DbRevertMigrationCommand extends Command {
 			logging: ['query', 'error', 'schema'],
 		};
 
-		const connection = new Connection(connectionOptions);
+		const connection = new Connection(connectionOptions as DataSourceOptions);
 		await connection.initialize();
 
 		const migrationExecutor = new MigrationExecutor(connection);
