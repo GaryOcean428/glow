@@ -1,10 +1,8 @@
 node_modules
 .DS_Store
 .tmp
-tmp
 npm-debug.log*
 google-generated-credentials.json
-_START_PACKAGE
 .env
 .vscode/*
 !.vscode/extensions.json
